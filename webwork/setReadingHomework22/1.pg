@@ -1,0 +1,54 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW24')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup2 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup3 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup4 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup5 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup6 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Orthonormal Bases and Complements -- Orthogonal Complements' before attempting this problem.
+$BR
+$BR
+Decide whether each of the following statements is true or false. If the statement could be true and could be false, i.e., if you need more information to decide, choose "Impossible to tell".
+$PAR
+1. Let \(U\) be the subspace of \(\mathbb{R}^3\) consisting of the \(x\)-axis, and let \(V\) be the subspace of \(\mathbb{R}^3\) consisting of the \(xy\)-plane. Then \(U \oplus V=\operatorname{span} (U \cup V).\) \{$popup1->menu()\}
+$PAR
+2. Let \(U\) be the subspace of \(\mathbb{R}^3\) consisting of the \(z\)-axis, and let \(V\) be the subspace of \(\mathbb{R}^3\) consisting of the \(xy\)-plane. Then \(U \oplus V=\operatorname{span} (U \cup V).\) \{$popup2->menu()\}
+$PAR
+3. Let \(U\) and \(V\) be subspaces of \(W,\) and suppose that there exist vectors \(u \in U, v \in V, w \in U \oplus V\) such that \(u+v=w.\) Then it is possible to find vectors \(u' \in U, v' \in V\) with \(u' \neq u, v' \neq v,\) such that \(u'+v'=w.\) \{$popup3->menu()\}
+$PAR
+4. Let \(\mathbb{R}^2\) be equal to \(U \oplus V,\) where \(U\) is the span of the vector \((a,b)\) and \(V\) is the span of the vector \((c,d).\) Certainly it is true that \((0,0)\) is in both \(U\) and \(V\), and that \((0,0)+(0,0)=(0,0).\) There are no nonzero vectors \(u \in U, v \in V\) such that \(u+v=(0,0).\) \{$popup4->menu()\}
+$PAR
+5. Let \(U\) and \(V\) be subspaces of \(W\) with \(U \cap V=$LBRACE 0_W $RBRACE\) and let \(u \in U\) and \(v \in V\) be vectors. Then for any constants \(a, b \in \mathbb{R}\), we have that \(au+bv \in U \oplus V.\) \{$popup5->menu()\}
+$PAR
+6. Let \(U\) and \(V\) be subspaces of \(W.\) Then \(U \oplus V=V\oplus U.\)
+\{$popup6->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp(), $popup5->cmp(), $popup6->cmp());
+
+ENDDOCUMENT();

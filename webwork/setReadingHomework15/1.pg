@@ -1,0 +1,58 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW17')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGstandard.pl",
+           "PGgraphmacros.pl",
+           "PGunion.pl",
+           "imageChoice.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$refreshCachedImages = 1;
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following are vector spaces? Select all that apply. $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(y=0.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(x+y+z=0.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \($a x+$b y=0.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(y=z.\)  $PAR",
+);
+$mc -> extra(
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(x=$a.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(x=y+$b.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(x^2+y^2=z.\)  $PAR",
+"The set of all vectors \(\left(\begin{array}{c} x \cr y \cr z \cr \end{array}\right) \in \mathbb{R}^3\) such that \(|x|=|y|.\)  $PAR",
+);
+$mc -> makeLast("None of the above");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Subspaces and Spanning Sets -- Subspaces' before attempting this problem.
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

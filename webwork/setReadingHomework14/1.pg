@@ -1,0 +1,70 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW14')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+do{@p=NchooseK(4,4); @q=invert(@p);}until($p[0] != $q[0] || $p[1] != $q[1] || $p[2] != $q[2] || $p[3] != $q[3]);
+
+$p[0]=$p[0]+1;
+$p[1]=$p[1]+1;
+$p[2]=$p[2]+1;
+$p[3]=$p[3]+1;
+
+$q[0]=$q[0]+1;
+$q[1]=$q[1]+1;
+$q[2]=$q[2]+1;
+$q[3]=$q[3]+1;
+
+$i=0;
+
+for($j=0; $j<4; $j++){
+for($k=$j+1; $k<4; $k++){
+if($p[$k]<$p[$j]){
+$i++;
+}
+}
+}
+
+$s=(-1)**($i);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Determinants -- Properties of the Determinant' before attempting this problem.
+$BR
+$BR
+The permutation \(\sigma\) is given by \(\sigma=\left[ $p[0] \quad $p[1] \quad $p[2] \quad $p[3] \right].\) Compute the inverse of \(\sigma.\)
+$BR
+\{ mbox( '\(\sigma^{-1}=\)', answer_matrix(1,4,5) )\}
+$HR
+The sign of the permutation \(\sigma\) above is given by \(\operatorname{sgn} (\sigma)=$s.\) Compute the sign of \(\sigma^{-1}.\)
+$BR
+\(\operatorname{sgn}\left(\sigma^{-1}\right)=\) \{ans_rule(5)\}
+END_TEXT
+
+$ans1=$q[0];
+$ans2=$q[1];
+$ans3=$q[2];
+$ans4=$q[3];
+$ans5=$s;
+
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5));
+
+ENDDOCUMENT();

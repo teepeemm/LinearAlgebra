@@ -1,0 +1,90 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW15')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGstandard.pl",
+           "PGgraphmacros.pl",
+           "PGunion.pl",
+           "imageChoice.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$refreshCachedImages = 1;
+
+$showPartialCorrectAnswers = 0;
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following could be an eigenvector of \(L\) ? Select all that apply. $PAR",
+"\(u+v\) $PAR",
+"\(u-v\) $PAR",
+"\(v-u\) $PAR",
+"\(-u-v\) $PAR",
+);
+$mc -> extra(
+"\(u\) $PAR",
+"\(v\) $PAR",
+"\(2u+v\) $PAR",
+"\(u-3v\) $PAR",
+);
+$mc -> makeLast("None of the above");
+
+$a=random(1,5,1);
+do {$b=random(1,5,1);} until ($b != $a);
+$c=max($a,$b)+1;
+$d=$b+1;
+$offset=$d/20;
+
+@eq = ();
+$eq[0] = "y=x^{$a}";
+$eq[1] = "y=-x^{$a}";
+$eq[2] = "y^{$a}=x";
+$eq[3] = "y^{$a}=-x";
+
+$gr = init_graph(-1,-1,$c,$c, axes=>[0,0], size=>[400,400]);
+$gr->lb('reset');
+
+$gr->moveTo(0,0);
+$gr->arrowTo(0,1,'red',2);
+$gr->moveTo(0,0);
+$gr->arrowTo(1,0,'red',2);
+$gr->moveTo(0,0);
+$gr->arrowTo($b,$a,'blue',2);
+$gr->moveTo(0,0);
+$gr->arrowTo($a,$b,'blue',2);
+$gr->lb( new Label(1,-$offset,'u',
+    'red','center','middle'));
+$gr->lb( new Label(-$offset,1,'v',
+    'red','center','middle'));
+$gr->lb( new Label($b+$offset+$offset,$a+$offset+$offset,'L(v)',
+    'blue','center','middle'));
+$gr->lb( new Label($a+$offset+$offset,$b+$offset+$offset,'L(u)',
+    'blue','center','middle'));
+
+BEGIN_TEXT
+The linear transformation \(L \colon \mathbb{R}^2 \to \mathbb{R}^2\) maps the vector \(u\) to \(L(u)\) and the vector \(v\) to \(L(v).\) The vectors \(u,v,L(u),\) and \(L(v)\) are shown below; \(u\) and \(v\) in red and \(L(u)\) and \(L(v)\) in blue.
+$PAR
+\{ image( insertGraph($gr), width=>400, 
+    height=>400, tex_size=>800 ) \}
+$PAR
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

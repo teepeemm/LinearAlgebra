@@ -1,0 +1,74 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW18')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGstandard.pl",
+           "PGgraphmacros.pl",
+           "PGunion.pl",
+           "imageChoice.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$refreshCachedImages = 1;
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+$c=2*$a;
+
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following sets of vectors in \(\mathbb{R}^6\) are linearly independent? Select all that apply. $PAR",
+"\(\left( \begin{array}{c} $a \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr $b \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr 0 \cr $c \cr 0 \cr 0 \cr 0 \cr  \end{array} \right)\)
+$PAR",
+"\(\left( \begin{array}{c} $a \cr 0 \cr 0 \cr $a \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr $b \cr 0 \cr 0 \cr $b \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr 0 \cr $c \cr 0 \cr 0 \cr $c \cr  \end{array} \right)\)
+$PAR",
+"\(\left( \begin{array}{c} 0 \cr 0 \cr $a \cr $a \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr $b \cr 0 \cr 0 \cr $b \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} $c \cr 0 \cr 0 \cr 0 \cr 0 \cr $c \cr  \end{array} \right)\)
+$PAR",
+);
+$mc -> extra(
+"\(\left( \begin{array}{c} $a \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} $b \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr $c \cr 0 \cr 0 \cr 0 \cr $c \cr  \end{array} \right)\)
+$PAR",
+"\(\left( \begin{array}{c} 0 \cr $a \cr $a \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} $c \cr 0 \cr 0 \cr 0 \cr 0 \cr $c \cr  \end{array} \right)\)
+$PAR",
+"\(\left( \begin{array}{c} $a \cr 0 \cr $a \cr 0 \cr $a \cr 0 \cr \end{array} \right), \quad
+\left( \begin{array}{c} 0 \cr $a \cr 0 \cr $a \cr 0 \cr $a \cr \end{array} \right), \quad
+\left( \begin{array}{c} $a \cr $a \cr $a \cr $a \cr $a \cr $a \cr  \end{array} \right)\)
+$PAR",
+);
+$mc -> makeLast("None of the above");
+
+BEGIN_TEXT
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

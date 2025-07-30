@@ -1,0 +1,115 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW10')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a11=random(1,9,1);
+$a12=1;
+$a13=random(1,9,1);
+$a22=random(-9,-1,1);
+$a21=$a11*$a22-1;
+$a23=random(-9,-1,1);
+$a=random(2,4,1);
+$b=random(2,4,1);
+$a31=$a*$a11+$b*$a21;
+$a32=$a*$a12+$b*$a22;
+$a33=$a*$a13+$b*$a23;
+$c=random(1,9,1);
+$d=random(1,9,1);
+$e=$a*$c+$b*$d;
+$f=($a22*$c-$a12*$d);
+$g=(-$a21*$c+$a11*$d);
+$h=$a*$f+$b*$g;
+$i=(-$a13*$a22 +$a12*$a23);
+$j=($a13*$a21-$a11*$a23);
+$k=$a*$i+$b*$j;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Linear Systems and Inverses' before attempting this problem. 
+$BR
+$BR
+The system
+\[
+\left$LBRACE
+\begin{array}{cccc}
+$a11 x & + $a12 y & + $a13 z & = $c \cr
+$a21 x & + $a22 y & + $a23 z & = $d \cr
+$a31 x & + $a32 y & + $a33 z & = $e \cr
+\end{array}
+\right.
+\]
+has solution set
+\[
+\left$LBRACE
+\left(
+\begin{array}{c}
+x \cr
+y \cr
+z \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+$f \cr
+$g \cr
+0 \cr
+\end{array}
+\right)
++\lambda
+\left(
+\begin{array}{c}
+$i \cr
+$j \cr
+1 \cr
+\end{array}
+\right)
+\right$RBRACE.
+\]
+$BR
+Compute the inverse of the matrix \(
+A=\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right)
+.\)
+$BR
+\{ mbox( '\( A^{-1} = \)', answer_matrix(3,3,10) ) \} 
+(Enter "DNE" in all spaces if the inverse does not exist.)
+
+END_TEXT
+
+$ans1="DNE";
+$ans2="DNE";
+$ans3="DNE";
+$ans4="DNE";
+$ans5="DNE";
+$ans6="DNE";
+$ans7="DNE";
+$ans8="DNE";
+$ans9="DNE";
+
+ANS(num_cmp($ans1, strings=>["DNE"]), num_cmp($ans2, strings=>["DNE"]), num_cmp($ans3, strings=>["DNE"]), num_cmp($ans4, strings=>["DNE"]), num_cmp($ans5, strings=>["DNE"]), num_cmp($ans6, strings=>["DNE"]), num_cmp($ans7, strings=>["DNE"]), num_cmp($ans8, strings=>["DNE"]), num_cmp($ans9, strings=>["DNE"]));
+
+ENDDOCUMENT();

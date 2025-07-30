@@ -1,0 +1,259 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW9')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a11=random(-20,20,1);
+$a12=random(-20,20,1);
+$a13=random(-20,20,1);
+$a14=random(-20,20,1);
+$a15=random(-20,20,1);
+$a21=random(-20,20,1);
+$a22=random(-20,20,1);
+$a23=random(-20,20,1);
+$a24=random(-20,20,1);
+$a25=random(-20,20,1);
+$a31=random(-20,20,1);
+$a32=random(-20,20,1);
+$a33=random(-20,20,1);
+$a34=random(-20,20,1);
+$a35=random(-20,20,1);
+$a41=random(-20,20,1);
+$a42=random(-20,20,1);
+$a43=random(-20,20,1);
+$a44=random(-20,20,1);
+$a45=random(-20,20,1);
+$a51=random(-20,20,1);
+$a52=random(-20,20,1);
+$a53=random(-20,20,1);
+$a54=random(-20,20,1);
+$a55=random(-20,20,1);
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following makes sense as a block decomposition of \(M\)? Select all that apply.", 
+"\( \left(
+\begin{array}{c|c|c}
+A & B & C \cr
+\hline
+D & E & F \cr
+\hline
+G & H & I
+\end{array}
+\right) \) where
+\[
+A=\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right), \quad
+B=\left(
+\begin{array}{c}
+$a13  \cr
+$a23  \cr
+\end{array}
+\right), \quad
+C=\left(
+\begin{array}{cc}
+$a14 & $a15 \cr
+$a24 & $a25 \cr
+\end{array}
+\right), \quad
+D=\left(
+\begin{array}{cc}
+$a31 & $a32 \cr
+\end{array}
+\right), \quad
+E=\left(
+\begin{array}{c}
+$a33 \cr
+\end{array}
+\right),
+\]
+\[
+F=\left(
+\begin{array}{cc}
+$a34 & $a35 \cr
+\end{array}
+\right), \quad
+G=\left(
+\begin{array}{cc}
+$a41 & $a42 \cr
+$a51 & $a52 \cr
+\end{array}
+\right), \quad
+H=\left(
+\begin{array}{c}
+$a43 \cr
+$a53 \cr
+\end{array}
+\right), \quad
+I=\left(
+\begin{array}{cc}
+$a44 & $a45 \cr
+$a54 & $a55 \cr
+\end{array}
+\right)
+\]
+$PAR",
+"\( \left(
+\begin{array}{c|c}
+A & B \cr
+\hline
+C & D \cr
+\end{array}
+\right) \) where
+\[
+A=\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right), \quad
+B=\left(
+\begin{array}{ccc}
+$a13 & $a14 & $a15 \cr
+$a23 & $a24 & $a25 \cr
+\end{array}
+\right), \quad
+C=\left(
+\begin{array}{cc}
+$a31 & $a32 \cr
+$a41 & $a42 \cr
+$a51 & $a52 \cr
+\end{array}
+\right), \quad
+D=\left(
+\begin{array}{ccc}
+$a33 & $a34 & $a35 \cr
+$a43 & $a44 & $a45 \cr
+$a53 & $a54 & $a55 \cr
+\end{array}
+\right)
+\]
+$PAR",
+);
+$mc -> extra(
+"\( \left(
+\begin{array}{c|c}
+A & B \cr
+\hline
+C & D \cr
+\end{array}
+\right) \) where
+\[
+A=\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right), \quad
+B=\left(
+\begin{array}{cc}
+$a14 & $a15 \cr
+$a24 & $a25 \cr
+$a34 & $a35 \cr
+\end{array}
+\right), \quad
+C=\left(
+\begin{array}{ccc}
+$a41 & $a42 & $a43 \cr
+$a51 & $a52 & $a53 \cr
+\end{array}
+\right), \quad
+D=\left(
+\begin{array}{ccc}
+$a33 & $a34 & $a35 \cr
+$a43 & $a44 & $a45 \cr
+$a53 & $a54 & $a55 \cr
+\end{array}
+\right)
+\]
+$PAR",
+"\( \left(
+\begin{array}{c|c}
+A & B \cr
+\hline
+C & D \cr
+\end{array}
+\right) \) where
+\[
+A=\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right), \quad
+B=\left(
+\begin{array}{cc}
+$a14 & $a15 \cr
+$a24 & $a25 \cr
+\end{array}
+\right), \quad
+C=\left(
+\begin{array}{cc}
+$a41 & $a42 \cr
+$a51 & $a52 \cr
+\end{array}
+\right), \quad
+D=\left(
+\begin{array}{ccc}
+$a33 & $a34 & $a35 \cr
+$a43 & $a44 & $a45 \cr
+$a53 & $a54 & $a55 \cr
+\end{array}
+\right)
+\]
+$PAR",
+);
+$mc -> makeLast("None of the above");
+
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Block Matrices' before attempting this problem. 
+$BR
+$BR
+The matrix \(M\) is given by
+\[
+M=
+\left(
+\begin{array}{ccccc}
+$a11 & $a12 & $a13 & $a14 & $a15 \cr
+$a21 & $a22 & $a23 & $a24 & $a25 \cr
+$a31 & $a32 & $a33 & $a34 & $a35 \cr
+$a41 & $a42 & $a43 & $a44 & $a45 \cr
+$a51 & $a52 & $a53 & $a54 & $a55 \cr
+\end{array}
+\right).
+\]
+$PAR
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

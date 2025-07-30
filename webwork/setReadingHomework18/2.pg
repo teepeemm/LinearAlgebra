@@ -1,0 +1,67 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW15')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Eigenvalues and Eigenvectors -- Invariant Directions' before attempting this problem.
+$BR
+$BR
+The linear transformation \(L \colon \mathbb{R}^2 \to \mathbb{R}^2\) has eigenvalues \($a\) and \($b.\) The vector \(u\) is an eigenvector of \(L\) for the eigenvalue \($a,\) and the vector \(v\) is an eigenvector of \(L\) for the eigenvalue \($b.\)
+$HR
+If \(w=x u+y v,\) then compute \(L(w)\) in terms of \(u\) and \(v\).
+$BR
+\(L(w)=(\) \{ans_rule(10)\} \(x) u +(\) \{ans_rule(10)\} \(y) v.\)
+$HR
+Let \(
+\left(
+\begin{array}{c}
+x \cr
+y \cr
+\end{array}
+\right)\) denote the vector \(xu+yv.\) In terms of this notation, write a matrix for \(L\).
+$PAR
+\{ mbox( '\(L \left(
+\begin{array}{c}
+x \cr
+y \cr
+\end{array}
+\right) =\)', answer_matrix(2,2,5), '\(\left(
+\begin{array}{c}
+x \cr
+y \cr
+\end{array}
+\right)\)' )\}
+END_TEXT
+
+$ans1=$a;
+$ans2=$b;
+$ans3=$a;
+$ans4=0;
+$ans5=0;
+$ans6=$b;
+
+ANS(fun_cmp($ans1, var => ['x', 'y', 'u', 'v']), fun_cmp($ans2, var => ['x', 'y', 'u', 'v']), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6));
+
+ENDDOCUMENT();

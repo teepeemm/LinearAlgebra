@@ -1,0 +1,70 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW16')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGstandard.pl",
+           "PGgraphmacros.pl",
+           "PGunion.pl",
+           "imageChoice.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$refreshCachedImages = 1;
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+$c=$a+$b;
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following must also be an eigenvector of \(M\) ? Select all that apply. $PAR",
+"\(u+v\) $PAR",
+"\(u-v\) $PAR",
+"\($a u\) $PAR",
+"\($b v\) $PAR",
+"\($c w\) $PAR",
+"\(-$a u\) $PAR",
+"\(-$b v\) $PAR",
+"\(-$c w\) $PAR",
+"\($b u+$a v\) $PAR",
+);
+$mc -> extra(
+"\(v+w\) $PAR",
+"\(v-w\) $PAR",
+"\(u+w\) $PAR",
+"\(w-u\) $PAR",
+"\($a u+$b w\) $PAR",
+"\($b v+$a w\) $PAR",
+);
+$mc -> makeLast("None of the above");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Eigenvalues and Eigenvectors --  Eigenspaces' before attempting this problem.
+$BR
+$BR
+Let \(M\) be a matrix with eigenvalues \($a\) and \($b.\) Suppose that \(u\) and \(v\) are eigenvectors of \(M\) associated to the eigenvalue \($a\) and that \(w\) is an eigenvector of \(M\) associated to the eigenvalue \($b.\)
+$PAR
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

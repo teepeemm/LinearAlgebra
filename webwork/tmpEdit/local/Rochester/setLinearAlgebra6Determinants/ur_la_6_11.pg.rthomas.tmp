@@ -1,0 +1,75 @@
+##DESCRIPTION
+##KEYWORDS('matrix', 'determinant', 'upper triangular')
+## DBsubject('Linear Algebra')
+## DBchapter('Matrices')
+## DBsection('Determinants')
+## Date('6/3/2002')
+## Author('')
+## Institution('')
+## TitleText1('Elementary Linear Algebra')
+## EditionText1('5')
+## AuthorText1('Larson, Edwards, Falvo')
+## Section1('3.1')
+## Problem1('15')
+##
+##ENDDESCRIPTION
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PG.pl",
+"PGbasicmacros.pl",
+"PGchoicemacros.pl",
+"PGanswermacros.pl",
+"PGgraphmacros.pl",
+"PGmatrixmacros.pl", 
+"PGnumericalmacros.pl",
+"PGauxiliaryFunctions.pl"
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a11 = non_zero_random(-5,5,1);
+$a22 = non_zero_random(-5,5,1);
+$a33 = non_zero_random(-5,5,1);
+
+$a12 = random(-9,9,1);
+$a13 = non_zero_random(-9,9,1);
+$a23 = random(-9,9,1);
+
+$detu = $a11 * $a22 * $a33;
+
+$a = non_zero_random(-9,9,1);
+$b = non_zero_random(-9,9,1);
+$c = non_zero_random(-9,9,1);
+$d = non_zero_random(-9,9,1);
+$e = non_zero_random(-9,9,1);
+$f = non_zero_random(-9,9,1);
+
+$detl = $a*$c*$f; 
+
+$detlu=$detu*$detl;
+
+BEGIN_TEXT
+Find the determinant of the matrix 
+$BR  
+\{ mbox( '\(L=\)', display_matrix([[$a, 0, 0], [$b, $c, 0], [$d, $e, $f]]), '.' ) \}
+$BR  
+\(\det\,(L)=\) \{ans_rule(15)\}.
+$HR
+Find the determinant of the matrix 
+$BR  
+\{ mbox( '\(U=\)', display_matrix([[$a11, $a12, $a13], [0, $a22, $a23], [0, 0, $a33]]), '.' ) \}
+$BR  
+\(\det\,(U)=\) \{ans_rule(15)\}.
+$HR
+Find the determinant of the product \(LU.\)
+$BR
+\(\det\,(LU)=\) \{ans_rule(15)\}.
+END_TEXT
+
+ANS(num_cmp($detl), num_cmp($detu), num_cmp($detlu));
+
+ENDDOCUMENT();       # This should be the last executable line in the problem.
+

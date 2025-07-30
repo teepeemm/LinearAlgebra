@@ -1,0 +1,70 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW2')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGmatrixmacros.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(1,5,1);
+$b=random(1,4,1);
+$c=$a+$b;
+$d=$c+$b;
+$e=$d+$b;
+$f=$e+$b;
+$g=$f+$b;
+$h=$g+$b;
+$i=$h+$b;
+$j=$i+$b;
+$k=$j+$b;
+$l=$k+$b;
+$m=$l+$b;
+$n=$m+$b;
+$o=$n+$b;
+$p=$o+$b;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Systems of Linear Equations -- Augmented Matrix Notation' before attempting this problem.
+$BR
+$BR
+Consider the following augmented matrix:
+\{ display_matrix( [ [$a, $c, $k, $l, $p], [$f, $d, $i, $o, $n], [$g, $e, $m, $h, $j] ], align=>'ccccvc') \}
+What are the values of the following entries?
+$BR
+\(a_1^2=\) \{ans_rule(5)\}
+$BR
+\(a_2^3=\) \{ans_rule(5)\}
+$BR
+\(b^2=\) \{ans_rule(5)\}
+$BR
+\(a_3^1=\) \{ans_rule(5)\}
+$BR
+\(b^1=\) \{ans_rule(5)\}
+$PAR
+$BITALIC Warning: $EITALIC The superscripts here (and in the lecture notes) are NOT exponents.
+END_TEXT
+
+$ans1="$f";
+$ans2="$e";
+$ans3="$n";
+$ans4="$k";
+$ans5="$p";
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5));
+
+ENDDOCUMENT();

@@ -1,0 +1,53 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW23')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup2 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup3 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup4 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup5 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup6 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+
+$a=random(2,4,1);
+$b=$a+1;
+
+BEGIN_TEXT
+Decide whether each of the following statements is true or false. If the statement could be true and could be false, i.e., if you need more information to decide, choose "Impossible to tell".
+$PAR
+1. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is an injective (one-to-one) linear transformation, then \(\operatorname{null} L=0.\) \{$popup1->menu()\}
+$PAR
+2. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is an injective (one-to-one) linear transformation, then \(\operatorname{rank} L=$b.\) \{$popup2->menu()\}
+$PAR
+3. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is a linear transformation, then \(\operatorname{rank} L=$b.\) \{$popup3->menu()\}
+$PAR
+4. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is a linear transformation, then \(\ker L\) must be a vector space. \{$popup4->menu()\}
+$PAR
+5. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is a linear transformation, then \(\operatorname{Im} L\) must be a vector space. \{$popup5->menu()\}
+$PAR
+6. If \(L \colon \mathbb{R}^$a \to \mathbb{R}^$b\) is a linear transformation whose kernel is a one-dimensional vector space, then \(L\) is injective (one-to-one). \{$popup6->menu()\}
+
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp(), $popup5->cmp(), $popup6->cmp());
+
+ENDDOCUMENT();

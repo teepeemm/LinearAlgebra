@@ -1,0 +1,107 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('Background')
+## Problem('3')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "Function"=>"Function", "Not"=>"Not a function"] );
+$tf -> qa ( 
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1 \rbrace\) $BR \(f \colon 1 \mapsto 1 \) $BR \(f \colon 2 \mapsto 1\) $BR \(f \colon 3 \mapsto 1\)",
+"Function",
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1,2,3 \rbrace\) $BR \(f \colon 1 \mapsto 1 \) $BR \(f \colon 2 \mapsto 2\)",
+"Not",
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1,2,3 \rbrace\) $BR \(f \colon 1 \mapsto 3 \) $BR \(f \colon 2 \mapsto 2\) $BR \(f \colon 3 \mapsto 3\)",
+"Function",
+"$BR\(f \colon \lbrace 1,4,218 \rbrace \to \lbrace -4,3,4 \rbrace\) $BR \(f \colon 1 \mapsto \pm 4 \) $BR \(f \colon 4 \mapsto 4\) $BR \(f \colon 218 \mapsto 3\)",
+"Not",
+);
+
+$tf->choose(4);
+
+$tf2 = new_select_list();
+$tf2->rf_print_q(~~&pop_up_list_print_q);
+$tf2->ra_pop_up_list( 
+[ No_answer => "?", "Injective"=>"Injective", "Surjective"=>"Surjective", "Bijective"=>"Bijective", "Neither"=>"Neither"] );
+$tf2 -> qa ( 
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1,2,3 \rbrace\) $BR \(f \colon 1 \mapsto 1 \) $BR \(f \colon 2 \mapsto 3\) $BR \(f \colon 3 \mapsto 2\)",
+"Bijective",
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1,2,3 \rbrace\) $BR \(f \colon 1 \mapsto 2 \) $BR \(f \colon 2 \mapsto 3\) $BR \(f \colon 3 \mapsto 2\)",
+"Neither",
+"$BR\(f \colon \lbrace 1,2,3,4 \rbrace \to \lbrace 1,2,3 \rbrace\) $BR \(f \colon 1 \mapsto 3 \) $BR \(f \colon 2 \mapsto 2\) $BR \(f \colon 3 \mapsto 3\) $BR \(f \colon 4 \mapsto 1\)",
+"Surjective",
+"$BR\(f \colon \lbrace 1,2,3 \rbrace \to \lbrace 1,2,3,4 \rbrace\) $BR \(f \colon 1 \mapsto 4 \) $BR \(f \colon 2 \mapsto 1\) $BR \(f \colon 3 \mapsto 3\)",
+"Injective",
+);
+
+$tf2->choose(4);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+$BBOLD Functions $EBOLD
+$PAR
+A $BBOLD function $EBOLD is a mapping from one set, the $BBOLD domain$EBOLD, to another set, the $BBOLD codomain$EBOLD. That is, a function assigns to each element of its domain exactly one element of its codomain. If f is a function with domain A and codomain B, we write \(f \colon A \to B.\) If, moreover, f assigns to the element a of A the element b of B, we write \(f\colon a \mapsto b,\) or, more concisely, \(f(a)=b.\)
+$PAR
+For example,
+\[f \colon \mathbb{R} \to \mathbb{R}\]
+\[f \colon x \mapsto x^2\]
+is the function which assigns to any real number its square. For example, \(f(5)=25\) and \(f(-7)=49.\)
+$PAR
+For another example,
+\[g \colon \lbrace 1,4,5,9 \rbrace \to \lbrace 2,7,11,15,19,20,23,29 \rbrace\]
+\[g \colon 1 \mapsto 23\]
+\[g \colon 4 \mapsto 29\]
+\[g \colon 5 \mapsto 15\]
+\[g \colon 9 \mapsto 19\]
+is a function whose domain is just \(\lbrace 1,4,5,9 \rbrace \), such that \(g(1)=23, g(4)=29, g(5)=15,\) and \(g(9)=19.\) If x is any number other than 1, 4, 5, or 9, then \(g(x)\) is not defined.
+$PAR
+Notice that in both of the above examples, not every element of the codomain is mapped to by some element of the domain. For example, there is no x in the domain of f such that \(f(x)=-1,\) and there is no x in the domain of g such that \(g(x)=7.\)
+$BR
+The set of elements of the codomain which are mapped to by some element of the domain is called the $BBOLD range$EBOLD or $BBOLD image$EBOLD. The image is contained in the codomain, but may not be the entire codomain. For example, the image of f is \([0,\infty)\) and the image of g is \(\lbrace 15,19,23,29 \rbrace.\)
+$PAR
+In lower math classes, we often think of a function as a rule which tells us how to get from one number to another number--for example, \(f(x)=x^2.\) This is only part of the story. A function consists of three things: its domain (the things you can plug in), its codomain (the things it spits out), and the way it assigns an element of its codomain to each element of its domain (the rule for getting from one thing to another). In this class it is imperative that whenever you see a function, you keep in mind what its domain and codomain are.
+For example, \(f \colon \left[0,\infty\right) \to \mathbb{R}\) such that \(f \colon x \mapsto x^2\) is a very different function from \(g \colon \mathbb{R} \to \mathbb{R}\) such that \(g \colon x \mapsto x^2\), even though the rules both functions use are the same.
+$HR
+Suppose that \(f \colon A \to B\) is a function. An $BBOLD inverse function $EBOLD for \(f\) is a function \(g \colon B \to A\) such that for any \(a \in A,\) we have that \(g(f(a))=a,\) and for any \(b \in B,\) we have that \(f(g(b))=b.\)
+$PAR
+For example, if \(f \colon \mathbb{R} \to \mathbb{R}\) is defined by \(f(x)=2x+4,\) then \(g \colon \mathbb{R} \to \mathbb{R}\) given by \(g(x)=x/2-2\) is an inverse function for \(f\).
+$PAR
+Not every function has an inverse function! For example, \(f \colon \mathbb{R} \to \mathbb{R}\) defined by \(f(x)=x^2\) has no inverse function. If it did have an inverse function \(g(x),\) it would have to be true that \(g(f(x))=x\) for any real number \(x\). So, for example, since \(f(2)=f(-2)=4,\) it would have to be true that \(g(f(2))=g(f(-2))=g(4).\) But \(g(4)\) cannot be equal to both \(2\) and \(-2\)! So there can be no such inverse function \(g(x).\)
+$PAR
+A function \(f \colon A \to B\) is $BBOLD one-to-one $EBOLD if different elements in \(A\) always map to different elements in \(B.\) That is, \(f\) is one-to-one if for any elements \(x \neq y \in S,\) we have that \(f(x) \neq f(y).\) One-to-one functions are also called $BBOLD injective $EBOLD functions.
+$PAR
+A function \(f \colon A \to B\) is $BBOLD onto $EBOLD if every element in \(B\) is mapped to by some element of \(A.\) That is, \(f\) is onto if for any \(b \in B,\) there exists some \(a \in A\) such that \(f(a)=b.\) Onto functions are also called $BBOLD surjective $EBOLD functions.
+$PAR
+A function that is both injective and surjective is called $BBOLD bijective. $EBOLD It turns out that a function has an inverse if and only if it is bijective.
+$HR
+Decide whether each of the following descriptions defines a function.
+$PAR
+\{ $tf-> print_q \}
+$HR
+Decide whether each of the following functions is injective but not surjective, surjective but not injective, bijective, or neither injective nor surjective.
+$PAR
+\{ $tf2-> print_q \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(str_cmp($tf->ra_correct_ans), str_cmp($tf2->ra_correct_ans));
+
+ENDDOCUMENT();

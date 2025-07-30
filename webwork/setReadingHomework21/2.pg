@@ -1,0 +1,81 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW21')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(-1,1,2);
+$b=random(-1,1,2);
+$c=random(-1,1,2);
+$d=random(-1,1,2);
+$e=-$b*$d*$c*2;
+$f=-$a;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Orthonormal Bases and Complements -- Relating Orthonormal Bases' before attempting this problem.
+$BR
+$BR
+The set
+\(\displaystyle{S=\left$LBRACE
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+\frac{$f}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right)
+\right$RBRACE}\)
+is an orthonormal basis of \(\mathbb{R}^3.\)
+$HR
+Write the matrix \(P\) for the change of basis from \(S\) to the standard basis \($LBRACE e_1, e_2, e_3 $RBRACE\) of \(\mathbb{R}^3.\)
+$PAR
+\{ mbox( '\(P=\)', answer_matrix(3,3,10) ) \}
+$HR
+Write the matrix \(P^{-1}\) for the change of basis from the standard basis to \(S.\)
+\{ mbox( '\(P^{-1}=\)', answer_matrix(3,3,10) ) \}
+END_TEXT
+
+$ans11="$a/sqrt(2)";
+$ans12="$b/sqrt(3)";
+$ans13="$c/sqrt(6)";
+$ans21="$f/sqrt(2)";
+$ans22="$b/sqrt(3)";
+$ans23="$c/sqrt(6)";
+$ans31="0";
+$ans32="$d/sqrt(3)";
+$ans33="$e/sqrt(6)";
+
+
+ANS(num_cmp($ans11), num_cmp($ans12), num_cmp($ans13), num_cmp($ans21), num_cmp($ans22), num_cmp($ans23), num_cmp($ans31), num_cmp($ans32), num_cmp($ans33), num_cmp($ans11), num_cmp($ans21), num_cmp($ans31), num_cmp($ans12), num_cmp($ans22), num_cmp($ans32), num_cmp($ans13), num_cmp($ans23), num_cmp($ans33));
+
+ENDDOCUMENT();

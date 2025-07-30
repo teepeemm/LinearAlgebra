@@ -1,0 +1,52 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW8')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a11=random(-20,20,1);
+$a12=random(-20,20,1);
+$a13=random(-20,20,1);
+$a21=random(-20,20,1);
+$a22=random(-20,20,1);
+$a23=random(-20,20,1);
+$a31=random(-20,20,1);
+$a32=random(-20,20,1);
+$a33=random(-20,20,1);
+
+TEXT(beginproblem());
+
+BEGIN_TEXT
+The matrix \(A\) is given by
+\[
+A=\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right).\]
+What is \(A^T\)?
+$BR
+\{ mbox( '\(A^T=\)', answer_matrix(3,3,5) ) \} 
+END_TEXT
+
+ANS(num_cmp($a11), num_cmp($a21), num_cmp($a31), num_cmp($a12), num_cmp($a22), num_cmp($a32), num_cmp($a13), num_cmp($a23), num_cmp($a33));
+
+ENDDOCUMENT();

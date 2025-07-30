@@ -1,0 +1,40 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW3')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Row swap");
+$popup2 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Scalar multiplication");
+$popup3 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Row sum");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+To which of the three elementary row operations does the first step of the Gaussian elimination algorithm correspond? \{$popup1->menu()\}
+$PAR
+To which of the three elementary row operations does the second step of the Gaussian elimination algorithm correspond? \{$popup2->menu()\}
+$PAR
+To which of the three elementary row operations does the third step of the Gaussian elimination algorithm correspond? \{$popup3->menu()\}
+
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp());
+
+ENDDOCUMENT();

@@ -1,0 +1,77 @@
+##DESCRIPTION
+##  Check basic understanding of Ax=b form
+##ENDDESCRIPTION
+
+##KEYWORDS('')
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## Date('6/11/2013')
+## Author('Cherney')
+## Institution('UC Davis')
+## TitleText1('Linear Algebra')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+   #"source.pl",        # allows code to be displayed on certain sites.
+   #"PGcourse.pl",      # Customization file for the course
+);
+
+# Print problem number and point value (weight) for the problem
+#TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+##############################################################
+#
+#  Setup
+#
+#
+Context("Numeric");
+
+$pi = Real("pi");
+
+##############################################################
+#
+#  Text
+#
+#
+
+Context()->texStrings;
+BEGIN_TEXT
+
+Reword the question 
+$PAR
+"What function \( f \)  satisfies \( f'=3f \) ?"
+$PAR 
+into the form 
+$PAR
+"What function \( f \) satisfies \( Df=0 \) where \( Df=f'-\) \{ans_rule(1) \} \( f \)?" 
+$PAR
+What goes in the blank? 
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#
+#  Answers
+#
+#
+
+
+ANS(std_num_cmp(3));
+
+#
+
+ENDDOCUMENT();        

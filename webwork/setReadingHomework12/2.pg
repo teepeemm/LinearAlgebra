@@ -1,0 +1,70 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW12')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,6,2);
+$b=random(3,7,2);
+$c=random(2,7,1);
+$a11=1*$a;
+$a12=2*$a;
+$a13=3*$a;
+$a21=4*$b;
+$a22=5*$b;
+$a23=6*$b;
+$a31=7*$c;
+$a32=8*$c;
+$a33=10*$c;
+$d=$a11*($a22*$a33-$a23*$a32)-$a12*($a21*$a33-$a31*$a23)+$a13*($a21*$a32-$a22*$a31);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Determinants -- Permutations' before attempting this problem.
+$BR
+$BR
+Compute
+\[
+\det \left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a31 & $a32 & $a33 \cr
+$a21 & $a22 & $a23 \cr
+\end{array}
+\right),
+\]
+given that
+\[
+\det \left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right)=$d.
+\]
+
+The determinant of the first matrix is equal to \{ans_rule(5)\}.
+END_TEXT
+
+$ans1=-$d;
+
+ANS(num_cmp($ans1));
+
+ENDDOCUMENT();

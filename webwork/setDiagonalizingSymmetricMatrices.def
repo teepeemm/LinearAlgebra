@@ -1,0 +1,12 @@
+
+openDate          = 07/05/2013 at 07:00pm PDT
+dueDate           = 01/16/2020 at 10:00pm PST
+answerDate        = 01/16/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeaderDiagonalize.pg
+problemList       = 
+setReadingHomework23/1.pg, 1, 6 
+setReadingHomework23/2.pg, 1, 5 
+Library/Rochester/setLinearAlgebra22SymmetricMatrices/ur_la_22_2.pg, 1, -1 
+Library/Rochester/setLinearAlgebra22SymmetricMatrices/ur_la_22_4.pg, 1, -1 
+

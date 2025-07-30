@@ -1,0 +1,115 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW14')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a11=random(-50,50,1);
+$a12=random(-50,50,1);
+$a13=random(-50,50,1);
+$a14=random(-50,50,1);
+$a21=random(-50,50,1);
+$a22=random(-50,50,1);
+$a23=random(-50,50,1);
+$a24=random(-50,50,1);
+$a31=random(-50,50,1);
+$a32=random(-50,50,1);
+$a33=random(-50,50,1);
+$a34=random(-50,50,1);
+$a41=random(-50,50,1);
+$a42=random(-50,50,1);
+$a43=random(-50,50,1);
+$a44=random(-50,50,1);
+
+$popup1 = PopUp(["?", "+", "-"], "+");
+$popup2 = PopUp(["?", "+", "-"], "-");
+$popup3 = PopUp(["?", "+", "-"], "+");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Determinants -- Adjoint of a Matrix' before attempting this problem.
+$BR
+$BR
+The matrix \(A\) is given by
+\(A=
+\left(
+\begin{array}{cccc}
+$a11 & $a12 & $a13 & $a14 \cr
+$a21 & $a22 & $a23 & $a24 \cr
+$a31 & $a32 & $a33 & $a34 \cr
+$a41 & $a42 & $a43 & $a44 \cr
+\end{array}
+\right).\)
+$PAR
+Then the adjoint matrix \(B=\operatorname{adj} A\) is given by
+\(\operatorname{adj} A=
+\left(
+\begin{array}{cccc}
+b_1^1 & b_2^1 & b_3^1 & b_4^1 \medskip \cr
+b_1^2 & b_2^2 & b_3^2 & b_4^2 \medskip \cr
+b_1^3 & b_2^3 & b_3^3 & b_4^3 \medskip \cr
+b_1^4 & b_2^4 & b_3^4 & b_4^4 \cr
+\end{array}
+\right).\)
+$HR
+Express \(b_1^1\) as \(\pm 1\) times the determinant of a \(3 \times 3\) matrix:
+$PAR
+\{ mbox( '\(b_1^1=\)', $popup1->menu(), '\(\det\)', answer_matrix(3,3,5) )\}
+$HR
+Express \(b_3^2\) as \(\pm 1\) times the determinant of a \(3 \times 3\) matrix:
+$PAR
+\{ mbox( '\(b_3^2=\)', $popup2->menu(), '\(\det\)', answer_matrix(3,3,5) )\}
+$HR
+Express \(b_2^4\) as \(\pm 1\) times the determinant of a \(3 \times 3\) matrix:
+$PAR
+\{ mbox( '\(b_2^4=\)', $popup3->menu(), '\(\det\)', answer_matrix(3,3,5) )\}
+END_TEXT
+
+$ans1=$a22;
+$ans2=$a23;
+$ans3=$a24;
+$ans4=$a32;
+$ans5=$a33;
+$ans6=$a34;
+$ans7=$a42;
+$ans8=$a43;
+$ans9=$a44;
+$ans11=$a11;
+$ans12=$a13;
+$ans13=$a14;
+$ans14=$a21;
+$ans15=$a23;
+$ans16=$a24;
+$ans17=$a41;
+$ans18=$a43;
+$ans19=$a44;
+$ans21=$a11;
+$ans22=$a12;
+$ans23=$a13;
+$ans24=$a31;
+$ans25=$a32;
+$ans26=$a33;
+$ans27=$a41;
+$ans28=$a42;
+$ans29=$a43;
+
+
+ANS($popup1->cmp(), num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6), num_cmp($ans7), num_cmp($ans8), num_cmp($ans9), $popup2->cmp(), num_cmp($ans11), num_cmp($ans12), num_cmp($ans13), num_cmp($ans14), num_cmp($ans15), num_cmp($ans16), num_cmp($ans17), num_cmp($ans18), num_cmp($ans19), $popup3->cmp(), num_cmp($ans21), num_cmp($ans22), num_cmp($ans23), num_cmp($ans24), num_cmp($ans25), num_cmp($ans26), num_cmp($ans27), num_cmp($ans28), num_cmp($ans29));
+
+ENDDOCUMENT();

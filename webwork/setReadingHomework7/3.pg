@@ -1,0 +1,85 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW7')
+## Problem('3')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,4,1);
+$b=random(5,7,1);
+
+BEGIN_TEXT
+Let \(L \colon \mathbb{R}^3 \to \mathbb{R}^3\) be a linear transformation defined by
+\[
+L\left(
+\begin{array}{c}
+x \cr
+y \cr
+z \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+$a x-y \cr
+$b y-z \cr
+x+y \cr
+\end{array}
+\right)
+\]
+Write \(L\) using a matrix:
+\[L \left(
+\begin{array}{c}
+x \cr
+y \cr
+z \cr
+\end{array}
+\right)
+=
+\]
+\{ mbox( '\(L \left(
+\begin{array}{c}
+x \cr
+y \cr
+z \cr
+\end{array}
+\right)
+=\)', answer_matrix(3,3,5), '\(\left(
+\begin{array}{c}
+x \cr
+y \cr
+z \cr
+\end{array}
+\right)\)' ) \} 
+
+END_TEXT
+
+$ans11=$a;
+$ans12=-1;
+$ans13=0;
+$ans21=0;
+$ans22=$b;
+$ans23=-1;
+$ans31=1;
+$ans32=1;
+$ans33=0;
+
+
+ANS(num_cmp($ans11), num_cmp($ans12), num_cmp($ans13), num_cmp($ans21), num_cmp($ans22), num_cmp($ans23), num_cmp($ans31), num_cmp($ans32), num_cmp($ans33));
+
+ENDDOCUMENT();

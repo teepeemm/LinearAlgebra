@@ -1,0 +1,16 @@
+
+openDate          = 07/05/2013 at 07:00pm PDT
+dueDate           = 01/15/2020 at 10:00pm PST
+answerDate        = 01/15/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeaderOrtho.pg
+problemList       = 
+setReadingHomework21/1.pg, 1, -1 
+setReadingHomework21/2.pg, 1, -1 
+setReadingHomework22/1.pg, 1, -1 
+setReadingHomework22/2.pg, 1, -1 
+Library/Rochester/setLinearAlgebra18OrthogonalBases/ur_la_18_4.pg, 1, -1 
+Library/Rochester/setLinearAlgebra18OrthogonalBases/ur_la_18_5.pg, 1, -1 
+local/Library/Rochester/setLinearAlgebra22SymmetricMatrices/ur_la_22_5_Fixed.pg, 1, -1 
+Library/Rochester/setLinearAlgebra17DotProductRn/ur_la_17_19.pg, 1, -1 
+

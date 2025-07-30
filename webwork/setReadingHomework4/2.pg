@@ -1,0 +1,66 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW4')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,4,1);
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Suppose that \(MX=V\) is a linear system, for some matrix M and some vector V. 
+Let the vector P 
+$BR be a particular solution to the system and the vector H a homogeneous solution to the system. 
+$BR Which of the following vectors must be a particular solution to the system? Select all that apply.", 
+"\(P\)$BR",
+"\(P+H\)$BR",
+"\(P+2H\)$BR",
+"\(P+3H\)$BR",
+"\(P-H\)$BR",
+"\(P-2H\)$BR",
+"\(P-3H\)$BR",
+);
+$mc -> extra(
+"\(H\)$BR",
+"\(2P+H\)$BR",
+"\(3P+H\)$BR",
+"\(H-P\)$BR",
+"\(2H-P\)$BR",
+"\(3H-P\)$BR",
+"\(2H-P\)$BR",
+"\(2P+2H\)$BR",
+"\(3P+3H\)$BR",
+);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+ENDDOCUMENT();
+
+
+ENDDOCUMENT();

@@ -1,0 +1,71 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW22')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,5,1);
+$b=random(6,9,1);
+$c=random(10,13,1);
+$d=random(14,17,1);
+$e=random(18,21,1);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Diagonalizing Symmetric Matrices' before attempting this problem.
+$BR
+$BR
+The matrix \(A\) is a real symmetric \(5 \times 5\) matrix with eigenvalues \($a, $b, $c, $d,\) and \($e.\) The vector \(x_1\) is an eigenvector of \(A\) with eigenvalue $a, the vector \(x_2\) is an eigenvector of \(A\) with eigenvalue $b, the vector \(x_3\) is an eigenvector of \(A\) with eigenvalue $c, the vector \(x_4\) is an eigenvector of \(A\) with eigenvalue $d, and the vector \(x_5\) is an eigenvector of \(A\) with eigenvalue $e.
+$PAR
+Compute the dot products of the eigenvectors \(x_i\) with each other.
+$BR
+\(x_1 \cdot x_2=\) \{ans_rule(10)\}
+$BR
+\(x_1 \cdot x_3=\) \{ans_rule(10)\}
+$BR
+\(x_1 \cdot x_4=\) \{ans_rule(10)\}
+$BR
+\(x_1 \cdot x_5=\) \{ans_rule(10)\}
+$BR
+\(x_2 \cdot x_3=\) \{ans_rule(10)\}
+$BR
+\(x_2 \cdot x_4=\) \{ans_rule(10)\}
+$BR
+\(x_2 \cdot x_5=\) \{ans_rule(10)\}
+$BR
+\(x_3 \cdot x_4=\) \{ans_rule(10)\}
+$BR
+\(x_3 \cdot x_5=\) \{ans_rule(10)\}
+$BR
+\(x_4 \cdot x_5=\) \{ans_rule(10)\}
+END_TEXT
+
+$ans1=0;
+$ans2=0;
+$ans3=0;
+$ans4=0;
+$ans5=0;
+$ans6=0;
+$ans7=0;
+$ans8=0;
+$ans9=0;
+$ans10=0;
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6), num_cmp($ans7), num_cmp($ans8), num_cmp($ans9), num_cmp($ans10));
+
+ENDDOCUMENT();

@@ -1,0 +1,310 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW13')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$m1a=random(0,5,1);
+$m1b=random(2,6,1);
+@m1=(0,0,0,0,0,0);
+$m1[$m1a]=$m1b;
+
+$m4a=random(0,5,1);
+$m4b=random(-6,-2,1);
+@m4=(0,0,0,0,0,0);
+$m4[$m4a]=$m4b;
+
+$m7a=random(0,5,1);
+$m7b=random(2,6,1);
+@m7=(0,0,0,0,0,0);
+$m7[$m7a]=$m7b;
+
+$m10a=random(1,6,1);
+$m10b=random(-6,-2,1);
+@m10=(0,0,0,0,0,0);
+$m10[$m10a]=$m10b;
+
+$m2=random(1,3,1);
+if($m2==1){
+@m21=(1,0,0);
+@m22=(0,0,1);
+@m23=(0,1,0);
+}elsif($m2==2){
+@m21=(0,0,1);
+@m22=(0,1,0);
+@m23=(1,0,0);
+}else{
+@m21=(0,1,0);
+@m22=(1,0,0);
+@m23=(0,0,1);
+}
+
+$m5=random(1,3,1);
+if($m5==1){
+@m51=(1,0,0);
+@m52=(0,0,1);
+@m53=(0,1,0);
+}elsif($m5==2){
+@m51=(0,0,1);
+@m52=(0,1,0);
+@m53=(1,0,0);
+}else{
+@m51=(0,1,0);
+@m52=(1,0,0);
+@m53=(0,0,1);
+}
+
+$m8=random(1,3,1);
+if($m8==1){
+@m81=(1,0,0);
+@m82=(0,0,1);
+@m83=(0,1,0);
+}elsif($m8==2){
+@m81=(0,0,1);
+@m82=(0,1,0);
+@m83=(1,0,0);
+}else{
+@m81=(0,1,0);
+@m82=(1,0,0);
+@m83=(0,0,1);
+}
+
+$m3a=random(0,2,1);
+$m3b=random(2,6,1);
+@m3=(1,1,1);
+$m3[$m3a]=$m3b;
+
+$m6a=random(0,2,1);
+$m6b=random(-6,-2,1);
+@m6=(1,1,1);
+$m6[$m6a]=$m6b;
+
+$m9a=random(0,2,1);
+$m9b=random(-6,-2,1);
+@m9=(1,1,1);
+$m9[$m9a]=$m9b;
+
+$a11=1;
+$a12=$m1[0];
+$a13=$m1[1];
+$a21=$m1[2];
+$a22=1;
+$a23=$m1[3];
+$a31=$m1[4];
+$a32=$m1[5];
+$a33=1;
+$d11=1;
+$d12=$m4[0];
+$d13=$m4[1];
+$d21=$m4[2];
+$d22=1;
+$d23=$m4[3];
+$d31=$m4[4];
+$d32=$m4[5];
+$d33=1;
+$g11=1;
+$g12=$m7[0];
+$g13=$m7[1];
+$g21=$m7[2];
+$g22=1;
+$g23=$m7[3];
+$g31=$m7[4];
+$g32=$m7[5];
+$g33=1;
+$j11=1;
+$j12=$m10[0];
+$j13=$m10[1];
+$j21=$m10[2];
+$j22=1;
+$j23=$m10[3];
+$j31=$m10[4];
+$j32=$m10[5];
+$j33=1;
+$b11=$m21[0];
+$b12=$m21[1];
+$b13=$m21[2];
+$b21=$m22[0];
+$b22=$m22[1];
+$b23=$m22[2];
+$b31=$m23[0];
+$b32=$m23[1];
+$b33=$m23[2];
+$e11=$m51[0];
+$e12=$m51[1];
+$e13=$m51[2];
+$e21=$m52[0];
+$e22=$m52[1];
+$e23=$m52[2];
+$e31=$m53[0];
+$e32=$m53[1];
+$e33=$m53[2];
+$h11=$m81[0];
+$h12=$m81[1];
+$h13=$m81[2];
+$h21=$m82[0];
+$h22=$m82[1];
+$h23=$m82[2];
+$h31=$m83[0];
+$h32=$m83[1];
+$h33=$m83[2];
+$c11=$m3[0];
+$c12=0;
+$c13=0;
+$c21=0;
+$c22=$m3[1];
+$c23=0;
+$c31=0;
+$c32=0;
+$c33=$m3[2];
+$f11=$m6[0];
+$f12=0;
+$f13=0;
+$f21=0;
+$f22=$m6[1];
+$f23=0;
+$f31=0;
+$f32=0;
+$f33=$m6[2];
+$i11=$m9[0];
+$i12=0;
+$i13=0;
+$i21=0;
+$i22=$m9[1];
+$i23=0;
+$i31=0;
+$i32=0;
+$i33=$m9[2];
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Determinants -- Elementary Matrices' before attempting this problem.
+$BR
+$BR
+The matrix \(M\) is equal to the product of matrices \(M_1\) through \(M_{10}\):
+\[
+M=M_1 M_2 M_3 M_4 M_5 M_6 M_7 M_8 M_9 M_{10},
+\]
+where the matrices \(M_i\) are as follows:
+\[
+M_1=
+\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right),
+\quad
+M_2=
+\left(
+\begin{array}{ccc}
+$b11 & $b12 & $b13 \cr
+$b21 & $b22 & $b23 \cr
+$b31 & $b32 & $b33 \cr
+\end{array}
+\right),
+\quad
+M_3=
+\left(
+\begin{array}{ccc}
+$c11 & $c12 & $c13 \cr
+$c21 & $c22 & $c23 \cr
+$c31 & $c32 & $c33 \cr
+\end{array}
+\right),
+\]
+$BR
+\[
+M_4=
+\left(
+\begin{array}{ccc}
+$d11 & $d12 & $d13 \cr
+$d21 & $d22 & $d23 \cr
+$d31 & $d32 & $d33 \cr
+\end{array}
+\right),
+\quad
+M_5=
+\left(
+\begin{array}{ccc}
+$e11 & $e12 & $e13 \cr
+$e21 & $e22 & $e23 \cr
+$e31 & $e32 & $e33 \cr
+\end{array}
+\right),
+\quad
+M_6=
+\left(
+\begin{array}{ccc}
+$f11 & $f12 & $f13 \cr
+$f21 & $f22 & $f23 \cr
+$f31 & $f32 & $f33 \cr
+\end{array}
+\right),
+\]
+$BR
+\[
+M_7=
+\left(
+\begin{array}{ccc}
+$g11 & $g12 & $g13 \cr
+$g21 & $g22 & $g23 \cr
+$g31 & $g32 & $g33 \cr
+\end{array}
+\right),
+\quad
+M_8=
+\left(
+\begin{array}{ccc}
+$h11 & $h12 & $h13 \cr
+$h21 & $h22 & $h23 \cr
+$h31 & $h32 & $h33 \cr
+\end{array}
+\right),
+\quad
+M_9=
+\left(
+\begin{array}{ccc}
+$i11 & $i12 & $i13 \cr
+$i21 & $i22 & $i23 \cr
+$i31 & $i32 & $i33 \cr
+\end{array}
+\right),
+\]
+$BR
+\[M_{10}=
+\left(
+\begin{array}{ccc}
+$j11 & $j12 & $j13 \cr
+$j21 & $j22 & $j23 \cr
+$j31 & $j32 & $j33 \cr
+\end{array}
+\right).
+\]
+$PAR
+Compute the determinant of \(M.\)
+$BR
+\(\det M=\) \{ans_rule(10)\}
+END_TEXT
+
+$ans1=-1*$m3b*$m6b*$m9b;
+
+ANS(num_cmp($ans1));
+
+ENDDOCUMENT();

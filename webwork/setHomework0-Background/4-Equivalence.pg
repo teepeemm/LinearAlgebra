@@ -1,0 +1,86 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('Background')
+## Problem('4')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "Equivalence"=>"Equivalence relation", "Not"=>"Not an equivalence relation"] );
+$tf -> qa ( 
+"Numbers x and y are equivalent if \(x^2=y^2.\)",
+"Equivalence",
+"Numbers x and y are equivalent if \(x \leq y.\)",
+"Not",
+"Numbers x and y are equivalent if \(|x-y| \leq 2.\)",
+"Not",
+"People A and B are equivalent if they are siblings.",
+"Not",
+"People A and B are equivalent if they have the same mother.",
+"Equivalence",
+);
+
+$tf->choose(5);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+$BBOLD Equivalence relations $EBOLD
+$PAR
+In lower math classes you often studied equality. Two numbers or functions are equal if they are exactly the same. However, sometimes we want to consider weaker notions of sameness. For example, instead of asking whether two geometric shapes are exactly the same $BITALIC (congruent)$EITALIC, we might ask whether they are $BITALIC similar$EITALIC. What properties should such a relationship have?
+$PAR
+An $BBOLD equivalence relation $EBOLD is a relation which satisfies the following three properties.
+$BR
+$BBOLD Reflexivity$EBOLD: Everything must be equivalent to itself.
+$BR
+$BBOLD Symmetry$EBOLD: If A is equivalent to B, then B must be equivalent to A.
+$BR
+$BBOLD Transitivity$EBOLD: If A is equivalent to B and B is equivalent to C, then A must be equivalent to C.
+$BR
+We write \(A \sim B,\) read "A is equivalent to B", to describe when two things are equivalent.
+$HR
+For example, if two geometric shapes are congruent after one is scaled up or down, then they are called similar. Let us check whether this is an equivalence relation:
+$BR
+Similarity is reflexive: any shape is similar to itself.
+$BR
+Similarity is symmetric: if shape A is similar to shape B then shape B is similar to shape A.
+$BR
+Similarity is transitive: if shape A is similar to shape B and shape B is similar to shape C, then shape A is similar to shape C. That is, if shape B is a scaled version of shape A and shape C is a scaled version of shape B, then shape C is a scaled version of shape A.
+$BR
+Therefore, the geometric notion of similarity is an equivalence relation.
+$HR
+As another example, we might call two people equivalent if they have the same birthday. Is this an equivalence relation?
+$BR
+Reflexivity: every person has the same birthday as himself/herself.
+$BR
+Symmetry: if person A has the same birthday as person B, then clearly person B has the same birthday as person A.
+$BR
+Transitivity: if person A has the same birthday as person B and person B has the same birthday as person C, clearly person A has the same birthday as person C.
+$BR
+So this too is an equivalence relation.
+$HR
+Decide whether each of the following descriptions is an equivalence relation.
+$PAR
+\{ $tf-> print_q \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();

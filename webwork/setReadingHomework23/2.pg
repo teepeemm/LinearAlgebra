@@ -1,0 +1,122 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW22')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,18,2);
+$b=$a/2;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Diagonalizing Symmetric Matrices' before attempting this problem.
+$BR
+$BR
+We are going to follow the idea of the proof of Theorem 22.2 in order to show that a particular real \(3 \times 3\) symmetric matrix is similar to a diagonal matrix of its eigenvalues.
+$HR
+Let \(M\) be the matrix given by
+\(M=
+\left(
+\begin{array}{ccc}
+$a & $a & 0 \cr
+$a & 0 & $a \cr
+0 & $a & $a \cr
+\end{array}
+\right).\)
+$HR
+Compute the eigenvalues of \(M.\) Call the largest eigenvalue \(\lambda_1,\) the middle eigenvalue \(\lambda_2,\) and the smallest eigenvalue \(\lambda_3.\)
+$PAR
+\(\lambda_1=\) \{ans_rule(10)\}
+$BR
+\(\lambda_2=\) \{ans_rule(10)\}
+$BR
+\(\lambda_3=\) \{ans_rule(10)\}
+$HR
+Find an eigenvector \(x_1\) of \(M\) so that \(x_1\) has eigenvalue \(\lambda_1\) and length 1. Choose \(x_1\) so that its first nonzero entry is positive.
+$PAR
+\{ mbox( '\(x_1=\)', answer_matrix(3,1,10) ) \}
+$HR
+Let the vector \(x_2\) be given by
+\(\displaystyle{x_2=
+\left(
+\begin{array}{c}
+0 \cr
+\frac{\sqrt{2}}{2} \cr
+-\frac{\sqrt{2}}{2} \cr
+\end{array}
+\right).}\)
+You can check for yourself that \(x_1\) and \(x_2\) are orthonormal. Find a third vector \(x_3\) so that \($LBRACE x_1, x_2, x_3 $RBRACE\) is an orthonormal basis for \(\mathbb{R}^3.\) Choose \(x_3\) so that its first nonzero entry is positive.
+$PAR
+\{ mbox( '\(x_3=\)', answer_matrix(3,1,10) ) \}
+$HR
+Let the matrix \(P\) be given by \(P= (x_1 \quad x_2 \quad x_3).\) Notice that \(P\) is orthogonal, so \(P^{-1}=P^T.\) Compute the matrix \(P^TMP.\)
+$PAR
+\{ mbox( '\(P^TMP=\)', answer_matrix(3,3,10) ) \}
+$HR
+Now we repeat this process to finish diagonalizing \(M.\) Let \(\hat{M}\) be the two-by-two block in the lower-right corner of the matrix \(P^TMP\) which you computed above. You can check for yourself that the eigenvalues of \(\hat{M}\) are the eigenvalues \(\lambda_2, \lambda_3\) which you computed earlier. Find an eigenvector \(y_2\) of \(\hat{M}\) so that \(y_2\) has eigenvalue \(\lambda_2\) and length 1. Choose \(y_2\) so that its first nonzero entry is positive.
+$PAR
+\{ mbox( '\(y_2=\)', answer_matrix(2,1,10) ) \}
+$HR
+Find a second vector \(y_3\) so that \($LBRACE y_2, y_3 $RBRACE\) is an orthonormal basis for \(\mathbb{R}^2.\) Choose \(y_3\) so that its first nonzero entry is positive.
+$PAR
+\{ mbox( '\(y_3=\)', answer_matrix(2,1,10) ) \}
+$HR
+Let the matrix \(Q\) be given by \(Q= (y_2 \quad y_3).\) Notice that \(Q\) is orthogonal, so \(Q^{-1}=Q^T.\) Compute the matrix \(Q^T\hat{M}Q.\)
+$PAR
+\{ mbox( '\(Q^T\hat{M}Q=\)', answer_matrix(2,2,10) ) \}
+$HR
+You should have ended up with a diagonal matrix. This shows that the matrix \(M\) is similar to the diagonal matrix
+\(\left(
+\begin{array}{ccc}
+\lambda_1 & 0 & 0 \cr
+0 & \lambda_2 & 0 \cr
+0 & 0 & \lambda_3 \cr
+\end{array}
+\right).\)
+END_TEXT
+
+$lambda1="2*$a";
+$lambda2="$a";
+$lambda3="-$a";
+$x11="sqrt(3)/3";
+$x12="sqrt(3)/3";
+$x13="sqrt(3)/3";
+$x31="sqrt(2/3)";
+$x32="-sqrt(6)/6";
+$x33="-sqrt(6)/6";
+$pmp11="2*$a";
+$pmp12="0";
+$pmp13="0";
+$pmp21="0";
+$pmp22="-$b";
+$pmp23="$b*sqrt(3)";
+$pmp31="0";
+$pmp32="$b*sqrt(3)";
+$pmp33="$b";
+$y21="1/2";
+$y22="sqrt(3)/2";
+$y31="sqrt(3)/2";
+$y32="-1/2";
+$qmq11="$a";
+$qmq12="0";
+$qmq21="0";
+$qmq22="-$a";
+
+ANS(num_cmp($lambda1), num_cmp($lambda2), num_cmp($lambda3), num_cmp($x11), num_cmp($x12), num_cmp($x13), num_cmp($x31), num_cmp($x32), num_cmp($x33), num_cmp($pmp11), num_cmp($pmp12), num_cmp($pmp13), num_cmp($pmp21), num_cmp($pmp22), num_cmp($pmp23), num_cmp($pmp31), num_cmp($pmp32), num_cmp($pmp33), num_cmp($y21), num_cmp($y22), num_cmp($y31), num_cmp($y32), num_cmp($qmq11), num_cmp($qmq12), num_cmp($qmq21), num_cmp($qmq22));
+
+ENDDOCUMENT();

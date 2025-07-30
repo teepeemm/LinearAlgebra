@@ -1,0 +1,78 @@
+##DESCRIPTION
+##  Test understanding that vectors are functions
+##ENDDESCRIPTION
+
+##KEYWORDS('algebra', 'inequality', 'fraction')
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## Date('')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('3')
+## AuthorText1('Stewart, Redlin, Watson')
+## Section1('1.1')
+## Problem1('22')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+"PG.pl",
+"PGbasicmacros.pl",
+"PGchoicemacros.pl",
+"PGanswermacros.pl",
+"PGgraphmacros.pl",
+"PGnumericalmacros.pl",
+"PGauxiliaryFunctions.pl",
+"PGmatrixmacros.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+#TEXT(beginproblem()); #or comment out so you don't
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+##############################################################
+#
+#  Setup
+#
+#
+
+
+$a = non_zero_random(-9,9,1);
+$b = non_zero_random(-9,9,1);
+$c = non_zero_random(-9,9,1);
+
+
+##############################################################
+#
+#  Text
+#
+#
+
+BEGIN_TEXT
+
+The function \( v \) defined by $par
+
+\{  mbox([ '\( v = \)' , display_matrix([['\( v_1 \)'],['\( v_2 \)'],['\( v_3 \)']]), '\(  = \)', display_matrix([[$a],[$b],[$c]])  ]) \}
+
+$par
+
+takes in 2 and gives out \{ans_rule(1)\}.
+
+END_TEXT
+
+##############################################################
+#
+#  Answers
+#
+#
+
+ANS(num_cmp($b));
+
+ENDDOCUMENT();        

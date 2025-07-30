@@ -1,0 +1,18 @@
+
+openDate          = 06/20/2013 at 12:00pm PDT
+dueDate           = 01/05/2020 at 10:00pm PST
+answerDate        = 01/05/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeader4.pg
+problemList       = 
+setVectorsInSpace/problem1.pg, 1, -1 
+local/setReadingHomework5-Corrected/2.pg, 1, -1 
+local/setVectorsInSpace/problem_3.pg, 1, -1 
+setVectorsInSpace/problem_4.pg, 1, -1 
+setVectorsInSpace/problem_5.pg, 1, -1 
+setVectorsInSpace/problem_6.pg, 1, -1 
+setVectorsInSpace/problem_7.pg, 1, -1 
+setVectorsInSpace/problem_8.pg, 1, -1 
+local/Union/setMVlinesplanes/wal2-1.pg, 1, -1 
+setVectorsInSpace/problem_9.pg, 1, -1 
+

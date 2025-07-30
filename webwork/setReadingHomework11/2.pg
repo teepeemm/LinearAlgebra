@@ -1,0 +1,181 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW11')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Let \(\lambda\) be a non-zero scalar. The product
+\(
+\left(
+\begin{array}{ccc}
+a_1^1 & a_2^1 & a_3^1 \medskip \cr
+a_1^2 & a_2^2 & a_3^2 \medskip \cr
+a_1^3 & a_2^3 & a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+b_1^1 & b_2^1 & b_3^1 \medskip \cr
+b_1^2 & b_2^2 & b_3^2 \medskip \cr
+b_1^3 & b_2^3 & b_3^3 \cr
+\end{array}
+\right)
+\) is the same as which of the following products? Select all that apply. $BR Hint: Think, don't calculate!",
+"\(
+\left(
+\begin{array}{ccc}
+\frac{1}{\lambda}a_1^1 & a_2^1 & a_3^1 \medskip \cr
+\frac{1}{\lambda}a_1^2 & a_2^2 & a_3^2 \medskip \cr
+\frac{1}{\lambda}a_1^3 & a_2^3 & a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\lambda b_1^1 & \lambda b_2^1 & \lambda b_3^1 \medskip \cr
+b_1^2 & b_2^2 & b_3^2 \medskip \cr
+b_1^3 & b_2^3 & b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+"\(
+\left(
+\begin{array}{ccc}
+\frac{1}{\lambda}a_1^1 & \frac{1}{\lambda}a_2^1 & \frac{1}{\lambda}a_3^1 \medskip \cr
+\frac{1}{\lambda}a_1^2 & \frac{1}{\lambda}a_2^2 & \frac{1}{\lambda}a_3^2 \medskip \cr
+\frac{1}{\lambda}a_1^3 & \frac{1}{\lambda}a_2^3 & \frac{1}{\lambda}a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\lambda b_1^1 & \lambda b_2^1 & \lambda b_3^1 \medskip \cr
+\lambda b_1^2 & \lambda b_2^2 & \lambda b_3^2 \medskip \cr
+\lambda b_1^3 & \lambda b_2^3 & \lambda b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+"\(
+\left(
+\begin{array}{ccc}
+a_1^1 & \lambda a_2^1 & a_3^1 \medskip \cr
+a_1^2 & \lambda a_2^2 & a_3^2 \medskip \cr
+a_1^3 & \lambda a_2^3 & a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+b_1^1 & b_2^1 & b_3^1 \medskip \cr
+\frac{1}{\lambda}b_1^2 & \frac{1}{\lambda}b_2^2 & \frac{1}{\lambda}b_3^2 \medskip \cr
+b_1^3 & b_2^3 & b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+);
+$mc -> extra(
+"\(
+\left(
+\begin{array}{ccc}
+a_1^1 & a_2^1 & a_3^1 \medskip \cr
+a_1^2 & a_2^2 & a_3^2 \medskip \cr
+\lambda a_1^3 & \lambda a_2^3 & \lambda a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+b_1^1 & b_2^1 & \frac{1}{\lambda}b_3^1 \medskip \cr
+b_1^2 & b_2^2 & \frac{1}{\lambda}b_3^2 \medskip \cr
+b_1^3 & b_2^3 & \frac{1}{\lambda}b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+"\(
+\left(
+\begin{array}{ccc}
+\frac{1}{\lambda}a_1^1 & a_2^1 & a_3^1 \medskip \cr
+a_1^2 & \frac{1}{\lambda}a_2^2 & a_3^2 \medskip \cr
+a_1^3 & a_2^3 & \frac{1}{\lambda}a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\lambda b_1^1 & b_2^1 & b_3^1 \medskip \cr
+b_1^2 & \lambda b_2^2 & b_3^2 \medskip \cr
+b_1^3 & b_2^3 & \lambda b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+"\(
+\left(
+\begin{array}{ccc}
+a_1^1 & a_2^1 & a_3^1 \medskip \cr
+\frac{1}{\lambda}a_1^2 & \frac{1}{\lambda}a_2^2 & \frac{1}{\lambda}a_3^2 \medskip \cr
+a_1^3 & a_2^3 & a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+b_1^1 & \frac{1}{\lambda}b_2^1 & b_3^1 \medskip \cr
+b_1^2 & \frac{1}{\lambda}b_2^2 & b_3^2 \medskip \cr
+b_1^3 & \frac{1}{\lambda}b_2^3 & b_3^3 \cr
+\end{array}
+\right)
+\)
+$PAR",
+"\(
+\left(
+\begin{array}{ccc}
+\lambda a_1^1 & \lambda a_2^1 & \lambda a_3^1 \medskip \cr
+a_1^2 & a_2^2 & a_3^2 \medskip \cr
+a_1^3 & a_2^3 & a_3^3 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+b_1^1 & \frac{1}{\lambda}b_2^1 & b_3^1 \medskip \cr
+b_1^2 & \frac{1}{\lambda}b_2^2 & b_3^2 \medskip \cr
+b_1^3 & \frac{1}{\lambda}b_2^3 & b_3^3 \cr\end{array}
+\right)
+\)
+$PAR",
+);
+$mc -> makeLast("None of the above");
+
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Finding an LU Decomposition' before attempting this problem.
+$BR
+$BR
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

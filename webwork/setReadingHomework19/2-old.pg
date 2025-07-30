@@ -1,0 +1,50 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW19')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup2 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup3 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup4 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup5 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup6 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+
+BEGIN_TEXT
+Suppose that the set
+\(S=$LBRACE v_1, v_2, \ldots, v_n $RBRACE\) is a basis for the vector space \(V.\) Decide whether each of the following statements is true or false. If you do not have enough information to decide whether a statement is true or false, select "Impossible to tell".
+$PAR
+1. The vectors \(v_1, \ldots, v_n\) span \(V\). \{$popup1->menu()\}
+$BR
+2. The vectors \(v_1, \ldots, v_n\) are linearly independent. \{$popup2->menu()\}
+$BR
+3. If \(T=$LBRACE w_1, w_2, \ldots, w_m $RBRACE\) is a different basis for \(V,\) then \(m\) could be equal to \(n+1.\) \{$popup3->menu()\}
+$BR
+4. If \(x\) is any vector in \(V\), then it may be impossible to write \(x\) as a linear combination of elements of \(S.\) \{$popup4->menu()\}
+$BR
+5. There exist nonzero constants \(c^1, \ldots, c^n\) such that \(c^1v_1+\cdots+c^nv_n=0.\) \{$popup5->menu()\}
+$BR
+6. The dimension of \(V\) is equal to \(n.\) \{$popup6->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp(), $popup5->cmp(), $popup6->cmp());
+
+ENDDOCUMENT();

@@ -1,0 +1,44 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW1')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGmatrixmacros.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=non_zero_random(-10,10,1);
+do {$b=non_zero_random(-10,10,1);} until ($b != $a);
+do {$c=non_zero_random(-10,10,1);} until (($c != $a) and ($c != $b));
+do {$d=non_zero_random(-10,10,1);} until (($d != $a) and ($d != $b) and ($d != $c));
+do {$e=non_zero_random(-10,10,1);} until (($e != $a) and ($e != $b) and ($e != $c) and ($e != $d));
+do {$f=non_zero_random(-10,10,1);} until (($f != $a) and ($f != $b) and ($f != $c) and ($f != $d) and ($f != $e));
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'What is Linear Algebra--What is a Matrix?' before attempting this problem.
+$BR
+$BR
+Compute the product: 
+\{ mbox( display_matrix([[$a, $b], [$c, $d]]), display_matrix([[$e], [$f]]), '\(=\)', answer_matrix(2,1,5) ) \}
+END_TEXT
+
+$ans1="$a*$e+$b*$f";
+$ans2="$c*$e+$d*$f";
+
+ANS(num_cmp($ans1), num_cmp($ans2));
+
+ENDDOCUMENT();

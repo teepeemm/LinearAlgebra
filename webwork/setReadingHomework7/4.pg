@@ -1,0 +1,126 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW7')
+## Problem('4')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,3,1);
+$b=random(4,5,1);
+$c=random(6,7,1);
+$d=random(-7,-6,1);
+$e=random(-5,-4,1);
+$f=random(-3,-2,1);
+$g=non_zero_random(-9,9,1);
+$h=non_zero_random(-9,9,1);
+$i=non_zero_random(-9,9,1);
+$j=non_zero_random(-9,9,1);
+$k=non_zero_random(-9,9,1);
+$l=non_zero_random(-9,9,1);
+$p=random(2,3,1);
+$q=random(-3,-2,1);
+$m=$p*$a+$q*$d;
+$n=$p*$b+$q*$e;
+$o=$p*$c+$q*$f;
+$r=$p*$g+$q*$j;
+$s=$p*$h+$q*$k;
+$t=$p*$i+$q*$l;
+
+BEGIN_TEXT
+Suppose that \(M\) is a \(3 \times 3\) matrix and that
+\[M \left(
+\begin{array}{c}
+$a \cr
+$b \cr
+$c \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+$g \cr
+$h \cr
+$i \cr
+\end{array}
+\right)
+\]
+and that
+\[M \left(
+\begin{array}{c}
+$d \cr
+$e \cr
+$f \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+$j \cr
+$k \cr
+$l \cr
+\end{array}
+\right).
+\]
+Compute
+\[M \left(
+\begin{array}{c}
+$m \cr
+$n \cr
+$o \cr
+\end{array}
+\right).\]
+Hint: 
+\[\left(
+\begin{array}{c}
+$m \cr
+$n \cr
+$o \cr
+\end{array}
+\right)=
+$p\left(
+\begin{array}{c}
+$a \cr
+$b \cr
+$c \cr
+\end{array}
+\right)
++ ${q} \left(
+\begin{array}{c}
+$d \cr
+$e \cr
+$f \cr
+\end{array}
+\right).
+\]
+\{ mbox( '\(M \left(
+\begin{array}{c}
+$m \cr
+$n \cr
+$o \cr
+\end{array}
+\right)
+=\)', answer_matrix(3,1,5) ) \} 
+END_TEXT
+
+$ans1=$r;
+$ans2=$s;
+$ans3=$t;
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3));
+
+ENDDOCUMENT();

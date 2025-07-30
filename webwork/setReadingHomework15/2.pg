@@ -1,0 +1,72 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW17')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGstandard.pl",
+           "PGgraphmacros.pl",
+           "PGunion.pl",
+           "imageChoice.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$refreshCachedImages = 1;
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+$c=2*$a;
+$d=3*$b;
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following are in \(\operatorname{span}(S)\) ? Select all that apply. $PAR",
+"\(\left( \begin{array}{c} 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} $a \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} 0 \cr $b \cr 0 \cr $b \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} $c \cr $d \cr 0 \cr $d \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} $a \cr $b \cr $c \cr $b \cr $c \cr -$c \cr \end{array} \right)\) $PAR",
+);
+$mc -> extra(
+"\(\left( \begin{array}{c} $a \cr $a \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} $a \cr $b \cr $c \cr $b \cr $c \cr $c \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} $b \cr $a \cr 0 \cr $b \cr 0 \cr 0 \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} 0 \cr 0 \cr $a \cr 0 \cr $b \cr $c \cr \end{array} \right)\) $PAR",
+"\(\left( \begin{array}{c} 0 \cr 0 \cr $b \cr 0 \cr -$b \cr $b \cr \end{array} \right)\) $PAR",
+);
+$mc -> makeLast("None of the above");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Subspaces and Spanning Sets -- Building Subspaces' before attempting this problem.
+$BR
+$BR
+Let \(S\) be the set of vectors given by
+\(S= \left$LBRACE
+\left( \begin{array}{c} 1 \cr 0 \cr 0 \cr 0 \cr 0 \cr 0 \cr \end{array} \right),
+\left( \begin{array}{c} 0 \cr 1 \cr 0 \cr 1 \cr 0 \cr 0 \cr \end{array} \right),
+\left( \begin{array}{c} 0 \cr 0 \cr 1 \cr 0 \cr 1 \cr -1 \cr \end{array} \right)
+\right$RBRACE
+.\)
+$PAR
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

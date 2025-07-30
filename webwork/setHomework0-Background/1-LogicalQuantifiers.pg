@@ -1,0 +1,118 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('Background')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(5,19,2);
+$b=random(2,8,1);
+$c=$b+1;
+$d=random(1,3,1);
+$e=4-$d;
+
+$popup1 = PopUp(["?", "=>", "<=", "<=>"], "=>");
+$popup2 = PopUp(["?", "=>", "<=", "<=>"], "<=");
+$popup3 = PopUp(["?", "=>", "<=", "<=>"], "<=>");
+$popup4 = PopUp(["?", "=>", "<=", "<=>"], "<=");
+$popup5 = PopUp(["?", "=>", "<=", "<=>"], "=>");
+$popup6 = PopUp(["?", "=>", "<=", "<=>"], "<=>");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+$BBOLD Logical quantifiers $EBOLD
+$PAR
+The sentence \(A \Rightarrow B\) is read "A implies B" and means that whenever A is true, B is also true. That is, \(A \Rightarrow B\) means "if A, then B."
+$PAR
+For example,
+$BR
+\[ \text{I am in Davis} \Rightarrow \text{I am in California,}\]
+$BR
+because if I am in Davis, then I am in California. Or,
+$BR $BR
+\[ x \text{ is a multiple of four} \Rightarrow x \text{ is even,}\]
+$BR
+because if a number is a multiple of four, then it must surely be even.
+$HR
+Similarly, the sentence \(A \Leftarrow B\) is read "A is implied by B" and means that whenever B is true, A is also true. That is, \(A \Leftarrow B\) means "if B, then A," or, equivalently, "B only if A."
+$PAR
+For example,
+$BR
+\[\sin x=0 \Leftarrow x=0 \text{ or } -\pi,\]
+$BR
+because if \(x=0\) or \(\pi\) then \(\sin x=0.\)
+$PAR
+The sentence \(A \Rightarrow B\) means exactly the same thing as the sentence \(B \Leftarrow A.\)
+$HR
+Notice that in all of the above examples, we cannot reverse the arrow. That is, the following statements are FALSE:
+$BR $BR
+\[ \text{I am in California} \Rightarrow \text{I am in Davis.}\] 
+\[ x \text{ is even} \Rightarrow x \text{ is a multiple of four.}\] 
+\[ \sin x=0 \Rightarrow x=0 \text{ or } -\pi.\]
+$BR
+The first is false because if I am in California, I might be in Los Angeles; the mere fact that I am in California is not enough to tell me without a doubt that I am in Davis.
+$BR
+The second is false because if a number is even, it does not have to be a multiple of four--for example, six is even but not a multiple of four.
+$BR
+The third is false because if \(\sin x=0,\) \(x\) could be ANY integer multiple of \(\pi,\) not just \(0\) or \(\pi.\)
+$PAR
+In some situations, we CAN reverse the arrow. That is, sometimes \(A \Rightarrow B\) AND \(B \Rightarrow A.\) In this case, we write \(A \iff B,\) read "A if and only if B." Sometimes this is abbreviated "A iff B" in writing.
+$PAR
+For example,
+$BR
+\[ x^2=9 \iff x=3 \text{ or } -3,\]
+$BR
+because \(x^2=9 \Rightarrow x=3 \text{ or } -3\) AND \(x^2=9 \Leftarrow x=3 \text{ or } -3.\) That is, if \(x^2=9,\) then \(x\) must be \(\pm 3,\) and if \(x\) is \(\pm 3\) then \(x^2=9.\) Or,
+$BR $BR
+\[ \text{Today is Friday} \iff \text{yesterday was Thursday,}\]
+$BR
+because if today is Friday then yesterday must have been Thursday, and if yesterday was Thursday then today must be Friday. 
+$HR
+The sentence \(A \therefore B\) is read "A therefore B" and means that B is a logical consequence of A. That is, \(A \therefore B\) means "B is true $BITALIC because $EITALIC A is true." 
+$PAR
+For example,
+$BR
+\[\text{California is in the Pacific Time Zone and I am in California,} 
+\therefore \text{ I am in the Pacific Time Zone,}\]
+$BR
+since if California is in the Pacific Time Zone and I am in California then it logically follows that I am in the Pacific Time Zone. Or,
+$BR $BR
+\[\text{ Every prime number is either odd or 2, and 19 is a prime number,} 
+\therefore \text{ 19 is odd,}\]
+$BR
+since without knowing what odd means, if you know that every prime number is either odd or 2 and 19 is a prime number then you know that 19 must be odd.
+$HR
+Choose the correct logical quantifier in each of the following sentences.
+$PAR
+\(x=$a\) \{$popup1->menu()\} \(x\) is odd.
+$BR
+\(f(x)\) is a continuous function \{$popup2->menu()\} \(f(x)\) is a differentiable function.
+$BR
+The graph of \(f(x)\) never touches the x-axis \{$popup3->menu()\} \(f(x)=0\) has no real solutions.
+$BR
+\(f'(x)=$c x^{$b}\) \{$popup4->menu()\} \(f(x)=x^{$c}.\)
+$BR
+\(x=1\) \{$popup5->menu()\} \(x^4=1.\)
+$BR
+\(\sin^2 x=\frac{$d}{4}\) \{$popup6->menu()\} \(\cos^2 x=\frac{$e}{4}.\)
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp(), $popup5->cmp(), $popup6->cmp());
+
+ENDDOCUMENT();

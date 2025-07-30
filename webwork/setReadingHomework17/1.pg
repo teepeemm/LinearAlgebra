@@ -1,0 +1,308 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW19')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,9,1);
+do {$b=random(2,9,1);} until ($b != $a);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Basis and Dimension' before attempting this problem.
+$BR
+$BR
+We are going to follow the idea of the proof of the lemma in order to show that a particular set of set \(T\) of linearly independent vectors in \(\mathbb{R}^3\) has no more elements than a particular basis \(S\) of the vector space \(\mathbb{R}^3.\)
+$HR
+Let the set \(S\) be given by
+$BR
+\(
+S=
+\left$LBRACE
+\left(
+\begin{array}{c}
+1 \cr
+0 \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)
+\right$RBRACE.
+\)
+$BR
+You can check for yourself that \(S\) is a basis for \(\mathbb{R}^3.\)
+$BR$BR
+Let the set \(T\) be given by
+$BR
+\(
+T=
+\left$LBRACE
+\left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+$b \cr
+$b \cr
+$b \cr
+\end{array}
+\right)
+\right$RBRACE.
+\)
+$BR
+You can check for yourself that the vectors in \(T\) are linearly independent.
+$HR
+Express \(\left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right)\) as a linear combination of elements in \(S.\)
+$PAR
+\(\left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right)=\)
+\{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+1 \cr
+0 \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)\)
+$PAR
+Use the equation you found to express \(\left(
+\begin{array}{c}
+1 \cr
+0 \cr
+0 \cr
+\end{array}
+\right)\) as a linear combination of the vectors in the set
+\(
+S'=
+\left$LBRACE
+\left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)
+\right$RBRACE
+.\)
+$PAR
+\(\left(
+\begin{array}{c}
+1 \cr
+0 \cr
+0 \cr
+\end{array}
+\right)=\)
+\{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)\)
+$PAR
+This means that the set
+\(S'\)
+is a basis for \(\mathbb{R}^3.\) You can check for yourself that it is a basis.
+$HR
+Express \(\left(
+\begin{array}{c}
+$b \cr
+$b \cr
+$b \cr
+\end{array}
+\right)\) as a linear combination of elements in \(S'.\)
+$PAR
+\(\left(
+\begin{array}{c}
+$b \cr
+$b \cr
+$b \cr
+\end{array}
+\right)=\)
+\{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)\)
+$PAR
+Use the equation you found to express \(\left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)\) as a linear combination of the vectors in the set
+\(
+S''=
+\left$LBRACE
+\left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+$b \cr
+$b \cr
+$b \cr
+\end{array}
+\right)
+\right$RBRACE
+.\)
+$PAR
+\(\left(
+\begin{array}{c}
+0 \cr
+0 \cr
+1 \cr
+\end{array}
+\right)=\)
+\{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+$a \cr
+$a \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+0 \cr
+1 \cr
+0 \cr
+\end{array}
+\right)+\) \{ans_rule(10)\} \(\cdot \left(
+\begin{array}{c}
+$b \cr
+$b \cr
+$b \cr
+\end{array}
+\right)\)
+$PAR
+This means that the set
+\(S''\)
+is a basis for \(\mathbb{R}^3.\) You can check for yourself that it is a basis.
+$HR
+We've made a new basis from \(S\) by replacing some of its elements with elements of \(T.\) Since all the elements of \(T\) are in this new basis \(S'',\) and the new basis \(S''\) has exactly as many elements as \(S\) did, we can conclude that the number of elements in \(T\) is less than or equal to the number of elements in \(S.\)
+$BR$BR
+Of course, we could have just counted the number of elements in \(T\) and the number of elements of \(S\) at the beginning, but the point is that this process always works: if \(S\) is any basis for a vector space \(V\) and \(T\) is any set of linearly independent vectors in \(V\), then we can do what we did above to conclude that the number of elements in \(T\) is less than or equal to the number of elements in \(S.\)
+END_TEXT
+
+$ans1=$a;
+$ans2=$a;
+$ans3=0;
+$ans4="1/($a)";
+$ans5=-1;
+$ans6=0;
+$ans7="$b/($a)";
+$ans8=0;
+$ans9=$b;
+$ans10="-1/($a)";;
+$ans11=0;
+$ans12="1/($b)";;
+
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6), num_cmp($ans7), num_cmp($ans8), num_cmp($ans9), num_cmp($ans10), num_cmp($ans11), num_cmp($ans12));
+
+ENDDOCUMENT();

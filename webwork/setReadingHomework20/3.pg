@@ -1,0 +1,47 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW20')
+## Problem('3')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup2 = PopUp(["?", "True", "False", "Impossible to tell"], "False");
+$popup3 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+$popup4 = PopUp(["?", "True", "False", "Impossible to tell"], "True");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Diagonalization -- Changing to a Basis of Eigenvectors' before attempting this problem.
+$BR
+$BR
+Suppose that \(V\) is a 5-dimensional vector space. Let \(S=( v_1, \ldots, v_5 ) \) be some ordered basis of \(V,\) and let \(T=( w_1, \ldots, w_5 )\) be some other ordered basis of \(V.\) Let \(L \colon V \to V\) be a linear transformation. Let \(M\) be the matrix of \(L\) in the basis \(S\) and let \(N\) be the matrix of \(L\) in the basis \(T.\) Decide whether each of the following statements is true or false. If you do not have enough information to decide whether a statement is true or false, select "Impossible to tell".
+$PAR
+1. There is a change of basis matrix which takes us from the basis \(S\) to the basis \(T.\) \{$popup1->menu()\}
+$BR
+2. If \(P\) is a change of basis matrix, then \(\det P=0.\) \{$popup2->menu()\}
+$BR
+3. The matrices \(M\) and \(N\) are similar. \{$popup3->menu()\}
+$BR
+4. If \(M\) is a diagonal matrix, then \(N\) is a diagonalizable matrix. \{$popup4->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp());
+
+ENDDOCUMENT();

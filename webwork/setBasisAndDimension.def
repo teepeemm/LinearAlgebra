@@ -1,0 +1,14 @@
+
+openDate          = 07/05/2013 at 07:00pm PDT
+dueDate           = 01/12/2020 at 10:00pm PST
+answerDate        = 01/12/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeaderBasis.pg
+problemList       = 
+setReadingHomework17/1.pg, 1, -1 
+setReadingHomework17/2.pg, 1, -1 
+Library/Rochester/setLinearAlgebra10Bases/ur_la_10_35.pg, 1, -1 
+Library/Rochester/setLinearAlgebra10Bases/ur_la_10_36.pg, 1, -1 
+Library/Rochester/setLinearAlgebra10Bases/ur_la_10_34.pg, 1, -1 
+Library/Rochester/setLinearAlgebra10Bases/ur_la_10_33.pg, 1, -1 
+

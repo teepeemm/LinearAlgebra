@@ -1,0 +1,51 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW7')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,4,1);
+$b=random(5,7,1);
+$c=random(-4,-2,1);
+$d=random(-7,-5,1);
+$e=$a*$c+$b*$d;
+
+TEXT(beginproblem());
+
+BEGIN_TEXT
+Read 'Linear Transformations' before attempting this problem.
+$BR
+$BR
+Suppose that \(V\) is a vector space and that \(u\) and \(v\) are two vectors in \(V.\) The linear transformation \(L \colon V \to \mathbb{R}\) is such that
+$BR
+$BR
+ \(L(u)=$c\) and \(L(v)=$d.\) 
+$BR
+$BR
+What is the value of \(L($a u+$b v)\) ?
+$BR
+$BR
+\(L($a u+$b v)=\) \{ans_rule(20)\}
+END_TEXT
+
+$ans1=$e;
+
+ANS(num_cmp($ans1));
+
+ENDDOCUMENT();

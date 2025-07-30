@@ -1,0 +1,15 @@
+
+openDate          = 08/29/2013 at 04:00pm PDT
+dueDate           = 01/14/2020 at 10:00pm PST
+answerDate        = 01/14/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeader13.pg
+problemList       = 
+setReadingHomework20/2.pg, 1, -1 
+setReadingHomework20/3.pg, 1, -1 
+Library/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_30.pg, 1, -1 
+local/TCNJ/TCNJ_Diagonalization/problem3.pg, 1, -1 
+Library/TCNJ/TCNJ_Diagonalization/problem3.pg, 1, -1 
+local/TCNJ/TCNJ_Diagonalization/problem5-caveat4.pg, 1, -1 
+local/TCNJ/TCNJ_Diagonalization/problem5-final.pg, 1, -1 
+

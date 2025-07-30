@@ -1,0 +1,68 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW1')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,9,1);
+$b=non_zero_random(-9,9,1);
+$c=random(4,16,4);
+$d=list_random(5,7,11,13);
+$e=non_zero_random(-20,20,1);
+$i=random(2,5,1);
+do {$j=random(2,5,1);} until ($j != $i);
+$k=list_random(7,11,13,17,19);
+$l=random(2,5,1);
+do {$m=random(2,5,1);} until ($l != $m);
+$n=list_random(7,11,13,17,19);
+
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following equations is linear? Select all that apply.", 
+"\($c x+$d y=$e \)$BR",
+"\($c x=$d y+$e \)$BR",                
+"\(\displaystyle{\frac{$i x-$j y}{$k}=\frac{-$l x+$m y}{$n}}\)$BR",
+);
+$mc -> extra(
+"\(\displaystyle{\frac{$i x-$j y}{$k}=\frac{$n}{-$l x+$m y}}\)$BR",
+"\(x^2+y^2=$b\)$BR",
+"\(\sin x+$a y=$b\)$BR",
+"\(\sqrt{x}=y\)$BR",
+);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'What is Linear Algebra--What is a Matrix?' before attempting this problem.
+$BR
+$BR
+
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+ENDDOCUMENT();
+
+
+ENDDOCUMENT();

@@ -1,0 +1,15 @@
+
+openDate          = 08/14/2013 at 12:00pm PDT
+dueDate           = 01/07/2020 at 10:00pm PST
+answerDate        = 01/07/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeaderLinear.pg
+problemList       = 
+setReadingHomework7/1.pg, 1, -1 
+setLinearTransformations/problem2.pg, 1, -1 
+Library/TCNJ/TCNJ_IntroLinearTransformations/problem20.pg, 1, -1 
+Library/TCNJ/TCNJ_LinearTransformations/problem20.pg, 1, -1 
+Library/TCNJ/TCNJ_IntroLinearTransformations/problem7.pg, 1, -1 
+Library/TCNJ/TCNJ_LinearTransformations/problem25.pg, 1, -1 
+local/Library/TCNJ/TCNJ_IntroLinearTransformations/problem17.pg, 1, -1 
+

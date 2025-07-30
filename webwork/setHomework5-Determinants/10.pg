@@ -1,0 +1,72 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('HW5')
+## Problem('10')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,9,1);
+$b=list_random(-5,-4,-3,-2,2,3,4,5);
+$c=random(2,9,1);
+$d=list_random(-5,-4,-3,-2,2,3,4,5);
+$e=random(2,9,1);
+$f=list_random(-5,-4,-3,-2,2,3,4,5);
+$g=list_random(-5,-4,-3,-2,2,3,4,5);
+
+BEGIN_TEXT
+Let \(M\) be an invertible \(3 \times 3\) matrix. The following sequence of row operations turns \(M\) into row-reduced echelon form:
+$PAR
+1. Start with \(M.\)
+$BR
+2. Multiply row 1 by \(1/$a\).
+$BR
+3. Add $b times row 1 to row 2.
+$BR
+4. Swap rows 2 and 3.
+$BR
+5. Multiply row 2 by \(1/$c\).
+$BR
+6. Add $d times row 2 to row 1.
+$BR
+7. Multiply row 3 by \(1/$e\).
+$BR
+8.Add $f times row 3 to row 2.
+$BR
+9. Add $g times row 3 to row 1.
+$PAR
+Compute \(M\) and its determinant.
+$PAR
+\(\det M=\) \{ans_rule(10)\}
+$PAR
+\{ mbox( '\(M=\)', answer_matrix(3,3,5) )\}
+END_TEXT
+
+$ans1=-$a*$c*$e;
+$ans2=$a;
+$ans3=-$a*$d;
+$ans4=$a*$d*$f-$a*$g;
+$ans5=-$b;
+$ans6=$b*$d;
+$ans7=$e-$b*$d*$f+$b*$g;
+$ans8=0;
+$ans9=$c;
+$ans10=-$c*$f;
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6), num_cmp($ans7), num_cmp($ans8), num_cmp($ans9), num_cmp($ans10));
+
+ENDDOCUMENT();

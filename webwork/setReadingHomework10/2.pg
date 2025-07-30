@@ -1,0 +1,93 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW10')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$c=random(2,5,1);
+$d=random(2,5,1);
+$a11=non_zero_random(-20,20,1);
+$a12=non_zero_random(-20,20,1);
+$a13=$c*$a11+$d*$a12;
+$a21=non_zero_random(-20,20,1);
+$a22=non_zero_random(-20,20,1);
+$a23=$c*$a21+$d*$a22;
+$a=random(2,3,1);
+$b=random(2,3,1);
+$a31=$a*$a11+$b*$a21;
+$a32=$a*$a12+$b*$a22;
+$a33=$a*$a13+$b*$a23;
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+"Which of the following is true? Select all that apply.",
+"The matrix \(M^{-1}\) does not exist.
+$PAR",
+);
+$mc -> extra(
+"The matrix \(M^{-1}\) exists; to compute it, we would need to write the augmented matrix \((M|I)\) and row-reduce.
+$PAR",
+"The matrix \(M^{-1}\) is equal to \(N\).
+$PAR",
+"\(MN=I.\)
+$PAR",
+"\(NM=I.\)
+$PAR",
+"It is impossible to tell whether \(M\) has an inverse without writing the augmented matrix \((M|I)\) and row-reducing.
+$PAR",
+);
+$mc -> makeLast("None of the above");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Finding Inverses' before attempting this problem. 
+$BR
+$BR
+The matrix \(M\) is given by
+\[
+M=
+\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13  \cr
+$a21 & $a22 & $a23  \cr
+$a31 & $a32 & $a33  \cr
+\end{array}
+\right).
+\]
+Further, \(M\) is row-equivalent to the matrix \(N\) which is given by
+\[
+N=
+\left(
+\begin{array}{ccc}
+1 & 0 & $c  \cr
+0 & 1 & $d  \cr
+0 & 0 & 0  \cr
+\end{array}
+\right).
+\]
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc->correct_ans() ));
+
+ENDDOCUMENT();

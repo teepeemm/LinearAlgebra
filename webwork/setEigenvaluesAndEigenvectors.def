@@ -1,0 +1,23 @@
+
+openDate          = 07/05/2013 at 07:00pm PDT
+dueDate           = 01/13/2020 at 10:00pm PST
+answerDate        = 01/13/2020 at 10:00pm PST
+paperHeaderFile   = setHeader.pg
+screenHeaderFile  = local/setHeader12.pg
+problemList       = 
+setReadingHomework18/1.pg, 1, -1 
+setReadingHomework18/2.pg, 1, -1 
+setReadingHomework19/1.pg, 1, -1 
+Library/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_1.pg, 1, -1 
+local/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_2-retry.pg, 1, -1 
+setEigenvalues/problemx.pg, 1, -1 
+Library/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_4.pg, 1, -1 
+local/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_21.pg, 1, -1 
+Library/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_20.pg, 1, -1 
+Library/Rochester/setLinearAlgebra11Eigenvalues/ur_la_11_22.pg, 1, -1 
+local/Library/TCNJ/TCNJ_Eigenvalues/problem10Fixed.pg, 1, -1 
+Library/TCNJ/TCNJ_Eigenvalues/problem13.pg, 1, -1 
+Library/TCNJ/TCNJ_Eigenvalues/problem3.pg, 1, -1 
+local/Library/TCNJ/TCNJ_CharacteristicPolynomial/problem5Fixed.pg, 1, -1 
+local/Rochester/setLinearAlgebra13ComplexEigenvalues/ur_la_13_2.pg, 1, -1 
+

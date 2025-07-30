@@ -1,0 +1,69 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW4')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,4,1);
+$b=random(5,7,1);
+$c=$a*2+$b*3;
+$d=$b;
+$e=$a;
+$f=$d*2+$e*3;
+$g=3*$a;
+$h=3*$b;
+$i=3*$c;
+
+$popup1 = PopUp(["?", "No solutions", "Single point", "Line", "Plane"], "Single point");
+$popup2 = PopUp(["?", "No solutions", "Single point", "Line", "Plane"], "Line");
+$popup3 = PopUp(["?", "No solutions", "Single point", "Line", "Plane"], "No solutions");
+$popup4 = PopUp(["?", "No solutions", "Single point", "Line", "Plane"], "Plane");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Geometrically describe the set of solutions to the following system:
+\[ \left\{'\{'\} \begin{array}{r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r}
+$a x & + & $b y & = & $c \cr
+$d x & + & $e y & = & $f 
+\end{array}\right. \]
+\{$popup1->menu()\}
+$HR
+Geometrically describe the set of solutions to the following system:
+\[ \left\{'\{'\} \begin{array}{r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r}
+$a x & + & $b y & = & $c \cr
+$g x & + & $h y & = & $i 
+\end{array}\right. \]
+\{$popup2->menu()\}
+$HR
+Geometrically describe the set of solutions to the following system:
+\[ \left\{'\{'\} \begin{array}{r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r${NO_SPACE}r}
+$a x & + & $b y & = & $c \cr
+$g x & + & $h y & = & $c 
+\end{array}\right. \]
+\{$popup3->menu()\}
+$HR
+Geometrically describe the set of solutions to the following system:
+\[0 x +0 y = 0\]
+\{$popup4->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp());
+
+ENDDOCUMENT();

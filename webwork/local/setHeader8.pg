@@ -1,0 +1,78 @@
+################################################################################
+# WeBWorK Online Homework Delivery System
+# Copyright � 2000-2003 The WeBWorK Project, http://openwebwork.sf.net/
+# $CVSHeader: webwork2/courses.dist/modelCourse/templates/setHeader.pg,v 1.1.2.1 2008/06/25 11:55:31 gage Exp $
+# 
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of either: (a) the GNU General Public License as published by the
+# Free Software Foundation; either version 2, or (at your option) any later
+# version, or (b) the "Artistic License" which comes with this package.
+# 
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See either the GNU General Public License or the
+# Artistic License for more details.
+################################################################################
+
+DOCUMENT();
+
+loadMacros(
+	"PG.pl",
+	"PGbasicmacros.pl",
+	
+);
+
+TEXT($BEGIN_ONE_COLUMN);
+
+TEXT(MODES(TeX =>EV3(<<'EOT'),HTML=>"",Latex2HTML=>""));
+\noindent {\large \bf $studentName}
+\hfill
+\noindent {\large \bf $courseName }
+\par
+
+EOT
+
+BEGIN_TEXT
+
+$BBOLD WeBWorK  $setNumber  is due :  $formattedDueDate. $EBOLD
+
+$PAR
+
+Read Chapter 8 before attempting these problems.
+
+$PAR
+
+
+END_TEXT
+
+##################
+# EDIT BELOW HERE
+##################
+##################
+# EDIT ABOVE HERE
+##################
+BEGIN_TEXT
+The primary purpose of WeBWorK is to let you know that you are getting the correct answer or to alert you if you are making some kind of mistake. Usually you can attempt a problem as many times as you want before the due date. If you are having trouble figuring out your error, 
+consult the book, or ask a fellow student, one of the TAs, or your professor for help.  Don't spend a lot of time guessing -- it's not very efficient or effective.
+$PAR
+Give 4 or 5  significant digits for (floating point) numerical answers.
+For most problems you can 
+enter elementary expressions such as 
+$PAR
+\( 2\wedge3 \) instead of 8, 
+$PAR
+\( sin(3*pi/2) \)instead of -1, 
+$PAR
+\( e\wedge (ln(2)) \) instead of 2, 
+$PAR
+\( (2+tan(3))*(4-sin(5))\wedge6-7/8 \) instead of 27620.3413, etc.
+$PAR
+ Here's the 
+\{ htmlLink(qq!http://webwork.math.ucdavis.edu/wiki/doku.php?id=mathematical_notation!,"list of the functions") \}
+ which WeBWorK understands.
+$PAR
+
+$END_ONE_COLUMN
+END_TEXT
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

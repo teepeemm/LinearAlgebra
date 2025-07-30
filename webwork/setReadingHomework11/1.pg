@@ -1,0 +1,148 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW11')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Row sum");
+$popup2 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Scalar multiplication");
+$popup3 = PopUp(["?", "Row sum", "Row swap", "Scalar multiplication"], "Row swap");
+
+$a11=random(1,9,1);
+$a12=random(-9,-1,1);
+$a21=random(-9,-1,1);
+$a22=random(1,9,1);
+$p=random(2,5,1);
+$p11=$a11;
+$p12=$a12;
+$p21=$a21+$p*$a11;
+$p22=$a22+$p*$a12;
+$h=random(2,5,1);
+$h11=$h*$a11;
+$h12=$h*$a12;
+$h21=$a21;
+$h22=$a22;
+$e11=$a21;
+$e12=$a22;
+$e21=$a11;
+$e22=$a12;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Using LU Decomposition to Solve Linear Systems' before attempting this problem.
+$BR
+$BR
+Suppose that the matrix \(A\) is given by
+\(A=
+\left(
+\begin{array}{cc}
+1 & 0 \cr
+$p & 1 \cr
+\end{array}
+\right).\)
+Then multiplying on the left by \(A\) corresponds to which of the three elementary row operations? For example,
+\[
+\left(
+\begin{array}{cc}
+1 & 0 \cr
+$p & 1 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cc}
+$p11 & $p12 \cr
+$p21 & $p22 \cr
+\end{array}
+\right).\]
+Multiplying on the left by \(A\) corresponds to: \{$popup1->menu()\}
+$HR
+Suppose that the matrix \(B\) is given by
+\(B=
+\left(
+\begin{array}{cc}
+$h & 0 \cr
+0 & 1 \cr
+\end{array}
+\right).\)
+Then multiplying on the left by \(B\) corresponds to which of the three elementary row operations? For example,
+\[
+\left(
+\begin{array}{cc}
+$h & 0 \cr
+0 & 1 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cc}
+$h11 & $h12 \cr
+$h21 & $h22 \cr
+\end{array}
+\right).\]
+Multiplying on the left by \(B\) corresponds to: \{$popup2->menu()\}
+$HR
+Suppose that the matrix \(C\) is given by
+\(C=
+\left(
+\begin{array}{cc}
+0 & 1 \cr
+1 & 0 \cr
+\end{array}
+\right).\)
+Then multiplying on the left by \(C\) corresponds to which of the three elementary row operations? For example,
+\[
+\left(
+\begin{array}{cc}
+0 & 1 \cr
+1 & 0 \cr
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+$a11 & $a12 \cr
+$a21 & $a22 \cr
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cc}
+$e11 & $e12 \cr
+$e21 & $e22 \cr
+\end{array}
+\right).\]
+Multiplying on the left by \(C\) corresponds to: \{$popup3->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp());
+
+ENDDOCUMENT();

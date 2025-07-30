@@ -1,0 +1,51 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW25')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "True", "False"], "True");
+$popup2 = PopUp(["?", "True", "False"], "False");
+$popup3 = PopUp(["?", "True", "False"], "True");
+$popup4 = PopUp(["?", "True", "False"], "False");
+$popup5 = PopUp(["?", "True", "False"], "False");
+$popup6 = PopUp(["?", "True", "False"], "True");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Least Squares' before attempting this problem.
+$BR
+$BR
+Let \(M\) be an \(m \times n\) matrix and let \(V\) be a vector in \(\mathbb{R}^m.\)
+$PAR
+Decide whether each of the following statements is true or false.
+$PAR
+1. The matrix \(M^TM\) must be a square matrix. \{$popup1->menu()\}
+$PAR
+2. The equation \(MX=V\) must have a solution. That is, there must be some vector \(X\) such that \(MX=V.\) \{$popup2->menu()\}
+$PAR
+3. If \(X_0\) is some vector in \(\mathbb{R}^n\) such that \(MX_0=V,\) then \(X=X_0\) must be a least-squares solution to \(MX=V.\) \{$popup3->menu()\}
+$PAR
+4. If \(X_0\) is some vector in \(\mathbb{R}^n\) so that \(X=X_0\) is a least-squares solution to \(MX=V,\) then it must also be true that \(MX_0=V.\) \{$popup4->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp());
+
+ENDDOCUMENT();

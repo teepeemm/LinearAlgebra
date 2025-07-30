@@ -1,0 +1,219 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW21')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(-1,1,2);
+$b=random(-1,1,2);
+$c=random(-1,1,2);
+$d=random(-1,1,2);
+$e=-$b*$d*$c*2;
+$f=-$a;
+$i=random(0,2,1);
+foreach my $j (0..2) {
+  @ei[$j]=0;
+}
+@ei[$i]=1;
+@v=(2,3,6); #denominators
+@v1=($a,$b,$c);
+@v2=($f,$b,$c);
+@v3=(0,$d,$e);
+$k=$i+1;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Orthonormal Bases and Complements' before attempting this problem.
+$BR
+$BR
+The set
+\(\displaystyle{S=\left$LBRACE
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+\frac{$f}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right), \qquad
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right)
+\right$RBRACE}\)
+is an orthonormal basis of \(\mathbb{R}^3.\)
+$HR
+What are the dot products of the vectors in \(S\) with each other?
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+\frac{$f}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+\frac{-$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$HR
+What are the dot products of the vectors in \(S\) with themselves?
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+\frac{-$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+\frac{-$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right) =}\) \{ans_rule(10)\}
+$HR
+Express the standard basis vector \(e_{$k}\) in terms of the basis \(S\):
+$PAR
+\(\displaystyle{
+\left(
+\begin{array}{c}
+$ei[0] \cr
+$ei[1] \cr
+$ei[2] \cr
+\end{array}
+\right)=
+}\)\{ans_rule(10)\}\(
+\left(
+\begin{array}{c}
+\frac{$a}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \quad +
+\)\{ans_rule(10)\}\(
+\left(
+\begin{array}{c}
+\frac{$f}{\sqrt{2}} \cr
+\frac{$b}{\sqrt{3}} \cr
+\frac{$c}{\sqrt{6}} \cr
+\end{array}
+\right) \quad +
+\)\{ans_rule(10)\}\(
+\left(
+\begin{array}{c}
+0 \cr
+\frac{$d}{\sqrt{3}} \cr
+\frac{$e}{\sqrt{6}} \cr
+\end{array}
+\right).
+\)
+END_TEXT
+
+$ans1=0;
+$ans2=0;
+$ans3=0;
+$ans4=1;
+$ans5=1;
+$ans6=1;
+$ans7="$v1[$i]/sqrt($v[$i])";
+$ans8="$v2[$i]/sqrt($v[$i])";
+$ans9="$v3[$i]/sqrt($v[$i])";
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4), num_cmp($ans5), num_cmp($ans6), num_cmp($ans7), num_cmp($ans8), num_cmp($ans9));
+
+ENDDOCUMENT();

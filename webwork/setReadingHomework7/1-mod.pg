@@ -1,0 +1,41 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW7')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "Possibly", "Definitely not"], "Definitely not");
+$a=random(2,4,1);
+$b=random(5,7,1);
+$c=random(-4,-2,1);
+$d=random(-7,-5,1);
+$e=$a*$c+$b*$d+100;
+
+BEGIN_TEXT
+Suppose that \(V\) is a vector space and that \(u\) and \(v\) are two vectors in \(V.\) The function \(L \colon V \to \mathbb{R}\) is such that \(L(u)=$c\) and \(L(v)=$d.\) Moreover, \(L($a u+$b v)=$e.\)
+$BR
+Is \(L\) a linear transformation?
+\{$popup1->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp());
+
+ENDDOCUMENT();

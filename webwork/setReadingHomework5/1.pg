@@ -1,0 +1,120 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW5')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,4,1);
+$b=random(5,7,1);
+
+$popup1 = PopUp(["?", "Yes", "No"], "No");
+$popup2 = PopUp(["?", "Yes", "No"], "Yes");
+$popup3 = PopUp(["?", "Yes", "No"], "Yes");
+$popup4 = PopUp(["?", "Yes", "No"], "No");
+$popup5 = PopUp(["?", "Yes", "No"], "Yes");
+$popup6 = PopUp(["?", "Yes", "No"], "No");
+$popup7 = PopUp(["?", "Yes", "No"], "No");
+$popup8 = PopUp(["?", "Yes", "No"], "No");
+
+
+BEGIN_TEXT
+Suppose that for any two vectors \(u\) and \(v\) in \(\mathbb{R}^2,\) we define \[\langle u,v \rangle = $a u^1 v^2-$b v^1 u^2.\]
+Is this symmetric? \{$popup1->menu()\}
+$BR
+Is this bilinear? \{$popup2->menu()\}
+$BR
+Is this distributive? \{$popup3->menu()\}
+$BR
+Is this an inner product? \{$popup4->menu()\}
+$HR
+Suppose that for any two vectors \(u\) and \(v\) in \(\mathbb{R}^2,\) we define \[\langle u,v \rangle = u^1 u^2+v^1 v^2.\]
+Is this symmetric? \{$popup5->menu()\}
+$BR
+Is this bilinear? \{$popup6->menu()\}
+$BR
+Is this distributive? \{$popup7->menu()\}
+$BR
+Is this an inner product? \{$popup8->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp(), $popup5->cmp(), $popup6->cmp(), $popup7->cmp(), $popup8->cmp());
+
+BEGIN_SOLUTION
+$PAR SOLUTION $PAR
+For the first part, notice that \[\langle u,v \rangle = $a u^1 v^2-$b v^1 u^2\] is NOT symmetric:
+\[\langle v,u \rangle = $a v^1 u^2-$b u^1 v^2\]
+is NOT the same as \(\langle u,v \rangle.\)
+$BR
+However, this formula is distributive:
+\[
+\langle u,v+w \rangle = $a u^1(v+w)^2-$b (v+w)^1u^2 = $a u^1(v^2+w^2)-$b (v^1+w^1)u^2
+\]
+\[
+=$a u^1v^2+$a u^1w^2-$b v^1u^2-$b w^1u^2 = \left($a u^1v^2-$b v^1u^2\right)+\left($a u^1w^2-$b w^1u^2\right)
+\]
+\[
+=\langle u,v \rangle + \langle u,w \rangle.\]
+It is also bilinear: if c and d are scalars, then
+\[\langle u,cv+dw \rangle =$a u^1(cv+dw)^2-$b (cv+dw)^1u^2 =$a u^1(cv^2+dw^2)-$b (cv^1+dw^1)u^2\]
+\[
+=$a cu^1v^2+$a du^1w^2-$b cv^1u^2-$b dw^1u^2
+=c \left($a u^1v^2-$b v^1u^2\right)+d \left($a u^1w^2-$b w^1u^2\right)
+\]
+\[
+=c \langle u,v \rangle + d\langle u,w \rangle,\]
+and
+\[\langle cu+dw,v \rangle =$a (cu+dw)^1v^2-$b v^1(cu+dw)^2 =$a (cu^1+dw^1)v^2-$b v^1(cu^2+dw^2)
+\]
+\[
+=$a cu^1v^2+$a dw^1v^2-$b cv^1u^2-$b dv^1w^2
+=c \left($a u^1v^2-$b v^1u^2\right)+d \left($a w^1v^2-$b v^1w^2\right)
+\]
+\[
+=c \langle u,v \rangle + d\langle w,v \rangle.\]
+Since the formula is not symmetric, it does not define an inner product.
+$HR
+For the second part, notice that \[\langle u,v \rangle = u^1 u^2+v^1 v^2\] is symmetric:
+\[\langle v,u \rangle = v^1 v^2+ u^1 u^2\]
+is the same as \(\langle u,v \rangle.\)
+$BR
+However, this formula is NOT distributive:
+\[\langle u,v+w \rangle =u^1u^2+(v+w)^1(v+w)^2\]
+\[=u^1u^2+(v^1+w^1)(v^2+w^2)
+=u^1u^2+v^1v^2+w^1w^2+v^1w^2+w^1v^2\]
+is NOT the same as
+\[\langle u,v \rangle + \langle u,w \rangle
+=u^1u^2+v^1v^2+u^1u^2+w^1w^2.\]
+It is also NOT bilinear: if c and d are scalars, then
+\[\langle u,cv+dw \rangle
+=u^1u^2+(cv+dw)^1(cv+dw)^2
+\]
+\[=u^1u^2+(cv^1+dw^1)(cv^2+dw^2)
+=u^1u^2+c^2v^1v^2+d^2w^1w^2+cdv^1w^2+cdw^1v^2\]
+is NOT the same as 
+\[c \langle u,v \rangle + d \langle u,w \rangle
+=cu^1u^2+cv^1v^2+du^1u^2+dw^1w^2.\]
+(Be careful! The notation \(u^i, v^i, w^i\) here refers to the ith components of the vectors u, v, w, while \(c^i, d^i\) means the ith power of the scalars c, d.)
+$BR
+Since the formula is neither bilinear nor distributive, it cannot define an inner product.
+END_SOLUTION
+
+
+
+ENDDOCUMENT();

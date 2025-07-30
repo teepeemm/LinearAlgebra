@@ -1,0 +1,66 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW2')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGmatrixmacros.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$x=random(1,3,1);
+$y=random(4,6,1);
+$z=random(7,9,1);
+$a=random(2,10,1);
+$b=random(2,10,1);
+$c=random(2,10,1);
+$e=random(2,10,1);
+$f=random(2,10,1);
+$g=random(2,10,1);
+$i=random(2,10,1);
+$j=random(2,10,1);
+$k=random(2,10,1);
+$d=$a*$x-$b*$y+$c*$z;
+$h=-$e*$x-$f*$y+$g*$z;
+$l=$i*$x+$j*$y-$k*$z;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Systems of Linear Equations -- Reduced Row Echelon Form' before attempting this problem. 
+$BR
+$BR
+The system of equations
+\[$a x-$b y+$c z=$d\]
+\[-$e x-$f y+$g z=$h\]
+\[$i x+$j y-$k z=$l\]
+has the following augmented matrix: \{display_matrix( [ [$a, -$b, $c, $d], [-$e, -$f, $g, $h], [$i, $j, -$k, $l] ], align=>'cccvc')\}
+The reduced row echelon form of this matrix is:
+\{ display_matrix( [ [1, 0, 0, $x], [0, 1, 0, $y], [0, 0, 1, $z] ], align=>'cccvc') \}
+What is the solution to the original system of equations?
+$BR
+\(x=\) \{ans_rule(5)\}
+$BR
+\(y=\) \{ans_rule(5)\}
+$BR
+\(z=\) \{ans_rule(5)\}
+END_TEXT
+
+$ans1="$x";
+$ans2="$y";
+$ans3="$z";
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3));
+
+ENDDOCUMENT();

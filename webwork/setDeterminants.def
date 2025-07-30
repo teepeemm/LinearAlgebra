@@ -1,0 +1,27 @@
+
+openDate          = 06/20/2013 at 12:00pm PDT
+dueDate           = 01/09/2020 at 10:00pm PST
+answerDate        = 01/09/2020 at 10:00pm PST
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = local/setHeaderDeterminants.pg
+problemList       = 
+setReadingHomework12/1.pg, 1, -1 
+setReadingHomework12/2.pg, 1, -1 
+setReadingHomework13/1.pg, 1, -1 
+setReadingHomework13/2.pg, 1, -1 
+setReadingHomework14/1.pg, 1, -1 
+setReadingHomework14/2.pg, 1, -1 
+Library/maCalcDB/setLinearAlgebra6Determinants/ur_la_6_3.pg, 1, -1 
+Library/Rochester/setAlgebra34Matrices/det_inv_3x3.pg, 1, -1 
+Library/Rochester/setAlgebra34Matrices/det_inv_3x3a.pg, 1, -1 
+Library/Rochester/setAlgebra34Matrices/determinant_3x3a.pg, 1, -1 
+Library/Rochester/setLinearAlgebra6Determinants/ur_la_6_8.pg, 1, -1 
+Library/Rochester/setAlgebra34Matrices/determinant_3x3.pg, 1, -1 
+local/setDeterminants/problem_20.pg, 1, -1 
+Library/TCNJ/TCNJ_Determinants/problem7.pg, 1, -1 
+Library/Rochester/setLinearAlgebra6Determinants/ur_la_6_11.pg, 1, -1 
+Library/TCNJ/TCNJ_Determinants/problem8.pg, 1, -1 
+Library/TCNJ/TCNJ_Determinants/problem9.pg, 1, -1 
+Library/maCalcDB/setLinearAlgebra6Determinants/ur_la_6_4.pg, 1, -1 
+Library/Rochester/setLinearAlgebra6Determinants/ur_la_6_7.pg, 1, -1 
+

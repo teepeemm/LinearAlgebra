@@ -1,0 +1,61 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW5')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=non_zero_random(-9,9,1);
+do {$b=non_zero_random(-9,9,1);} until ($b != $a);
+do {$c=non_zero_random(-9,9,1);} until (($c != $a) and ($c != $b));
+$d=random(-9,-2,1);
+$e=random(-9,-2,1);
+$f=random(2,9,1);
+$g=random(2,9,1);
+
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Vectors in Space -- Directions and Magnitudes' before attempting this problem.
+$BR
+$BR
+
+Let \(a,b,c,d,e\) and \(f\) be vectors such that
+$BR 
+$BR
+\(\langle a,b \rangle=$c, \quad \langle a,c \rangle=$b, \quad \langle b,c \rangle=$a, \quad b+c=d, \quad $d a+$f b=e\) and \($e b+$g c=f.\) 
+$BR
+$BR
+Compute the following inner products:
+$PAR
+\(\langle b,a \rangle=\) \{ans_rule(20)\}
+$BR
+\(\langle a,d \rangle=\) \{ans_rule(20)\}
+$BR
+\(\langle e,c \rangle=\) \{ans_rule(20)\}
+$BR
+\(\langle a,f \rangle=\) \{ans_rule(20)\}
+END_TEXT
+
+$ans1="$c";
+$ans2="$c+$b";
+$ans3="$d*$b+$f*$a";
+$ans4="$e*$c+$g*$b";
+
+ANS(num_cmp($ans1), num_cmp($ans2), num_cmp($ans3), num_cmp($ans4));
+
+ENDDOCUMENT();

@@ -1,0 +1,60 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW8')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=list_random(2,3,4,5,6,7,9,10);
+do {$b = list_random(2,3,4,5,6,7,9,10);} until ($b != $a);
+do {$c = list_random(2,3,4,5,6,7,9,10);} until (($c != $a) and ($c != $b));
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- Properties of Matrices' before attempting this problem.
+$BR
+$BR
+Suppose that \(A\) is a \($a \times $b\) matrix and that \(B\) is a \($b \times $c\) matrix. What are the dimensions of the product \(AB\) ?
+$BR
+\(AB\) is a \{ans_rule(5)\} \(\times\) \{ans_rule(5)\} matrix. (Enter "DNE" in both spaces if the product does not exist, that is, if \(A\) and \(B\) cannot be multiplied together.)
+$HR
+Suppose that \(A\) is a \($b \times $a\) matrix and that \(B\) is a \($b \times $c\) matrix. What are the dimensions of the product \(AB\) ?
+$BR
+\(AB\) is a \{ans_rule(5)\} \(\times\) \{ans_rule(5)\} matrix. (Enter "DNE" in both spaces if the product does not exist, that is, if \(A\) and \(B\) cannot be multiplied together.)
+$HR
+Suppose that \(A\) is a \($a \times $b\) matrix and that \(B\) is a \($c \times $b\) matrix. What are the dimensions of the product \(AB\) ?
+$BR
+\(AB\) is a \{ans_rule(5)\} \(\times\) \{ans_rule(5)\} matrix. (Enter "DNE" in both spaces if the product does not exist, that is, if \(A\) and \(B\) cannot be multiplied together.)
+$HR
+Suppose that \(A\) is a \($b \times $a\) matrix and that \(B\) is a \($c \times $b\) matrix. What are the dimensions of the product \(AB\) ?
+$BR
+\(AB\) is a \{ans_rule(5)\} \(\times\) \{ans_rule(5)\} matrix. (Enter "DNE" in both spaces if the product does not exist, that is, if \(A\) and \(B\) cannot be multiplied together.)
+END_TEXT
+
+$ans1=$a;
+$ans2=$c;
+$ans3="DNE";
+$ans4="DNE";
+$ans5="DNE";
+$ans6="DNE";
+$ans7="DNE";
+$ans8="DNE";
+
+ANS(num_cmp($ans1, strings=>["DNE"]), num_cmp($ans2, strings=>["DNE"]), num_cmp($ans3, strings=>["DNE"]), num_cmp($ans4, strings=>["DNE"]), num_cmp($ans5, strings=>["DNE"]), num_cmp($ans6, strings=>["DNE"]), num_cmp($ans7, strings=>["DNE"]), num_cmp($ans8, strings=>["DNE"]));
+
+ENDDOCUMENT();

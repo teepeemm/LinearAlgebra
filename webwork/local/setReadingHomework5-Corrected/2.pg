@@ -1,0 +1,127 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW5')
+## Problem('2')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$a=random(2,6,2);
+$b=random(3,7,2);
+$c=$a*$b;
+$d=-$a*$b;
+$e=0;
+$f=$a*$b/2;
+$g=-$a*$b/2;
+$h=$a*$b*2;
+$i=-$a*$b*2;
+$j=$a*$b+3;
+$k=-$a*$b-5;
+$l=$a*$b-5;
+$m=-$a*$b+3;
+$n=$a+$b;
+$o=1;
+$p=-$o;
+$q=2*$a+$b;
+$r=2*$b+$a;
+$s=-$n;
+
+$mc1 = new_checkbox_multiple_choice();
+$mc1 -> qa (
+"Which of the following could be the value of \(u \cdot v\) ? Select all that apply.", 
+"\($a\)$BR",
+"\($b\)$BR",
+"\($c\)$BR",
+"\($d\)$BR",
+"\($e\)$BR",
+"\($f\)$BR",
+"\($g\)$BR",
+"\($l\)$BR",
+"\($m\)$BR",
+);
+$mc1 -> extra(
+"\($h\)$BR",
+"\($i\)$BR",
+"\($j\)$BR",
+"\($k\)$BR",
+);
+
+$mc2 = new_checkbox_multiple_choice();
+$mc2 -> qa (
+"Which of the following could be the value of \(\|u+v\|\) ? Select all that apply.", 
+"\($a\)$BR",
+"\($b\)$BR",
+"\($n\)$BR",
+"\($o\)$BR",
+);
+$mc2 -> extra(
+"\($p\)$BR",
+"\($q\)$BR",
+"\($r\)$BR",
+"\($s\)$BR",
+);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Vectors in Space -- Directions and Magnitudes' before attempting this problem. 
+$BR
+$BR
+Suppose that \(u\) and \(v\) are vectors and that \(\|u\|=$a\) and \(\|v\|=$b.\)
+$HR
+\{ $mc1 -> print_q() \}
+$BR
+\{ $mc1 -> print_a() \}
+$HR
+\{ $mc2 -> print_q() \}
+$BR
+\{ $mc2 -> print_a() \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp( $mc1->correct_ans() ), checkbox_cmp( $mc2->correct_ans() ));
+
+BEGIN_SOLUTION
+$PAR SOLUTION $PAR
+For the first part, recall that the Cauchy-Schwarz inequality tells us that 
+\[
+\frac{|\langle u,v \rangle|}{\|u\|\|v\|} \leq 1.
+\]
+Therefore, 
+\[
+|\langle u,v \rangle | \leq \|u\|\|v\|=$c,
+\]
+so
+\[
+-$c \leq \langle u,v \rangle \leq $c.
+\]
+So any number in the interval \([-$c,$c]\) could be the value of \(\langle u,v \rangle.\)
+
+$HR
+
+For the second part, recall that the triangle inequality tells us that
+\[
+\|u+v\| \leq \|u\|+\|v\|.
+\]
+Moreover, since
+\[\|v\|=\sqrt{\langle v,v \rangle},\]
+we have in particular that \(\|v\|\) cannot be negative.
+$BR
+So any number in the interval \([0,$n]\) could be the value of \(\|u+v\|.\)
+END_SOLUTION
+
+
+ENDDOCUMENT();

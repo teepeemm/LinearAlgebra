@@ -1,0 +1,95 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW13')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$a=random(2,6,2);
+$b=random(3,7,2);
+$c=random(2,7,1);
+$a11=1*$a;
+$a12=2*$a;
+$a13=3*$a;
+$a21=4*$b;
+$a22=5*$b;
+$a23=6*$b;
+$a31=7*$c;
+$a32=8*$c;
+$a33=10*$c;
+$d=$a11*($a22*$a33-$a23*$a32)-$a12*($a21*$a33-$a31*$a23)+$a13*($a21*$a32-$a22*$a31);
+$b11=2*$a11;
+$b12=2*$a12;
+$b13=2*$a13;
+$c21=$a11+$a21;
+$c22=$a12+$a22;
+$c23=$a13+$a23;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Determinants -- Elementary Matrices' before attempting this problem.
+$BR
+$BR
+The determinant of
+\(
+A=
+\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right)
+\)
+is equal to \($d.\)
+$PAR
+Using this fact, compute the determinants of the matrices
+\(
+B=
+\left(
+\begin{array}{ccc}
+$b11 & $b12 & $b13 \cr
+$a21 & $a22 & $a23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right)
+\)
+and
+\(
+C=
+\left(
+\begin{array}{ccc}
+$a11 & $a12 & $a13 \cr
+$c21 & $c22 & $c23 \cr
+$a31 & $a32 & $a33 \cr
+\end{array}
+\right).
+\)
+$PAR
+\(\det B=\) \{ans_rule(5)\} Hint: compare the first row of \(B\) to the first row of \(A\).
+$BR
+\(\det C=\) \{ans_rule(5)\} Hint: compare the second row of \(C\) to the first two rows of \(A\).
+
+END_TEXT
+
+$ans1=2*$d;
+$ans2=$d;
+
+ANS(num_cmp($ans1), num_cmp($ans2));
+
+ENDDOCUMENT();

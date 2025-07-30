@@ -1,0 +1,68 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW20')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "PGmatrixmacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 1;
+
+$m11=non_zero_random(-50,50,1);
+$m12=non_zero_random(-50,50,1);
+$m13=non_zero_random(-50,50,1);
+$m21=non_zero_random(-50,50,1);
+$m22=non_zero_random(-50,50,1);
+$m23=non_zero_random(-50,50,1);
+$m31=non_zero_random(-50,50,1);
+$m32=non_zero_random(-50,50,1);
+$m33=non_zero_random(-50,50,1);
+$m41=non_zero_random(-50,50,1);
+$m42=non_zero_random(-50,50,1);
+$m43=non_zero_random(-50,50,1);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Matrices -- From Linear Operators to Matrices' before attempting this problem.
+$BR
+$BR
+Let \($LBRACE e_1, e_2, e_3 $RBRACE\) be a basis for \(\mathbb{R}^3\) and let \($LBRACE f_1, f_2, f_3, f_4 $RBRACE\) be a basis for \(\mathbb{R}^4.\) Let \(L \colon \mathbb{R}^3 \to \mathbb{R}^4\) be a linear transformation which acts in the following way on basis elements:
+$BR
+\(L(e_1)=$m11 f_1+$m21 f_2+$m31 f_3+$m41 f_4, \) $BR
+\(L(e_2)=$m12 f_1+$m22 f_2+$m32 f_3+$m42 f_4, \) $BR
+\(L(e_3)=$m13 f_1+$m23 f_2+$m33 f_3+$m43 f_4. \)
+$PAR
+Given our choice of bases, write a matrix \(M\) for the linear transformation \(L\).
+$BR
+\{ mbox( '\(M=\)', answer_matrix(4,3,5) ) \} 
+
+END_TEXT
+
+$ans11=$m11;
+$ans12=$m12;
+$ans13=$m13;
+$ans21=$m21;
+$ans22=$m22;
+$ans23=$m23;
+$ans31=$m31;
+$ans32=$m32;
+$ans33=$m33;
+$ans41=$m41;
+$ans42=$m42;
+$ans43=$m43;
+
+ANS(num_cmp($ans11), num_cmp($ans12), num_cmp($ans13), num_cmp($ans21), num_cmp($ans22), num_cmp($ans23), num_cmp($ans31), num_cmp($ans32), num_cmp($ans33), num_cmp($ans41), num_cmp($ans42), num_cmp($ans43));
+
+ENDDOCUMENT();

@@ -1,0 +1,47 @@
+## Date('August 2010')
+## Author('RPT')
+## Institution('UC Davis')
+## Course('Math 22A')
+## Section('ReadingHW23')
+## Problem('1')
+
+DOCUMENT();
+
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGcourse.pl",
+           "PGanswermacros.pl",
+           "parserPopUp.pl",
+           "extraAnswerEvaluators.pl",
+           "PGauxiliaryFunctions.pl");
+
+
+$showPartialCorrectAnswers = 0;
+
+$popup1 = PopUp(["?", "Injective", "Surjective", "Bijective", "Neither"], "Bijective");
+$popup2 = PopUp(["?", "Injective", "Surjective", "Bijective", "Neither"], "Surjective");
+$popup3 = PopUp(["?", "Injective", "Surjective", "Bijective", "Neither"], "Neither");
+$popup4 = PopUp(["?", "Injective", "Surjective", "Bijective", "Neither"], "Injective");
+
+TEXT(beginproblem());
+BEGIN_TEXT
+Read 'Kernel, Range, Rank, Nullity' before attempting this problem.
+￼$BR
+￼$BR
+Decide whether each of the following linear transformations is injective but not surjective, surjective but not injective, bijective, or neither injective nor surjective. Remember that "injective" means one-to-one, "surjective" means onto, and "bijective" means both one-to-one and onto.
+$PAR
+1. \(L \colon \mathbb{R}^3 \to \mathbb{R}^3\) given by \(L(x,y,z)=(x,y,z)\) \{$popup1->menu()\}
+$PAR
+2. \(L \colon \mathbb{R}^3 \to \mathbb{R}^2\) given by \(L(x,y,z)=(x,y)\) \{$popup2->menu()\}
+$PAR
+3. \(L \colon \mathbb{R}^3 \to \mathbb{R}^3\) given by \(L(x,y,z)=(0,0,0)\) \{$popup3->menu()\}
+$PAR
+4. \(L \colon \mathbb{R}^2 \to \mathbb{R}^3\) given by \(L(x,y)=(x,y,0)\) \{$popup4->menu()\}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($popup1->cmp(), $popup2->cmp(), $popup3->cmp(), $popup4->cmp());
+
+ENDDOCUMENT();
