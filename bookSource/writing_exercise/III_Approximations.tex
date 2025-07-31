@@ -137,7 +137,7 @@ Option for approximating a matrix instead? \\
 \section*{Example}
 To measure the strength of the gravitational field at the surface of mars, a mars rover picks up a rock, throws it, and video records the rock flying through the air. A team of volunteers watches the video and estimates the height of the rock in each frame of the video. 
 %The frames are numbered $1,2,3,...$ and there values are refered to as t values
-$$
+\[
 \begin{array}{|l|c|c|c|c|c|}
 \hline
 {\rm Frame~ number}& 1&2&3&4&5\\%[.5mm]
@@ -145,14 +145,14 @@ $$
 {\rm Estimated~height}& 2&4&5&3&1\\
 \hline
 \end{array}
-$$
+\]
 Estimate the acceleration due to gravity at the surface of mars based on this data.
 Describe ways that more data can be obtained to yield a better estimation.\\
 
 
 \noindent {\bf Response:}\\
 If the acceleration of the rock due to gravity is constant $a$ then the function $h:[0,5]\to \R$ that gives the height of the rock (in the units were used to describe the height of the rock) as a function of time (in units of time equal to the time between video frames) satisfies 
-$$ \frac{d^2}{dt^2} h(t)=a \implies h(t)=\frac12 a t^2+bt+c {\rm ~for~some ~}b,c\in \R.$$
+\[ \frac{d^2}{dt^2} h(t)=a \implies h(t)=\frac12 a t^2+bt+c {\rm ~for~some ~}b,c\in \R.\]
 If $h$ is to fit the data exactly then $(a,b,c)$ should be a solution to the system of equations 
 \bea \nn
 \begin{array}{cc}
@@ -177,7 +177,7 @@ If $h$ is to fit the data exactly then $(a,b,c)$ should be a solution to the sys
 \end{array}.
 \eea
 This system has no solution, as shown by row reduction of the associated augmented matrix; 
-$$
+\[
 \left( \begin{array}{rrr|c}
 \frac12 &1&1&2\\
 2&2&1&4\\
@@ -202,8 +202,8 @@ $$
 0&0&-5&-5\\
 0&0&6&-9
 \end{array} \right)
-$$
-$$
+\]
+\[
 \sim 
 \left( \begin{array}{rrr|r}
 1 &0&0&-1\\
@@ -220,12 +220,12 @@ $$
 0&0&0&1\\
 0&0&0&0
 \end{array} \right).
-$$
+\]
 The system encoded by the augmented matrix $(M|V)$ does not have a solution if $V$ can not be expressed as a linear combination of the columns of $M$ since this means that $V$ is not in the range of $M$. 
 Out of all the systems of equations $(M|U)$ that do have solutions the system with $U$ closest to $V$ is the system $(M|V_r)$ where $V_r$ is the projection of 
 $V$ onto ${\rm ran~} M$. The matrix that projects a vector onto ${\rm ran~} M$ is 
 $M(M^TM)^-1 M $
-$$= 
+\[= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -252,8 +252,8 @@ $$=
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-$$
-$$= 
+\]
+\[= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -271,8 +271,8 @@ $$=
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-$$
-$$= 
+\]
+\[= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -290,8 +290,8 @@ $$=
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-$$
-$$= 
+\]
+\[= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &\frac12&0\\
@@ -304,8 +304,8 @@ $$=
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-$$
-$$= 
+\]
+\[= 
 \left( \begin{array}{rrrrr}
 1 &0&0&0&0\\
 0      &1&0&0&0\\
@@ -313,9 +313,9 @@ $$=
 0&0&0&0&0\\
 0&0&0&0&0
 \end{array} \right).
-$$
+\]
 Applying this matrix to $V$ gives 
-$$
+\[
 V_r:=\left( \begin{array}{rrrrr}
 1 &0&0&0&0\\
 0      &1&0&0&0\\
@@ -326,11 +326,11 @@ V_r:=\left( \begin{array}{rrrrr}
 \bv -1\\7\\-1\\1\\0 \ev 
 =
 \bv -1\\7\\-1\\0\\0 \ev.
-$$
+\]
 
 The equation $Mx=V_r$ then has augmented matrix 
 
-$$
+\[
 \left( \begin{array}{rrr|r}
 1 &0&0&-1\\
 0      &2&0&7\\
@@ -338,12 +338,12 @@ $$
 0&0&0&0\\
 0&0&0&0
 \end{array} \right)
-$$
+\]
 and unique solution 
-$$\bv -1\\ \frac72 \\-1 \ev. $$
+\[\bv -1\\ \frac72 \\-1 \ev. \]
 The quadratic function that best approximates the data set is then 
-$$ h:[0,5] \to \R$$
-$$h(t)=\frac12 (-1) t^2 +\frac72 t +(-1).$$
+\[ h:[0,5] \to \R\]
+\[h(t)=\frac12 (-1) t^2 +\frac72 t +(-1).\]
 
 In particular, the data indicate that acceleration at the surface of mars $a$ is approximately $-1$ (in whatever units were used to described the height in the data set per the the time between video frames squared.) Mode data would yield a better approximation for this value. That data may come in the form of more video frames per second, data for another rock throw, throwing a rock harder so that its hang time is longer, or setting up a different experiment such as spherical balls rolling down inclined planes as Galileo used to measure earth's gravity. 
 

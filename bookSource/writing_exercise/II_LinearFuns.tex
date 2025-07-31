@@ -155,17 +155,17 @@ If you buy too many or too few you will be fired.
 \item[]
 \begin{enumerate}
 \item $L$ is a linear function if it is a function whose domain and codomain  are vector spaces and its rule of correspondence  is additive and homogeneous. So, if the tools of linear algebra are to be applied to this situation, the domain of $L$  should be 
-$$ \{ af+bg~\vert a,b \in \R \} $$ 
+\[ \{ af+bg~\vert a,b \in \R \} \] 
 even though many elements of this set are not realistic; for example half or $1/\pi$ of a supply package has no physical interpretation. \\
 
 Similarly, while the most natural description of the codomain of $L$ is 
-$$   \{  mLf+ nLg ~\vert~m,n\in \N \}, $$
+\[   \{  mLf+ nLg ~\vert~m,n\in \N \}, \]
 the unrealistic 
-$$   \{  aLf+ bLg ~\vert~a,b\in \R \} $$
+\[   \{  aLf+ bLg ~\vert~a,b\in \R \} \]
 should be used. \\
 
 If $L$ is to be considered homogeneous then equations such as
-$$L(mf)= mLf $$
+\[L(mf)= mLf \]
 should hold; 
 the production results from utilizing 
 $m$ packages of type $f$ 
@@ -174,7 +174,7 @@ This excludes the possibilities such as having enough leftover  wood after using
 \\
 
 If $L$ is to be considered additive then  
-$$L(f+g) =Lf+Lg$$
+\[L(f+g) =Lf+Lg\]
 should hold; 
 this excludes possibilities such as mixing the contents of a $f$ package and a $g$ package into the right combination of materials to make 4 doors and 4 frames even though without mixing the contents 4 doors and 3 frames can be made. Such possibilities are often realistic, so treating $L$ as additive should be considered an approximation. \\
 %and
@@ -185,97 +185,97 @@ Doing so would be an instance of the fallacy of misplaced concreteness.
 
 \item 
 The packages of supplies are elements of the vector space 
-$$ V:=\{  F: \{ {\rm slabs, fasters,brackets }\} \to \R \}.$$
+\[ V:=\{  F: \{ {\rm slabs, fasters,brackets }\} \to \R \}.\]
 In particular, 
-$$ f: \{ {\rm slabs, fasters,brackets }\} \to \R $$
-$$  f({\rm slabs})=3~,~~f({\rm fasters})=4, f({\rm brackets})= 6$$
+\[ f: \{ {\rm slabs, fasters,brackets }\} \to \R \]
+\[  f({\rm slabs})=3~,~~f({\rm fasters})=4, f({\rm brackets})= 6\]
 and
-$$ g: \{ {\rm slabs, fasters,brackets} \} \to \R $$
-$$  g({\rm slabs})=7,g({\rm fasters})=5, g({\rm brackets})= 3. $$
+\[ g: \{ {\rm slabs, fasters,brackets} \} \to \R \]
+\[  g({\rm slabs})=7,g({\rm fasters})=5, g({\rm brackets})= 3. \]
 The post manufacturing packages are  in the vector space 
-$$W :=\{ F: \{{\rm doors, frames} \}\to \R\} .$$
+\[W :=\{ F: \{{\rm doors, frames} \}\to \R\} .\]
 In particular
-$$Lf:  \{{\rm doors, frames }\} \to \R $$
-$$Lf({\rm doors})=1,Lf({\rm frames})=2 $$
+\[Lf:  \{{\rm doors, frames }\} \to \R \]
+\[Lf({\rm doors})=1,Lf({\rm frames})=2 \]
 and
-$$Lg:  \{{\rm doors, frames} \} \to \R $$
-$$Lg({\rm doors})=3,Lf({\rm frames})=1.$$
+\[Lg:  \{{\rm doors, frames} \} \to \R \]
+\[Lg({\rm doors})=3,Lf({\rm frames})=1.\]
 
 A choice of bases for $V$ and $W$ will induce column vector notation for vectors in $V$ and $W$ and  matrix notation for linear functions $V\to W$. 
 Let 
-$$B:=( e_s,e_f,e_b)$$ 
+\[B:=( e_s,e_f,e_b)\] 
 be a basis for $V$ defined by 
-$$
+\[
 e_s(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm slabs}\\ 0 {\rm ~else~} \end{array} \right.\, , ~
-e_f(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm fasteners}\\ 0 {\rm{~else~}} \end{array} \right.\, , $$
-$$
+e_f(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm fasteners}\\ 0 {\rm{~else~}} \end{array} \right.\, , \]
+\[
 e_b(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm brackets} \\ 0 {\rm ~else~} \end{array} \right.
-$$
+\]
 and let 
-$$B'= ( e_d,e_F)$$
+\[B'= ( e_d,e_F)\]
 be a basis for $W$ defined by
-$$
+\[
 e_d(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm doors}\\ 0 {\rm ~else~} \end{array}\right.
 e_F(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm frames}\\ 0 {\rm ~else~} \end{array} \right. \, .
-$$
+\]
 With this notation 
-$$f= \bv 3\\4\\6 \ev_B ,~g= \bv 7\\5\\3 \ev_B$$
+\[f= \bv 3\\4\\6 \ev_B ,~g= \bv 7\\5\\3 \ev_B\]
 and
-$$ Lf=\bv 1\\2\ev _{B'} , ~Lg=\bv3\\1 \ev _{B'}$$
+\[ Lf=\bv 1\\2\ev _{B'} , ~Lg=\bv3\\1 \ev _{B'}\]
 
 \item 
 Putting these together the rule of correspondence of $L$ is partially specified by
-$$ L\bv 3\\4\\6 \ev_B=\bv 1\\2\ev _{B'} , ~L\bv 7\\5\\3 \ev_B=\bv3\\1 \ev _{B'}.$$
+\[ L\bv 3\\4\\6 \ev_B=\bv 1\\2\ev _{B'} , ~L\bv 7\\5\\3 \ev_B=\bv3\\1 \ev _{B'}.\]
 This is insufficient information to define $L$ as a function with V as its domain; $V$ is a three dimensional vector space but we do not know the outputs of $L$ for three linearly independent vectors from $V$, 
 and so $Lx$ is undefined for $x\notin \span\{ f,g\}$. 
 
 This  problem is remedied by defining 
-$$L: \span \{ f,g \} \to  \span\{Lf,Lg\} .$$ 
+\[L: \span \{ f,g \} \to  \span\{Lf,Lg\} .\] 
 Using the basis 
-$$ Q:=(f,g)$$ 
+\[ Q:=(f,g)\] 
 for  the domain of $L$ simplifies the equations specifying the rule of correspondence for $L$ to 
-$$L \bv 1\\0 \ev_Q = \bv 1\\2 \ev_{B'}, L\bv 0\\1 \ev_Q = \bv 3\\1 \ev_{B'}.$$
+\[L \bv 1\\0 \ev_Q = \bv 1\\2 \ev_{B'}, L\bv 0\\1 \ev_Q = \bv 3\\1 \ev_{B'}.\]
 Therefore
-$$L\bv x\\y \ev_Q= l \left[   x \bv 1\\0 \ev_Q+y \bv 0\\1 \ev \right]_{Q}
-=x\bv 1\\2 \ev_{Q'} +y \bv 3\\1 \ev_{Q'}$$
-$$
+\[L\bv x\\y \ev_Q= l \left[   x \bv 1\\0 \ev_Q+y \bv 0\\1 \ev \right]_{Q}
+=x\bv 1\\2 \ev_{Q'} +y \bv 3\\1 \ev_{Q'}\]
+\[
 = 
 \left[       \ba 1&3\\2&1\ea \bv x\\y \ev 
-\right]_{B'}.$$
+\right]_{B'}.\]
 
 To make 20 doors and 20 frames, $x$ and $y$ packages of type $f$ and $g$, respectively, are required such that 
 
-$$L\bv x\\y \ev_Q = \bv 20\\20 \ev_{B'}$$
-$$ \LR 
+\[L\bv x\\y \ev_Q = \bv 20\\20 \ev_{B'}\]
+\[ \LR 
 \left[       \ba 1&3\\2&1\ea \bv x\\y \ev 
 \right]_{B'}= \bv 20\\20 \ev_{B'}
-$$
-$$ \LR 
+\]
+\[ \LR 
       \ba 1&3\\2&1\ea \bv x\\y \ev 
 = \bv 20\\20 \ev
-$$
+\]
 \item 
 Since the determinant of the matrix is $-5$, the matrix is invertible and exactly one solution exists. Using the formula for the inverse of a $2\times 2$ matrix, the unique solution is
-$$
-\frac{1}{-5}   \ba1&-3 \\ -2&1 \ea \bv 20\\20 \ev = \bv 8 \\ 4 \ev.$$ 
+\[
+\frac{1}{-5}   \ba1&-3 \\ -2&1 \ea \bv 20\\20 \ev = \bv 8 \\ 4 \ev.\] 
 That is, exactly 8 and 4 packages of type $f$ and $g$, respectively, are required to manufacture exactly 20 doors and 20 frames in this model. \\
 
 To make 20 doors and 21 frames, $x$ and $y$ packages of type $f$ and $g$, respectively, are required such that 
 
-$$L\bv x\\y \ev_Q = \bv 20\\1 \ev_{B'}$$
-$$ 
+\[L\bv x\\y \ev_Q = \bv 20\\1 \ev_{B'}\]
+\[ 
 \LR 
       \ba 1&3\\2&1\ea \bv x\\y \ev 
 = \bv 20\\21 \ev
-$$
+\]
 which  has unique solution  
-$$
+\[
 \frac{1}{-5}   \ba1&-3 \\ -2&1 \ea \bv 20\\21 \ev 
 = 
 \bv \frac{23}{5}  \\  \frac{19}{5}\ev 
 =
 \bv 4+\frac{3}{5}  \\  3+\frac{4}{5}\ev 
-.$$ 
+.\] 
 One of the artifacts of our model is seen here; non integer multiples of the packages are not realistic, 
 and so we  round these numbers up to obtain the following prescription.
 
