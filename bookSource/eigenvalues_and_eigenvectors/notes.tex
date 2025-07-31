@@ -16,7 +16,7 @@ whose displacement at point $x$ at time $t$ is given by a function $y(x,t)$:
 The set of all displacement functions for the string 
 can be modeled by 
 a vector space 
-$$V=\left\{ y:\mathbb{R}^2 \to \mathbb{R} \middle| \mbox{\rm all partial derivatives } \frac{\partial^{k+m}y(x,t)}{\partial x^k\partial t^m} \mbox{ exist}\right\}.$$ 
+\[V=\left\{ y:\mathbb{R}^2 \to \mathbb{R} \middle| \mbox{\rm all partial derivatives } \frac{\partial^{k+m}y(x,t)}{\partial x^k\partial t^m} \mbox{ exist}\right\}.\] 
 %The reason for the condition that the second derivatives exist is 
  The concavity and 
  the acceleration of the string at the point $(x,t)$ are 
@@ -28,55 +28,55 @@ $$V=\left\{ y:\mathbb{R}^2 \to \mathbb{R} \middle| \mbox{\rm all partial derivat
 %
 We now add some extra information.
 The string's behavior in time and space can be modeled by a wave equation\index{Wave equation}
-$$\frac{\partial^2 y}{\partial t^2}=\frac{\partial^2 y}{\partial x^2}\, ,
-$$
+\[\frac{\partial^2 y}{\partial t^2}=\frac{\partial^2 y}{\partial x^2}\, ,
+\]
 which says that the acceleration of a point on the string is equal its concavity at that point. For example, if the string were made of stretched rubber, it would 
 prefer to be in a straight line, so this equation makes good intuitive sense. 
 Not all of the functions in $V$ are solutions to the wave equation; not all of the functions in the vector space $V$ describe the way a string would really vibrate.  The ways a string  would really  vibrate are (at least approximately) solutions to the wave equation above, which can rewritten as a linear function
-$$Wy=0$$
+\[Wy=0\]
 where
-$$
+\[
 W=\left(-\frac{\partial^2 }{\partial t^2}+\frac{\partial^2 }{\partial x^2}\right):V\rightarrow V\, .
-$$
+\]
 Some examples of solutions are 
-$$
+\[
 y_1(x,t)=\sin (t) \sin (x)\, \quad
-y_2(x,t)=3\sin (2t) \sin (2x)\, $$
+y_2(x,t)=3\sin (2t) \sin (2x)\, \]
 and
-$$
+\[
 y_3(x,t)=\sin (t) \sin (x)+3\sin (2t) \sin (2x)\, .
-$$
+\]
 Since $Wy=0$ is a homogeneous linear equation, linear combinations of solutions are solutions; in other words the kernel $\ker(w)$ is a vector space.
 Given the linear function $W$, some vectors are now more special than others.
 
 We can use musical intuition to do more! If the ends of the string were held fixed, we suspect that it would prefer to vibrate at certain frequencies corresponding to musical notes.
 This is modeled by looking at solutions of the form
-$$
+\[
 y(x,t)=\sin(\omega t) v(x)\, .
-$$
+\]
 Here the periodic sine function accounts for the string's vibratory motion, while the function $v(x)$ gives the shape of the string at any fixed instant of time. Observe that
-$$
+\[
 W\big(\sin(\omega t) v(x)\big)=\sin(\omega t)\big(\frac{d^2f}{dx^2}+\omega^2 f\big)\, .
-$$
-This suggests we introduce a new vector space $$U=\left\{v:{\mathbb R}\to {\mathbb R}\, \middle| \, \mbox{\rm all derivatives } \frac{d^kf}{d x^k }\text{~exist~} \right\}\, ,
-$$
+\]
+This suggests we introduce a new vector space \[U=\left\{v:{\mathbb R}\to {\mathbb R}\, \middle| \, \mbox{\rm all derivatives } \frac{d^kf}{d x^k }\text{~exist~} \right\}\, ,
+\]
 as well as a new linear function
-$$
+\[
 L:=\frac{d^2}{dx^2}: U\longrightarrow U\, .
-$$
+\]
 The number $\omega$ is called an angular frequency in many contexts, lets call its square $\lambda:=-\omega^2$ to match notations we will use later (notice that for this particular problem $\lambda$ must then  be negative).
 Then, because we want $W(y)=0$, which implies $d^2 f/dx^2=\omega^2 f$, it follows that the vector $v(x)\in U$ determining the vibrating string's shape obeys
-$$
+\[
 L(v)=\lambda v\, .
-$$
+\]
 This is perhaps one of the most important equations in all of linear algebra! It is the eigenvalue-eigenvector equation. In this problem we have to solve it both for $\lambda$, to determine which frequencies (or musical notes) our string likes to sing, and the vector $v$ determining the string's shape. The vector $v$ is called an eigenvector and $\lambda$ its corresponding eigenvalue.
 %We can incorporate a realistic complication into our model of the string: 
 %an additional force may be pulling the string toward the rest position with a Hooke's law type force. In this case there are two causes for acceleration of a point on the string: the concavity and  Hooke's force.  
 %In this case the acceleration of the string at each point will be the sum of the acceleration due to its concavity and the acceleration due to gravity $g$;
-%$$\frac{\partial^2 y}{\partial t^2}=\frac{\partial^2 y}{\partial x^2}+ky\, ,
-%$$
+%\[\frac{\partial^2 y}{\partial t^2}=\frac{\partial^2 y}{\partial x^2}+ky\, ,
+%\]
 %or, written as a linear equation 
-%$$Ly=ky.$$
+%\[Ly=ky.\]
 %The solution set this of  equation will be different for every different value of the spring constant $k$. 
 The solution sets for each $\lambda$ are called $V_\lambda$. For any $\lambda$ the set $V_k$ is a vector space since elements of this set are solutions to the homogeneous equation $(L-\lambda)v=0.$ 
 
@@ -89,7 +89,7 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 % with the largest value of k are more important than those for smaller values of $k$. 
 %You might ask ``more important in what sense?" 
 %In the sense that the function $L$ can be built out of the various values of $k$ and the vectors in $V_k$ and the biggest part of that construction is the part with the biggest values of $k$. In particular for some vectors $v_k\in V_k$
-%$$L=\sum_{k} k \, v_k \,v_k^t.$$
+%\[L=\sum_{k} k \, v_k \,v_k^t.\]
 %We are aware that we have made the startling suggestion that a derivative operator is a linear combination of products of vectors, and we hope that you are intrigued. Lets now return to the simpler case of linear functions which are matrices to develop this idea.
 
 
@@ -108,9 +108,9 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 %This can be confusing! The idea to keep firm in your mind is that the vector space and its elements---vectors---are what really ``exist''. 
 %The pairs of numbers are really just different shorthand notations for the same vector. 
 %\hyperlink{Basis notation}{Previously} we denoted the correspondence between pairs of numbers and vectors by labeling the pairs of numbers with the basis in which to interpret the numbers;
-%$$
+%\[
 %v= \colvec{ 2\\2 }_E :=2e_1+2e_2, ~v= \colvec{2\\1}_F := 2f_1+1f_2\, .
-%$$
+%\]
 %
 %There is an intuitive reason for the fact that there are many ways to describe the same vector;
 %typically, you will use vectors to describe configurations of the real world systems, but the coordinate system you use is your choice. 
@@ -130,7 +130,7 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 %\videoscriptlink{eigenvectors_and_eigenvalues_matrix.mp4}{Worked Example}{scripts_eigenvalseigenvects_matrix}
 %
 %For what follows it is often convenient follow this order and put the scalar coefficients to the right of basis vectors as in 
-%$$v  =  e_1v^1 \ + e_2v^2 \ + \cdots + e_nv^n .$$ 
+%\[v  =  e_1v^1 \ + e_2v^2 \ + \cdots + e_nv^n .\] 
 %
 %
 %
@@ -163,12 +163,12 @@ edges lying along the same two directions. Clearly this is a very special situat
 Now lets try an explicit example to see if we can achieve the last picture:
 
 \begin{example}
-Consider the linear transformation $L$ such that $$L\colvec{1\\0}=\colvec{-4\\-10}\,  \mbox{ and }\, L\colvec{0\\1}=\colvec{3\\7}\, ,$$ so that the matrix of $L$ in the standard basis is $$\begin{pmatrix}
+Consider the linear transformation $L$ such that \[L\colvec{1\\0}=\colvec{-4\\-10}\,  \mbox{ and }\, L\colvec{0\\1}=\colvec{3\\7}\, ,\] so that the matrix of $L$ in the standard basis is \[\begin{pmatrix}
 -4 & 3 \\
 -10 & 7 \\
-\end{pmatrix}\, .$$  Recall that a vector is a direction and a magnitude; $L$ applied to $\colvec{1\\0}$ or $\colvec{0\\1}$ changes both the direction and the magnitude of the vectors given to it.
+\end{pmatrix}\, .\]  Recall that a vector is a direction and a magnitude; $L$ applied to $\colvec{1\\0}$ or $\colvec{0\\1}$ changes both the direction and the magnitude of the vectors given to it.
 
-Notice that $$L\colvec{3\\5}=\colvec{-4\cdot 3+3\cdot 5 \\ -10\cdot 3+7\cdot 5}=\colvec{3\\5}\, .$$  Then $L$ fixes the  direction (and actually also the magnitude) of the vector $v_1=\colvec{3\\5}$.  
+Notice that \[L\colvec{3\\5}=\colvec{-4\cdot 3+3\cdot 5 \\ -10\cdot 3+7\cdot 5}=\colvec{3\\5}\, .\]  Then $L$ fixes the  direction (and actually also the magnitude) of the vector $v_1=\colvec{3\\5}$.  
 
 %In fact also the vector $v_2=\colvec{1\\2}$ has its direction fixed by $M$ because $Lv_2=2v_2$.
 
@@ -179,7 +179,7 @@ Notice that $$L\colvec{3\\5}=\colvec{-4\cdot 3+3\cdot 5 \\ -10\cdot 3+7\cdot 5}=
 
 Now, notice that any vector with the same direction as $v_1$ can be written as $cv_1$ for some constant $c$.  Then $L(cv_1)=cL(v_1)=cv_1$, so $L$ fixes every vector pointing in the same direction as $v_1$.
 
-Also notice that $$L\colvec{1\\2}=\colvec{-4\cdot 1+3\cdot 2 \\ -10\cdot 1+7\cdot 2}=\colvec{2\\4}=2\colvec{1\\2}\, ,$$ so $L$ fixes the direction of the vector $v_2=\colvec{1\\2}$ but stretches $v_2$ by a factor of $2$.  Now notice that for any constant $c$, $L(cv_2)=cL(v_2)=2cv_2$.  Then $L$ stretches every vector pointing in the same direction as $v_2$ by a factor of $2$.
+Also notice that \[L\colvec{1\\2}=\colvec{-4\cdot 1+3\cdot 2 \\ -10\cdot 1+7\cdot 2}=\colvec{2\\4}=2\colvec{1\\2}\, ,\] so $L$ fixes the direction of the vector $v_2=\colvec{1\\2}$ but stretches $v_2$ by a factor of $2$.  Now notice that for any constant $c$, $L(cv_2)=cL(v_2)=2cv_2$.  Then $L$ stretches every vector pointing in the same direction as $v_2$ by a factor of $2$.
 
 \end{example}
 
@@ -195,15 +195,15 @@ $
 \end{figure}
 We call the direction of the vector $v$ an \emph{invariant direction}\index{Invariant direction}.  In fact, any vector pointing in the same direction also satisfies this  equation because   $L(cv)=cL(v)=\lambda cv$.  
 More generally, any {\it non-zero} vector $v$ that solves
-$$
+\[
 L(v)=\lambda v
-$$
+\]
 is called an \emph{eigenvector}\index{Eigenvector} of $L$, and $\lambda$ (which now need not be zero) is an \emph{eigenvalue}\index{Eigenvalue}.  Since the direction is all we really care about here, then any other vector $cv$ (so long as $c\neq 0$) is an equally good choice of eigenvector. Notice that the relation ``\(u\) and \(v\) point in the same direction'' is an equivalence relation.
 
-In our example of the linear transformation $L$ with matrix $$\begin{pmatrix}
+In our example of the linear transformation $L$ with matrix \[\begin{pmatrix}
 -4 & 3 \\
 -10 & 7 \\
-\end{pmatrix}\, ,$$ we have seen that $L$ enjoys the property of having two invariant directions, represented by eigenvectors $v_1$ and $v_2$ with eigenvalues $1$ and $2$, respectively.  
+\end{pmatrix}\, ,\] we have seen that $L$ enjoys the property of having two invariant directions, represented by eigenvectors $v_1$ and $v_2$ with eigenvalues $1$ and $2$, respectively.  
 
 It would be very convenient if we could write any vector $w$ as a linear combination of $v_1$ and $v_2$.  Suppose $w=rv_1+sv_2$ for some constants $r$ and~$s$.  Then
 \[
@@ -216,7 +216,7 @@ Now $L$ just multiplies the number $r$ by $1$ and the number $s$ by $2$.  If we 
 0 & 2
 \end{pmatrix}\colvec{s\\t}
 \]
-which is much slicker than the usual scenario  $$L\!\begin{pmatrix}
+which is much slicker than the usual scenario  \[L\!\begin{pmatrix}
 x\\
 y
 \end{pmatrix}\!=\!\begin{pmatrix}
@@ -229,7 +229,7 @@ y
 \begin{pmatrix}
 \!ax+by\! \\
 \!cx+dy\!
-\end{pmatrix}\, .$$
+\end{pmatrix}\, .\]
 Here, $s$ and $t$ give the coordinates of $w$ in terms of the vectors $v_1$ and $v_2$.  In the previous example, we multiplied the vector by the matrix $L$ and came up with a complicated expression.  In these coordinates, we see that~$L$ has a very simple \emph{diagonal matrix}, whose diagonal entries are exactly the \emph{eigenvalues} of~$L$.
 
 This process is called \emph{diagonalization}\index{Diagonalization!concept of}. It makes complicated linear systems much easier to analyze.
@@ -298,7 +298,7 @@ This is a homogeneous system, so it only has solutions when the matrix $\begin{p
 \end{array}
 \end{equation*}
 
-\hypertarget{characteristic_polynomial}{For any} square $n\times n$ matrix $M$, the polynomial in $\lambda$ given by $$P_M(\lambda)=\det (\lambda I-M)=(-1)^n \det (M-\lambda I)$$ is called the \emph{characteristic polynomial}\index{Characteristic polynomial} of $M$, and its roots are the eigenvalues of $M$.
+\hypertarget{characteristic_polynomial}{For any} square $n\times n$ matrix $M$, the polynomial in $\lambda$ given by \[P_M(\lambda)=\det (\lambda I-M)=(-1)^n \det (M-\lambda I)\] is called the \emph{characteristic polynomial}\index{Characteristic polynomial} of $M$, and its roots are the eigenvalues of $M$.
 
 In this case, we see that $L$ has two eigenvalues, $\lambda_1=10$ and $\lambda_2=-2$.  To find the eigenvectors, we need to deal with these two cases separately.
 To do so, we solve the linear system $\begin{pmatrix}
@@ -370,9 +370,9 @@ In section~\ref{eigenvalseigenvects}, we developed the idea of eigenvalues and e
 
 \begin{definition}
 If $L \colon V\rightarrow V$ is linear and for some scalar $\lambda$ and $v\neq 0_V$
-$$
+\[
 Lv=\lambda v.
-$$
+\]
 then $\lambda$ is an {\bf eigenvalue}\index{Eigenvalue} of $L$ with {\bf eigenvector}\index{Eigenvector} $v$.
 
 \end{definition}
@@ -422,7 +422,7 @@ The eigenvalues $\lambda_i$ of $M$ are exactly the roots of $P_M(\lambda)$.  The
 
 \begin{example}
 Let $L$ be the linear transformation $L \colon \Re^3\rightarrow \Re^3$ given by 
-$$L\colvec{x\\y\\z}=\ccolvec{2x+y-z\\ x+2y-z\\ -x-y+2z}\, .$$ 
+\[L\colvec{x\\y\\z}=\ccolvec{2x+y-z\\ x+2y-z\\ -x-y+2z}\, .\] 
 In the standard basis the matrix $M$ representing $L$ has columns $Le_i$ for each $i$, so:
 
 \[
@@ -495,7 +495,7 @@ This set is a plane through the origin.  So the multiplicity two eigenvalue has 
 \begin{example}
 Let $V$ be the vector space of smooth (\textit{i.e.} infinitely differentiable) functions $f \colon \Re\rightarrow \Re$.  Then the derivative is a linear operator $\frac{d}{dx} \colon V\rightarrow V$.  What are the eigenvectors of the derivative?  In this case, we don't have a matrix to work with, so we have to make do.
 
-A function $f$ is an eigenvector of $\frac{d}{dx}$ if there exists some number $\lambda$ such that $$\frac{d}{dx}f=\lambda f\, .$$  An obvious candidate is the exponential function, $e^{\lambda x}$; indeed, $\frac{d}{dx} e^{\lambda x} = \lambda e^{\lambda x}$.
+A function $f$ is an eigenvector of $\frac{d}{dx}$ if there exists some number $\lambda$ such that \[\frac{d}{dx}f=\lambda f\, .\]  An obvious candidate is the exponential function, $e^{\lambda x}$; indeed, $\frac{d}{dx} e^{\lambda x} = \lambda e^{\lambda x}$.
 The operator $\frac{d}{dx}$ has an eigenvector $e^{\lambda x}$ for every $\lambda \in \Re$.
 %This is actually the all of the eigenvectors for $\frac{d}{dx}$. 
 %(This can be proved using the fact that every infinitely differentiable function has a Taylor series with infinite radius of convergence, and then using the Taylor series to show that if two functions are eigenvectors of $\frac{d}{dx}$ with eigenvalues $\lambda$, then they are scalar multiples of each other.)
@@ -503,8 +503,8 @@ The operator $\frac{d}{dx}$ has an eigenvector $e^{\lambda x}$ for every $\lambd
 
 
 \section{Eigenspaces}
-In the previous example, we found two eigenvectors  $$\colvec{-1\\1\\0} \mbox{ and }\colvec{1\\0\\1}$$ for $L$, both with eigenvalue $1$.  Notice that  $$\colvec{-1\\1\\0} + \colvec{1\\0\\1}=
-\colvec{0\\1\\1}$$ is also an eigenvector of $L$ with eigenvalue $1$.  In fact, any linear combination $$r\colvec{-1\\1\\0} + s\colvec{1\\0\\1}$$ of these two eigenvectors will be another eigenvector with the same eigenvalue.  
+In the previous example, we found two eigenvectors  \[\colvec{-1\\1\\0} \mbox{ and }\colvec{1\\0\\1}\] for $L$, both with eigenvalue $1$.  Notice that  \[\colvec{-1\\1\\0} + \colvec{1\\0\\1}=
+\colvec{0\\1\\1}\] is also an eigenvector of $L$ with eigenvalue $1$.  In fact, any linear combination \[r\colvec{-1\\1\\0} + s\colvec{1\\0\\1}\] of these two eigenvectors will be another eigenvector with the same eigenvalue.  
 
 More generally, let $\{ v_1, v_2, \ldots \}$ be eigenvectors of some linear transformation $L$ with the same eigenvalue $\lambda$.  A \emph{linear combination}\index{Linear combination} of the $v_i$ is given by $c^1v_1+c^2v_2+\cdots$ for some constants $c^1, c^2,\ldots$.  Then
 \begin{eqnarray*}
