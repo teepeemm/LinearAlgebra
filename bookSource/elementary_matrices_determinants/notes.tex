@@ -15,16 +15,16 @@ For small cases, we already know when a matrix is invertible.  If $M$ is a $1\ti
 
 \vspace{.3cm}
 
-For $M$ a $2\times 2$ matrix, chapter~\ref{Matrices} section~\ref{inverse_matrix} shows that if $$M=\begin{pmatrix}
+For $M$ a $2\times 2$ matrix, chapter~\ref{Matrices} section~\ref{inverse_matrix} shows that if \[M=\begin{pmatrix}
 m^1_1 & m^1_2 \\[1mm]
 m^2_1 & m^2_2 \\
-\end{pmatrix}\, ,$$ then $$M^{-1}=\frac{1}{m^1_1m^2_2-m^1_2m^2_1}\begin{pmatrix}
+\end{pmatrix}\, ,\] then \[M^{-1}=\frac{1}{m^1_1m^2_2-m^1_2m^2_1}\begin{pmatrix}
 m^2_2 & -m^1_2 \\[1mm]
 -m^2_1 & m^1_1 \\
-\end{pmatrix}\, .$$ Thus $M$ is invertible if and only if 
+\end{pmatrix}\, .\] Thus $M$ is invertible if and only if 
 \vspace{.3cm}
 
-$$m^1_1m^2_2-m^1_2m^2_1\neq 0\, .$$  For $2\times 2$ matrices, this quantity is called the \emph{determinant of $M$}\index{Determinant!$2\times 2$ matrix}.
+\[m^1_1m^2_2-m^1_2m^2_1\neq 0\, .\]  For $2\times 2$ matrices, this quantity is called the \emph{determinant of $M$}\index{Determinant!$2\times 2$ matrix}.
 \[
 \det M = \det \begin{pmatrix}
 m^1_1 & m^1_2 \\[1mm]
@@ -41,11 +41,11 @@ m^2_1 & m^2_2 \\
 
 
 \begin{example}
-For a $3\times 3$ matrix, $$M=\begin{pmatrix}
+For a $3\times 3$ matrix, \[M=\begin{pmatrix}
 m^1_1 & m^1_2 & m^1_3\\[1mm]
 m^2_1 & m^2_2 & m^2_3\\[1mm]
 m^3_1 & m^3_2 & m^3_3\\
-\end{pmatrix}\, ,$$ then---see \hyperref[det33]{review question}~\ref{det33}---$M$ is non-singular if and only if\index{Determinant!$3\times 3$ matrix}:
+\end{pmatrix}\, ,\] then---see \hyperref[det33]{review question}~\ref{det33}---$M$ is non-singular if and only if\index{Determinant!$3\times 3$ matrix}:
 \vspace{.1cm}
 \[
 \det M= 
@@ -176,7 +176,7 @@ We would like to use the determinant to decide whether a matrix is invertible.  
 
 \begin{remark}[Swapping rows]
 Lets \hypertarget{rowswap}{swap}
- rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly $$\text{sgn}(\hat{\sigma})=-\text{sgn}(\sigma)\, .$$  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
+ rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly \[\text{sgn}(\hat{\sigma})=-\text{sgn}(\sigma)\, .\]  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
 \begin{eqnarray}
 \det M' & = & \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\
 & = & \sum_{\sigma} \text{sgn}(\sigma) \,m^1_{\sigma(1)}\cdots m^i_{\sigma(j)}\cdots m^j_{\sigma(i)} \cdots m^n_{\sigma(n)} \nonumber \\
@@ -185,12 +185,12 @@ Lets \hypertarget{rowswap}{swap}
 & = & -\det M.\nn
 \end{eqnarray}
 The step replacing $\sum_\sigma$ by $\sum_{\hat \sigma}$ often causes confusion; it holds since we sum over all permutations (see review problem~\ref{hatsum}).
-Thus we see that swapping rows changes the sign of the determinant. {\it I.e.}, $$\det M' = - \det M\, .$$
+Thus we see that swapping rows changes the sign of the determinant. {\it I.e.}, \[\det M' = - \det M\, .\]
 
 \begin{center}\href{\webworkurl ReadingHomework8/2/}{Reading homework: problem 8.2}\end{center}
 
 Applying this result to $M=I$ (the identity matrix) yields
-$$\det E^i_j=-1\, ,$$
+\[\det E^i_j=-1\, ,\]
 where the matrix $E^i_j$ is the identity matrix with rows $i$ and $j$ swapped. It is a row swap  elementary matrix.
 %and we will meet it again \hyperlink{elem_matrix_row_swap}{soon}.
 
@@ -243,7 +243,7 @@ M'=\ccolvec{\\ \vdots \\ R^j \\ \vdots \\ R^i \\ \vdots\\ \\  }=
 \ccolvec{\\ \vdots \\ R^i \\ \vdots \\ R^j \\ \vdots \\ \\  }.
 \]
 The matrix 
-$$
+\[
 \begin{pmatrix}
 1 & & & & & & \\
 & \ddots & & & & & \\
@@ -253,7 +253,7 @@ $$
 & & & & & \ddots & \\
 & & & & & & 1 \\
 \end{pmatrix}=:E^i_j
-$$
+\]
 is just the identity matrix with rows $i$ and $j$ swapped.  \hypertarget{elem_matrix_row_swap}The matrix $E^i_j$ is an \emph{elementary matrix}\index{Elementary matrix!swapping rows} and
 \[
 M'=E^i_jM\, .
@@ -270,9 +270,9 @@ Because $\det I=1$ and swapping a pair of rows changes the sign of the determina
 
 Now we know that swapping a pair of rows flips the sign of the determinant so $\det M'=-det M$.
 But $\det E_j^i=-1$ and $M'=E^i_j M$ so 
-$$
+\[
 \det E^i_j M = \det E^i_j \, \det M\, .
-$$
+\]
 This result hints at a general rule for determinants of products of matrices. 
 %Stare at it again before reading the next Lecture:
 %\begin{center}
@@ -304,8 +304,8 @@ This result hints at a general rule for determinants of products of matrices.
 
 \subsection{Row  Multiplication}
 The next row operation is multiplying a row by a scalar.
-Consider $$M=\ccolvec{R^1 \\ \vdots \\ R^n }\, ,$$ where $R^i$ are row vectors.  Let $R^i(\lambda)$ be the identity matrix, with the $i$th diagonal entry replaced by $\lambda$, not to be confused with the row vectors. {\it I.e.},
-$$
+Consider \[M=\ccolvec{R^1 \\ \vdots \\ R^n }\, ,\] where $R^i$ are row vectors.  Let $R^i(\lambda)$ be the identity matrix, with the $i$th diagonal entry replaced by $\lambda$, not to be confused with the row vectors. {\it I.e.},
+\[
 R^i(\lambda)=
 \begin{pmatrix}
 1 & & & & \\
@@ -314,7 +314,7 @@ R^i(\lambda)=
   & & & \ddots & \\
   & & & & 1 \\
 \end{pmatrix}
-\, .$$
+\, .\]
 Then:
 \[
 M'=R^i(\lambda)M=\ccolvec{R^1 \\ \vdots \\ \lambda R^i \\ \vdots \\ R^n }\, ,
@@ -329,7 +329,7 @@ What effect does multiplication by the elementary matrix $R^i(\lambda)$ have on 
 & = & \lambda \det M
 \end{eqnarray*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
-{\it I.e.,} $$\det R^i(\lambda) M = \lambda \det M\, .$$
+{\it I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
 
 
 \begin{figure}
@@ -352,9 +352,9 @@ Since $R^i(\lambda)$ is just the identity matrix with a single row multiplied by
 \end{pmatrix} = \lambda\, ,
 \]
 and once again we have a product of determinants formula
-$$
+\[
 \det \left( R^i(\lambda) M \right) = \det\left( R^i(\lambda) \right)\det M.
-$$
+\]
 
 \subsection{Row Addition}
 The final row operation is adding $\mu R^j$ to $R^i$.  This is done with the elementary matrix~$S^i_j(\mu)$, which is an identity matrix but with an additional  $\mu$ in the $i,j$ position;
@@ -395,9 +395,9 @@ Then
 & = & \det M + \mu \det M''
 \end{eqnarray*}
 Since $M''$ has two identical rows, its determinant is $0$ so
-$$
+\[
 \det M' = \det M,
-$$
+\]
 when $M'$ is obtained from $M$ by adding $\mu$ times row~$j$ to row~$i$.
 
 %\href{\webworkurl ReadingHomework13/1/}{Reading homework: problem 13.1}
@@ -405,8 +405,8 @@ when $M'$ is obtained from $M$ by adding $\mu$ times row~$j$ to row~$i$.
 
 \noindent
 We also have learnt that
-$$\det \left( S^i_j(\mu)M \right) = \det M\, .$$
-Notice that if $M$ is the identity matrix, then we have $$\det S^i_j(\mu) = \det (S^i_j(\mu)I) = \det I = 1\, .$$
+\[\det \left( S^i_j(\mu)M \right) = \det M\, .\]
+Notice that if $M$ is the identity matrix, then we have \[\det S^i_j(\mu) = \det (S^i_j(\mu)I) = \det I = 1\, .\]
 
 
 
@@ -443,7 +443,7 @@ If $E$ is \emph{ any} of the elementary matrices $E^i_j, R^i(\lambda), S^i_j(\mu
 %\end{center}
 
 
-We have seen that any matrix $M$ can be put into reduced row echelon form via a sequence of row operations, and we have seen that any row operation can be achieved via left matrix multiplication by an elementary matrix.  Suppose that $\rref(M)$ is the reduced row echelon form of $M$.  Then $$\rref(M)=E_1E_2\cdots E_kM\, ,$$ where each $E_i$ is an elementary matrix.
+We have seen that any matrix $M$ can be put into reduced row echelon form via a sequence of row operations, and we have seen that any row operation can be achieved via left matrix multiplication by an elementary matrix.  Suppose that $\rref(M)$ is the reduced row echelon form of $M$.  Then \[\rref(M)=E_1E_2\cdots E_kM\, ,\] where each $E_i$ is an elementary matrix.
 We know how to compute determinants of elementary matrices and products thereof, so we ask:
 
 \begin{center}
@@ -455,7 +455,7 @@ The answer has two cases:
 
 \item Otherwise, every row of $\rref(M)$ has a pivot on the diagonal; since $M$ is square, this means that $\rref(M)$ is the identity matrix.  So if $M$ is invertible, $\det \rref(M)=1$.
 \end{enumerate}
-Notice that because $\det \rref(M) = \det (E_1E_2\cdots E_kM)$, by the theorem above, $$\det \rref(M)=\det (E_1) \cdots \det (E_k) \det M\, .$$  Since each $E_i$ has non-zero determinant, then $\det \rref(M)=0$ if and only if $\det M=0$.
+Notice that because $\det \rref(M) = \det (E_1E_2\cdots E_kM)$, by the theorem above, \[\det \rref(M)=\det (E_1) \cdots \det (E_k) \det M\, .\]  Since each $E_i$ has non-zero determinant, then $\det \rref(M)=0$ if and only if $\det M=0$.
 This establishes an important theorem:
 
 
@@ -480,7 +480,7 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\mu)$ is invertible, except fo
 \end{corollary}
 
 
-To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, $$M=E_1E_2\cdots E_k \, \rref(M)\, ,$$ and  $$N=F_1F_2\cdots F_l \, \rref(N)\, .$$  If $\rref(M)$ is the identity matrix ({\it i.e.}, $M$ is invertible), then:
+To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\it i.e.}, $M$ is invertible), then:
 
 \begin{eqnarray*}
 \det (MN) & = & \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
@@ -599,11 +599,11 @@ In other words, to expand by minors we pick an entry $m^1_j$ of the first row, t
 
 \begin{example}
 Let's compute the determinant of 
-$$M=\begin{pmatrix}
+\[M=\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9 \\
-\end{pmatrix}$$ using expansion by minors:
+\end{pmatrix}\] using expansion by minors:
 
 \begin{eqnarray*}
 \det M & = & 1\det \begin{pmatrix}
@@ -728,14 +728,14 @@ The second-to-last equality is due to the existence of a unique inverse permutat
 \end{figure}
 
 \begin{example}
-Because of this, we see that expansion by minors also works over columns.  Let $$M=\begin{pmatrix}
+Because of this, we see that expansion by minors also works over columns.  Let \[M=\begin{pmatrix}
 1 & 2 & 3 \\
 0 & 5 & 6 \\
 0 & 8 & 9 \\
-\end{pmatrix}\, .$$  Then $$\det M = \det M^T = 1\det \begin{pmatrix}
+\end{pmatrix}\, .\]  Then \[\det M = \det M^T = 1\det \begin{pmatrix}
 5 & 8 \\
 6 & 9 \\
-\end{pmatrix}=-3\, .$$
+\end{pmatrix}=-3\, .\]
 \end{example}
 
 \subsection{Determinant of the Inverse}
@@ -763,24 +763,24 @@ Then $1 = \det I = \det (MM^{-1}) = \det M \det M^{-1}$.  As such we have:
 
 
 Recall that for a $2\times 2$ matrix 
-$$
+\[
 \begin{pmatrix}d & -b \\ -c & a\end{pmatrix}\begin{pmatrix}a & b \\ c & d\end{pmatrix}
 =\det \begin{pmatrix}a & b \\ c & d\end{pmatrix}\, I\, .
-$$
+\]
 %\begin{figure}
 %\begin{center}
 %\includegraphics[scale=.2]{\propDetPath/adj2x2.jpg}
 %\end{center}
 %\end{figure}
 Or in a more careful notation: if
-$$M=\begin{pmatrix}
+\[M=\begin{pmatrix}
 m^1_1 & m^1_2 \\[1mm]
 m^2_1 & m^2_2 \\
-\end{pmatrix}\, ,$$ 
-then $$M^{-1}=\frac{1}{m^1_1m^2_2-m^1_2m^2_1}\begin{pmatrix}
+\end{pmatrix}\, ,\] 
+then \[M^{-1}=\frac{1}{m^1_1m^2_2-m^1_2m^2_1}\begin{pmatrix}
 m^2_2 & -m^1_2 \\
 -m^2_1 & m^1_1 \\
-\end{pmatrix}\, ,$$
+\end{pmatrix}\, ,\]
 so long as $\det M=m^1_1m^2_2-m^1_2m^2_1\neq 0$.
   The  matrix $\begin{pmatrix}
 m^2_2 & -m^1_2 \\
