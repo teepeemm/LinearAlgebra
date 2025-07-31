@@ -1,3 +1,6 @@
+% !TEX program = LuaLaTeX
+\DocumentMetadata{testphase=latest,lang=en,pdfversion=1.7,pdfstandard=ua-1,uncompress}
+\tagpdfsetup{math/alt/use = true}
 \documentclass[12pt]{book}
 
 
@@ -51,6 +54,8 @@
    {\fancyplain{}{\sffamily\bfseries\rightmark}}
 \rhead[\fancyplain{}{\sffamily\bfseries\leftmark}]
    {\fancyplain{}{\sffamily\bfseries\thepage}}
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
 
 \usepackage{makeidx}
 
@@ -71,9 +76,7 @@
 \usepackage{textcomp}
 %\usepackage{fancyhdr}
 %\pagestyle{fancy}
-% Added to work with my enumerates, and I feel that it allows us more flexibility
-%  to select how we want to number our items - TCS 1/9/12
-\usepackage{enumerate}
+\usepackage{enumext}
 
 \usepackage{linalgdir} % Get the directory and title information
 
@@ -85,8 +88,9 @@
 %\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/LinearAlgebra/}
 %\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/MAT22A-Waldron-Summer2-2013/}
 %\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/MAT22A-Cherney-Summer1-2013/}
-\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/LinearAlgebra/}
+%\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/LinearAlgebra/}
 \newcommand{\videourl}{http://math.ucdavis.edu/~linear/videos/}
+\newcommand{\webworkurl}{https://webwork.und.edu/webwork2/Math_207_Fall_2025_Prescott/}
 
 % This command works by specifying the following (in order):
 %  1 - the filename (with extension)

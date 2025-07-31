@@ -167,14 +167,14 @@ functions of vectors that respect vector addition.
 Here are some examples of things that can be added:
 
 \begin{example} (Vector Addition)
-\begin{enumerate}[(A)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 \item Numbers: Both $3$ and $5$ are numbers and so is $3+5$.\\[-2mm]
 \item 3-vectors: $\colvec{1 \\ 1\\ 0} + \colvec{0\\1\\1}=\colvec{1 \\ 2\\ 1}$.\\[-1mm]
 \item Polynomials: If $p(x)=1+x-2x^2+3x^3$ and $q(x)=x+3x^2-3x^3+x^4$ then\\[1mm] their sum $p(x)+q(x)$ is the new polynomial $1+2x+x^2+x^4$.\\
 \item Power series: If $f(x)=1+x+\frac1{2!} x^2 + \frac1{3!} x^3 +\cdots$ and $g(x)=1-x+\frac1{2!} x^2 - \frac1{3!} x^3 +\cdots$ \\[1mm]
  then $f(x)+g(x)=2+ x^2 +\frac2 {4!} x^4+\cdots$ is also a power series.\\
 \item Functions: If $f(x)=e^x$ and $g(x)=e^{-x}$ then their sum $f(x)+g(x)$ is the new function $2\cosh x$.
-\end{enumerate}
+\end{enumext}
 \end{example}
 
 \noindent
@@ -211,7 +211,7 @@ $$
 
  A very special vector can be produced from any vector of any kind by scalar multiplying any vector by the number~$0$. 
 This is called the {\it zero vector}\index{Zero vector} and is usually denoted simply $0$. This gives five very different kinds of zero from the 5 different kinds of vectors in   examples A-E above.
-\begin{enumerate}[(A)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 \item $0(3)=0$ (The zero number)
 \item $0\colvec{1\\1\\0}=\colvec{0\\0\\0} $ (The zero 3-vector)
 \item $0\left(1+x-2x^2+3x^3\right)=0$ (The zero polynomial)
@@ -219,7 +219,7 @@ This is called the {\it zero vector}\index{Zero vector} and is usually denoted s
 $0\!\left(  1+x\!-\!\frac1{2!}x^2\!+\!\frac1{3!}x^3\!+\cdots \!\right) \!
  =  0+0x+0x^2\!+0x^3\!+\cdots $(The zero power~series)
  \item $0\left(   e^x \right) =0$ (The zero function)
- \end{enumerate}
+\end{enumext}
 
 In any given situation that you plan to describe using vectors, you need to decide on a way to add and scalar multiply vectors.
 In summary:
@@ -264,7 +264,7 @@ So things don't get too abstract, here are five questions that can be rephrased 
 
 \begin{example}  \label{EX}
 (Questions involving Functions of Vectors in Disguise)\\
-\begin{enumerate}[(A)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 \item\label{FVA}What number $x$ satisfies $10x=3$?
 \item\label{FVB} What 3-vector~$u\!\, $  satisfies\footnote{ The \hyperlink{crossprod}{cross product} appears in this equation.}~$\!\colvec{1 \\ 1\\ 0} \times u = \colvec{0\\1\\1}$?\\[-.4cm]
 %$$\!\!\!\!\!\!\!\!\!\colvec{x\\ y\\ z} \raisebox{-11mm}{\includegraphics[scale=.14]{\whatIsPath//machine_blank.jpg} }\! \! \!\! \! \!\colvec{\phantom{-}z\\-z\\y-x}$$
@@ -275,12 +275,12 @@ So things don't get too abstract, here are five questions that can be rephrased 
 %$$f(x) \raisebox{-11mm}{\includegraphics[scale=.14]{\whatIsPath//machine_blank.jpg} }\! \! \!\! \! \!x\frac{d}{dx} f(x) -2f(x)$$
 \item What number~$x$~satisfies~$4 x^2=1$?
 %$$f(x) \raisebox{-11mm}{\includegraphics[scale=.14]{\whatIsPath//machine_blank.jpg} }\! \! \!\! \! \!f''(x)+f^3(x) -\sqrt{x}$$
-\end{enumerate}
+\end{enumext}
 \vspace{.3cm}
 All of these are of the form 
-\begin{enumerate}[($\star$)]
-\item What vector $X$ satisfies $f(X)=B$?
-\end{enumerate}
+\begin{itemize}
+\item[($\star$)] What vector $X$ satisfies $f(X)=B$?
+\end{itemize}
 with a function\footnote{In math terminology, each question is asking for the level set of $f$ corresponding to $B$.} $f$ known, a vector $B$ known, and a vector $X$ unknown.
 \end{example}
 The machine needed for part~(\ref{FVA}) is as in the picture below. 
@@ -451,10 +451,10 @@ It's a collection of equations in which variables are multiplied by constants an
 %An important idea underlies the following observation. 
 \noindent
 Information about the fruity contents of the room can be stored two ways: 
-\begin{enumerate}[(i)]
+\begin{enumext}[label=\roman*,wrap-label=(#1)]
 \item In terms of the number of apples and bananas. 
 \item In terms of the number of bags and boxes. 
-\end{enumerate}
+\end{enumext}
 Intuitively, knowing the information in one form allows you to figure out the information in the other form. 
 Going from~(ii) to~(i) is easy: 
 If you knew there were~3 bags and~2 boxes it would be easy to calculate the number of apples and bananas, and doing so would have the feel of multiplication (containers times fruit per container). 
@@ -609,7 +609,7 @@ Indeed this is an example of
   \colvec{x \\ y}
   :=
   \colvec{px+qy \\ rx+sy}=x\colvec{p\\r} + y\colvec{q\\s}\, .
-\end{equation*}\\%[.2cm]
+\end{equation*}
 Notice, that the second way of writing the output on the right hand side of this equation is very useful because it
 tells us what all possible outputs a matrix times a vector look like -- they are just sums of the columns of the matrix
 multiplied by scalars. The set of all possible outputs of a matrix times a vector is called 
@@ -693,7 +693,6 @@ The matrix-function is homogeneous if the expressions on the left hand side and 
  = \colvec{2\lambda a \\ 4\lambda a} 
 +   
       \colvec{6\lambda b \\ 8\lambda b}=  \underline{\colvec{2\lambda a+6\lambda b\\4\lambda a+8\lambda b}} \end{split}\end{equation*}
-    \\[.1cm]
 while
  \begin{equation*}\begin{split} \lambda  \begin{pmatrix}
       2             &6 \\
@@ -1018,7 +1017,7 @@ Probably you will spend most of your time on the following review questions:
 %{\cal A}\, {\bf x} = {\bf b}\, ,
 %$$
 %where
-%\begin{enumerate}[(A)]
+%\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 %\item \label{A}
 %${\bf x}$ and ${\bf b}$ are numbers, $${\cal A}\, {\bf x}:=10 \, {\bf x}\, ,$$
 %and ${\bf b}=3$.
@@ -1050,7 +1049,7 @@ Probably you will spend most of your time on the following review questions:
 %$$
 %and ${\bf b}=\sqrt{x}$.
 %%What function~$f$ satisfies~$Ef=g$ where~$Ef:=f''(x)+\big(f(x)\big)^3$ and~$g(x):=\sqrt{x}$?
-%\end{enumerate}
+%\end{enumext}
 %\end{example}
 %\noindent
 %\reading{1}{1}
@@ -1135,7 +1134,7 @@ Probably you will spend most of your time on the following review questions:
 %\section{What is Linear?} 
 %
 %\begin{example} (Vectors) \\[-.5cm]
-%\begin{enumerate}[(A)]
+%\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 %\item Numbers. If
 %\item What vector~$v$ from 3 space satisfies the cross product equation~$ \colvec{1 \\ 1\\ 0} \times v = \colvec{0\\1\\1}$?\\[-.4cm]
 %\item What polynomial~$g$ satisfies~$\int_{-1}^1 f(x,y)g(y) dy = h(x)$, \\[.2cm]
@@ -1143,7 +1142,7 @@ Probably you will spend most of your time on the following review questions:
 %\item What power series~$f$ satisfies~$x\frac{d}{dx} f(x) -2f(x)=0$?
 %%\item What power series~$f$ satisfies~$x\frac{d}{dx} f(x) -2f(x)=0$?
 %\item What what function~$f$ satisfies~$f''(x)+f^3(x) =\sqrt{x}~$?
-%\end{enumerate}
+%\end{enumext}
 %\end{example}
 %
 %
