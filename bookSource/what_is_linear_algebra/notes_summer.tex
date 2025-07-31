@@ -122,7 +122,7 @@ Takes in~$3$ and gives out~$v_3=21$.\\[1mm]
 
 \noindent
 This is an explicit definition of a function as opposed to of the more familiar algebraic definition. In analogy to defining a function~$f$ with domain all real numbers by the algebraic statement~$f(x)=7x$, we can define the function~$v$ by~$v_i=7i$. 
-The operator~$B$ takes in such a  function and gives out another. For example~$$Bv=\colvec{1\\1\\0}\times \colvec{7\\14\\21}=\colvec{21\\-21\\7}.$$
+The operator~$B$ takes in such a  function and gives out another. For example~\[Bv=\colvec{1\\1\\0}\times \colvec{7\\14\\21}=\colvec{21\\-21\\7}.\]
 
 
 You can also think of vectors from two space as functions with domain (the set containing only)~$1$ and~$2$. Similarly vectors from n-space are functions of (the set containing only)~$1,2,...,n$. This includes the case~$n=1$; we can even think of~$A$ as an operator. 
@@ -152,9 +152,9 @@ Students often ask questions like ``how do I know when to use a particular metho
 An operator~$E$ is \hypertarget{asked in chapter 1}{said to be linear} if it has two properties:\\[-.5cm]
 \begin{enumerate}
 \item {\it Homogeneity:} ``Constants can be pulled out"
-$$E(cv)=cEv\, .$$ \\[-.5cm]
+\[E(cv)=cEv\, .\] \\[-.5cm]
 \item {\it Additivity:} ``The operator can be distributed"
-$$E(v+u)=Ev+Eu\, .$$ 
+\[E(v+u)=Ev+Eu\, .\] 
 \end{enumerate}
 
 
@@ -175,37 +175,37 @@ We now explicitly verify that~$B$ and~$C$ are linear. You will verify that~$A$ a
 
 We need to check that $B$ is linear acting on any vector $v=\colvec{x\\ y\\ z}$ so we compute~$Bv$
 using the cross product
-$$
+\[
 Bv=\colvec{1 \\ 1\\ 0} \times \colvec{x \\ y\\ z}=\colvec{z\\ -z\\y-x}\, .
-$$
+\]
 Now, until we know what a scalar multiple $cv$ of the vector $v$ means, the problem makes no sense. 
 Here we make (the logical) choice
-$$
+\[
 c\colvec{x \\ y\\ z} := \colvec{cx\\ cy\\ cz}\, .
-$$
+\]
 Now, using this definition and our result for how $B$ acts on an arbitrary vector we find:
-$$
+\[
 B(cv)=B\colvec{cx\\ cy\\ cz}=\colvec{cz\\-cz\\cy-cx}\, .
-$$
+\]
 We hope that this coincides with $cBv$ which also compute using our result for $Bv$ and the definition
 for multiplying a vector by a number:
-$$
+\[
 cBv=c\colvec{z\\ -z\\y-x}=\colvec{cz\\ c(-z)\\c(y-x)}=\colvec{cz\\-cz\\cy-cx}\, .
-$$
+\]
 Thankfully, we got the same result for both $B(cv)$ and $cBv$, so the homogeneity property holds.
 
 We still have to check additivity. Again, this makes no sense until we define what the sum $v+u$ of two arbitrary vectors $v=\colvec{x\\y\\z}$ 
 and $u=\colvec{x'\\y'\\z'}$. For that we again make a logical choice
-$$
+\[
 \colvec{x\\y\\z}+\colvec{x'\\y'\\z'}:=\colvec{x+x'\\y+y'\\z+z'}\, .
-$$
+\]
 Again, we have to make two computations: $B(u+v)$ (first add then act with $B$) and $Bu+Bv$ (first act with $B$, then add):
-$$
+\[
 B(u+v)=B\colvec{x+x'\\y+y'\\z+z'}=\colvec{z+z'\\-(z+z')\\(y+y')-(x+x')}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, ,
-$$
-$$
+\]
+\[
 Bu+Bv=B\colvec{x\\y\\z}+B\colvec{x'\\y'\\z'}=\colvec{z\\-z\\y-x}+\colvec{z'\\-z'\\y'-x'}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, .
-$$
+\]
 Both computations give the same answer so now we know that $B$ also obeys additivity and can conclude that $B$ is linear.
 %AI)~$A(cx)=5cx= c5x=cAx$, \\
 %AII) A(x+y)=5(x+y)=5x+5y=Ax+Ay\\
@@ -220,9 +220,9 @@ Both computations give the same answer so now we know that $B$ also obeys additi
 %\end{enumerate} 
 \end{example} 
 The above example looks a little silly, this because it is really just checking something you probably already know about cross products of vectors. Namely, if $u$, $v$ and $w$ are vectors and $c$ is a number then
-$$
+\[
 w\times(cv)=c(w\times v)\quad\mbox{and}\quad  w\times(v+u)=w\times v+w\times u\, .
-$$
+\]
 You might also have noticed how important it was to know what $cu$ and $u+v$ actually meant to even solve the problem.
 In fact, one of the reasons linear algebra is so powerful, is that it can be applied to any choice for what $cu$ and $u+v$ mean
 that happens to obey a few basic rules. You will learn about these in Chapter~\ref{\vectorSpacesPath}.
@@ -261,11 +261,11 @@ Actually,~$E$ is not additive either, but we did not need to show this. Once eit
 
 \begin{example} Show that operator~$Y$ that acts on numbers by~$Yx=5x+3$ is not linear. \\ 
 Lets check additivity first:
-$$
+\[
 Y(x+y)= 5(x+y)+3=(5x+3)+(5x)\neq (5x+3)+(5x+3)=Yx+Yy\, .
-$$
+\]
 This proves linearity, unfortunately homogeneity fails:
-$$Y(cx)=5cx+3=c (5x+3) +3 -3c= c\, Yx +3-3c\neq cYx \mbox{ if } c\neq1\, .$$
+\[Y(cx)=5cx+3=c (5x+3) +3 -3c= c\, Yx +3-3c\neq cYx \mbox{ if } c\neq1\, .\]
 Notice that the special case $c=1$ holds (and just says $Y(1.x)=1.Yx$), but the homogeneity
 requirement must work for {\it any} $c$. 
 
@@ -274,13 +274,13 @@ The operator~$Y$ is neither homogeneous nor additive, and therefore not linear.
 
 This example might surprise you because the graph of the equation~$y=5x+3$ is a line, and what else could linear mean other than ``line-like"? In fact, there is a linear operator associated with this equation: 
 the operator~$L$ that acts on two-vectors as 
-$$L\colvec{x\\y}=y-5x.$$ 
+\[L\colvec{x\\y}=y-5x.\] 
 The line is then the collection of solutions to 
-$$L\colvec{x\\y}=10 \Leftrightarrow y-5x=3 \,.$$ 
+\[L\colvec{x\\y}=10 \Leftrightarrow y-5x=3 \,.\] 
 Similarly, the  operator~$M$ on 3-space with 
-$$M\colvec{x\\y\\z}=2x-3y+5z$$ 
+\[M\colvec{x\\y\\z}=2x-3y+5z\] 
 is linear. The set of solutions to 
-$$M\colvec{x\\y\\z}=10 \Leftrightarrow 2x-3y+5z=10$$ 
+\[M\colvec{x\\y\\z}=10 \Leftrightarrow 2x-3y+5z=10\] 
 form a plane. Lines and planes are {\it level sets} of linear functions. 
 
 \videoscriptlink{Linear_Operator_on_Lines.mp4}{Linear Operators Preserve Lines}{scripts_H}
@@ -379,9 +379,9 @@ One of our goals is to learn to solve systems of linear equations with maximal e
 %Lets work toward reducing the amount of things we rewrite by combining the pair of equations in example 3 into a singe equation using vectors from 2-space. 
 We will do that in the Chapter~\ref{\gaussElimPath}. Lets try to use less ink by writing our system of  equations as a single equation between 2-vectors.
 To do that we will need rules for multiplying a 2-vector by a scalar and adding pairs of 2-vectors:
-$$
+\[
 c\colvec{x\\y}:=\colvec{cx\\cy}\, \mbox{ and } \colvec{x\\y}+\colvec{x'\\y'}:=\colvec{x+x'\\y+y'}\, .
-$$
+\]
 Now we can write the following:
 %First we reduce the number of appearances of the equal sign:
 \begin{eqnarray*}
@@ -435,14 +435,14 @@ The matrix encodes fruit per container. The equation is roughly fruit per contai
 Another way to think about the above example is to remember the rule for multiplying a matrix times a vector.
 If you have forgotten this, you can actually  guess a good rule by making sure the matrix equation is the same as the system of linear equations.
 This would require that
-$$
+\[
  \begin{pmatrix}
       2     & 6 \\
       4     & 8
     \end{pmatrix}
   \colvec{x \\ y}
   :=   \colvec{2x+6y \\ 4x+8y}
-$$
+\]
 Indeed this is an example of
 \hypertarget{ch1vecmult}{the general rule} that you have probably seen before
 %\begin{center}
