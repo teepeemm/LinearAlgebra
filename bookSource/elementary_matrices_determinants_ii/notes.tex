@@ -4,7 +4,7 @@
 In section~\ref{elementarydeterminants}, we saw the definition of the determinant and derived an elementary matrix that exchanges two rows of a matrix.  Next, we need to find elementary matrices corresponding to the other two row operations; multiplying a row by a scalar, and adding a multiple of one row to another.  As a consequence, we will derive some important properties of the determinant.
 
 Consider $M=\colvec{R^1 \\ \vdots \\ R^n }$, where $R^i$ are row vectors.  Let $R^i(\lambda)$ be the identity matrix, with the $i$th diagonal entry replaced by $\lambda$, not to be confused with the row vectors. {\it I.e.}
-$$
+\[
 R^i(\lambda)=
 \begin{pmatrix}
 1 & & & & \\
@@ -13,7 +13,7 @@ R^i(\lambda)=
   & & & \ddots & \\
   & & & & 1 \\
 \end{pmatrix}
-\, .$$
+\, .\]
 Then:
 
 \[
@@ -27,7 +27,7 @@ What effect does multiplication by $R^i(\lambda)$ have on the determinant?
 & = & \lambda \det M
 \end{eqnarray*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
-{\it I.e.,} $$\det R^i(\lambda) M = \lambda \det M\, .$$
+{\it I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
 
 
 \begin{figure}
@@ -85,8 +85,8 @@ What is the effect of multiplying by $S^i_j(\lambda)$ on the determinant?  Let $
 &   & \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
 & = & \det M + \lambda \det M''
 \end{eqnarray*}
-Since $M''$ has two identical rows, its determinant is $0$.  Then $$\det S^i_j(\lambda)M = \det M\, .$$
-Notice that if $M$ is the identity matrix, then we have $$\det S^i_j(\lambda) = \det (S^i_j(\lambda)I) = \det I = 1\, .$$
+Since $M''$ has two identical rows, its determinant is $0$.  Then \[\det S^i_j(\lambda)M = \det M\, .\]
+Notice that if $M$ is the identity matrix, then we have \[\det S^i_j(\lambda) = \det (S^i_j(\lambda)I) = \det I = 1\, .\]
 
 \begin{figure}
 \begin{center}
@@ -153,7 +153,7 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\lambda)$ is invertible, excep
 \end{corollary}
 
 
-To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, $$M=E_1E_2\cdots E_k \, \rref(M)\, ,$$ and  $$N=F_1F_2\cdots F_l \, \rref(N)\, .$$  If $\rref(M)$ is the identity matrix ({\it i.e.}, $M$ is invertible), then:
+To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\it i.e.}, $M$ is invertible), then:
 
 \begin{eqnarray*}
 \det (MN) & = & \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
