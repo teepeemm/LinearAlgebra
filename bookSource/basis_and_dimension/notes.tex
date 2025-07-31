@@ -36,7 +36,7 @@ w=c^1v_1+\cdots + c^nv_n.
 Since $S$ is a basis for $V$, then $\spa S=V$, and so there exist constants~$c^i$ such that $w=c^1v_1+\cdots + c^nv_n$.
 
 Suppose there exists a second set of constants $d^i$ such that 
-$$w=d^1v_1+\cdots + d^nv_n\, .$$  Then
+\[w=d^1v_1+\cdots + d^nv_n\, .\]  Then
 \begin{eqnarray*}
 0_V&=&w-w\\
 &=&c^1v_1+\cdots + c^nv_n-d^1v_1-\cdots - d^nv_n \\[1mm]
@@ -52,9 +52,9 @@ If we have more than one $i$ for which $c^i\neq d^i$, we can use this last equat
 \begin{remark}
 This theorem is the one that makes bases so useful--they allow us to convert abstract vectors into column vectors.
 By ordering the set $S$ we obtain $B=(v_1,\ldots,v_n)$ and can write
-$$
+\[
 w=(v_1,\ldots,v_n) \ccolvec{c^1\\ \vdots\\ c^n }=\ccolvec{c^1\\ \vdots\\ c^n }_B\, .
-$$
+\]
 Remember that in general it makes no sense to drop the subscript $B$ on the column vector on the right--most vector spaces  are not made from  columns of numbers!
 \end{remark}
 
@@ -222,7 +222,7 @@ The numbers $m^i_j$ naturally form a matrix whose $j$th column is the column vec
 %This is a vector in $W$.  Let's compute its components in $W$.
 %
 %%%%%%%%%%%%%%%%%%%
-Indeed, if $$v=e_1v^1+\cdots+e_n v^n\, ,$$
+Indeed, if \[v=e_1v^1+\cdots+e_n v^n\, ,\]
 Then
 \begin{eqnarray*}
 L(v) & = & L( v^1e_1 + v^2e_2 + \cdots + v^ne_n) \\[1mm]
@@ -256,10 +256,10 @@ Also observe that the columns of $M$ are computed by examining $L$ acting on eac
 basis vectors of $W$.
 %
 %An efficient procedure for finding the matrix for a linear operator in particular bases for its domain and target is to calculate the way the linear operator acts on the basis vectors from the domain one at a time. This allows you to read off the columns of the matrix as
-%$$
+%\[
 %L(e_j)=
 %\rowvec{f_1 & f_2 & \cdots & f_m}\ccolvec{M^1_j \\[1mm] M^2_j \\[1mm] \vdots \\[1mm] M^m_j} .
-%$$
+%\]
 \begin{example}
 
 \noindent
@@ -284,7 +284,7 @@ L\colvec {a\\b }_B=
 
 %
 %\begin{example}
-%Consider a linear transformation $$L \colon \Re^2\rightarrow \Re^2\, .$$  Suppose we know that $L\colvec{1\\0}=\colvec{a\\c}$ and $L\colvec{0\\1}=\colvec{b\\d}$.  Then, because of linearity, we can determine what $L$ does to any vector $\colvec{x\\y}$:
+%Consider a linear transformation \[L \colon \Re^2\rightarrow \Re^2\, .\]  Suppose we know that $L\colvec{1\\0}=\colvec{a\\c}$ and $L\colvec{0\\1}=\colvec{b\\d}$.  Then, because of linearity, we can determine what $L$ does to any vector $\colvec{x\\y}$:
 %
 %\[
 %L\colvec{x\\y}=L\left(x\colvec{1\\0}+y\colvec{0\\1}\right)=xL\colvec{1\\0}+yL\colvec{0\\1}=x\colvec{a\\c}+y\colvec{b\\d}=\colvec{ax+by\\cx+dy}.
@@ -311,31 +311,31 @@ linear transformation will seem almost trivial. It is worthwhile working through
 \begin{example}
 Any vector in $\Re^n$ can be written as a linear combination of the \emph{standard (ordered) basis}\index{Standard basis} $(e_1,\dots e_n)$.  
 The vector $e_i$ has a one in the $i$th position, and zeros everywhere else.  {\it I.e.}
-$$
+\[
 e_1=\colvec{1\\ 0\\ \vdots \\0}\, ,\quad e_2=\colvec{0\\ 1\\ \vdots \\0}\, ,\ldots,\quad e_n=\colvec{0\\ 0\\ \vdots \\1 }\, .
-$$
+\]
 Then to find the matrix of any linear transformation $L \colon \Re^n \rightarrow \Re^n$, it suffices to know what $L(e_i)$ is for every $i$.  
 
 For any matrix $M$, observe that $Me_i$ is equal to the $i$th column of $M$.  Then if the $i$th column of $M$ equals $L(e_i)$ for every $i$, then $Mv=L(v)$ for every $v\in \Re^n$.  Then the matrix representing $L$ in the standard basis is just the matrix whose $i$th column is~$L(e_i)$. 
 
 For example, if 
-$$
+\[
 L\colvec{1\\0\\0}=\colvec{1\\4\\7}\, ,\quad
 L\colvec{0\\1\\0}=\colvec{2\\5\\8}\, ,\quad
 L\colvec{0\\0\\1}=\colvec{3\\6\\9}\, ,
-$$
+\]
 then the matrix of $L$ in the standard basis is simply
-$$
+\[
 \begin{pmatrix}1&2&3\\4&5&6\\7&8&9\end{pmatrix}\, .
-$$
+\]
 Alternatively, this information would often be presented as
-$$
+\[
 L\colvec{x\\y\\z}=\ccolvec{x+2y+3z\\4x+5y+6z\\7x+8y+9z}\, .
-$$
+\]
 You could either rewrite this  as 
-$$
+\[
 L\colvec{x\\y\\z}=\begin{pmatrix}1&2&3\\4&5&6\\7&8&9\end{pmatrix}\colvec{x\\y\\z}\, ,
-$$
+\]
 to immediately learn the matrix of $L$, or taking a more circuitous route:
 \begin{eqnarray*}
 L\colvec{x\\y\\z}&=&L\left[x\colvec{1\\0\\0}+y\colvec{0\\0\\1}+z
