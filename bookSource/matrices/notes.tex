@@ -16,10 +16,10 @@ Ordered, finite-dimensional, bases for  vector spaces allows us to express linea
 \noindent
 A basis allows us to efficiently label arbitrary vectors in terms of column vectors. Here is an  example.
 \begin{example}
-Let $$V=\left\{\begin{pmatrix}a&b\\c&d\end{pmatrix}\middle| \,a,b,c,d\in {\mathbb R}\right\}$$ be the vector space of $2\times 2$ real matrices,
+Let \[V=\left\{\begin{pmatrix}a&b\\c&d\end{pmatrix}\middle| \,a,b,c,d\in {\mathbb R}\right\}\] be the vector space of $2\times 2$ real matrices,
 with addition and scalar multiplication defined componentwise. 
 One choice of basis is the ordered set (or list) of matrices
-$$B=\left(\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\ 1&0\end{pmatrix},\begin{pmatrix}0&0\\ 0&1\end{pmatrix}\right)=:(e_1^1,e_2^1,e^2_1,e^2_2)\, .$$ 
+\[B=\left(\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\ 1&0\end{pmatrix},\begin{pmatrix}0&0\\ 0&1\end{pmatrix}\right)=:(e_1^1,e_2^1,e^2_1,e^2_2)\, .\] 
 Given a particular vector and a basis, your job is to write that vector as a sum of multiples of basis elements. Here
 an arbitrary vector $v\in V$ is just a matrix, so we write
 \begin{eqnarray*}
@@ -30,9 +30,9 @@ v\ =\ \begin{pmatrix}a&b\\c&d\end{pmatrix}&=&\quad\!\! \begin{pmatrix}a&0\\0&0\e
 \end{eqnarray*}
 The coefficients $(a,b,c,d)$ of the basis vectors $(e^1_1,e^1_2,e^2_1,e^2_2)$ encode the information of which matrix the vector $v$ is.
 We store them in column vector by writing
-$$
+\[
 v=a \, e^1_1+b \, e^1_2+c\,  e^2_1+d \, e^2_2=: (e^1_1,e^1_2,e^2_1,e^2_2)\colvec{a\\b\\c\\d}=:\colvec{a \\ b\\c\\d}_B\, .
-$$
+\]
 The 4-vector $\colvec{a\\b\\c\\d} \in \mathbb{R}^4$ encodes the vector $\begin{pmatrix}a&b\\c&d\end{pmatrix}\in V$ but is NOT equal to it! \\(After all, $v$ is a matrix so could not equal a column vector.) Both notations on the right hand side of the above equation really stand for the vector obtained by multiplying the coefficients stored in the column vector by the corresponding basis element and then summing over them.
 \end{example}
  
@@ -40,10 +40,10 @@ Next, lets consider a tautological example showing how to label column vectors i
 
 \begin{example} (Standard Basis of $\Re^2$)\index{Standard basis!for ${\mathbb R}^2$}\\
 The vectors 
-$$
+\[
 e_1=\colvec{1\\0},~~~
 e_2=\colvec{0\\1}
-$$
+\]
 are called the standard basis vectors of $\Re^2=\Re^{\{1,2\}}$. 
 Their description as functions of~$\{1,2\}$ are 
 \begin{displaymath}
@@ -62,13 +62,13 @@ Their description as functions of~$\{1,2\}$ are
 \end{displaymath} 
 It is  natural to assign these  the order: $e_1$ is first and $e_2$ is second.
 An arbitrary vector~$v$ of $\Re^2$ can be written as  
-$$
+\[
 v=\colvec{x\\y}=x e_1+ ye_2 .
-$$
-To emphasize that we are using the standard basis we define the list (or ordered set) $$E=(e_1,e_2)\, ,$$ and write 
-$$
+\]
+To emphasize that we are using the standard basis we define the list (or ordered set) \[E=(e_1,e_2)\, ,\] and write 
+\[
 \colvec{x\\y}_E:=(e_1,e_2)\colvec{x\\y}:=x e_1+ ye_2=v .
-$$
+\]
 You should read this equation by saying:
 \begin{quote}
 ``The column vector of the vector $v$ in the basis $E$ is $\colvec{x\\y}$.''
@@ -86,9 +86,9 @@ The last example probably seems pedantic because column vectors are already just
 has simply allowed us to ``re-express'' these as lists of numbers. Of course, this objection does not apply to more complicated vector spaces like our first matrix example. Moreover, as we saw \hypertarget{nonstandard r2 basis}{earlier}, there are infinitely many other pairs of vectors in $\Re^2$ that form a basis.
 
 \begin{example}(A Non-Standard Basis of $\Re^2=\Re^{\{1,2\}}$)\\
-$$
+\[
 b=\colvec{1\\1}\, ,\quad \beta=\colvec{1\\-1}.
-$$
+\]
 As functions of $\{1,2\}$ they read
 \begin{displaymath}
    b (k)= \left\{
@@ -106,41 +106,41 @@ As functions of $\{1,2\}$ they read
 \end{displaymath} 
 
 Notice something important: there is no reason to say that $\beta$ comes before $b$ or vice versa. That is, there is no {\it a priori} reason to give these basis elements one order or the other. 
-However, it will be necessary to give the basis elements an order if we want to use them to encode other vectors.  We choose one arbitrarily; let $$B=(b,\beta)$$ be the ordered basis. Note that for an unordered set we use the $\{\}$ parentheses while for lists or ordered sets we use $()$. 
+However, it will be necessary to give the basis elements an order if we want to use them to encode other vectors.  We choose one arbitrarily; let \[B=(b,\beta)\] be the ordered basis. Note that for an unordered set we use the $\{\}$ parentheses while for lists or ordered sets we use $()$. 
 
 As before we define 
-$$
+\[
 \colvec{x\\y}_B :=(b,\beta)\colvec{x \\ y}:= xb+ y \beta\, . 
-$$
+\]
 You might think that the numbers $x$ and $y$ denote exactly the same vector as in the previous example. However, they do not. Inserting
 the actual vectors that $b$ and $\beta$ represent we have
-$$
+\[
 xb+ y \beta=x\colvec{1\\1}+y\colvec{1\\-1}=\colvec{x+y\\x-y}\, .
-$$
+\]
 Thus, to contrast, we have
-$$
+\[
 \colvec{x\\y}_B=\colvec{x+y\\x-y} \mbox{ and } \colvec{x\\y}_E=\colvec{x\\y}
-$$
+\]
 Only in the standard basis $E$ does the column vector of $v$ agree with the column vector that $v$ actually is!
 
 %This equation shows how a pair of numbers in ordered basis $B$ gives a pair of numbers in the standard basis $E$. The stacks of numbers we have dealt with in the past were always specifying vectors in the standard basis. 
 
 %The other order for the basis, $B'=(\beta,b)$ yields
-%$$
+%\[
 %\colvec{x\\y}_B' := x\beta+ y b =x\colvec{1\\-1}+y \colvec{1\\1}=\colvec{x-y\\x+y}_E.
-%$$
+%\]
 %Again, order matters. 
 \end{example}
 
 Based on the above example, you might think that our aim would be to find the ``standard basis'' for any problem. 
-In fact, this is far from the truth. Notice, for example that the vector $$v=\colvec{1\\1}=e_1+e_2=b$$ written in the standard basis~$E$ is just
-$$
+In fact, this is far from the truth. Notice, for example that the vector \[v=\colvec{1\\1}=e_1+e_2=b\] written in the standard basis~$E$ is just
+\[
 v=\colvec{1\\1}_E\, ,
-$$
+\]
 which was easy to calculate. But in the basis~$B$ we find
-$$
+\[
 v=\colvec{1\\0}_B\, ,
-$$
+\]
 which is actually a simpler column vector!
 The fact that there are many bases for any given vector space allows us to choose a basis in which our computation is easiest. 
 In any case, the standard basis only makes sense for $\Re^n$. Suppose your vector space was the set of solutions to a differential equation--what would a standard basis then be?
@@ -149,59 +149,59 @@ In any case, the standard basis only makes sense for $\Re^n$. Suppose your vecto
 
 \begin{example} (A Basis For a Hyperplane)\\
 Lets again consider the hyperplane
-$$
+\[
 V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle| c_1,c_2\in \Re \right\} 
-$$
+\]
 One possible choice of ordered basis is 
-$$b_1=\colvec{1\\1\\0},~~~b_2=\colvec{0\\1\\1}, ~~~
+\[b_1=\colvec{1\\1\\0},~~~b_2=\colvec{0\\1\\1}, ~~~
 B=(b_1,b_2).
-$$
+\]
 With this choice
-$$
+\[
 \colvec{x\\y}_B := xb_1+ y b_2 
 =x\colvec{1\\1\\0}+y \colvec{0\\1\\1}=\ccolvec{x\\x+y\\y}_E.
-$$
+\]
 With the other choice of order $B'=(b_2, b_1)$ 
-$$
+\[
 \colvec{x\\y}_{\!B'} := xb_2+ y b_1 
 =x\colvec{0\\1\\1}+y \colvec{1\\1\\0}=\ccolvec{y\\x+y\\x}_E.
-$$
+\]
 We see that the  order of basis elements matters. 
 \end{example}
 
 Finding the column vector of a given vector in a given basis usually amounts to a linear systems problem:
 
 \begin{example} (Pauli Matrices)\\
-Let $$V=\left\{\begin{pmatrix}z&u\\v&-z\end{pmatrix}\middle| z,u,v\in{\mathbb C}\right\}$$\
+Let \[V=\left\{\begin{pmatrix}z&u\\v&-z\end{pmatrix}\middle| z,u,v\in{\mathbb C}\right\}\]\
 be the vector space of \hyperlink{TRACE}{trace}-free complex-valued matrices (over~${\mathbb C}$) with basis
-$$
+\[
 B=(\sigma_x,\sigma_y,\sigma_z)\, ,
-$$ where
-$$
+\] where
+\[
 \sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}\, ,\quad
 \sigma_y=\begin{pmatrix}0&-i\\i&0\end{pmatrix}\, ,\quad
 \sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}\, .
-$$
+\]
 These three matrices are the famous {\it Pauli matrices}\index{Pauli Matrices}; they are used to describe electrons in quantum theory, or qubits in quantum computation.
 Let 
-$$
+\[
 v=\begin{pmatrix}
 -2+i&1+i\\3-i&2-i
 \end{pmatrix}\, .
-$$
+\]
 Find the column vector of $v$ in the basis~$B$.
 
 For this we must solve the equation
-$$
+\[
 \begin{pmatrix}
 -2+i&1+i\\3-i&2-i
 \end{pmatrix}
 =\alpha^x \begin{pmatrix}0&1\\1&0\end{pmatrix}+\alpha^y
 \begin{pmatrix}0&-i\\i&0\end{pmatrix}+\alpha^z
 \begin{pmatrix}1&0\\0&-1\end{pmatrix}\, .
-$$
+\]
 This gives four equations, {\it i.e.} a linear systems problem, for the $\alpha$'s
-$$
+\[
 \left\{
 \begin{array}{rrrrr}
 \alpha^x&\!\!-\ i\alpha^y&&=&1+i\\
@@ -210,30 +210,30 @@ $$
 &&-\alpha^z&=&2-i\\
 \end{array}
 \right.
-$$
+\]
 with solution
-$$
+\[
 \alpha^x=2\, ,\quad \alpha^y=2-2i\, ,\quad \alpha^z=-2+i\, .
-$$
+\]
 Thus
-$$
+\[
 v=\begin{pmatrix}
 -2+i&1+i\\3-i&2-i
 \end{pmatrix}=\ccolvec{2\\\ 2-i\\\!\!-2+i }_B\, .
-$$
+\]
 \end{example}
 
 To summarize, the {\it column vector 
 of a vector}\index{Column vector! of a vector} $v$ in an ordered basis $B=(b_1,b_2,\ldots,b_n)$,
-$$\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}\, ,$$ is defined by solving the linear systems problem
-$$
+\[\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}\, ,\] is defined by solving the linear systems problem
+\[
 v=\alpha^1 b_1 + \alpha^2b_2 +\cdots + \alpha^n b_n = \sum_{i=1}^n \alpha^i b_i\, .
-$$
+\]
 The numbers $(\alpha^1,\alpha^2,\ldots,\alpha^n)$ are called the {\it components of the vector}\index{Components of a vector}~$v$.
 Two useful shorthand notations for this are
-$$
+\[
 v=\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}_B = (b_1,b_2,\ldots,b_n)\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}\, .
-$$
+\]
 
 \subsection{From Linear Operators to Matrices}
 
@@ -244,12 +244,12 @@ A matrix  records how a linear operator maps an element of the basis to a sum of
 More carefully, if $L$ is a linear operator from $V$ to $W$ 
 then the matrix for~$L$ in the ordered bases $B=(b_1,b_2,\dots)$ for $V$ and $B'=(\beta_1,\beta_2,\dots)$ for~$W$, is the
  array of numbers %$M$ specified by 
-% $$
+% \[
 % Lv_B=(Mv)_{B'}
-% $$
+% \]
 %
  $m_{i}^j$ specified by 
-$$L(b_i)= m_{i}^1\beta_1^{\phantom{1}}+\dots +m_{i}^j \beta_j^{\phantom{1}}+\cdots$$
+\[L(b_i)= m_{i}^1\beta_1^{\phantom{1}}+\dots +m_{i}^j \beta_j^{\phantom{1}}+\cdots\]
 
 \begin{remark}
 To calculate the matrix of a linear transformation you must compute what the linear transformation does to every input basis vector and then write the answers in terms of the output basis vectors:
@@ -277,39 +277,39 @@ m_1^j & m_2^j & \cdots & m_i^j& \cdots \\
 \begin{example}
 Consider 
 $L:V\to \Re^3$ (as in example~\ref{Vdef}) defined by 
-$$
+\[
 L\colvec{1\\1\\0 } = \colvec{0\\1\\0}\, ,\quad
 L\colvec{0\\1\\1 } = \colvec{0\\1\\0}\, .
-$$
+\]
 By linearity this specifies the action of $L$ on any vector from $V$ as
-$$
+\[
 L\left[ c_1\colvec{1\\1\\0 } + c_2 \colvec{0\\1\\1} \right]= (c_1+c_2)\colvec{0\\1\\0}.
-$$
+\]
 We had trouble expressing this linear operator as a matrix. Lets take input basis
-$$
+\[
 B=\left(\colvec{1\\1\\0 } ,\colvec{0\\1\\1 }\right)=:(b_1,b_2)\, ,
-$$
+\]
 and output basis 
-$$
+\[
 E=\left(\colvec{1\\0\\0 } ,\colvec{0\\1\\0 } ,\colvec{0\\0\\1 }\right)\, .
-$$
+\]
 Then
-$$
+\[
 L b_1 = 0 e_1 + 1e_2+ 0  e_3 \, ,
-$$
-$$
+\]
+\[
 L b_2 = 0 e_1 + 1e_2+ 0  e_3 \, ,
-$$
+\]
 or 
-$$
+\[
 \big(Lb_1, L b_2) = \big( (e_1,e_2,e_3)\colvec{0\\1\\0}, (e_1,e_2,e_3)\colvec{0\\1\\0}\big)=(e_1,e_2,e_3)\begin{pmatrix}0&0\\1&1\\0&0
 \end{pmatrix}\, .
-$$
+\]
 The matrix on the right is the matrix of $L$ in these bases.
 More succinctly we could write
-$$
+\[
 L\colvec{x\\y}_B=(x+y) \colvec{0\\1\\0}_E
-$$
+\]
 and thus see that $L$ acts like the matrix 
 $
 \begin{pmatrix}
@@ -320,14 +320,14 @@ $
 $.
 
 Hence
-$$L\colvec{x\\y}_B
+\[L\colvec{x\\y}_B
 =\left(  \begin{pmatrix}
 0&0\\
 1&1\\
 0&0
 \end{pmatrix}
 \colvec{x\\y} \right)_E\, ;
-$$
+\]
 given input and output bases, the linear operator is now encoded by a matrix.
 \end{example}
 This is the general rule for this chapter:
@@ -421,18 +421,18 @@ The numbers $m^i_j$ are called {\bf entries}\index{Matrix!entries of}.  The supe
 
 %It is often useful to consider matrices whose entries are more general than the real numbers, so we allow that possibility.
 
-An $r\times 1$ matrix $v = (v^r_1) = (v^r)$ is called a \emph{column vector}\index{Column vector}, written $$v = \ccolvec{v^1\\v^2\\ \vdots \\ v^r }\, .$$  A $1\times k$ matrix $v = (v^1_k) = (v_k)$ is called a \emph{row vector}\index{Row vector}, written $$v = \rowvec{v_1 & v_2 & \cdots & v_k }\, .$$  
+An $r\times 1$ matrix $v = (v^r_1) = (v^r)$ is called a \emph{column vector}\index{Column vector}, written \[v = \ccolvec{v^1\\v^2\\ \vdots \\ v^r }\, .\]  A $1\times k$ matrix $v = (v^1_k) = (v_k)$ is called a \emph{row vector}\index{Row vector}, written \[v = \rowvec{v_1 & v_2 & \cdots & v_k }\, .\]  
 The {\it transpose of a column vector}\index{Transpose!of a column vector} is the corresponding row vector and vice versa:
 
 \begin{example}
 Let 
-$$
+\[
 v=\colvec{1\\2\\3}\, .
-$$
+\]
 Then
-$$
+\[
 v^T=\rowvec{1 &2 &3}\, ,
-$$
+\]
 and $(v^T)^T=v$. This is an example of an {\it involution}\index{Involution}, namely an operation which when performed twice does nothing.
 \end{example}
 
@@ -470,9 +470,9 @@ This is an example of a \emph{symmetric matrix}, since $m_j^i = m_i^j$.
 \end{example}
 
 The set of all $r\times k$ matrices 
-$${\mathbb M}_k^r:=\{(m^i_j)|m^i_j\in {\mathbb R};\,  
+\[{\mathbb M}_k^r:=\{(m^i_j)|m^i_j\in {\mathbb R};\,  
 i\in \{1,\dots,r\} ;\, 
-j\in \{1\dots k\} \}\, ,$$ 
+j\in \{1\dots k\} \}\, ,\] 
 is itself  a vector space with  addition and scalar multiplication defined as follows:
 
 \Shabox{1}{\begin{tabular}{c}
@@ -558,20 +558,20 @@ Another way to view matrix multiplication is in terms of dot products:
 
 
 \begin{example}
-Let $$M=\begin{pmatrix}1&3\\3&5\\2&6\end{pmatrix}=:\ccolvec{u^T\\v^T\\w^T}
+Let \[M=\begin{pmatrix}1&3\\3&5\\2&6\end{pmatrix}=:\ccolvec{u^T\\v^T\\w^T}
 \mbox{ and }
-N=\begin{pmatrix}2&3&1\\0&1&0\end{pmatrix}=:\rowvec{a & b & c}$$
+N=\begin{pmatrix}2&3&1\\0&1&0\end{pmatrix}=:\rowvec{a & b & c}\]
 where
-$$
+\[
 u=\colvec{1\\3}\, ,\quad
 v=\colvec{3\\5}\, ,\quad 
 w=\colvec{2\\6}\, ,\quad
 a=\colvec{2\\0}\, ,\quad
 b=\colvec{3\\1}\, ,\quad 
 c=\colvec{1\\0}\, .
-$$
+\]
 Then 
-$$
+\[
 MN=\left(\!\begin{array}{ccc}
 u\cdot a & u\cdot b & u\cdot c\\
 v\cdot a & v\cdot b & v\cdot c\\
@@ -583,15 +583,15 @@ w\cdot a & w\cdot b & w\cdot c\\
 6&14&3\\
 4&12&2
 \end{pmatrix}\, .
-$$
+\]
 \end{example}
 This fact has an obvious yet important consequence:
 
 \begin{theorem}
 Let $M$ be a matrix and $x$ a column vector. If 
-$$
+\[
 Mx=0
-$$
+\]
 then the vector $x$ is \hyperlink{orthog}{orthogonal} to the rows of $M$.
 \end{theorem}
 
@@ -604,7 +604,7 @@ Remember that the set of all vectors that can be obtained by adding up scalar mu
 
 We know that $r\times k$ matrices can be used to represent linear transformations 
 $ \Re^k \rightarrow \Re^r $
-via $$(MV)^i = \sum_{j=1}^{k} m_j^iv^j , $$ which is the same rule used when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
+via \[(MV)^i = \sum_{j=1}^{k} m_j^iv^j , \] which is the same rule used when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
 
 Likewise, we can use a matrix $N=(n^i_j)$ to define a linear transformation of a vector space of matrices. For example
 \[
@@ -619,11 +619,11 @@ This is the same as the rule we use to multiply matrices. \hypertarget{leftmult}
 Let $M=(m^i_j)$ be a matrix. The entries $m_i^i$ are called {\bf diagonal}, and the set $\{m_1^1$, $m_2^2$, $\ldots \}$~is called the {\bf diagonal} of the matrix\index{Matrix!diagonal of}.
 
 Any $r\times r$ matrix is called a {\bf square matrix}\index{Square matrix}.  A square matrix that is zero for all non-diagonal entries is called a {\bf diagonal matrix}\index{Diagonal matrix}. An example of a square diagonal matrix is
-$$\begin{pmatrix}
+\[\begin{pmatrix}
 2 & 0 & 0\\
 0 & 3 & 0\\
 0 & 0 & 0\\
-\end{pmatrix}\, .$$
+\end{pmatrix}\, .\]
 
 The $r\times r$ diagonal matrix with all diagonal entries equal to $1$ is called the {\bf identity matrix}\index{Identity matrix}, $I_r$, or just $I$.  An identity matrix looks like \[ I=
 \begin{pmatrix}
@@ -634,7 +634,7 @@ The $r\times r$ diagonal matrix with all diagonal entries equal to $1$ is called
 0 & 0 & 0 & \cdots & 1
 \end{pmatrix}.
 \]
-The identity matrix is special because $$I_rM=MI_k=M$$ for all $M$ of size $r\times k$.
+The identity matrix is special because \[I_rM=MI_k=M\] for all $M$ of size $r\times k$.
 \end{definition}
 
 
@@ -650,7 +650,7 @@ A matrix $M$ is \emph{symmetric}\index{Symmetric matrix} if $M=M^T$.
 \end{definition}
 
 \begin{example}
-$$\begin{pmatrix}
+\[\begin{pmatrix}
 2 & 5 & 6\\
 1 & 3 & 4\\
 \end{pmatrix}^T = 
@@ -658,9 +658,9 @@ $$\begin{pmatrix}
 2 & 1 \\
 5 & 3 \\
 6 & 4 \\
-\end{pmatrix}\, ,$$
+\end{pmatrix}\, ,\]
 and
-$$
+\[
 \begin{pmatrix}
 2 & 5 & 6\\
 1 & 3 & 4\\
@@ -671,7 +671,7 @@ $$
 \end{pmatrix}^T = 
 \begin{pmatrix}
 65&43\\43&26
-\end{pmatrix}\, ,$$
+\end{pmatrix}\, ,\]
 is symmetric.
 
 
@@ -706,30 +706,30 @@ Many properties of matrices following from the same property for real numbers. H
 
 \begin{example}
 {\it Associativity of matrix multiplication.} We know for real numbers $x$, $y$ and $z$ that 
-$$
+\[
 x(yz)=(xy)z\, ,
-$$
+\]
 {\it i.e.}, the order of multiplications does not matter. The same property holds for matrix multiplication, let us show why.
 Suppose $M=\big( m^i_j \big)$, $N=\big( n^j_k \big)$ and  $R=\big( r^k_l \big)$ are, 
 respectively, $m\times n$, $n\times r$ and $r\times t$ matrices. Then from the rule for matrix
 multiplication we have
-$$
+\[
 MN=\Big(\sum_{j=1}^n m^i_j n^j_k\Big)\mbox{ and } NR=\Big(\sum_{k=1}^r n^j_k r^k_l\Big)\, .
-$$
+\]
 So first we compute 
-$$
+\[
 (MN)R=\Big(\sum_{k=1}^r \Big[\sum_{j=1}^n m^i_j n^j_k\Big] r^k_l \Big) = 
 \Big(\sum_{k=1}^r \sum_{j=1}^n \Big[ m^i_j n^j_k\Big] r^k_l \Big) =\Big(\sum_{k=1}^r \sum_{j=1}^n m^i_j n^j_k r^k_l \Big)\, .
-$$
+\]
 In the first step we just wrote out the definition for matrix multiplication, in the second step we
 moved summation symbol outside the bracket (this is just the distributive
 property $x(y+z)=xy+xz$ for numbers) and
 in the last step we used the associativity property for real numbers to remove the square brackets. 
 Exactly the same reasoning shows that
-$$
+\[
 M(NR)=\Big(\sum_{j=1}^n m^i_j\Big[\sum_{k=1}^r n^j_k r^k_l\Big]\Big) = 
 \Big(\sum_{k=1}^r \sum_{j=1}^n  m^i_j \Big[n^j_kr^k_l \Big] \Big) =\Big(\sum_{k=1}^r \sum_{j=1}^n m^i_j n^j_k r^k_l \Big)\, .
-$$
+\]
 This is the same as above so we are done. \footnote{As a fun remark, note that Einstein would simply have written\\
 $(MN)R=(m^i_j n^j_k) r^k_l= m^i_j n^j_k r^k_l = m^i_j (n^j_k r^k_l ) = M(NR)$.}
 \end{example}
@@ -779,21 +779,21 @@ while, on the other hand,
 \end{example}
 Since $n\times n$ matrices are linear transformations $\Re^n \rightarrow \Re^n$, we can see that the order of successive linear transformations matters.  
 %In general  for two linear transformations $K$ and $L$ taking $\Re^n \rightarrow \Re^n$, and $v\in \Re^n$,  one has
-%$$K(L(v)) \neq L(K(v))\, .$$
+%\[K(L(v)) \neq L(K(v))\, .\]
 %Finding matrices such that $MN=NM$ is an important problem in mathematics.
 %We promise
 
 Here is an example of matrices acting on objects in three dimensions that also shows matrices not commuting.
 \begin{example}
 In \hyperlink{rotationprob}{Review Problem}~\ref{rotate}, you learned that the matrix
-$$M=\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin \theta & \cos\theta\end{pmatrix}\, ,$$
+\[M=\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin \theta & \cos\theta\end{pmatrix}\, ,\]
 rotates vectors in the plane by an angle~$\theta$. 
 We can generalize this, using \hyperlink{blocks}{block matrices}, to three dimensions.
 In fact the following matrices built from a $2\times 2$ rotation matrix, a $1\times 1$ identity matrix and zeroes everywhere else
-$$
+\[
 M=\begin{pmatrix}\cos\theta & \sin\theta &0\\ -\sin \theta & \cos\theta&0\\\multicolumn{1}{c}{0}&\multicolumn{1}{c}{0}&1\end{pmatrix}\qquad\mbox{and}\qquad
 N=\begin{pmatrix}1&\multicolumn{1}{c}{0}&\multicolumn{1}{c}{0}\\0&\cos\theta & \sin\theta \\ 0&-\sin \theta & \cos\theta\end{pmatrix}\, ,
-$$
+\]
 perform rotations by an angle $\theta$ in the $xy$ and $yz$ planes, respectively. Because, they rotate single vectors, you can also use them to rotate objects built from a collection of vectors like pretty colored blocks! Here is a picture of $M$ and then $N$ acting on such a block, compared with the case of $N$ followed by $M$. The special case of $\theta=90^\circ$ is shown.
 \begin{center}
 \includegraphics[scale=.3]{MNNM.jpg}
@@ -897,16 +897,16 @@ This is exactly $M^2$.
 
 Not every pair of matrices can be multiplied.  When multiplying two matrices, the number of rows in the left matrix must equal the number of columns in the right.  For an $r\times k$ matrix $M$ and an $s\times l$ matrix $N$, then we must have~$k=s$.
 
-This is not a problem for square matrices of the same size, though.  Two~$n\times n$ matrices can be multiplied in either order.  For a single matrix $M \in \mathbb{M}^n_n$, we can form $M^2=MM$, $M^3=MMM$, and so on. It is useful to define $$M^0=I\, ,$$ the identity matrix, just like $x^0=1$ for numbers.
+This is not a problem for square matrices of the same size, though.  Two~$n\times n$ matrices can be multiplied in either order.  For a single matrix $M \in \mathbb{M}^n_n$, we can form $M^2=MM$, $M^3=MMM$, and so on. It is useful to define \[M^0=I\, ,\] the identity matrix, just like $x^0=1$ for numbers.
 
 As a result, any polynomial  can be have square matrices in it's domain. 
 
 \begin{example}
 Let $f(x) = x - 2x^2 + 3x^3$
-and $$M=\begin{pmatrix}
+and \[M=\begin{pmatrix}
 1 & t \\
 0 & 1 \\
-\end{pmatrix}\, .$$  
+\end{pmatrix}\, .\]  
 Then 
 \[
 M^2 = \begin{pmatrix}
@@ -948,7 +948,7 @@ Then we can define the matrix function by just plugging in $M$:
 f(M) = f(0) + f'(0)M + \frac{1}{2!}f''(0)M^2 + \cdots\, .
 \]
 There are additional techniques to determine the convergence of Taylor Series of matrices, based on the fact that the convergence problem is simple for diagonal matrices.  It also turns out that the matrix exponential\index{Matrix exponential}
-$$\exp (M) = I + M + \frac{1}{2}M^2 + \frac{1}{3!}M^3 + \cdots\, ,$$ always converges.
+\[\exp (M) = I + M + \frac{1}{2}M^2 + \frac{1}{3!}M^3 + \cdots\, ,\] always converges.
 
 \Videoscriptlink{properties_of_matrices_example.mp4}{Matrix Exponential Example}{properties_of_matrices_example}
 
@@ -984,7 +984,7 @@ While matrix multiplication does not commute, the trace of a product of matrices
 \end{eqnarray*}
 \Videoscriptlink{properties_of_matrices_trace_proof.mp4}{Proof Explanation}{scripts_properties_of_matrices_trace_proof}
 Thus we have a Theorem:
-\begin{theorem} For any square matrices $M$ and $N$ $$\tr(MN)=\tr(NM).$$
+\begin{theorem} For any square matrices $M$ and $N$ \[\tr(MN)=\tr(NM).\]
 \end{theorem}
 
 \begin{example}
@@ -1017,7 +1017,7 @@ However, $\tr(MN) = 2+1 = 3 = 1+2 = \tr(NM)$.
 Another useful property of the trace is that:
 \[\tr M = \tr M^T\] 
 This is true because the trace only uses the diagonal entries, which are fixed by the transpose.  For example, 
-$$\tr \begin{pmatrix}
+\[\tr \begin{pmatrix}
 1 & 1 \\
 2 & 3 \\
 \end{pmatrix} = 4 = \tr \begin{pmatrix}
@@ -1027,7 +1027,7 @@ $$\tr \begin{pmatrix}
 1 & 2 \\
 1 & 3 \\
 \end{pmatrix}^T\, .
-$$
+\]
 Finally, trace is a linear transformation from matrices to the real numbers.  This is easy to check.
 
 %\Videoscriptlink{properties_of_matrices_trace.mp4}{More on the trace function}{scripts_properties_of_matrices_trace}
@@ -1175,7 +1175,7 @@ I & M^{-1}V
 Solving the linear system $MX=V$ then tells us what $M^{-1}V$ is.  
 
 To solve many linear systems with the same matrix at once, 
-$$MX=V_1,~MX=V_2$$
+\[MX=V_1,~MX=V_2\]
 we can consider augmented matrices with 
 %a matrix on the right side instead of a column vector, 
 many columns on the right 
@@ -1306,7 +1306,7 @@ In summary, when $M^{-1}$ exists
 \subsection{Homogeneous Systems}
 
 \begin{theorem}
-A square matrix $M$ is invertible if and only if the homogeneous system $$Mx=0$$ has no non-zero solutions.
+A square matrix $M$ is invertible if and only if the homogeneous system \[Mx=0\] has no non-zero solutions.
 \end{theorem}
 
 \begin{proof}
@@ -1434,7 +1434,7 @@ Reading Problems & \hwrref{Matrices}{6}, \hwrref{Matrices}{7}
 \section{LU Redux}
 \label{LUdecomp}
 
-Certain matrices are easier to work with than others.  In this section, we will see how to write any square\footnote{The case where $M$ is not square is dealt with at the end of the section.} matrix $M$ as the product of two simpler matrices.  We will write $$M=LU\, ,$$ where:
+Certain matrices are easier to work with than others.  In this section, we will see how to write any square\footnote{The case where $M$ is not square is dealt with at the end of the section.} matrix $M$ as the product of two simpler matrices.  We will write \[M=LU\, ,\] where:
 \begin{itemize}
 \item $L$ is \emph{lower triangular}\index{Lower triangular matrix}.  This means that all entries above the main diagonal are zero.  In notation,
 $L=(l^i_j)$ with $l^i_j=0$ for all $j>i$.
@@ -1469,7 +1469,7 @@ a & b & 1 \\
 \end{amatrix} \ \Rightarrow \ y=\frac{e}{c}\, , \quad x=\frac{1}{a}\left(1-\frac{be}{c}\right)
 \]
 
-$$
+\[
 \begin{amatrix}{3}
 1 & 0 & 0 & d \\
 a & 1 & 0 & e \\
@@ -1479,7 +1479,7 @@ b & c & 1 & f \\
 \left\{    \begin{array}{l} x=d\\   y=e-ax\\  z=f-bx-cy \end{array} \right\}
 \Rightarrow 
 \left\{    \begin{array}{l} x=d\\   y=e-ad\\  z=f-bd-c(e-ad) \end{array} \right. .
-$$
+\]
 For lower triangular matrices, 
 \emph{forward} substitution\index{Forward substitution} 
 gives a quick solution; for upper triangular matrices, 
@@ -1595,24 +1595,24 @@ To find the $LU$ decomposition, we'll create two sequences of matrices $L_1, L_2
 \begin{example} (An Elementary Matrix)
 
 \noindent
-Consider $$E=\begin{pmatrix}1&0\\\lambda&1\end{pmatrix}\, ,\qquad M=\begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}\, .$$
+Consider \[E=\begin{pmatrix}1&0\\\lambda&1\end{pmatrix}\, ,\qquad M=\begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}\, .\]
 Lets compute $EM$
-$$
+\[
 EM=\begin{pmatrix}\multicolumn{1}{c}{a}&\mc{b}&\mc{c}&\cdots\\d+\lambda a&e+\lambda b&f+\lambda c&\cdots\end{pmatrix}\, .
-$$
+\]
 Something neat happened here: multiplying $M$ by $E$ performed the row operation $R_2\to R_2+\lambda R_1$ on $M$.
 Another interesting fact:
-$$
+\[
 E^{-1}:=\begin{pmatrix}1&0\\-\lambda&1\end{pmatrix}
-$$ 
+\] 
 obeys (check this yourself...)
-$$
+\[
 E^{-1} E = 1\, .
-$$
+\]
 Hence $M=E^{-1} E M$ or, writing this out
-$$
+\[
 \begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}=\begin{pmatrix}1&0\\-\lambda&1\end{pmatrix} \begin{pmatrix}\mc{a}&\mc{b}&\mc{c}&\cdots\\d+\lambda a&e+\lambda b&f+\lambda c&\cdots\end{pmatrix}\, .
-$$
+\]
 Here the matrix on the left is lower triangular, while the matrix on the right has had a row operation performed on it.
 \end{example}
 
@@ -1620,25 +1620,25 @@ Here the matrix on the left is lower triangular, while the matrix on the right h
 
 
 \vspace{2mm}
-We would like to  use the first row of $M$ to zero out the first entry of every row below it.  For our running example, $$M=\begin{pmatrix}
+We would like to  use the first row of $M$ to zero out the first entry of every row below it.  For our running example, \[M=\begin{pmatrix}
 6 & 18 & 3 \\
 2 & 12 & 1 \\
 4 & 15 & 3 
-\end{pmatrix}\, ,$$ so we would like to perform the row operations $$R_2\to R_2 -\frac 13 R_1 \mbox{ and } R_3\to R_3-\frac 23R_1\, .$$
+\end{pmatrix}\, ,\] so we would like to perform the row operations \[R_2\to R_2 -\frac 13 R_1 \mbox{ and } R_3\to R_3-\frac 23R_1\, .\]
 %so the second row minus $\frac{1}{3}$ of the first row will zero out the first entry in the second row.  Likewise, the third row minus $\frac{2}{3}$ of the first row will zero out the first entry in the third row.
 If we perform these row operations on $M$ to produce 
-$$U_1=\begin{pmatrix}
+\[U_1=\begin{pmatrix}
 6 & 18 & 3 \\
 0 & 6 & 0 \\
 0 & 3 & 1 
-\end{pmatrix}\, ,$$
+\end{pmatrix}\, ,\]
 we need to multiply this on the left by a lower triangular matrix $L_1$ so that the product $L_1U_1=M$ still.
 The above example shows how to do this:
-Set $L_1$ to be the lower triangular matrix whose first column is filled with  {\bf minus} the constants used to zero out the first column of $M$.  Then $$L_1 = \begin{pmatrix}
+Set $L_1$ to be the lower triangular matrix whose first column is filled with  {\bf minus} the constants used to zero out the first column of $M$.  Then \[L_1 = \begin{pmatrix}
 1 & 0 & 0 \\[1mm]
 \frac{1}{3} & 1 & 0 \\[1mm]
 \frac{2}{3} & 0 & 1 
-\end{pmatrix}\, .$$  
+\end{pmatrix}\, .\]  
 %Set $U_1$ to be the matrix obtained by zeroing out the first column of $M$.  Then $U_1=\begin{pmatrix}
 %6 & 18 & 3 \\
 %0 & 6 & 0 \\
@@ -1648,17 +1648,17 @@ By construction $L_1 U_1=M$, but you should compute this yourself as a double ch
 
 Now repeat the process by zeroing the second column of $U_1$ below the diagonal using the second row of $U_1$ using the row operation
 $R_3\to R_3-\frac 12 R_2$ to produce
-$$U_2=\begin{pmatrix}6&18&3\\0&6&0\\0&0&1\end{pmatrix}\, .$$
+\[U_2=\begin{pmatrix}6&18&3\\0&6&0\\0&0&1\end{pmatrix}\, .\]
 The matrix that undoes this row operation is obtained in the same way we found $L_1$ above and is:
-$$
+\[
 \begin{pmatrix}
 1&0&0\\
 0&1&0\\
 0&\frac 12& 1
 \end{pmatrix}\, .
-$$
+\]
 Thus our answer for $L_2$ is the product of this matrix with $L_1$, namely
-$$
+\[
 L_2=
 \begin{pmatrix}
 1 & 0 & 0 \\[1mm]
@@ -1674,7 +1674,7 @@ L_2=
 \frac{1}{3} & 1 & 0 \\[1mm]
 \frac{2}{3} & \frac{1}{2} & 1 
 \end{pmatrix}\, .
-$$
+\]
 Notice that it is lower triangular because 
 
 \begin{center}
@@ -1685,7 +1685,7 @@ Notice that it is lower triangular because
 Moreover it is obtained by recording minus the constants used for all our row operations in the appropriate columns (this always works this way).
 Moreover, $U_2$ is upper triangular and $M=L_2U_2$, we are done!
 Putting this all together we have
-$$M=\begin{pmatrix}
+\[M=\begin{pmatrix}
 6 & 18 & 3 \\
 2 & 12 & 1 \\
 4 & 15 & 3 
@@ -1697,7 +1697,7 @@ $$M=\begin{pmatrix}
 6 & 18 & 3 \\[1mm]
 0 & 6 & 0 \\[1mm]
 0 & 0 & 1 
-\end{pmatrix}\, .$$  
+\end{pmatrix}\, .\]  
 %Since $U_2$ is upper-triangular, we're done.  Inserting the new number into $L_1$ to get $L_2$ really is safe: the numbers in the first column don't affect the second column of $U_1$, since the first column of $U_1$ is already zeroed out.
 
 If the matrix you're working with has more than three rows, just continue this process by zeroing out the next column below the diagonal, and repeat until there's nothing left to do.
