@@ -428,9 +428,9 @@ In that case, we say $M$ is {\it invertible}\index{invertiblech3}.
 
 Much use is made of the fact that invertible matrices can be undone with EROs. 
 To begin with, since each  elementary row operation has an inverse, 
-$$
+\[
 M= E_1^{-1} E_2^{-1} \cdots
-$$
+\]
 while the inverse of $M$ is 
 \begin{equation*}
 M^{-1}=\cdots E_2 E_1 
@@ -461,7 +461,7 @@ The matrices corresponding to these kinds are close in form to the identity matr
 \begin{example} (Correspondences between EROs and their matrices)
 \begin{itemize}
 \item The row swap matrix that swaps the 2nd and 4th row is the identity matrix with the 2nd and 4th row swapped; 
-$$
+\[
 \begin{pmatrix}
 1&0&0&0&0\\
 0&0&0&1&0\\
@@ -469,20 +469,20 @@ $$
 0&1&0&0&0\\
 0&0&0&0&1\\
 \end{pmatrix}
-$$
+\]
 \item
 The scalar multiplication matrix that replaces the 3rd row with 7 times the 3rd row is the identity matrix with 7 in the 3rd row instead of 1; 
-$$
+\[
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&7&0\\
 0&0&0&1\\
 \end{pmatrix}
-$$
+\]
 
 \item The row sum matrix that replaces the 4th row with the 4th row plus 9 times the 2nd row is the identity matrix with a 9 in the  4th row, 2nd column
-$$
+\[
 \begin{pmatrix}
 1&0&0&0&0&0&0\\
 0&1&0&0&0&0&0\\
@@ -492,7 +492,7 @@ $$
 0&0&0&0&0&1&0\\
 0&0&0&0&0&0&1\\
 \end{pmatrix}
-$$
+\]
 \end{itemize}
 \end{example}
 
@@ -907,7 +907,7 @@ E_6^{-1}=
 \end{pmatrix} , \, 
 \end{eqnarray*}
 The equation $U=E_6E_5E_4E_3E_2E_1 M$ can be rearranged into  
-$$M=(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1})U.$$ 
+\[M=(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1})U.\] 
 We calculated the product of the first three factors in the previous example; it was named $L$ there, and we will reuse that name here. The product of the next three factors is diagonal and we wil name it $D$. The last factor we named $U$ (the name means something different in this example than the last example.) The $LDU$ factorization of our matrix is
 \begin{eqnarray*}
 \begin{pmatrix}
