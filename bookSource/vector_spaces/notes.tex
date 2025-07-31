@@ -50,11 +50,11 @@ Thus, before giving a rigorous definition of vector spaces, we restate the main 
 \begin{remark}
 Rather than writing $(V,+,.\, ,{\mathbb R})$, we will often say ``let $V$ be a vector space over ${\mathbb R}$''. If it is obvious that the numbers used are real numbers, then ``let $V$ be a vector space'' suffices.
 Also, don't confuse the scalar product $\cdot$ with the dot product~$\dotprod$.  The scalar product is a function that takes as its two inputs one number and one vector  and returns a vector as its output.  This can be written 
-$$\cdot \colon \mathbb{R}\times V \rightarrow V\, .$$ 
+\[\cdot \colon \mathbb{R}\times V \rightarrow V\, .\] 
 Similarly
-$$
+\[
 +:V\times V \rightarrow V\, .
-$$
+\]
 On the other hand, the dot product takes two vectors and returns a number.  Succinctly: $\dotprod \colon V\times V \rightarrow \Re$.
 Once the properties of a vector space have been verified, we'll just write scalar multiplication with juxtaposition $cv=c\cdot v$, though, to keep our notation efficient. 
 \end{remark}
@@ -100,7 +100,7 @@ The other axioms should also be checked.  This can be done using  properties of 
 
 \begin{example} The space of functions of one real variable.\\
 \[ \mathbb{R}^\mathbb{R} = \{f \mid f \colon \Re \to \Re \} \]
-The addition is point-wise $$(f+g)(x)=f(x)+g(x)\, ,$$ as is scalar multiplication $$c\cdot f(x)=cf(x)\, .$$  
+The addition is point-wise \[(f+g)(x)=f(x)+g(x)\, ,\] as is scalar multiplication \[c\cdot f(x)=cf(x)\, .\]  
 To check that $\Re^\Re$ is a vector space use the properties of addition of functions and scalar multiplication of functions as in the previous example. 
 
 
@@ -145,20 +145,20 @@ Let
       3&3&3
     \end{pmatrix}.\]
     The solution set to the homogeneous equation $Mx=0$ is 
-$$\left\{ c_1\colvec{-1\\1\\0} + c_2 \colvec{-1\\0\\1} \middle\vert c_1,c_2\in \Re \right\}.$$
+\[\left\{ c_1\colvec{-1\\1\\0} + c_2 \colvec{-1\\0\\1} \middle\vert c_1,c_2\in \Re \right\}.\]
     This set is not equal to $\Re^3$ since it does not contain, for example,  $\colvec{1\\0\\0}$. 
 The sum of any two solutions is a solution, for example 
-$$
+\[
     \left[ 2\colvec{-1\\1\\0} + 3 \colvec{-1\\0\\1} \right] 
 + \left [ 7\colvec{-1\\1\\0} + 5 \colvec{-1\\0\\1} \right]
 =
  9\colvec{-1\\1\\0} + 8 \colvec{-1\\0\\1} 
-$$
+\]
 and any scalar multiple of a solution is a solution
-$$
+\[
 4\left[ 5\colvec{-1\\1\\0} - 3 \colvec{-1\\0\\1} \right]
 =      20\colvec{-1\\1\\0} - 12 \colvec{-1\\0\\1} . 
-$$
+\]
 This example is called a {\it subspace} because it gives a vector space inside another vector space. See chapter~\ref{subspacesspanning}
 for details. Indeed, because it is determined by the linear map given by the matrix $M$, it is called $\ker M$, or in words, the {\it kernel} of $M$,
 for this see chapter~\ref{kernelrank}. 
@@ -166,7 +166,7 @@ for this see chapter~\ref{kernelrank}.
 
 Similarly, the solution set to any homogeneous linear equation is a vector space:
 Additive and multiplicative closure follow from the following statement, made using linearity of matrix multiplication:
-$${\rm If}~Mx_1=0 ~\mbox{and}~Mx_2=0~ \mbox{then} ~M(c_1x_1 + c_2x_2)=c_1Mx_1+c_2Mx_2=0+0=0.$$ 
+\[{\rm If}~Mx_1=0 ~\mbox{and}~Mx_2=0~ \mbox{then} ~M(c_1x_1 + c_2x_2)=c_1Mx_1+c_2Mx_2=0+0=0.\] 
 A powerful result, called the subspace theorem (see chapter~\ref{subspacesspanning}) guarantees, based on the closure properties alone, that homogeneous
 solution sets are vector spaces.
 
@@ -182,19 +182,19 @@ A hyperplane which does not contain the origin cannot be a vector space because 
 
 It is also possible to build new vector spaces from old ones using the product of sets. Remember that if $V$ and $W$ are sets, then
 their product is the new set
-$$
+\[
 V\times W = \{(v,w)|v\in V, w\in W\}\, ,
-$$
+\]
 or in words, all ordered pairs of elements from $V$ and $W$.
 In fact $V\times W$ is a vector space if $V$ and $W$ are. We have actually been using this fact already:
 
 \begin{example}
 The real numbers~${\mathbb R}$ form a vector space (over ${\mathbb R}$). The new vector space
-$${\mathbb R}\times {\mathbb R}=\{(x,y)|x\in{\mathbb R}, y\in {\mathbb R}\}$$
+\[{\mathbb R}\times {\mathbb R}=\{(x,y)|x\in{\mathbb R}, y\in {\mathbb R}\}\]
 has addition and scalar multiplication defined by
-$$
+\[
 (x,y)+(x',y')=(x+x',y+y')\, \mbox{ and } c.(x,y)=(cx,cy)\, .
-$$
+\]
 Of course, this is just the vector space ${\mathbb R}^2={\mathbb R}^{\{1,2\}}$. 
 \end{example}
 
@@ -249,18 +249,18 @@ is the set of possible states for an electron's spin. The vectors \scalebox{.9}{
 Other vectors, like \scalebox{.9}{$\colvec{i \\ -i}$} are permissible, since the base field is the complex numbers. Such states represent a mixture of spin up and spin down for the given direction (a rather counterintuitive yet experimentally verifiable concept), but a given spin in some other direction.
 \end{example}
 
-Complex numbers are very useful because of a special property that they enjoy: every polynomial over the complex numbers factors into a product of linear polynomials.  For example, the polynomial $$x^2+1$$ doesn't factor over  real numbers, but over complex numbers it factors into $$(x+i)(x-i)\, .$$ In other words, there are {\it two} solutions to $$x^2=-1,$$
+Complex numbers are very useful because of a special property that they enjoy: every polynomial over the complex numbers factors into a product of linear polynomials.  For example, the polynomial \[x^2+1\] doesn't factor over  real numbers, but over complex numbers it factors into \[(x+i)(x-i)\, .\] In other words, there are {\it two} solutions to \[x^2=-1,\]
 $x=i$ and $x=-i$.
  This property  has far-reaching consequences: often in mathematics problems that are very difficult using only real numbers become relatively simple when working over the complex numbers.  This phenomenon occurs when diagonalizing matrices, see chapter~\ref{sec:diagonalization}.
 
 The rational numbers $\mathbb{Q}$ are also a field. This  field is important in computer algebra: a real number given by an infinite string of numbers after the decimal point can't be stored by a computer.  So instead rational approximations are used.  Since the rationals are a field, the mathematics of vector spaces still apply to this special case.
 
 Another very useful field is bits 
-$$
+\[
 B_2={\mathbb Z}_2=\{0,1\}\, ,
-$$
+\]
 with the addition and multiplication rules
-$$
+\[
 \begin{array}{c|cc}
 +&0&1\\\hline
 0&0&1\\
@@ -271,7 +271,7 @@ $$
 0&0&0\\
 1&0&1
 \end{array}
-$$
+\]
 These rules can be summarized by the relation $2=0$. For bits, it follows that $-1=1$!
 %In this class, we will work mainly over the real numbers and the complex numbers, and occasionally work over $\mathbb{Z}_2 = \{0, 1\}$ where $1 + 1 = 0$. 
 %For more on fields in general, see \hyperref[fields]{Appendix~\ref*{fields}}; however 

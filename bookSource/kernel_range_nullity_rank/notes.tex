@@ -2,7 +2,7 @@
 
 \chapter{\kernelTitle}\label{kernelrank}
 
-Given a linear transformation $$L \colon V \to W\, ,$$ we often want  to know if it has an inverse, {\it i.e.}, if there exists a linear transformation $$M \colon W \to V$$ such that for any vector \(v \in V\), we have $$MLv=v\, ,$$ and for any vector \(w \in W\), we have $$LMw=w\, .$$ A linear transformation is a special kind of function from one vector space to another. So before we discuss which linear transformations have inverses, let us first discuss inverses of arbitrary functions. When we later specialize to linear transformations, we'll also find some nice ways of creating subspaces.
+Given a linear transformation \[L \colon V \to W\, ,\] we often want  to know if it has an inverse, {\it i.e.}, if there exists a linear transformation \[M \colon W \to V\] such that for any vector \(v \in V\), we have \[MLv=v\, ,\] and for any vector \(w \in W\), we have \[LMw=w\, .\] A linear transformation is a special kind of function from one vector space to another. So before we discuss which linear transformations have inverses, let us first discuss inverses of arbitrary functions. When we later specialize to linear transformations, we'll also find some nice ways of creating subspaces.
 
 Let \(f \colon S \to T\) be a function from a set \(S\) to a set \(T\). \href{\webworkurl Homework0-Background/3/}{Recall} that \(S\) is called the {\it domain} of \(f\), \(T\) is called the {\it codomain} or {\it target} of \(f\).  
 We now formally introduce a term that should be familar to you from many previous courses.
@@ -22,7 +22,7 @@ The range of a matrix is very easy to find; the range of a matrix is the span of
 Thus, calculation of the range of a matrix is very easy until the last step: simplification. One aught to end by the calculation by writing the vector space as the span of a linearly independent set. 
 
 \begin{example}{ of calculating the range of a matrix.}
-$${\rm ran} 
+\[{\rm ran} 
 \begin{pmatrix} 
 1&2&0&1\\
 1&2&1&2\\
@@ -36,13 +36,13 @@ $${\rm ran}
 0&0&1&1
 \end{pmatrix} 
 \colvec{x\\y\\z\\w } | \colvec{x\\y\\z\\w} \in \R^4 \right\}
-$$
-$$=
+\]
+\[=
 \left\{   
 x\colvec{1\\1\\0 } +y \colvec{ 2\\2\\0 } +z \colvec{0\\1\\1} + w\colvec{1\\2\\1} \middle| x,y,z,w \in \R \right\}
-.$$
+.\]
 That is 
-$$
+\[
 {\rm ran} 
 \begin{pmatrix} 
 1&2&0&1\\
@@ -52,9 +52,9 @@ $$
 = 
 \spa \left\{   
 \colvec{1\\1\\0 } , \colvec{ 2\\2\\0 } , \colvec{0\\1\\1}, \colvec{1\\2\\1} \right\}
-$$
+\]
 but since 
-$${\rm RREF} \begin{pmatrix} 
+\[{\rm RREF} \begin{pmatrix} 
 1&2&0&1\\
 1&2&1&2\\
 0&0&1&1
@@ -64,10 +64,10 @@ $${\rm RREF} \begin{pmatrix}
 0&0&1&1\\
 0&0&0&0
 \end{pmatrix} 
-$$
+\]
 the second and fourth columns (which are the non-pivot columns), can be expressed as linear combinations of columns to their left. 
 They can then be removed from the set in the span to obtain
-$${\rm ran} 
+\[{\rm ran} 
 \begin{pmatrix} 
 1&2&0&1\\
 1&2&1&2\\
@@ -75,11 +75,11 @@ $${\rm ran}
 \end{pmatrix} 
 = \spa \left\{   
 \colvec{1\\1\\0 } , \colvec{0\\1\\1} \right\} .
-$$
+\]
 \end{example}
 
 It might occur to you that the range of the $3\times 4$ matrix from the last example can be expressed as the range of a $3\times 2$ matrix;
-$$
+\[
 {\rm ran} 
 \begin{pmatrix} 
 1&2&0&1\\
@@ -91,11 +91,11 @@ $$
 1&0\\
 1&1\\
 0&1
-\end{pmatrix}.$$
+\end{pmatrix}.\]
 Indeed, because the span of a set of vectors does not change when we replace the vectors with another set through an invertible process, we can calculate ranges through strings of equalities of ranges of matrices that differer by Elementary Column Operations, ECOs, ending with the range of a matrix in Column Reduced Echelon Form, CREF, with its zero columns deleted.
 
 \begin{example} Calculating a range with ECOs\\
-$$
+\[
 {\rm ran} 
 \begin{pmatrix} 
 0&1&1\\
@@ -123,8 +123,8 @@ $$
 1&1&1\\
 0&1&1
 \end{pmatrix} 
-$$
-$$\stackrel{c_3'= c_3-c_2}{=}
+\]
+\[\stackrel{c_3'= c_3-c_2}{=}
 {\rm ran} 
 \begin{pmatrix} 
 1&0&0\\
@@ -137,7 +137,7 @@ $$\stackrel{c_3'= c_3-c_2}{=}
 1&1\\
 0&1
 \end{pmatrix}. 
-$$
+\]
 
 
 \end{example}
@@ -150,25 +150,25 @@ This is an efficient way to compute and encode the range of a matrix.
 
 \begin{definition}
 For any subset $U$ of the domain $S$ of a function $f:S\to T$  the {\bf image} of $U$ is 
-$$f(U)={\rm Im} \,U:= \left\{  f(x) | x\in U \right\} .$$
+\[f(U)={\rm Im} \,U:= \left\{  f(x) | x\in U \right\} .\]
 \end{definition}
 
 \begin{example} 
 The image of the  cube
-$$U= \left\{  a \colvec{1\\0\\0} +b \colvec{0\\1\\0}+c\colvec{0\\0\\1} \middle| a,b,c \in [0,1] \right\} $$ 
+\[U= \left\{  a \colvec{1\\0\\0} +b \colvec{0\\1\\0}+c\colvec{0\\0\\1} \middle| a,b,c \in [0,1] \right\} \] 
 under multiplication by the matrix 
-$$ M=
+\[ M=
 \begin{pmatrix}
 1&0&0\\
 1&1&1\\
 0&0&1
 \end{pmatrix}
-$$
+\]
 is the parallelepiped 
-$$
+\[
 {\rm Img}\,U= 
  \left\{  a \colvec{1\\1\\0} +b \colvec{0\\1\\0}+c\colvec{0\\1\\1} \middle| a,b,c \in [0,1] \right\} .
-$$
+\]
 \end{example}
 
 Note that for most subsets $U$ of the domain $S$  of a function  $f$ the image of $U$ is not a vector space. 
@@ -195,13 +195,13 @@ f^{-1}(U):=\{ s\in S | f(s)\in U \}\subset S.
 The pre-image of a set \(U\) is the set of all elements of \(S\) which map to \(U\). 
 \begin{example}
 The pre-image of the set $U= \left\{ a\colvec{2\\1\\1 } \middle| a\in [0,1]\right\}$ (a line segment) under the matrix 
-$$ 
+\[ 
 M=\begin{pmatrix}
 1&0&1\\
 0&1&1\\
 0&1&1
 \end{pmatrix}: \R^3\to \R^3
-$$
+\]
 is the set 
 \begin{eqnarray*}
 M^{-1} U&=& \left\{  x \middle| Mx=v {\rm ~for ~some~ } v\in U \right\} \\[3mm]
@@ -213,7 +213,7 @@ M^{-1} U&=& \left\{  x \middle| Mx=v {\rm ~for ~some~ } v\in U \right\} \\[3mm]
 \end{pmatrix} \colvec{x\\y\\z} =a\colvec{2\\1\\1}  {\rm ~for ~some~ } a\in [0,1] \right\} .
 \end{eqnarray*}
 Since
-$$
+\[
 {\rm RREF }
 \begin{amatrix}{3}
 1&0&1&2a\\
@@ -226,9 +226,9 @@ $$
 0&1&1&a\\
 0&0&0&0
 \end{amatrix} 
-$$
+\]
 we have 
-$$ M^{-1} U = \left\{   a \colvec{2\\1\\0} +b \colvec{-1\\-1\\ 1}\,  \middle|\,  a\in [0,1] ,b\in \R\right\},$$
+\[ M^{-1} U = \left\{   a \colvec{2\\1\\0} +b \colvec{-1\\-1\\ 1}\,  \middle|\,  a\in [0,1] ,b\in \R\right\},\]
 a strip from a plane in $\R^3$.
 \end{example}
 
@@ -327,7 +327,7 @@ Then all solutions of $MX=0$ are of the form $x=y=0$.  In other words, $\ker L=\
 \Reading{KernelRangeNullityRank}{1}
 
 Notice that in the above example we found 
-$$\ker 
+\[\ker 
 \begin{pmatrix}
 1 & 1  \\
 1 & 2  \\
@@ -339,11 +339,11 @@ $$\ker
 0 & 1  \\
 0 & 0  \\
 \end{pmatrix}.
-$$
+\]
 In general, an efficient way to get the  kernel of a matrix is to write a string of equalities between kernels of matrices which differ by row operations and, once RREF is reached, note that the linear relationships between the columns for a basis for the nullspace.
 
 \begin{example} of calculating the kernel of a matrix.\\
-$$
+\[
 \ker 
 \begin{pmatrix}
 1&2&0&1 \\
@@ -364,12 +364,12 @@ $$
 0&0&1&1 \\
 0&0&0&0
 \end{pmatrix}
-$$
-$$
+\]
+\[
 =\spa \left\{ 
 \colvec{-2\\1 \\0\\0}, \colvec{-1\\0\\-1 \\1 } 
  \right\} .
-$$
+\]
 The two column vectors in this last line describe linear relations between the columns $c_1,c_2,c_3,c_4$. 
 In particular $-2c_1+1c_2=0$ and $-c_1-c_3 +c_4=0$. 
 \end{example}
@@ -403,7 +403,7 @@ A trivial kernel only gives us half of what is needed for invertibility.
 
 
 \begin{theorem}
-A linear transformation $L\colon V\rightarrow W$ is injective iff $${\rm ker} L=\{0_V\}\, .$$
+A linear transformation $L\colon V\rightarrow W$ is injective iff \[{\rm ker} L=\{0_V\}\, .\]
 \end{theorem}
 
 \begin{proof}
@@ -433,7 +433,7 @@ When $L:V\to V$, the above theorem has an interpretation in terms of the eigensp
 
 
 In the example where $L(x,y)=(x+y,x+2y,y)$, the map $L$ is clearly not surjective, since $L$ maps $\Re^2$ to a plane through the origin in $\Re^3$. But any plane through the origin is a subspace. In general notice 
-that if $w=L(v)$ and $w'=L(v')$, then for any constants $c,d$, linearity of $L$ ensures that $$cw+dw' = L(cv+dv')\, .$$  Now the subspace theorem strikes again, and we have the following theorem:
+that if $w=L(v)$ and $w'=L(v')$, then for any constants $c,d$, linearity of $L$ ensures that \[cw+dw' = L(cv+dv')\, .\]  Now the subspace theorem strikes again, and we have the following theorem:
 
 \begin{theorem}
 If $L \colon V\rightarrow W$ is linear then the range $L(V)$ is a subspace of~$W$.
@@ -442,26 +442,26 @@ If $L \colon V\rightarrow W$ is linear then the range $L(V)$ is a subspace of~$W
 \begin{example}
 Let $L(x,y)=(x+y,x+2y,y)$. The range of $L$ is a plane through the origin and thus a subspace of ${\mathbb R}^3$.
 Indeed the matrix of $L$ in the standard basis is 
-$$
+\[
 \begin{pmatrix}1&1\\1&2\\0&1\end{pmatrix}\, .
-$$
+\]
 The columns of this matrix encode the possible outputs of the function $L$ because
-$$
+\[
 L(x,y)=\begin{pmatrix}1&1\\1&2\\0&1\end{pmatrix}\colvec{x\\ y}=x \colvec{1\\1\\0}+y\colvec{1\\2\\1}\, . 
-$$
+\]
 Thus 
-$$
+\[
 L({\mathbb R}^2)=\spa \left\{\colvec{1\\1\\0},\colvec{1\\2\\1}\right\}
-$$
+\]
 Hence, when  bases and a linear transformation is are given, people often refer to its range as the {\it column space}\index{Column space}
 of the corresponding matrix.
 \end{example}
 
 To find a basis of the range of $L$, we can start with a basis $S=\{v_1, \ldots, v_n\} $ for $V$. Then
 the most general input for $L$ is of the form  $\alpha^1 v_1 + \cdots + \alpha^n v_n$. In turn, its most general output looks like
-$$
+\[
 L\big(\alpha^1 v_1 + \cdots + \alpha^n v_n\big)=\alpha^1 Lv_1 + \cdots + \alpha^n Lv_n\in \spa\{Lv_1,\ldots\,Lv_n\}\, .
-$$
+\]
 Thus
 \[
 L(V)=\spa L(S) = \spa \{Lv_1, \ldots, Lv_n\}\, .
@@ -521,16 +521,16 @@ But since the $u^j$ are linearly independent, then $d^1u_1+\cdots+d^qu_q\neq 0$,
 
 \begin{example} (Row rank equals column rank)\\
 Suppose $M$ is an $m\times n$ matrix. The matrix  $M$ itself is a linear transformation $M:{\mathbb R}^n \rightarrow {\mathbb R}^m$ but it  must also  be the matrix of some linear transformation
-$$
+\[
 L:V\stackrel{\rm linear}\longrightarrow W\, .
-$$
+\]
 Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\it column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\it i.e.} the nullity:  $ {\rm null}\, L= {\rm dim}V-{\rm rank}L=n-r$. 
 
-To compute the kernel we would study the linear system $$Mx=0\, ,$$ which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\it row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
+To compute the kernel we would study the linear system \[Mx=0\, ,\] which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\it row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
 Each linearly independent row of $M$ gives an independent equation satisfied by the $n$-vector $x$. Every independent equation on $x$ reduces the size of the kernel by one, so if the row rank is $s$, then ${\rm null}\, L+ s = n$.  Thus we have two equations: 
-$$
+\[
 {\rm null}\, L+s=n \mbox{ and } {\rm null } \, L = n-r\, .
-$$
+\]
 From these we conclude the $r=s$. In other words, the row rank of $M$ equals its column rank.
  \end{example}
 
@@ -543,7 +543,7 @@ We have seen that a linear transformation has an inverse if and only if it is bi
 Let $V$  be an $n$-dimensional vector space  
 and suppose  $L:V\to V$ is a linear transformation with matrix $M$ in some basis.
 Then \(M\) is an \(n \times n\) matrix, and 
-%let $$L \colon \Re^n \to \Re^n$$ be the linear transformation defined by \(L(v)=Mv\). Then 
+%let \[L \colon \Re^n \to \Re^n\] be the linear transformation defined by \(L(v)=Mv\). Then 
 the following statements are equivalent:
 \newpage
 \begin{enumerate}
@@ -568,7 +568,7 @@ the following statements are equivalent:
 \end{theorem}
 Note: it is important that \(M\) be an \(n \times n\) matrix! If \(M\) is not square, then it can't be invertible, and many of the statements above are no longer equivalent to each other.
 %I hate it when books do this. "Here is our proof: you prove it or figure out where it has been proven. " I think it is dishonest to write proof: and then not actually give a proof.
-%Yes, but some books make proving the above list there raison d'être which I really don't like...plus we have a video handling this!!!!
+%Yes, but some books make proving the above list there raison d'Ãªtre which I really don't like...plus we have a video handling this!!!!
 \begin{proof}
 Many of these equivalences were proved earlier in other chapters. Some were left as review questions or sample final questions. The rest are left as exercises for the reader.
 \end{proof}

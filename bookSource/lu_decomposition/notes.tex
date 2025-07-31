@@ -1,7 +1,7 @@
 \chapter{\luDecompTitle}
 \label{LUdecomp}
 
-Certain matrices are easier to work with than others.  In this section, we will see how to write any square\footnote{The case where $M$ is not square is dealt with at the end of the lecture.} matrix $M$ as the product of two simpler matrices.  We will write $$M=LU\, ,$$ where:
+Certain matrices are easier to work with than others.  In this section, we will see how to write any square\footnote{The case where $M$ is not square is dealt with at the end of the lecture.} matrix $M$ as the product of two simpler matrices.  We will write \[M=LU\, ,\] where:
 \begin{itemize}
 \item $L$ is \emph{lower triangular}\index{Lower triangular matrix}.  This means that all entries above the main diagonal are zero.  In notation,
 $L=(l^i_j)$ with $l^i_j=0$ for all $j>i$.
@@ -150,24 +150,24 @@ To find the $LU$ decomposition, we'll create two sequences of matrices $L_0, L_1
 Start by setting $L_0=I$ and $U_0=M$, because $L_0U_0=M$. A main concept of this calculation is captured by the following example:
 
 \begin{example}
-Consider $$E=\begin{pmatrix}1&0\\\lambda&1\end{pmatrix}\, ,\qquad M=\begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}\, .$$
+Consider \[E=\begin{pmatrix}1&0\\\lambda&1\end{pmatrix}\, ,\qquad M=\begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}\, .\]
 Lets compute $EM$
-$$
+\[
 EM=\begin{pmatrix}a&b&c&\cdots\\d+\lambda a&e+\lambda b&f+\lambda c&\cdots\end{pmatrix}\, ,.
-$$
+\]
 Something neat happened here: multiplying $M$ by $E$ performed the row operation $R_2\to R_2+\lambda R-1$ on $M$.
 Another interesting fact:
-$$
+\[
 E^{-1}:=\begin{pmatrix}1&0\\-\lambda&1\end{pmatrix}
-$$ 
+\] 
 obeys (check this yourself...)
-$$
+\[
 E^{-1} E = 1\, .
-$$
+\]
 Hence $M=E^{-1} E M$ or, writing this out
-$$
+\[
 \begin{pmatrix}a&b&c&\cdots\\d&e&f&\cdots\end{pmatrix}=\begin{pmatrix}1&0\\-\lambda&1\end{pmatrix} \begin{pmatrix}a&b&c&\cdots\\d+\lambda a&e+\lambda b&f+\lambda c&\cdots\end{pmatrix}\, .
-$$
+\]
 Here the matrix on the left is lower triangular, while the matrix on the right has had a row operation performed on it.
 \end{example}
 
@@ -175,25 +175,25 @@ Here the matrix on the left is lower triangular, while the matrix on the right h
 
 
 \vspace{2mm}
-We would like to  use the first row of $U_0$ to zero out the first entry of every row below it.  For our running example, $$U_0=M=\begin{pmatrix}
+We would like to  use the first row of $U_0$ to zero out the first entry of every row below it.  For our running example, \[U_0=M=\begin{pmatrix}
 6 & 18 & 3 \\
 2 & 12 & 1 \\
 4 & 15 & 3 
-\end{pmatrix}\, ,$$ so we would like to perform the row operations $R_2\to R_2 -\frac 13 R_1$ and $R_3\to R_3-\frac 23R_1$.
+\end{pmatrix}\, ,\] so we would like to perform the row operations $R_2\to R_2 -\frac 13 R_1$ and $R_3\to R_3-\frac 23R_1$.
 %so the second row minus $\frac{1}{3}$ of the first row will zero out the first entry in the second row.  Likewise, the third row minus $\frac{2}{3}$ of the first row will zero out the first entry in the third row.
 If we perform these row operations on $U_0$ to produce 
-$$U_1=\begin{pmatrix}
+\[U_1=\begin{pmatrix}
 6 & 18 & 3 \\
 0 & 6 & 0 \\
 0 & 3 & 1 
-\end{pmatrix}\, ,$$
+\end{pmatrix}\, ,\]
 we need to multiply this on the left by a lower triangular matrix $L_1$ so that the product $L_1U_1=M$ still.
 The above example shows how to do this:
-Set $L_1$ to be the lower triangular matrix whose first column is filled with the minus constants used to zero out the first column of $M$.  Then $$L_1 = \begin{pmatrix}
+Set $L_1$ to be the lower triangular matrix whose first column is filled with the minus constants used to zero out the first column of $M$.  Then \[L_1 = \begin{pmatrix}
 1 & 0 & 0 \\[1mm]
 \frac{1}{3} & 1 & 0 \\[1mm]
 \frac{2}{3} & 0 & 1 
-\end{pmatrix}\, .$$  
+\end{pmatrix}\, .\]  
 %Set $U_1$ to be the matrix obtained by zeroing out the first column of $M$.  Then $U_1=\begin{pmatrix}
 %6 & 18 & 3 \\
 %0 & 6 & 0 \\
@@ -203,17 +203,17 @@ By construction $L_1 U_1=M$, but you should compute this yourself as a double ch
 
 Now repeat the process by zeroing the second column of $U_1$ below the diagonal using the second row of $U_1$ using the row operation
 $R_3\to R_3-\frac 12 R_2$ to produce
-$$U_2=\begin{pmatrix}6&18&3\\0&6&0\\0&0&1\end{pmatrix}\, .$$
+\[U_2=\begin{pmatrix}6&18&3\\0&6&0\\0&0&1\end{pmatrix}\, .\]
 The matrix that undoes this row operation is obtained in the same way we found $L_1$ above and is:
-$$
+\[
 \begin{pmatrix}
 1&0&0\\
 0&1&0\\
 0&\frac 12& 0
 \end{pmatrix}\, .
-$$
+\]
 Thus our answer for $L_2$ is the product of this matrix with $L_1$, namely
-$$
+\[
 L_2=
 \begin{pmatrix}
 1 & 0 & 0 \\[1mm]
@@ -229,7 +229,7 @@ L_2=
 \frac{1}{3} & 1 & 0 \\[1mm]
 \frac{2}{3} & \frac{1}{2} & 1 
 \end{pmatrix}\, .
-$$
+\]
 Notice that it is lower triangular because 
 
 \begin{center}
@@ -240,7 +240,7 @@ Notice that it is lower triangular because
 Moreover it is obtained by recording minus the constants used for all our row operations in the appropriate columns (this always works this way).
 Moreover, $U_2$ is upper triangular and $M=L_2U_2$, we are done!
 Putting this all together we have
-$$M=\begin{pmatrix}
+\[M=\begin{pmatrix}
 6 & 18 & 3 \\
 2 & 12 & 1 \\
 4 & 15 & 3 
@@ -252,7 +252,7 @@ $$M=\begin{pmatrix}
 6 & 18 & 3 \\
 0 & 6 & 0 \\
 0 & 0 & 1 
-\end{pmatrix}\, .$$  
+\end{pmatrix}\, .\]  
 %Since $U_2$ is upper-triangular, we're done.  Inserting the new number into $L_1$ to get $L_2$ really is safe: the numbers in the first column don't affect the second column of $U_1$, since the first column of $U_1$ is already zeroed out.
 
 If the matrix you're working with has more than three rows, just continue this process by zeroing out the next column below the diagonal, and repeat until there's nothing left to do.

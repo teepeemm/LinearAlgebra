@@ -139,7 +139,7 @@ They index elements of the solutions set by acting as coefficients of vectors.
 %We can denote them with dummy variables $\mu_1, \mu_2, \ldots$. 
 
 \begin{example} (Non-pivot columns determine terms of the solutions)
-$$\begin{pmatrix}
+\[\begin{pmatrix}
 1 &  0 & 1 & -1 \\ 
  0 & 1 & -1& 1  \\
  0 &0   & 0  & 0 \\
@@ -155,7 +155,7 @@ $$\begin{pmatrix}
 	0x_1 +0x_2 + 0x_3 + 0x_4 & = 0 
 \end{array}
      \right.
-$$
+\]
 Following the standard approach, express the pivot variables in terms of the non-pivot variables and add ``freebee equations". Here $x_3$ and $x_4$ are non-pivot variables.  
 \begin{eqnarray*}
 \left.
@@ -202,9 +202,9 @@ Here $X_0$ is called a particular solution while $Y_1$ and $Y_2$ are called homo
 %X= \colvec{x_1\\x_2\\x_3\\x_4} \mbox{ and } Y=\colvec{y_1\\y_2\\y^3 \\y^4 }\, ,
 %\]
 %and take for the function of vectors
-%$$
+%\[
 %f(X)=MX\, .
-%$$
+%\]
 %Now let us check the linearity property for $f$. 
 %The property needs to hold for {\it any} scalars $\alpha$ and $\beta$, so for simplicity
 %let us concentrate first on the case $\alpha=\beta=1$. This means that we need to
@@ -214,24 +214,24 @@ Here $X_0$ is called a particular solution while $Y_1$ and $Y_2$ are called homo
 %\item First compute $f(X)$ and $f(Y)$, then compute the sum $f(X)+f(Y)$.
 %\end{enumerate}
 %The second computation is slightly easier:
-%$$
+%\[
 %f(X) = MX 
 %    =\colvec{x_1+x_3-x_4\\x_2-x_3+x_4\\0}\mbox{ and }
 %f(Y) = MY   
 %    =\colvec{y_1+y_3-y_4\\y_2-y_3+y_4\\0}\, ,
-%$$
+%\]
 %(using our result above). Adding these gives
-%$$
+%\[
 %f(X)+f(Y)=\colvec{x_1+x_3-x_4+y_1+y_3-y_4\\[1mm]x_2-x_3+x_4+y_2-y_3+y_4\\[1mm]0}\, .
-%$$
+%\]
 %Next we perform the first computation beginning with:
-%$$
+%\[
 %X+Y=\colvec{x_1 + y_1\\x_2+y_2\\ x_3+y_3\\ x_4+y_4}\, ,
-%$$
+%\]
 %from which we calculate
-%$$
+%\[
 %f(X+Y)=\colvec{x_1+y_2+x_3+y_3-(x_4+y_4)\\[1mm] x_2+y_2-(x_3+y_3)+x_4+y_4\\[1mm]0}\, .
-%$$
+%\]
 %Distributing the minus signs and remembering that the order of adding numbers like $x_1,x_2,\ldots$ 
 %does not matter, we see that the two computations give exactly the same answer.
 %
@@ -250,16 +250,16 @@ Recall from \hyperlink{{Matrices are linear operators}}{earlier} that matrices a
 %
 %the two equations 
 Thus 
-$$M( X_0 + \mu_1 Y_1 + \mu_2 Y_2)  = MX_0 + \mu_1MY_1 + \mu_2MY_2 =V$$
+\[M( X_0 + \mu_1 Y_1 + \mu_2 Y_2)  = MX_0 + \mu_1MY_1 + \mu_2MY_2 =V\]
 for \emph{any} $\mu_1, \mu_2 \in \mathbb{R}$. 
 Choosing $\mu_1=\mu_2=0$, we obtain 
-$$MX_0=V\, .$$  
+\[MX_0=V\, .\]  
 This is why $X_0$ is an example of a  \emph{particular solution}\index{Particular solution!an example}.
 
 %Given a particular solution to the system, we can then deduce that $\mu_1MY_1 + \mu_2MY_2 = 0$.  
 Setting $\mu_1=1, \mu_2=0$, and using the particular solution $MX_0=V$, we obtain 
-$$MY_1=0\, .$$ 
-Likewise, setting $\mu_1=0, \mu_2=1$, we obtain $$MY_2=0\, .$$
+\[MY_1=0\, .\] 
+Likewise, setting $\mu_1=0, \mu_2=1$, we obtain \[MY_2=0\, .\]
 Here $Y_1$ and $Y_2$ are examples of what are called  \emph{homogeneous} solutions\index{Homogeneous solution!an example} to the system.
 They {\it do not} solve the original equation $MX=V$, but instead its associated 
 {\it homogeneous  equation}\index{homogeneous equation} $M Y =0$.
@@ -294,7 +294,7 @@ Notice how adding any multiple of a homogeneous solution to the particular solut
 %\begin{definition}
 %Let $M$ a matrix and $V$ a vector.  Given the linear system $MX=V$, we call $X_0$ a \emph{particular solution}\index{Particular solution} if $MX_0=V$.  We call $Y$ a \emph{homogeneous solution} if $MY=0$.  
 %The linear system 
-%$$MX=0$$ is called the (associated) \emph{homogeneous system}\index{Homogeneous system}.
+%\[MX=0\] is called the (associated) \emph{homogeneous system}\index{Homogeneous system}.
 %\end{definition}
 %
 %If $X_0$ is a particular solution, then the general solution\index{General solution} to the system is\footnote{The notation \(S=\{X_0+Y : MY=0\}\) is read, ``\(S\) is the set of all \(X_0+Y\) such that \(MY=0,\)'' and means exactly that. Sometimes a pipe \(|\) is used instead of a colon.}:
