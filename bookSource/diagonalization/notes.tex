@@ -83,25 +83,25 @@ Then we can write
 v_j = \sum_k \sum_i v_ip^i_kq^k_j.
 \]
 But $\sum_k p^i_kq^k_j$ is the $k,j$ entry of the product matrix  $PQ$.  Since the  expression for $v_j$ in the basis $S$ is $v_j$ itself, then $PQ$ maps each  $v_j$ to itself.  As a result, each $v_j$ is an eigenvector for $PQ$ with eigenvalue $1$, so $PQ$ is the identity, {\it i.e.}
-$$
+\[
 PQ=I \Leftrightarrow Q=P^{-1}\, .
-$$
+\]
 
 \vspace{1mm}
 The matrix $P$ is  called a \emph{change of basis} matrix\index{Change of basis matrix}. There is a quick and dirty trick to obtain it; look at the formula above relating the new basis vectors
 $v'_1,v'_2,\ldots v'_n$ to the old ones $v_1,v_2,\ldots,v_n$. In particular focus on $v'_1$ for which
-$$
+\[
 v'_1= \begin{pmatrix}v_1 , v_2 , \cdots , v_n\end{pmatrix}
 \begin{pmatrix}p^1_1\\p^2_1\\\mc\vdots \\ p^n_1
 \end{pmatrix}\, .
-$$
+\]
 This says that the first column of the change of basis matrix $P$ is really just the components of the vector $v'_1$ in the basis $v_1,v_2,\ldots,v_n$. 
 
 \Shabox{1}{\begin{tabular}{c}The columns of the change of basis matrix are the components\\ of the new basis vectors  in terms of the old basis vectors.\end{tabular} }
 
 \begin{example}
 Suppose  $S'=(v'_1,v'_2)$ is an ordered  basis for a vector space $V$ and that with respect to some other ordered basis $S=(v_1, v_2)$ for $V$ 
-$$
+\[
 v'_1=
 \begin{pmatrix}
 \frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}
@@ -111,12 +111,12 @@ v'_2=
 \begin{pmatrix}
 \frac{1}{\sqrt{3}}\\-\frac{1}{\sqrt{3}}
 \end{pmatrix}_S  \, .
-$$
+\]
 %What is the change of basis matrix $P$ from the old basis $u_1, u_2$ to the new basis $v_1,v_2$?
 %
 %Before answering note that the above 
 This means 
-$$
+\[
 v'_1=\begin{pmatrix}v_1 , v_2 \end{pmatrix}\begin{pmatrix}
 \frac{1}{\sqrt{2}}\\ \frac{1}{\sqrt{2}}
 \end{pmatrix}
@@ -125,14 +125,14 @@ v'_2=\begin{pmatrix}v_1 , v_2 \end{pmatrix}\begin{pmatrix}
 \frac{1}{\sqrt{3}}\\-\frac{1}{\sqrt{3}}
 \end{pmatrix}
 =\frac{v_1-v_2}{\sqrt{3}}\, .
-$$
+\]
 The change of basis matrix has as its columns just the components of $v'_1$ and $v'_2$;
-$$
+\[
 P= \begin{pmatrix}
 \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}\\
 \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{3}}
 \end{pmatrix}\, .
-$$
+\]
 \end{example}
 
 
@@ -154,12 +154,12 @@ L(v'_i)= \sum_k w_km'^k_i\, .
 \]
 %where 
 %$D$ 
-%$$D = (d^i_j)=\begin{pmatrix}
+%\[D = (d^i_j)=\begin{pmatrix}
 %\lambda_1    \\
 %& \lambda_2 &  & \\
 %&  & \ddots &  \\
 %& & & \lambda_n
-%\end{pmatrix}\, ,$$
+%\end{pmatrix}\, ,\]
 %is the diagonal matrix whose diagonal entries $d^k_k$ are the eigenvalues~$\lambda_k$. 
 Let $P=(p^i_j)$ be the change of basis matrix from input basis $S$ to the basis $S'$ and $Q=(q^j_k)$ be the change of basis matrix from output basis $T$ to the basis $T'$.  Then:
 \[
@@ -178,14 +178,14 @@ $}
 
 \begin{example}
 Let $V$ be the space of polynomials in $t$ and degree 2 or less and $\sloppy{L:V\to {\mathbb R}^2}$ where
-$$
+\[
 L(1)=\colvec{1\\2}\, \quad L(t)=\colvec{2\\1}\, ,\quad L(t^2)=\colvec{3\\3}\, .
-$$
+\]
 From this information we can immediately read off the matrix~$M$ of $L$ in the bases $S=(1,t,t^2)$ and $T=(e_1,e_2)$, the standard basis for ${\mathbb R}^2$,
 because
 \begin{eqnarray*}\big(L(1),L(t),L(t^2)\big)&=&(e_1+2 e_2,2e_1+e_2, 3 e_1+3e_2)\\[2mm]&=&(e_1,e_2)\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, \Rightarrow \, M\ =\ 
 \begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, .\end{eqnarray*}
-Now suppose we are more interested in the bases $$S'=(1+t,t+t^2,1+t^2)\, , \quad T'=\left(\colvec{1\\2},\colvec{2\\1}\right)=:(w_1',w_2')\, .$$
+Now suppose we are more interested in the bases \[S'=(1+t,t+t^2,1+t^2)\, , \quad T'=\left(\colvec{1\\2},\colvec{2\\1}\right)=:(w_1',w_2')\, .\]
 To compute the new matrix $M'$ of $L$ we could simply calculate what $L$ does the the new input basis vectors in terms of the new output basis vectors:
 \begin{eqnarray*}
 \big(L(1+t),L(t+t^2),L(1+t^2))&=&\left(\colvec{1\\2}+\colvec{2\\1},
@@ -196,18 +196,18 @@ To compute the new matrix $M'$ of $L$ we could simply calculate what $L$ does th
 M'=\begin{pmatrix}1&1&2\\1&2&1\end{pmatrix}\, .
 \end{eqnarray*}
 Alternatively we could calculate the change of basis matrices $P$ and $Q$ by noting that
-$$
+\[
 (1+t,t+t^2,1+t^2)=(1,t,t^2)\begin{pmatrix}1&0&1\\1&1&0\\0&1&1\end{pmatrix}\, \Rightarrow\, P=\begin{pmatrix}1&0&1\\1&1&0\\0&1&1\end{pmatrix}
-$$
+\]
 and
-$$
+\[
 (w'_1,w'_2)=(e_1+2e_2,2e_1+e_2)=(e_1,e_1)\begin{pmatrix}1&2\\2&1\end{pmatrix}\, \Rightarrow\, Q=\begin{pmatrix}1&2\\2&1\end{pmatrix}\, .
-$$
+\]
 Hence
-$$
+\[
 M'=Q^{-1}MP = -\frac{1}{3}\begin{pmatrix}1&-2\\-2&1\end{pmatrix}\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}
 \begin{pmatrix}1&0&1\\1&1&0\\0&1&1\end{pmatrix}=\begin{pmatrix}1&1&2\\1&2&1\end{pmatrix}\, .
-$$
+\]
 Notice that the change of basis matrices $P$ and $Q$ are both square and invertible. Also, since we really wanted $Q^{-1}$, 
 it is more efficient to try and write $(e_1,e_2)$ in terms of $(w'_1,w'_2)$ which would yield directly $Q^{-1}$. Alternatively, one can check that
 $MP=QM'$.
@@ -219,14 +219,14 @@ If we are changing to a basis of eigenvectors, then there are various simplifica
 \begin{itemize}
 \item Since $L:V\to V$, most likely you already know the matrix~$M$ of $L$ using the same input basis as output basis $S=(u_1,\ldots ,u_n)$ (say).
 \item In the new basis of eigenvectors $S'(v_1,\ldots,v_n)$, the matrix~$D$ of $L$ is diagonal because $Lv_i=\lambda_i v_i$ and so
-$$
+\[
 \big(L(v_1),L(v_2),\ldots,L(v_n)\big)=(v_1,v_2,\ldots, v_n)
 \begin{pmatrix}
 \lambda_1&\mc0&\cdots&\mc0\\
 \mc0&\lambda_2&&\mc0\\
 \mc\vdots&&\ddots&\mc\vdots \\
 \mc0&\mc0&\cdots&\lambda_n\end{pmatrix}\, .
-$$
+\]
 \item If $P$ is the change of basis matrix from $S$ to $S'$, the diagonal matrix of eigenvalues~$D$ and the original matrix are related by
 \Shabox{1.1}{$D=P^{-1}MP$}
 \end{itemize}
@@ -263,9 +263,9 @@ Let's try to diagonalize the matrix
 \end{pmatrix}.\]
 The eigenvalues of \(M\) are determined by \[\det(M-\lambda I)=-\lambda^3+\lambda^2+2\lambda=0.\]
 So the eigenvalues of \(M\) are \(-1,0,\) and \(2\), and associated eigenvectors turn out to be 
-$$
+\[
 v_1=\colvec{-8 \\ -1 \\ 3},~~ v_2=\colvec{-2 \\ 1 \\ 0}, {\rm ~and~~} v_3=\colvec{-1 \\ -1 \\ 1}.
-$$ 
+\] 
 In order for \(M\) to be diagonalizable, we need the vectors \(v_1, v_2, v_3\) to be linearly independent. Notice that the matrix
 \[P=\rowvec{v_1 & v_2 & v_3}=\begin{pmatrix}
 -8 & -2 & -1 \\
@@ -274,13 +274,13 @@ In order for \(M\) to be diagonalizable, we need the vectors \(v_1, v_2, v_3\) t
 \end{pmatrix}\]
 is invertible because its determinant is \(-1\). Therefore, the eigenvectors of \(M\) form a basis of \(\Re\), and so \(M\) is diagonalizable. 
 Moreover, because the columns of $P$ are the components of eigenvectors, 
-$$
+\[
 MP=\rowvec{Mv_1 &Mv_2& Mv_3}=\rowvec{-1.v_1&0.v_2&2.v_3}=\rowvec{v_1& v_2 & v_3}\begin{pmatrix}
 -1 & 0 & 0 \\
 0 & 0 & 0 \\
 0 & 0 & 2 \\
 \end{pmatrix}\, .
-$$
+\]
 Hence, the matrix \(P\) of eigenvectors is a change of basis matrix that diagonalizes~\(M\);
 \[P^{-1}MP=\begin{pmatrix}
 -1 & 0 & 0 \\
