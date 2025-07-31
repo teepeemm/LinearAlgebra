@@ -61,10 +61,10 @@ Now you will learn  an efficient algorithm  for (maximally) simplifying a system
 %\\
 %
 %%\noindent
-%By the way, the matrix $$I=    \begin{pmatrix}
+%By the way, the matrix \[I=    \begin{pmatrix}
 %      1             &0  \\
 %      0             &1
-%    \end{pmatrix}$$ is called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}.  She will be very important to us. You should check that if $v$ is any vector, then $$Iv=v\, .$$
+%    \end{pmatrix}\] is called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}.  She will be very important to us. You should check that if $v$ is any vector, then \[Iv=v\, .\]
 %    
 %Here is a nice way to summarize your goal when performing the process we are calling elimination elimination; manipulate the system of equations until the resulting system can be written as a matrix equation with the identity matrix.
 
@@ -76,12 +76,12 @@ Efficiency demands a new notation, called an \hypertarget{augmented_matrix}{\emp
 which we  introduce via examples: 
 
 The linear system
-$$\left\{ 
+\[\left\{ 
 \begin{array}{rcr}
 	x\ +\ y & = & 27 \\
 	2x-\ y & = &\  0\, ,
 \end{array}\right.
-$$
+\]
 is denoted by the augmented matrix
 
 \[
@@ -107,9 +107,9 @@ although all three of the above denote the same thing.
 
 \noindent
 Another interesting rewriting is
-$$
+\[
 x\colvec{1\\2}+y\colvec{1\\-1}=\colvec{27\\0}\, .
-$$
+\]
 This tells us that we are trying to find the combination of the vectors $\colvec{1\\2}$~and $\colvec{1\\-1}$ adds up to $\colvec{27\\0}$; 
  the answer is  ``clearly'' $9\colvec{1\\2}+18\colvec{1\\-1}$.\\[1mm]
 
@@ -391,10 +391,10 @@ entry used to ``zero out''  the other entries in its column; the pivot is the nu
 
 \subsection{Reduced Row Echelon Form}\label{RREF}
 For a system of two linear  equations, the goal of Gaussian elimination is to convert the part of the augmented matrix left of the dividing line into the matrix
- $$I=    \begin{pmatrix}
+ \[I=    \begin{pmatrix}
       1             &0  \\
       0             &1
-    \end{pmatrix}\, ,$$ 
+    \end{pmatrix}\, ,\] 
 called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}, since this would give the simple statement of a solution $x=a,y=b$. The same goes for  larger systems of equations
 for which the identity matrix~$I$ has 1's along its \hyperlink{diagonal}{diagonal} and all off-diagonal entries vanish:
 \begin{center}
@@ -552,7 +552,7 @@ Here is a video (with special effects!) of a hand performing the algorithm by ha
 
 \noindent
 This algorithm and its variations is known as Gaussian elimination. The endpoint of the algorithm is  an augmented matrix of the form \label{Reduced row echelon form} 
-$$\left(
+\[\left(
 \begin{array}{cccccccc|c}
 1       	& * & 0		& * & 0		& \cdots& 0	&*	& b^1 \\[.5mm] 
 0	        & 0 & 1		& * & 0		& \cdots& 0	&*	& b^2 \\[.5mm]
@@ -563,7 +563,7 @@ $$\left(
 0		& 0 & 0		& 0 & 0		& \cdots& 0 	&0	& b^{k+1} \\[.5mm] 
 \vdots  	& \vdots & \vdots	&  \vdots & \vdots	& 	& \vdots	&\vdots	& \vdots \\[.5mm]  
 0		&  0 & 0		& 0 & 0		& \cdots& 0		 & 0& b^r \\ 
-\end{array}\!\right).$$
+\end{array}\!\right).\]
 This is called 
 \emph{Reduced Row Echelon Form}\index{Reduced row echelon form} (RREF).
 The asterisks denote the possibility of arbitrary numbers ({\it e.g.}, the second 1 in the top line of example~\ref{redundant}).
@@ -582,25 +582,25 @@ Learning to perform this algorithm by hand is the first step to learning linear 
 \end{enumerate}
 %Here are some examples:
 \begin{example}\label{augrref} (Augmented matrix in RREF)
-$$
+\[
 \begin{amatrix}{3} 
 1 & 0 & 7 & 0 \\ 
 0 & 1 & 3 & 0 \\
 0 & 0 & 0 & 1 \\
 0 & 0 & 0 & 0 \\
 \end{amatrix}
-$$
+\]
 \end{example}
 
 \begin{example} (Augmented matrix NOT in RREF)
-$$
+\[
 \begin{amatrix}{3} 
 1 & 0 & 3 & 0 \\ 
 0 & 0 & 2 & 0 \\
 0 & 1 & 0 & 1 \\
 0 & 0 & 0 & 1 \\
 \end{amatrix}
-$$
+\]
 Actually, this NON-example breaks all three of the rules!
 \end{example}
 
@@ -716,10 +716,10 @@ It is easier to read off solutions from the maximally simplified equations than 
 %This brings up the issue of what constitutes a solution to a system of equations; the last thing written above was a vector equation... and if it sounds wrong to say  ``an equation is a solution to an equation" you are in good company.  
 %There are infinitely many solutions to the , one for each value of $w$. 
 %For example
-%$$ \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} 
+%\[ \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} 
 %+ 
 %\left( -.75\right)^{\pi-1}\colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1}\, 
-%$$
+%\]
 %is one of the solutions. Notice that this solution is not an equation; it is an ordered set of numbers that, if substituted  for the variables in the equations, yields true statements. This might be annoying to check because of the annoying number $(-.75)^{\pi-1}$ we chose to replace $w$. We just wanted to show you that ANY number can go there. You probably want a way to check a solution which is not annoying. A good check is to see if the system is solved by the expression with $w$ replaced by $0$. Indeed
 %\begin{eqnarray*}
 % \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} {\text ~is~a ~solution ~to \qquad}
@@ -750,11 +750,11 @@ It is easier to read off solutions from the maximally simplified equations than 
 %\alpha \colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1} : \alpha \in \mathbb{R} \right\}
 %\end{eqnarray*}
 There is one solution for each value of $w$, so the solution set is 
-$$
+\[
 \left\{    \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} 
 + 
 \alpha \colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1} : \alpha \in \mathbb{R} \right\}.
-$$
+\]
 \end{example}
 Here is a verbal description of the preceeding example of the \hypertarget{standard approach}{{\it standard approach}}. We say that $x,y$, and $z$ are {\it pivot variables}\index{Pivot variables} because they appeared with a  pivot coefficient in RREF. 
 Since $w$ never appears with a pivot  coefficient, 
@@ -819,7 +819,7 @@ When you see an RREF augmented matrix with two columns that have no pivot, you k
 \end{eqnarray*}
 %There are infinitely many solutions; one for each pair of numbers $z,w$. 
 so the solution set is 
-$$  \left\{  \colvec{4\\1\\0\\0} + z\colvec{-7\\-3\\1\\0} + w\colvec{0\\-4\\0\\1} : z,w\in \mathbb{R} \right\}. $$
+\[  \left\{  \colvec{4\\1\\0\\0} + z\colvec{-7\\-3\\1\\0} + w\colvec{0\\-4\\0\\1} : z,w\in \mathbb{R} \right\}. \]
 \end{example}
 
 %the youtube version
@@ -875,14 +875,14 @@ of their augmented matrix; it is a basic skill for linear algebra, and we will c
 
 %This example emphasizes different aspects.
 %\begin{example}
-%$$
+%\[
 %\begin{amatrix}{5} 
 %1 & 1 & 0 & 1 & 0 & 1\\ 
 %0 & 0 & 1 & 2 & 0 & 2\\ 
 %0 & 0 & 0 & 0 & 1 & 3\\ 
 %0 & 0 & 0 & 0 & 0 & 0
 %\end{amatrix}\, .
-%$$
+%\]
 %Here we were not told the names of the variables, so lets just call them $x_1,x_2,x_3,x_4,x_5$.
 %(There are always as many of these as there are columns in the matrix before the vertical line; the number of rows,
 %on the other hand is the number of linear equations.)
@@ -891,13 +891,13 @@ of their augmented matrix; it is a basic skill for linear algebra, and we will c
 %Next we see from the second last row that $x_5=3$. The second row says 
 %$x_3=2-2x_4=2-2 x_2$.
 %The top row then gives $x_1=1-x_2-x_4=1-x_1-x_2$. Again we can write this solution as a vector
-%$$
+%\[
 %\colvec{1\\0\\2\\0\\3}+x_1\colvec{-1\\1\\0\\0\\0}+x_2\colvec{-1\\0\\-2\\1\\0}\, .
-%$$
+%\]
 %Observe, that since no variables were given at the beginning, we can use any symbols instead of $x_1$ and $x_2$. For example lower case greek letter lambda:
-%$$
+%\[
 %\colvec{1\\0\\2\\0\\3}+\lambda_1\colvec{-1\\1\\0\\0\\0}+\lambda_2\colvec{-1\\0\\-2\\1\\0}\, .
-%$$
+%\]
 %As a challenge, look carefully at this solution and make sure you can see how every part of it comes from
 %the original augmented matrix without every having to reintroduce variables and equations.
 %\end{example}
@@ -920,13 +920,13 @@ of their augmented matrix; it is a basic skill for linear algebra, and we will c
 %\end{theorem}
 %
 %\begin{proof}
-%Suppose Alice and Bob compute the RREF for a linear system but get different results, $A$ and $B$.  Working from the left, discard all columns except for the pivots and the first column in which $A$ and $B$ differ.  By \hyperref[colremove]{Review Problem~\ref{colremove}}, removing columns does not affect row equivalence.  Call the new, smaller, matrices $\hat{A}$ and $\hat{B}$.  The new matrices should look this: $$\hat{A}=\begin{amatrix}{1}
+%Suppose Alice and Bob compute the RREF for a linear system but get different results, $A$ and $B$.  Working from the left, discard all columns except for the pivots and the first column in which $A$ and $B$ differ.  By \hyperref[colremove]{Review Problem~\ref{colremove}}, removing columns does not affect row equivalence.  Call the new, smaller, matrices $\hat{A}$ and $\hat{B}$.  The new matrices should look this: \[\hat{A}=\begin{amatrix}{1}
 %I_N & a\\
 %0 & 0
 %\end{amatrix} \mbox{ and } \hat{B}=\begin{amatrix}{1}
 %I_N & b\\
 %0 & 0
-%\end{amatrix}\, ,$$ where $I_N$ is an $N\times N$ identity matrix and $a$ and $b$ are vectors.
+%\end{amatrix}\, ,\] where $I_N$ is an $N\times N$ identity matrix and $a$ and $b$ are vectors.
 %
 %Now if $\hat{A}$ and $\hat{B}$ have the same solution, then we must have $a=b$.  But this is a contradiction!  Then $A=B$.
 %\end{proof}
@@ -1431,9 +1431,9 @@ This is only true if the RREF of $M$ is the identity matrix.  \\
 
 Much use is made of the fact that invertible matrices can be undone with EROs. 
 To begin with, since each  elementary row operation has an inverse, 
-$$
+\[
 M= E_1^{-1} E_2^{-1} \cdots\, ,
-$$
+\]
 while the inverse of $M$ is 
 \begin{equation*}
 M^{-1}=\cdots E_2 E_1 \, .
@@ -1464,7 +1464,7 @@ The matrices corresponding to these kinds are close in form to the identity matr
 \begin{example} (Correspondences between EROs and their matrices)
 \begin{itemize}
 \item The row swap matrix that swaps the 2nd and 4th row is the identity matrix with the 2nd and 4th row swapped: 
-$$
+\[
 \begin{pmatrix}
 1&0&0&0&0\\
 0&0&0&1&0\\
@@ -1472,20 +1472,20 @@ $$
 0&1&0&0&0\\
 0&0&0&0&1\\
 \end{pmatrix}\, .
-$$
+\]
 \item
 The scalar multiplication matrix that replaces the 3rd row with 7 times the 3rd row is the identity matrix with 7 in the 3rd row instead of 1:
-$$
+\[
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&7&0\\
 0&0&0&1\\
 \end{pmatrix}\, .
-$$
+\]
 
 \item The row sum matrix that replaces the 4th row with the 4th row plus 9 times the 2nd row is the identity matrix with a 9 in the  4th row, 2nd column:
-$$
+\[
 \begin{pmatrix}
 1&0&0&0&0&0&0\\
 0&1&0&0&0&0&0\\
@@ -1495,7 +1495,7 @@ $$
 0&0&0&0&0&1&0\\
 0&0&0&0&0&0&1\\
 \end{pmatrix}\, .
-$$
+\]
 \end{itemize}
 \end{example}
 
@@ -1915,7 +1915,7 @@ E_6^{-1}=
 \end{aligned}
 \end{equation*}
 The equation $U=E_6E_5E_4E_3E_2E_1 M$ can be rearranged as
-$$M=(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1})U.$$ 
+\[M=(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1})U.\] 
 We calculated the product of the first three factors in the previous example; it was named $L$ there, and we will reuse that name here. The product of the next three factors is diagonal and we wil name it $D$. The last factor we named $U$ (the name means something different in this example than the last example.) The $LDU$ factorization of our matrix is
 \begin{eqnarray*}
 \begin{pmatrix}
@@ -2215,7 +2215,7 @@ In the \hyperlink{standard approach}{standard approach}, variables corresponding
 %We can denote them with dummy variables $\mu_1, \mu_2, \ldots$. 
 
 \begin{example}\label{npcd} (Non-pivot variables determine the gemometry of the solution set)
-$$\begin{pmatrix}
+\[\begin{pmatrix}
 1 &  0 & 1 & -1 \\ 
  0 & 1 & -1& 1  \\
  0 &0   & 0  & 0 \\
@@ -2231,7 +2231,7 @@ $$\begin{pmatrix}
 	0x_1 +0x_2 + 0x_3 + 0x_4 & = 0 
 \end{array}
      \right.
-$$
+\]
 Following the standard approach, express the pivot variables in terms of the non-pivot variables and add ``empty equations". Here $x_3$ and $x_4$ are non-pivot variables.  
 \begin{eqnarray*}
 \left.
@@ -2278,9 +2278,9 @@ Here $x^P $ is a {\it particular solution} while $x^H _1$ and $x^H _2$ are calle
 %X= \colvec{x_1\\x_2\\x_3\\x_4} \mbox{ and } Y=\colvec{y_1\\y_2\\y^3 \\y^4 }\, ,
 %\]
 %and take for the function of vectors
-%$$
+%\[
 %f(X)=MX\, .
-%$$
+%\]
 %Now let us check the linearity property for $f$. 
 %The property needs to hold for {\it any} scalars $\alpha$ and $\beta$, so for simplicity
 %let us concentrate first on the case $\alpha=\beta=1$. This means that we need to
@@ -2290,24 +2290,24 @@ Here $x^P $ is a {\it particular solution} while $x^H _1$ and $x^H _2$ are calle
 %\item First compute $f(X)$ and $f(Y)$, then compute the sum $f(X)+f(Y)$.
 %\end{enumerate}
 %The second computation is slightly easier:
-%$$
+%\[
 %f(X) = MX 
 %    =\colvec{x_1+x_3-x_4\\x_2-x_3+x_4\\0}\mbox{ and }
 %f(Y) = MY   
 %    =\colvec{y_1+y_3-y_4\\y_2-y_3+y_4\\0}\, ,
-%$$
+%\]
 %(using our result above). Adding these gives
-%$$
+%\[
 %f(X)+f(Y)=\colvec{x_1+x_3-x_4+y_1+y_3-y_4\\[1mm]x_2-x_3+x_4+y_2-y_3+y_4\\[1mm]0}\, .
-%$$
+%\]
 %Next we perform the first computation beginning with:
-%$$
+%\[
 %X+Y=\colvec{x_1 + y_1\\x_2+y_2\\ x_3+y_3\\ x_4+y_4}\, ,
-%$$
+%\]
 %from which we calculate
-%$$
+%\[
 %f(X+Y)=\colvec{x_1+y_2+x_3+y_3-(x_4+y_4)\\[1mm] x_2+y_2-(x_3+y_3)+x_4+y_4\\[1mm]0}\, .
-%$$
+%\]
 %Distributing the minus signs and remembering that the order of adding numbers like $x_1,x_2,\ldots$ 
 %does not matter, we see that the two computations give exactly the same answer.
 %
@@ -2326,15 +2326,15 @@ Motivated by example~\ref{npcd}, we say that the matrix equation $Mx=v$ has  sol
 %
 %the two equations 
 Thus 
-$$M( x^P  + \mu_1 x^H _1 + \mu_2 x^H _2)  = Mx^P  + \mu_1Mx^H _1 + \mu_2Mx^H _2 =v\, ,$$
+\[M( x^P  + \mu_1 x^H _1 + \mu_2 x^H _2)  = Mx^P  + \mu_1Mx^H _1 + \mu_2Mx^H _2 =v\, ,\]
 for \emph{any} $\mu_1, \mu_2 \in \mathbb{R}$. 
 Choosing $\mu_1=\mu_2=0$, we obtain 
-$$Mx^P =v\, .$$  
+\[Mx^P =v\, .\]  
 This is why $x^P $ is an example of a  \emph{particular solution}\index{Particular solution!an example}.
 
 Setting $\mu_1=1, \mu_2=0$, and subtracting $Mx^P =v$ we obtain 
-$$Mx^H _1=0\, .$$ 
-Likewise, setting $\mu_1=0, \mu_2=1$, we obtain $$Mx^H _2=0\, .$$
+\[Mx^H _1=0\, .\] 
+Likewise, setting $\mu_1=0, \mu_2=1$, we obtain \[Mx^H _2=0\, .\]
 Here $x^H _1$ and $x^H _2$ are examples of what are called  \emph{homogeneous} solutions\index{Homogeneous solution!an example} to the system.
 They {\it do not} solve the original equation $Mx=v$, but instead its associated 
 {\it homogeneous  equation}\index{homogeneous equation} $M y =0$.

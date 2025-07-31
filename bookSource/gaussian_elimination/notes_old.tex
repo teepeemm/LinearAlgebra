@@ -63,10 +63,10 @@ You will see that Gaussian elimination is an efficient shorthand for (maximally)
 %\\
 %
 %%\noindent
-%By the way, the matrix $$I=    \begin{pmatrix}
+%By the way, the matrix \[I=    \begin{pmatrix}
 %      1             &0  \\
 %      0             &1
-%    \end{pmatrix}$$ is called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}.  She will be very important to us. You should check that if $v$ is any vector, then $$Iv=v\, .$$
+%    \end{pmatrix}\] is called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}.  She will be very important to us. You should check that if $v$ is any vector, then \[Iv=v\, .\]
 %    
 %Here is a nice way to summarize your goal when performing the process we are calling elimination elimination; manipulate the system of equations until the resulting system can be written as a matrix equation with the identity matrix.
 
@@ -400,10 +400,10 @@ This {\it pivot} jargon is helpful for describing the goings on in Gaussian elim
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reduced Row Echelon Form}
 The goal in Gaussian elimination is to have the part of the augmented matrix left of the dividing line become the matrix
- $$I=    \begin{pmatrix}
+ \[I=    \begin{pmatrix}
       1             &0  \\
       0             &1
-    \end{pmatrix}$$ 
+    \end{pmatrix}\] 
 This is called the \emph{Identity Matrix}\index{Identity matrix!$2\times2$}.  
 (She will be very important to us, along with her bigger sisters.)
 %You should check that if $v$ is any vector, then $Iv=v\, .$, that is, the identity matrix is the operator that maps any vector to itself. Identity is a good name for her!) 
@@ -732,14 +732,14 @@ of their augmented matrix.
 
 %This example emphasizes different aspects.
 %\begin{example}
-%$$
+%\[
 %\begin{amatrix}{5} 
 %1 & 1 & 0 & 1 & 0 & 1\\ 
 %0 & 0 & 1 & 2 & 0 & 2\\ 
 %0 & 0 & 0 & 0 & 1 & 3\\ 
 %0 & 0 & 0 & 0 & 0 & 0
 %\end{amatrix}\, .
-%$$
+%\]
 %Here we were not told the names of the variables, so lets just call them $x_1,x_2,x_3,x_4,x_5$.
 %(There are always as many of these as there are columns in the matrix before the vertical line; the number of rows,
 %on the other hand is the number of linear equations.)
@@ -748,13 +748,13 @@ of their augmented matrix.
 %Next we see from the second last row that $x_5=3$. The second row says 
 %$x_3=2-2x_4=2-2 x_2$.
 %The top row then gives $x_1=1-x_2-x_4=1-x_1-x_2$. Again we can write this solution as a vector
-%$$
+%\[
 %\colvec{1\\0\\2\\0\\3}+x_1\colvec{-1\\1\\0\\0\\0}+x_2\colvec{-1\\0\\-2\\1\\0}\, .
-%$$
+%\]
 %Observe, that since no variables were given at the beginning, we can use any symbols instead of $x_1$ and $x_2$. For example lower case greek letter lambda:
-%$$
+%\[
 %\colvec{1\\0\\2\\0\\3}+\lambda_1\colvec{-1\\1\\0\\0\\0}+\lambda_2\colvec{-1\\0\\-2\\1\\0}\, .
-%$$
+%\]
 %As a challenge, look carefully at this solution and make sure you can see how every part of it comes from
 %the original augmented matrix without every having to reintroduce variables and equations.
 %\end{example}
