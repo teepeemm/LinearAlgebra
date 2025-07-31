@@ -10,24 +10,24 @@
 
 \hypertarget{properties_of_matrices_example}{This video} shows you
 how to compute
-$$
+\[
 \exp\begin{pmatrix}0&\theta\\-\theta & 0\end{pmatrix}
 \, .
-$$
+\]
 For this we need to remember that the matrix exponential is defined by its power series
-$$
+\[
 \exp M := I + M + \frac1{2!} M^2 + \frac1{3!} M^3+\cdots\, .
-$$
+\]
 Now lets call 
-$$\begin{pmatrix}0&\theta\\-\theta & 0\end{pmatrix}=i\theta$$
+\[\begin{pmatrix}0&\theta\\-\theta & 0\end{pmatrix}=i\theta\]
 where the {\it matrix} 
-$$
+\[
 i:=\begin{pmatrix}0&1\\-1 & 0\end{pmatrix}
-$$
+\]
 and by matrix multiplication is seen to obey
-$$
+\[
 i^2 =-I\, ,\qquad i^3=-i\, , i^4 = I\, .
-$$
+\]
 Using these facts we compute by organizing terms according to whether they have an $i$ or not:
 \begin{eqnarray*}
 \exp i\theta &=& I + \frac 1{2!}\, \theta^2 (-I) + \frac 1{4!} \,(+I) + \cdots \\

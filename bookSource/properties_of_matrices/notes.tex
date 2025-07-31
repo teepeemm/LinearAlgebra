@@ -21,7 +21,7 @@ The numbers $m^i_j$ are called \emph{entries}\index{Matrix!entries of}.  The sup
 
 %It is often useful to consider matrices whose entries are more general than the real numbers, so we allow that possibility.
 
-An $r\times 1$ matrix $v = (v^r_1) = (v^r)$ is called a \emph{column vector}\index{Column vector}, written $$v = \colvec{v^1\\v^2\\ \vdots \\ v^r }\, .$$  A $1\times k$ matrix $v = (v^1_k) = (v_k)$ is called a \emph{row vector}\index{Row vector}, written $$v = \rowvec{v_1 & v_2 & \cdots & v_k }\, .$$  
+An $r\times 1$ matrix $v = (v^r_1) = (v^r)$ is called a \emph{column vector}\index{Column vector}, written \[v = \colvec{v^1\\v^2\\ \vdots \\ v^r }\, .\]  A $1\times k$ matrix $v = (v^1_k) = (v_k)$ is called a \emph{row vector}\index{Row vector}, written \[v = \rowvec{v_1 & v_2 & \cdots & v_k }\, .\]  
 
 
 A matrix is a very useful and efficient way to store information:
@@ -133,7 +133,7 @@ Multiplying a $(3\times 1)$ matrix and a $(1\times 2)$ matrix yields a $(3\times
 
 Recall that $r\times k$ matrices can be used to represent linear transformations 
 $ \Re^k \rightarrow \Re^r $
-via $$MV = \sum_{j=1}^{k} m_j^iv^j , $$ which is the same rule we use when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
+via \[MV = \sum_{j=1}^{k} m_j^iv^j , \] which is the same rule we use when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
 
 Likewise, we can use a matrix $N=(n^i_j)$ to define a linear transformation of a vector space of matrices. For example
 \[
@@ -158,16 +158,16 @@ The $r\times r$ diagonal matrix with all diagonal entries equal to $1$ is called
 0 & 0 & 0 & \cdots & 1
 \end{pmatrix}.
 \]
-The identity matrix is special because $$I_rM=MI_k=M$$ for all $M$ of size $r\times k$.
+The identity matrix is special because \[I_rM=MI_k=M\] for all $M$ of size $r\times k$.
 \end{definition}
 
 In the matrix given by the product of matrices  above, the diagonal entries are $2$ and $9$.
 An example of a diagonal matrix is 
-$$\begin{pmatrix}
+\[\begin{pmatrix}
 2 & 0 & 0\\
 0 & 3 & 0\\
 0 & 0 & 0\\
-\end{pmatrix}\, .$$
+\end{pmatrix}\, .\]
 
 \begin{definition}
 The \emph{transpose}\index{Transpose} of an $r\times k$ matrix $M = (m_j^i)$ is the $k\times r$ matrix with entries
@@ -218,30 +218,30 @@ Many properties of matrices following from the same property for real numbers. H
 
 \begin{example}
 {\it Associativity of matrix multiplication.} We know for real numbers $x$, $y$ and $z$ that 
-$$
+\[
 x(yz)=(xy)z\, ,
-$$
+\]
 {\it i.e.} the order of bracketing does not matter. The same property holds for matrix multiplication, let us show why.
 Suppose $M=\big( m^i_j \big)$, $N=\big( n^j_k \big)$ and  $R=\big( r^k_l \big)$ are, 
 respectively, $m\times n$, $n\times r$ and $r\times t$ matrices. Then from the rule for matrix
 multiplication we have
-$$
+\[
 MN=\Big(\sum_{j=1}^n m^i_j n^j_k\Big)\mbox{ and } NR=\Big(\sum_{k=1}^r n^j_k r^k_l\Big)\, .
-$$
+\]
 So first we compute 
-$$
+\[
 (MN)R=\Big(\sum_{k=1}^r \Big[\sum_{j=1}^n m^i_j n^j_k\Big] r^k_l \Big) = 
 \Big(\sum_{k=1}^r \sum_{j=1}^n \Big[ m^i_j n^j_k\Big] r^k_l \Big) =\Big(\sum_{k=1}^r \sum_{j=1}^n m^i_j n^j_k r^k_l \Big)\, .
-$$
+\]
 In the first step we just wrote out the definition for matrix multiplication, in the second step we
 moved summation symbol outside the bracket (this is just the distributive
 property $x(y+z)=xy+xz$ for numbers) and
 in the last step we used the associativity property for real numbers to remove the square brackets. 
 Exactly the same reasoning shows that
-$$
+\[
 M(NR)=\Big(\sum_{j=1}^n m^i_j\Big[\sum_{k=1}^r n^j_k r^k_l\Big]\Big) = 
 \Big(\sum_{k=1}^r \sum_{j=1}^n  m^i_j \Big[n^j_kr^k_l \Big] \Big) =\Big(\sum_{k=1}^r \sum_{j=1}^n m^i_j n^j_k r^k_l \Big)\, .
-$$
+\]
 This is the same as above so we are done. {\it As a fun remark, note that Einstein would simply have written
 $(MN)R=(m^i_j n^j_k) r^k_l= m^i_j n^j_k r^k_l = m^i_j (n^j_k r^k_l ) = M(NR)$.}
 \end{example}
@@ -287,21 +287,21 @@ On the other hand:
 \end{example}
 Since $n\times n$ matrices are linear transformations $\Re^n \rightarrow \Re^n$, we can see that the order of successive linear transformations matters.  
 %In general  for two linear transformations $K$ and $L$ taking $\Re^n \rightarrow \Re^n$, and $v\in \Re^n$,  one has
-%$$K(L(v)) \neq L(K(v))\, .$$
+%\[K(L(v)) \neq L(K(v))\, .\]
 %Finding matrices such that $MN=NM$ is an important problem in mathematics.
 %We promise
 
 Here is an example of matrices acting on objects in three dimensions that also shows matrices not commuting.
 \begin{example}
 You learned in a \hyperlink{rotationprob}{Review Problem} that the matrix
-$$M=\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin \theta & \cos\theta\end{pmatrix}\, ,$$
+\[M=\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin \theta & \cos\theta\end{pmatrix}\, ,\]
 rotates vectors in the plane by an angle~$\theta$. 
 We can generalize this, using block matrices, to three dimensions.
 In fact the following matrices built from a $2\times 2$ rotation matrix, a $1\times 1$ identity matrix and zeroes everywhere else
-$$
+\[
 M=\begin{pmatrix}\cos\theta & \sin\theta &0\\ -\sin \theta & \cos\theta&0\\0&0&1\end{pmatrix}\qquad\mbox{and}\qquad
 N=\begin{pmatrix}1&0&0\\0&\cos\theta & \sin\theta \\ 0&-\sin \theta & \cos\theta\end{pmatrix}\, ,
-$$
+\]
 perform rotations by an angle $\theta$ in the $xy$ and $yz$ planes, respectively. Because, they rotate single vectors, you can also use them to rotate objects built from a collection of vectors like pretty colored blocks! Here is a picture of $M$ and then $N$ acting on such a block, compared with the case of $N$ followed by $M$. The special case of $\theta=90^\circ$ is shown.
 \begin{center}
 \includegraphics[scale=.3]{MNNM.jpg}
@@ -492,7 +492,7 @@ While matrix multiplication does not commute, the trace of a product of matrices
 \end{eqnarray*}
 \videoscriptlink{properties_of_matrices_trace_proof.mp4}{Explanation of this Proof}{scripts_properties_of_matrices_trace_proof}
 Thus we have a Theorem:
-\begin{theorem} $$\tr(MN)=\tr(NM)$$ for any square matrices $M$ and $N$.
+\begin{theorem} \[\tr(MN)=\tr(NM)\] for any square matrices $M$ and $N$.
 \end{theorem}
 
 \begin{example}
