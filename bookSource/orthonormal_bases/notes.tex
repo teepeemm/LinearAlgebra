@@ -8,7 +8,7 @@ in this case.
 \section{Properties of the Standard Basis}
 
 The standard notion of the length of a vector $x=(x_1,x_2,\ldots,x_n)$ $\in$ ${\mathbb R}^n$ is 
-$$||x||=\sqrt{x\dotprod x}=\sqrt{(x_1)^2+(x_2)^2+\cdots(x_n)^2}\, .$$
+\[||x||=\sqrt{x\dotprod x}=\sqrt{(x_1)^2+(x_2)^2+\cdots(x_n)^2}\, .\]
 The canonical/standard basis in ${\mathbb R}^n$
 \[
 e_1=\colvec{1\\0\\ \vdots \\ 0}, \phantom{X}
@@ -117,14 +117,14 @@ v =\sum_i (v\dotprod u_i)u_i.
 \subsection{Orthonormal Bases and Dot Products}
 
 To calculate lengths of, and angles between vectors in ${\mathbb R}^n$ we most commonly use the dot product:
-$$
+\[
 \colvec{v^1\\\mc \vdots \\ v^n}\cdot \colvec{w^1\\\mc \vdots \\ w^n}:=v^1 w^1 + \cdots + v^n w^n\, .
-$$ 
+\] 
 When dealing with more general vector spaces
 the dot product makes no sense, and one must instead choose an appropriate inner product. By ``appropriate'', we mean an inner product well-suited to the problem one is trying to solve. If the vector space $V$ under study has an orthonormal basis $O=(u_1,\ldots, u_n)$ meaning 
-$$
+\[
 \langle u_i,u_j\rangle=\delta_{ij}\, ,
-$$
+\]
 where $\langle\cdot,\cdot\rangle$ is the inner product, you might ask whether this can be related to a dot product? The answer to this question is yes and rather easy to understand:
 
 Given an orthonormal basis, the information of two vectors $v$ and $v'$ in~$V$ can be encoded in column vectors
@@ -135,10 +135,10 @@ v'&=&\langle v',u_1\rangle u_1 + \cdots+ \langle v',u_n\rangle u_n=(u_1,\ldots, 
 \hspace{-.2mm}\colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}_{\! O}\, .
 \end{eqnarray*}
 The dot product of these two column vectors is
-$$
+\[
 \colvec{\langle v,u_1\rangle\\\mc\vdots\\\langle v,u_n\rangle}\cdot \colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}=
 \langle v,u_1\rangle\langle v',u_1\rangle+\cdots+\langle v,u_n\rangle\langle v,'u_n\rangle\, .
-$$
+\]
 This agrees exactly with the inner product of $v$ and $v'$ because
 \begin{eqnarray*}
 \langle v,v'\rangle&=& \big\langle
@@ -156,28 +156,28 @@ Because inner products become dot products once one uses an orthonormal basis, w
 
 \begin{example}
 Consider the space of polynomials given by $V={\rm span}\{1,x\}$ with inner product $\langle p,p'\rangle=\int_0^1  p(x) p'(x)dx $. An obvious basis to use is $B=(1,x)$ 
-but it is not hard to check that this is not orthonormal, instead we take $$O=\Big(1,{2\sqrt{3}}\, \big(x-\frac12\big)\Big)\, .$$
+but it is not hard to check that this is not orthonormal, instead we take \[O=\Big(1,{2\sqrt{3}}\, \big(x-\frac12\big)\Big)\, .\]
 This is an orthonormal basis  since,for example:
-$$
+\[
 \Big\langle{2\sqrt{3}}\big(x-\frac12\big),1\Big\rangle
-={2\sqrt{3}}\int_0^1 \big(x-\frac12\big)dx=0\, ,$$
+={2\sqrt{3}}\int_0^1 \big(x-\frac12\big)dx=0\, ,\]
 and 
-$$
+\[
 \Big\langle x-\frac12,x-\frac12\Big\rangle=
 \int_0^1 \big(x-\frac12\big)^2dx=\frac{1}{12}=\Big(\frac{1}{2\sqrt{3}}\Big)^2\, .
-$$
+\]
 An arbitrary vector $v=a+b x$ is given in terms of the orthonormal basis $O$ by
-$$
+\[
 v=(a+\frac b2).1 + b \big(x-\frac12\big) =\Big(1,{2\sqrt{3}}\, \big(x-\frac12\big)\Big)
 \colvec{a+\frac b2\\[2mm] \mc{\frac{b}{2\sqrt{3}}}}=\colvec{a+\frac b2\\[2mm] \mc{\frac{b}{2\sqrt{3}}}}_{\! O}\, .
-$$
+\]
 Hence   we can predict the inner product of $a+bx$ and $a'+b'x$ using the dot product:
-$$\colvec{a+\frac b2\\[2mm] \mc{\frac{b}{2\sqrt{3}}}}\cdot \colvec{a'+\frac {b'}2\\[2mm] \mc{\frac{b'}{2\sqrt{3}}}}
-=\Big(a+\frac b2\Big) \Big(a'+\frac {b'}2\Big) + \frac{b b'}{12}=aa'+\frac12\, (ab'+a'b) + \frac13\, bb'\, . $$
+\[\colvec{a+\frac b2\\[2mm] \mc{\frac{b}{2\sqrt{3}}}}\cdot \colvec{a'+\frac {b'}2\\[2mm] \mc{\frac{b'}{2\sqrt{3}}}}
+=\Big(a+\frac b2\Big) \Big(a'+\frac {b'}2\Big) + \frac{b b'}{12}=aa'+\frac12\, (ab'+a'b) + \frac13\, bb'\, . \]
 Indeed
-$$
+\[
 \langle a+bx,a'+b'x\rangle = \int_0^1 (a+bx)(a'+b'x)dx=aa'+\frac12\, (ab'+a'b) + \frac13\, bb'\, .
-$$
+\]
 \end{example}
 
 \section{Relating Orthonormal Bases}
@@ -194,9 +194,9 @@ Thus the matrix for the change of basis from $T$ to $R$ is given by
 P = (p^j_i) = (u_j\dotprod w_i).
 \]
 We would like to calculate the product $PP^T$. For that, we first develop a dirty trick for products of dot products:
-$$
+\[
 (u\dotprod v)(w\dotprod z)=(u^T v) (w^T z) = u^T (v w^T) z\, . 
-$$
+\]
 The object $v w^T$ is the square matrix made from the outer product of $v$ and~$w$. 
 Now we are ready to compute the components of the matrix product $PP^T$.
 \begin{eqnarray*}
@@ -394,8 +394,8 @@ We'll  obtain an orthogonal basis for $\Re^3$ by appling Gram-Schmidt to the lin
 $\left\{\colvec{1\\1\\1}, \colvec{1\\1\\0},\colvec{3\\1\\1} \right\}$.\\
 
 Because he Gram-Schmidt algorithm uses the first vector from the ordered set the largest number of times, we will choose the vector with the most zeros to be the first in hopes of simplifying computations; we choose to order the set as
-$$( v_1,v_2,v_3)
-:= \left( \colvec{1\\1\\0}, \colvec{1\\1\\1},\colvec{3\\1\\1} \right).$$
+\[( v_1,v_2,v_3)
+:= \left( \colvec{1\\1\\0}, \colvec{1\\1\\1},\colvec{3\\1\\1} \right).\]
 
 First, we set $v_1^\perp:=v_1$.  Then
 \begin{eqnarray*}
@@ -417,60 +417,60 @@ is an orthogonal basis for $\Re^3$.  To obtain an ortho{\it normal} basis we sim
 \section{$QR$ Decomposition}
 In Chapter~\ref{Matrices}, Section~\ref{LUdecomp} teaches you how to solve linear systems by decomposing a matrix $M$ into 
 a product of lower and upper triangular matrices
-$$M=LU\, .$$
+\[M=LU\, .\]
 The Gram--Schmidt procedure suggests another matrix decomposition,
-$$M=QR\, ,$$ 
+\[M=QR\, ,\] 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix. So-called QR-decompositions\index{QR decomposition}
 are useful for solving linear systems, eigenvalue problems and least squares approximations. You can
 easily get the idea behind the $QR$ decomposition by working through a simple example.
 
 \begin{example}
-\hypertarget{methodQR}{Find} the $QR$ decomposition of $$M=\begin{pmatrix}2&-1&1\\1&3&-2\\0&1&-2\end{pmatrix}\, .$$
+\hypertarget{methodQR}{Find} the $QR$ decomposition of \[M=\begin{pmatrix}2&-1&1\\1&3&-2\\0&1&-2\end{pmatrix}\, .\]
 What we will do is to think of the columns of $M$ as three 3-vectors and use Gram--Schmidt to
 build an orthonormal basis from these that will become the columns of the orthogonal matrix $Q$.
 We will use the matrix $R$ to record the steps of the Gram--Schmidt procedure in such a way
 that the product $QR$ equals $M$. 
 
 To begin with we write
-$$
+\[
 M=\begin{pmatrix}2&-\frac75&1\\[1mm]1&\frac{14}5&-2\\[1mm]0&1&-2\end{pmatrix}
 \begin{pmatrix}1&\frac15&0\\[1mm]0&1&0\\[1mm]0&0&1\end{pmatrix}\, .
-$$
+\]
 In the first matrix the first two columns are  orthogonal because we simply replaced the second column of $M$ by the vector that the Gram--Schmidt
 procedure produces from the first two columns of~$M$, namely
-$$
+\[
 \colvec{-\frac75\\[1mm]\frac{14}5\\[1mm]1}=\colvec{-1\\[1mm]3\\[1mm]1}-\frac15
 \colvec{ 2 \\[1mm]1\\[1mm]0}\, .
-$$
+\]
  The matrix on the right is almost the identity
 matrix, save the $+\frac15$ in the second entry of the first row, whose effect upon multiplying the
 two matrices precisely undoes what we we did to the second column of the first matrix. 
 
 For the third column of $M$ we use Gram--Schmidt to deduce the third orthogonal vector
-$$
+\[
 \colvec{-\frac16\\[1mm]\frac13\\[1mm]-\frac76}=
 \colvec{1\\[1mm]-2\\[1mm]-2}
 -0
 \colvec{ 2 \\[1mm]1\\[1mm]0}
 -\frac{-9}{\frac{54}{5}}\colvec{-\frac75\\[1mm]\frac{14}5\\[1mm]1}\, ,
-$$
+\]
 and therefore, using exactly the same procedure write
-$$
+\[
 M=\begin{pmatrix}2&-\frac75&-\frac16\\[1mm]1&\frac{14}5&\frac13\\[1mm]0&1&-\frac76\end{pmatrix}
 \begin{pmatrix}1&\frac15&0\\[1mm]0&1&-\frac56\\[1mm]0&0&1\end{pmatrix}\, .
-$$
+\]
 This is not quite the answer because the first matrix is now made of mutually orthogonal column vectors,
 but  a {\it bona fide} orthogonal matrix is comprised of {\it orthonormal} vectors. To achieve that we divide
 each column of the first matrix by its length and multiply the corresponding row of the second matrix by the same 
 amount:
-$$
+\[
 M=\begin{pmatrix}\frac{2\sqrt{5}}{5}&-\frac{7\sqrt{30}}{90}&-\frac{\sqrt{6}}{18}\\[2mm]
 \frac{\sqrt{5}}{5}&\frac{7\sqrt{30}}{45}&\frac{\sqrt{6}}{9}\\[2mm]
 0&\frac{\sqrt{30}}{18}&-\frac{7\sqrt{6}}{18}\end{pmatrix}
 \begin{pmatrix}\sqrt{5}&\frac{\sqrt{5}}{5}&0\\[2mm]
 0&\frac{3\sqrt{30}}{5}&-\frac{\sqrt{30}}{2}\\[2mm]
 0&0&\frac{\sqrt{6}}{2}\end{pmatrix}=QR\, .
-$$
+\]
 Geometrically what has happened here is easy to see. We started with three vectors given by the columns of $M$ and rotated them such that the first lies along the $x$-axis, the second in the $xy$-plane and the third in some other generic direction (here it happens to be in the $yz$-plane).
 
 A nice check of the above result is to verify that entry $(i,j)$  of the matrix $R$
@@ -542,7 +542,7 @@ Suppose that $u+v=u'+v'$, with $u,u'\in U$, and $v,v' \in V$.  Then we could exp
 \noindent Here is a sophisticated algebra question:
 \begin{quote}
 Given a subspace $U$ in $W$, what are the solutions to 
-$$ U\oplus V =W.$$
+\[ U\oplus V =W.\]
 That is, how can we write $W$ as the direct sum of $U$ and \emph{something}? 
 \end{quote}
 There is not a unique answer to this question as can be seen from the following picture of subspaces in $W={\mathbb R}^3$. 
@@ -557,7 +557,7 @@ However, using the inner product, there is a natural candidate $U^\perp$ for thi
 
 \begin{definition}
 If $U$ is a subspace of the vector space $W$ then the vector space 
-$$U^\perp := \big\{w\in W \big| w\dotprod u=0 \text{ for all } u\in U\big\}\, $$
+\[U^\perp := \big\{w\in W \big| w\dotprod u=0 \text{ for all } u\in U\big\}\, \]
 is the {\bf orthogonal complement}\index{Orthogonal complement} of $U$ in $W$. 
 \end{definition}
 
@@ -586,9 +586,9 @@ Let $U$ be a subspace of a finite-dimensional vector space~$W$.  Then the set $U
 
 \begin{proof}
 First, to see that $U^\perp$ is a subspace, we only need to check closure, which requires a simple check:
-Suppose $v,w\in U^\perp$, then we know  $$v\dotprod u = 0 = w\dotprod u \quad (\forall u\in U)\, .$$
+Suppose $v,w\in U^\perp$, then we know  \[v\dotprod u = 0 = w\dotprod u \quad (\forall u\in U)\, .\]
 Hence
-$$\Rightarrow u\dotprod(\alpha v+\beta w)= \alpha u\dotprod v + \beta u\dotprod w =0\quad (\forall u\in U)\, ,$$ 
+\[\Rightarrow u\dotprod(\alpha v+\beta w)= \alpha u\dotprod v + \beta u\dotprod w =0\quad (\forall u\in U)\, ,\] 
 and so $\alpha v+\beta w\in U^\perp$.
 
 Next, to form a direct sum between $U$ and $U^\perp$ we need to show
@@ -610,7 +610,7 @@ It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).
 
 \begin{example}
 Consider any line \(L\) through the origin in \(\Re^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let 
-$$L=\spa \left\{ \colvec{1\\1\\1\\1} \right\}$$ 
+\[L=\spa \left\{ \colvec{1\\1\\1\\1} \right\}\] 
 be a line in \(\Re^4.\) Then 
 \begin{eqnarray*}
 L^\perp&=&\left \{  \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ (x,y,z,w) \dotprod (1,1,1,1)=0 \right\} \\
@@ -620,15 +620,15 @@ L^\perp&=&\left \{  \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ (x,y,z,w) \dotprod
 \noindent
 Using the Gram-Schmidt procedure one may  find an orthogonal basis for 
 \(L^\perp\). The set 
-$$
+\[
 \left\{
 \colvec{1\\-1\\0\\0}, \colvec{1\\0\\-1\\0}, \colvec{1\\0\\0\\-1} \right \}\, 
-$$ 
+\] 
 forms a basis for \(L^\perp\)  so, first, we order the basis as 
-$$
+\[
 ( v_1,v_2,v_2)= 
 \left(
-\colvec{1\\-1\\0\\0}, \colvec{1\\0\\-1\\0}, \colvec{1\\0\\0\\-1} \right)\,. $$
+\colvec{1\\-1\\0\\0}, \colvec{1\\0\\-1\\0}, \colvec{1\\0\\0\\-1} \right)\,. \]
 Next, we set \(v_1^\perp=v_1\). Then
 \begin{eqnarray*}
 v_2^\perp&=&\colvec{1\\0\\-1\\0}-\frac{1}{2}\colvec{1\\-1\\0\\0}
