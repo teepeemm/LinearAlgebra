@@ -99,7 +99,7 @@ That is, the span of \(S\) is the set of all finite linear combinations\footnote
  }.
 
 \begin{example}
-Let $V=\Re^3$ and $X\subset V$ be the $x$-axis.  Let $P=\colvec{0\\1\\0}$, and set $$S=X \cup \{P\}\, .$$
+Let $V=\Re^3$ and $X\subset V$ be the $x$-axis.  Let $P=\colvec{0\\1\\0}$, and set \[S=X \cup \{P\}\, .\]
 The vector \(\colvec{2 \\ 3 \\ 0}\) is in \(\spa(S),\) because \(\colvec{2\\3\\0}=\colvec{2\\0\\0}+3\colvec{0\\1\\0}.\) Similarly, the vector \(\colvec{-12 \\ 17.5 \\ 0}\) is in \(\spa(S),\) because \(\colvec{-12\\17.5\\0}=\colvec{-12\\0\\0}+17.5\colvec{0\\1\\0}.\)
 Similarly, any vector of the form
 \[
@@ -182,18 +182,18 @@ Some other very important ways of building subspaces are given in the following 
 
 \noindent
 Suppose $L:U\to V$ is a linear map between vector spaces. Then if
-$$
+\[
 L(u)=0=L(u')\, ,
-$$
+\]
 linearity tells us that
-$$
+\[
 L(\alpha u + \beta u') = \alpha L(u) + \beta L(u') =\alpha 0 + \beta 0 = 0\, .
-$$
+\]
 Hence, thanks to the subspace theorem,  the set of all vectors in $U$ that are mapped to the zero vector is a subspace of $V$.
 It is called the kernel of $L$:
-$$
+\[
 {\rm ker} L:=\{u\in U| L(u) = 0\}\subset U.
-$$
+\]
 Note that finding a kernel means finding a solution to a homogeneous linear equation. 
 \end{example}
 
@@ -202,19 +202,19 @@ Note that finding a kernel means finding a solution to a homogeneous linear equa
 
 \noindent
 Suppose $L:U\to V$ is a linear map between vector spaces. Then if
-$$
+\[
 v=L(u) \mbox{ and } v'=L(u')\, ,
-$$
+\]
 linearity tells us that
-$$
+\[
 \alpha v + \beta v' = \alpha L(u) + \beta L(u') =L(\alpha u +\beta u')\, .
-$$
+\]
 Hence, calling once again on the subspace theorem,  the set of all vectors in $V$ that are obtained as outputs of the
 map $L$ is a subspace.
 It is called the image of $L$:
-$$
+\[
 {\rm im} L:=\{L(u) \ |\  u\in U \}\subset V.
-$$
+\]
 \end{example}
 
 \begin{example}
@@ -222,19 +222,19 @@ $$
 
 \noindent
 Suppose $L:V\to V$ is a linear map and $V$ is a vector space. Then if
-$$
+\[
 L(u)=\lambda u \mbox{ and } L(v)=\lambda v\, ,
-$$
+\]
 linearity tells us that
-$$
+\[
 L(\alpha u + \beta v) = \alpha L(u) + \beta L(v) =\alpha L(u) + \beta L(v) =\alpha \lambda u  + \beta \lambda v = \lambda (\alpha u + \beta v)\, .
-$$
+\]
 Hence, again by subspace theorem, the set of all vectors in $V$ that
 obey the {\it eigenvector equation} $L(v)=\lambda v$ is a subspace of $V$. 
 It is called an eigenspace
-$$
+\[
 V_\lambda:=\{v\in V| L(v) = \lambda v\}.
-$$
+\]
 For most scalars $\lambda$, the only solution to $L(v) = \lambda v$ will be $v=0$, which yields the trivial subspace $\{0\}$.
 When there are nontrivial solutions to $L(v)=\lambda v$, the number~$\lambda$ is called an eigenvalue, and carries
 essential information about the map~$L$. 
