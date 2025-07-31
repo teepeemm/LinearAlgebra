@@ -67,7 +67,7 @@ Again this relies on the underlying associativity of real numbers:
 (x+y)+z=x+(y+z)\, .
 \]
 The computation required is
-\[
+\begin{gather*}
 \left(\begin{pmatrix}x_1\\x_2\end{pmatrix}+
 \begin{pmatrix}y_1\\y_2\end{pmatrix}\right)+
 \begin{pmatrix}z_1\\z_2\end{pmatrix}
@@ -76,7 +76,7 @@ The computation required is
 \begin{pmatrix}z_1\\z_2\end{pmatrix}
 =
 \begin{pmatrix}(x_1+y_1)+z_1\\(x_2+y_2)+z_2\end{pmatrix}
-\] \[
+\\
 =
 \begin{pmatrix}x_1+(y_1+z_1)\\x_2+(y_2+z_2)\end{pmatrix}
 =
@@ -84,7 +84,7 @@ The computation required is
 \begin{pmatrix}y_1+z_1\\y_2+z_2\end{pmatrix}=
 \begin{pmatrix}x_1\\x_2\end{pmatrix}+
 \left(\begin{pmatrix}y_1\\y_2\end{pmatrix}+
-\begin{pmatrix}z_1\\z_2\end{pmatrix}\right)\, .\]
+\begin{pmatrix}z_1\\z_2\end{pmatrix}\right)\, .\end{gather*}
 \item[(iv)] Zero: There needs to exist a vector $\vec 0$ that works the way we would 
 expect zero to behave, {\it i.e.}
 \[
@@ -132,20 +132,20 @@ b\begin{pmatrix}x_1\\x_2\end{pmatrix}
 \, .
 \] 
 Once again this is a simple LHS=RHS proof using properties of the real numbers. Starting on the left we have
-\[
+\begin{gather*}
 (a+b)
 \begin{pmatrix}x_1\\x_2\end{pmatrix}
 =
 \begin{pmatrix}(a+b)x_1\\(a+b)x_2\end{pmatrix}
 =
 \begin{pmatrix}ax_1+b x_1\\ax_2+bx_2\end{pmatrix}
-\qquad\qquad\] \[\qquad\qquad=
+\qquad\qquad\\\qquad\qquad=
 \begin{pmatrix}ax_1\\ax_2\end{pmatrix}+
 \begin{pmatrix}b x_1\\bx_2\end{pmatrix}
 =
 a\begin{pmatrix}x_1\\x_2\end{pmatrix}+
 b\begin{pmatrix} x_1\\x_2\end{pmatrix}\, ,
-\]
+\end{gather*}
 as required.
 \item[($\cdot$iii)] Additive distributivity:
 This time we need to check the equation
@@ -161,7 +161,7 @@ a\begin{pmatrix}y_1\\y_2\end{pmatrix}
 \] 
 {\it i.e.}, one scalar but two different vectors.
 The method is by now becoming familiar
-\[
+\begin{gather*}
 a\left(
 \begin{pmatrix}x_1\\x_2\end{pmatrix}
 +
@@ -171,7 +171,7 @@ a\left(
 \right)
 =
 \begin{pmatrix}a(x_1+y_1)\\a(x_2+y_2)\end{pmatrix}
-\qquad\] \[\qquad\qquad=
+\qquad\\\qquad\qquad=
 \begin{pmatrix}ax_1+ay_1\\ax_2+ay_2\end{pmatrix}
 =
 \begin{pmatrix}ax_1\\ax_2\end{pmatrix}+
@@ -180,7 +180,7 @@ a\left(
 a\begin{pmatrix}x_1\\x_2\end{pmatrix}+
 a\begin{pmatrix}y_1\\y_2\end{pmatrix}
 \, ,
-\] 
+\end{gather*} 
 again as required.
 \item[($\cdot$iv)] Multiplicative associativity. 
 Just as for addition, this is the requirement that the

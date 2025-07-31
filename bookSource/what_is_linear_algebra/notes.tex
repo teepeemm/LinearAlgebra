@@ -822,12 +822,10 @@ Let's simplify the way we denote the quadratic functions;
 we will  
 \[{\rm denote~~}ax^2+bx+c \text{~~as~~} \colvec{a\\b\\c}_B.\]
 The subscript $B$ serves to remind us of our particular notational convention; we will compare to another notational convention later. With the convention $B$ we can say
-\[  \left( \frac{d}{dx}+2\right) \colvec{a\\b\\c}_B
-=\left( \frac{d}{dx}+2\right)(ax^2+bx+c)\]
-\[
+\begin{gather*}  \left( \frac{d}{dx}+2\right) \colvec{a\\b\\c}_B
+=\left( \frac{d}{dx}+2\right)(ax^2+bx+c)\\
 =(2ax+b)+(2ax^2+2bx+2c) = 2a x^2+(2a+2b)x+(b+2c)
-\]
-\[
+\\
 =\colvec{\mc{2a}\\2a+2b\\\mc{b+2c}}_B
 = 
 \left[ 
@@ -837,7 +835,7 @@ The subscript $B$ serves to remind us of our particular notational convention; w
 0&1&2
 \end{pmatrix}
 \colvec{a\\b\\c}\right]_B.
-\]
+\end{gather*}
 That is, our notational convention for quadratic functions has induced a notation for the differential operator $\frac{d}{dx}+2$ as a matrix. 
 We can use this notation to change the way that 
 the following two equations say exactly the same thing.
@@ -886,12 +884,10 @@ consider how changeable the notational conventions are.
 \noindent Another possible notational convention  is to
 \[\text{denote~~}a+bx+cx^2 \text{~~as~~} \colvec{a\\b\\c}_{\!\!\!B'}.\]
 With this alternative notation
-\[  \left( \frac{d}{dx}+2\right) \colvec{a\\b\\c}_{B'}
-=\left( \frac{d}{dx}+2\right)(a+bx+cx^2)\]
-\[
+\begin{gather*}  \left( \frac{d}{dx}+2\right) \colvec{a\\b\\c}_{B'}
+=\left( \frac{d}{dx}+2\right)(a+bx+cx^2)\\
 =(b+2cx)+(2a +2bx+2cx^2 ) = (2a+b) + (2b+2c)x+2cx^2
-\]
-\[
+\\
 =\ccolvec{2a+b\\2b+2c\\2c}_{B'}
 = 
 \left[ 
@@ -900,10 +896,10 @@ With this alternative notation
 0&2&2\\
 0&0&2
 \end{pmatrix}
-\colvec{a\\b\\c}\right]_{B'}.\]
+\colvec{a\\b\\c}\right]_{B'}.\end{gather*}
 Notice that we have obtained {\it a different matrix for the same linear function}. 
 The  equation we started with 
-\[
+\begin{gather*}
  \left( \frac{d}{dx}+2\right) f=x+1
  \Leftrightarrow
 \left[ 
@@ -912,15 +908,14 @@ The  equation we started with
 0&2&2\\
 0&0&2
 \end{pmatrix}
-\colvec{a\\b\\c}\right]_{B'} = \colvec{1\\1\\0}_{\!B'}\]
-\[
+\colvec{a\\b\\c}\right]_{B'} = \colvec{1\\1\\0}_{\!B'}\\
 \Leftrightarrow
 \begin{array}{r}
 2a+b=1\\
 2b+2c=1\\
 2c=0
 \end{array}
-\]
+\end{gather*}
 has the solution 
 $\colvec{ \frac14\\[1mm] \frac12\\[1mm]0}$. Notice that we have obtained {\it a different 3-vector for the same vector},  since in the notational convention $B'$ this 3-vector represents $\frac14+\frac12x$. 
 \end{example}
@@ -1203,12 +1198,11 @@ Probably you will spend most of your time on the following review questions:
 %\colvec{x\\y\\z}+\colvec{x'\\y'\\z'}:=\colvec{x+x'\\y+y'\\z+z'}\, .
 %\]
 %Again, we have to make two computations: $B(u+v)$ (first add then act with $B$) and $Bu+Bv$ (first act with $B$, then add):
-%\[
+%\begin{gather*}
 %B(u+v)=B\colvec{x+x'\\y+y'\\z+z'}=\colvec{z+z'\\-(z+z')\\(y+y')-(x+x')}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, ,
-%\]
-%\[
+%\\
 %Bu+Bv=B\colvec{x\\y\\z}+B\colvec{x'\\y'\\z'}=\colvec{z\\-z\\y-x}+\colvec{z'\\-z'\\y'-x'}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, .
-%\]
+%\end{gather*}
 %Both computations give the same answer so now we know that $B$ also obeys additivity and can conclude that $B$ is linear.
 %%AI)~$A(cx)=5cx= c5x=cAx$, \\
 %%AII) A(x+y)=5(x+y)=5x+5y=Ax+Ay\\

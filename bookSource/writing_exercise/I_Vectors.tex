@@ -226,8 +226,8 @@ each type of supply item (slabs, fasters, and brackets) the number of items that
 %Similarly
 %\[ g: \{ {\rm slabs, fasters,brackets} \} \to  \{ 3,4,6,7,5\} \]
 %with rule of correspondence
-%\[  g(slabs)=7,g(fasters)=5, g(brackets)= 3. \]
-%\[ \{3,4,6\} \subseteq  \{ 3,4,6,7,5\}\]
+%\begin{gather*}  g(slabs)=7,g(fasters)=5, g(brackets)= 3. \\
+%\{3,4,6\} \subseteq  \{ 3,4,6,7,5\}\end{gather*}
 %and
 %\[ \{7,5,3\} \subseteq  \{ 3,4,6,7,5\}.\]
 
@@ -284,15 +284,15 @@ This property can be interpreted as follows: any ordered can be doubled, tripled
 The model vector space is a subspace of space of all functions with a particular domain and a codomain:
 \[ W:=\{  F: \{ slabs, fasters,brackets \} \to \R \}.\]
 In particular, 
-%\[ f: \{ {\rm slabs, fasters,brackets} \} \to \R \]
-%\[  f({\rm slabs})=3,f({\rm fasters})=4, f({\rm brackets})= 6\]
+%\begin{gather*} f: \{ {\rm slabs, fasters,brackets} \} \to \R \\
+%f({\rm slabs})=3,f({\rm fasters})=4, f({\rm brackets})= 6\end{gather*}
 %and
-%\[ g: \{ {\rm slabs, fasters,brackets } \} \to \R \]
-%\[  g(slabs)=7,g(fasters)=5, g(brackets)= 3 \]
+%\begin{gather*} g: \{ {\rm slabs, fasters,brackets } \} \to \R \\
+%g(slabs)=7,g(fasters)=5, g(brackets)= 3 \end{gather*}
 $f$ and $g$ and any sum of multiples of them are in $W$.
 However, some elements of $W$, such as 
-\[h:\{ slabs, fasters,brackets \} \to \R \]
-\[  h({\rm slabs})=1,f({\rm fasters})=0, f({\rm brackets})= 0\]
+\begin{gather*}h:\{ slabs, fasters,brackets \} \to \R \\
+ h({\rm slabs})=1,f({\rm fasters})=0, f({\rm brackets})= 0\end{gather*}
 are not. This claim, that $h\notin V$, can be backed up with a brief calculation after a basis for $V$ or $W$ is chosen. 
 
 \item 
@@ -300,19 +300,18 @@ A choice of basis for $W$ will induce n-vector notation for vectors in $V$ and $
 Let 
 \[B:=( e_s,e_f,e_b)\] 
 be a basis for $V$ defined by 
-\[
+\begin{gather*}
 e_s(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm slabs}\\ 0 {\rm ~else~} \end{array} \right.\, , ~
-e_f(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm fasteners}\\ 0 {\rm{~else~}} \end{array} \right.\, , \]
-\[
+e_f(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm fasteners}\\ 0 {\rm{~else~}} \end{array} \right.\, , \\
 e_b(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm brackets }\\ 0 {\rm ~else~} \end{array} \right. .
-\]
+\end{gather*}
 i) The function $h\in W$ with the property $h\notin V$ can be written in this basis as follows.
 \[h=1e_s+0e_f+0e_b \bv 1\\0\\0 \ev_B.\]
 We can now verify that $h\notin V$. Since
 \[f=3e_S+4e_f+6e_b=\bv 3\\4\\6 \ev~,~~g=7e_s+5e_f+3e_b = \bv 7\\5\\3 \ev_B\]
 if $h$ is  a sum of multiples of $h$ and $g$ then there are number $a,b\in \R$ such that
-\[af+bg=h \LR a\bv 3\\4\\6 \ev_B+b \bv 7\\5\\3 \ev_B= \bv 1\\0\\0 \ev_B\]
-\[ \LR \left[\ba 3&7 \\4&5\\6&3 \ev \bv a\\b \ev\right]_B= \bv 1\\0\\0 \ev_B\]
+\begin{gather*}af+bg=h \LR a\bv 3\\4\\6 \ev_B+b \bv 7\\5\\3 \ev_B= \bv 1\\0\\0 \ev_B\\
+\LR \left[\ba 3&7 \\4&5\\6&3 \ev \bv a\\b \ev\right]_B= \bv 1\\0\\0 \ev_B\end{gather*}
 This equation has no solution since 
 \[
 \left( \begin{array}{cc|c}

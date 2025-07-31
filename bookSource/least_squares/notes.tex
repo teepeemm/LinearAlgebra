@@ -147,14 +147,13 @@ there is a unique way to write  $V=V_r+V_k$ with $V_k\in \ker M^T$ and $V_r\in \
 $V\in \text{ran}\, M \Leftrightarrow V_k=0$. If not, then the closest thing to a solution of $MX=V$ is a solution to $MX=V_r$. We learned to find solutions to this in the previous subsection of this book. 
 
 But here is another question, how can we determine what $V_r$ is given $M$ and $V$? The answer is simple; suppose $X$ is a solution to $MX=V_r$. Then
-\[  MX=V_r 
+\begin{gather*}  MX=V_r 
 \implies M^TMx=M^T V_r 
-\implies M^TMx=M^T (V_r + 0) \] 
-\[
+\implies M^TMx=M^T (V_r + 0) \\
 \implies M^TMx=M^T (V_r+V_k)
 \implies M^TMx=M^T V 
 \implies X=(M^TM)^{-1} M^T V 
-\]
+\end{gather*}
 if indeed $M^TM$ is invertible. Since, by assumption, $X$ is a solution \\
 \begin{center}
 \shabox{ $M(M^TM)^{-1} M^T\, V =V_r. $}
@@ -169,7 +168,7 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
 \end{pmatrix}
  $ 
   multiply by the matrix 
- \[
+ \begin{gather*}
 \begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -190,8 +189,7 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
  1& 1 &0 \\
 1 & -1 &0 
 \end{pmatrix}
- \]
- \[
+ \\
 =\begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -205,8 +203,7 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
  1& 1 &0 \\
 1 & -1 &0 
 \end{pmatrix} 
-\]
-\[
+\\
 =\frac12 \begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -222,7 +219,7 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
 0 & 2  &0\\
 0 & 0 &0
 \end{pmatrix}. 
-\]
+\end{gather*}
 
 This gives 
 \[\frac12 \begin{pmatrix}

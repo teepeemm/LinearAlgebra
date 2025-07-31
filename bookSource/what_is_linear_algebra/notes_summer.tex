@@ -200,12 +200,11 @@ and $u=\colvec{x'\\y'\\z'}$. For that we again make a logical choice
 \colvec{x\\y\\z}+\colvec{x'\\y'\\z'}:=\colvec{x+x'\\y+y'\\z+z'}\, .
 \]
 Again, we have to make two computations: $B(u+v)$ (first add then act with $B$) and $Bu+Bv$ (first act with $B$, then add):
-\[
+\begin{gather*}
 B(u+v)=B\colvec{x+x'\\y+y'\\z+z'}=\colvec{z+z'\\-(z+z')\\(y+y')-(x+x')}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, ,
-\]
-\[
+\\
 Bu+Bv=B\colvec{x\\y\\z}+B\colvec{x'\\y'\\z'}=\colvec{z\\-z\\y-x}+\colvec{z'\\-z'\\y'-x'}=\colvec{z+z'\\-z-z'\\y+y'-x-x'}\, .
-\]
+\end{gather*}
 Both computations give the same answer so now we know that $B$ also obeys additivity and can conclude that $B$ is linear.
 %AI)~$A(cx)=5cx= c5x=cAx$, \\
 %AII) A(x+y)=5(x+y)=5x+5y=Ax+Ay\\

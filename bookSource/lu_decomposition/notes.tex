@@ -29,20 +29,18 @@ This is a useful trick for  computational reasons; it is much easier to compute 
 
 \begin{example}
 Linear systems associated to upper triangular matrices are very easy to solve by back substitution.
-\[
+\begin{gather*}
 \begin{amatrix}{2}
 a & b & 1 \\
 0 & c & e \\
 \end{amatrix} \ \Rightarrow \ y=\frac{e}{c}\, , \quad x=\frac{1}{a}\left(1-\frac{be}{c}\right)
-\]
-
-\[
+\\
 \begin{amatrix}{3}
 1 & 0 & 0 & d \\
 a & 1 & 0 & e \\
 b & c & 1 & f \\
 \end{amatrix} \Rightarrow x=d\, , \qquad y=e-ad\, , \qquad z=f-bd-c(e-ad)
-\]
+\end{gather*}
 For lower triangular matrices, \emph{back} substitution\index{Back substitution} gives a quick solution; for upper triangular matrices, \emph{forward} substitution\index{Forward substitution} gives the solution.
 \end{example}
 

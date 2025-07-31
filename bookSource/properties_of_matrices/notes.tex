@@ -86,7 +86,7 @@ N_s = \colvec{n_s^1\\n_s^2\\\vdots\\n_s^k}.
 Then
 %\[
 %MN=M \rowvec{N_1 & N_2 & \cdots & N_s} = \rowvec{MN_1 & MN_2 & \cdots & MN_s}.
-%\]
+%\]%
 \[
 MN=M
 \begin{pmatrix}
@@ -136,12 +136,11 @@ $ \Re^k \rightarrow \Re^r $
 via \[MV = \sum_{j=1}^{k} m_j^iv^j , \] which is the same rule we use when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
 
 Likewise, we can use a matrix $N=(n^i_j)$ to define a linear transformation of a vector space of matrices. For example
-\[
+\begin{gather*}
 L \colon M^s_k \stackrel{N}{\longrightarrow} M^r_k
-\]
-\[
+\\
 L(M)^i_l = \sum_{j=1}^{s} n_j^im^j_l.
-\]
+\end{gather*}
 This is the same as the rule we use to multiply matrices. \hypertarget{leftmult}{In other words,} \(L(M)=NM\) is a linear transformation.
 
 \begin{definition}[Matrix Terminology]

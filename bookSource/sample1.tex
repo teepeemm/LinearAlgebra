@@ -338,11 +338,11 @@ Now $||X||=\sqrt{X\dotprod X}=\sqrt{x^2 + y^2}$ and
 $
 (MX)\dotprod (MX)= X M^T M X
 $. But
-\[
+\begin{gather*}
 M^T M = \begin{pmatrix}\cos\theta &-\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}
-\begin{pmatrix}\cos\theta &\sin\theta \\ -\sin\theta & \cos\theta\end{pmatrix}\] \[=
+\begin{pmatrix}\cos\theta &\sin\theta \\ -\sin\theta & \cos\theta\end{pmatrix}\\=
 \begin{pmatrix}\cos^2\theta +\sin^2\theta& 0 \\ 0 & \cos^2\theta +\sin^2\theta\end{pmatrix}=I\, .
-\]
+\end{gather*}
 Hence $||MX||=||X||=\sqrt{x^2+y^2}$. Thus the cosine of the angle between $X$ and $MX$ is given by
 \[
 \frac{X\dotprod (MX)}{||X|| \ ||MX||}= \frac{(x^2+y^2)\cos\theta}{\sqrt{x^2+y^2}\, \sqrt{x^2+y^2}} = \cos \theta\, .
@@ -457,7 +457,7 @@ The easiest way to repair this would be to drop the requirement that there be at
  
 
 \item
-\[
+\begin{gather*}
 \begin{pmatrix}
 1&1&-1&2\\
 1&3&2&2\\
@@ -477,8 +477,7 @@ The easiest way to repair this would be to drop the requirement that there be at
 0&-2&-5&8\\
 0&4&7&-2
 \end{pmatrix}
-\]
-\[
+\\
 =
 \begin{pmatrix}
 1&0&0&0\\
@@ -492,7 +491,7 @@ The easiest way to repair this would be to drop the requirement that there be at
 0&0&-2&8\\
 0&0&1&-2
 \end{pmatrix}
-\] \[=
+\\=
 \begin{pmatrix}
 1&0&0&0\\
 1&1&0&0\\
@@ -505,9 +504,9 @@ The easiest way to repair this would be to drop the requirement that there be at
 0&0&-2&8\\
 0&0&0&2
 \end{pmatrix}\, .
-\]
+\end{gather*}
 To solve $MX=V$ using $M=LU$ we first solve $LW=V$ whose augmented matrix reads
-\[
+\begin{gather*}
 \left(
 \begin{array}{cccc|c}
 1&0&0&0&7\\
@@ -522,7 +521,7 @@ To solve $MX=V$ using $M=LU$ we first solve $LW=V$ whose augmented matrix reads
 0&1&0&0&-1\\
 0&0&1&0&18\\
 0&2&-\frac12&1&-7
-\end{array}\right)\] \[\sim 
+\end{array}\right)\\\sim 
 \left(
 \begin{array}{cccc|c}
 1&0&0&0&7\\
@@ -530,10 +529,10 @@ To solve $MX=V$ using $M=LU$ we first solve $LW=V$ whose augmented matrix reads
 0&0&1&0&18\\
 0&0&0&1&4
 \end{array}\right)\, ,
-\]
+\end{gather*}
 from which we can read off $W$.
 Now we compute $X$ by solving $UX=W$ with the augmented matrix
-\[
+\begin{gather*}
 \left(
 \begin{array}{cccc|c}
 1&1&-1&2&7\\
@@ -549,8 +548,7 @@ Now we compute $X$ by solving $UX=W$ with the augmented matrix
 0&0&-2&0&2\\
 0&0&0&1&2
 \end{array}\right)
-\]
-\[
+\\
 \sim
 \left(
 \begin{array}{cccc|c}
@@ -567,7 +565,7 @@ Now we compute $X$ by solving $UX=W$ with the augmented matrix
 0&0&1&0&-1\\
 0&0&0&1&2
 \end{array}\right).
-\]
+\end{gather*}
 So $x=1$, $y=1$, $z=-1$ and $w=2$.
 
 \end{enumerate}

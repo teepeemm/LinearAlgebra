@@ -177,7 +177,7 @@ If $h$ is to fit the data exactly then $(a,b,c)$ should be a solution to the sys
 \end{array}.
 \eea
 This system has no solution, as shown by row reduction of the associated augmented matrix; 
-\[
+\begin{gather*}
 \left( \begin{array}{rrr|c}
 \frac12 &1&1&2\\
 2&2&1&4\\
@@ -202,8 +202,7 @@ This system has no solution, as shown by row reduction of the associated augment
 0&0&-5&-5\\
 0&0&6&-9
 \end{array} \right)
-\]
-\[
+\\
 \sim 
 \left( \begin{array}{rrr|r}
 1 &0&0&-1\\
@@ -220,12 +219,12 @@ This system has no solution, as shown by row reduction of the associated augment
 0&0&0&1\\
 0&0&0&0
 \end{array} \right).
-\]
+\end{gather*}
 The system encoded by the augmented matrix $(M|V)$ does not have a solution if $V$ can not be expressed as a linear combination of the columns of $M$ since this means that $V$ is not in the range of $M$. 
 Out of all the systems of equations $(M|U)$ that do have solutions the system with $U$ closest to $V$ is the system $(M|V_r)$ where $V_r$ is the projection of 
 $V$ onto ${\rm ran~} M$. The matrix that projects a vector onto ${\rm ran~} M$ is 
 $M(M^TM)^-1 M $
-\[= 
+\begin{gather*}= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -252,8 +251,7 @@ $M(M^TM)^-1 M $
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-\]
-\[= 
+\\= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -271,8 +269,7 @@ $M(M^TM)^-1 M $
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-\]
-\[= 
+\\= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &2&0\\
@@ -290,8 +287,7 @@ $M(M^TM)^-1 M $
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-\]
-\[= 
+\\= 
 \left( \begin{array}{rrr}
 1 &0&0\\
 0      &\frac12&0\\
@@ -304,8 +300,7 @@ $M(M^TM)^-1 M $
 0      &2&0&0&0\\
 0&0&1&0&0\\
 \end{array} \right)
-\]
-\[= 
+\\= 
 \left( \begin{array}{rrrrr}
 1 &0&0&0&0\\
 0      &1&0&0&0\\
@@ -313,7 +308,7 @@ $M(M^TM)^-1 M $
 0&0&0&0&0\\
 0&0&0&0&0
 \end{array} \right).
-\]
+\end{gather*}
 Applying this matrix to $V$ gives 
 \[
 V_r:=\left( \begin{array}{rrrrr}
@@ -342,8 +337,8 @@ The equation $Mx=V_r$ then has augmented matrix
 and unique solution 
 \[\bv -1\\ \frac72 \\-1 \ev. \]
 The quadratic function that best approximates the data set is then 
-\[ h:[0,5] \to \R\]
-\[h(t)=\frac12 (-1) t^2 +\frac72 t +(-1).\]
+\begin{gather*} h:[0,5] \to \R\\
+h(t)=\frac12 (-1) t^2 +\frac72 t +(-1).\end{gather*}
 
 In particular, the data indicate that acceleration at the surface of mars $a$ is approximately $-1$ (in whatever units were used to described the height in the data set per the the time between video frames squared.) Mode data would yield a better approximation for this value. That data may come in the form of more video frames per second, data for another rock throw, throwing a rock harder so that its hang time is longer, or setting up a different experiment such as spherical balls rolling down inclined planes as Galileo used to measure earth's gravity. 
 

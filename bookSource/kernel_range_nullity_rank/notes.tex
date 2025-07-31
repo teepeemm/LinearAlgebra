@@ -22,7 +22,7 @@ The range of a matrix is very easy to find; the range of a matrix is the span of
 Thus, calculation of the range of a matrix is very easy until the last step: simplification. One aught to end by the calculation by writing the vector space as the span of a linearly independent set. 
 
 \begin{example}{ of calculating the range of a matrix.}
-\[{\rm ran} 
+\begin{gather*}{\rm ran} 
 \begin{pmatrix} 
 1&2&0&1\\
 1&2&1&2\\
@@ -36,11 +36,10 @@ Thus, calculation of the range of a matrix is very easy until the last step: sim
 0&0&1&1
 \end{pmatrix} 
 \colvec{x\\y\\z\\w } | \colvec{x\\y\\z\\w} \in \R^4 \right\}
-\]
-\[=
+\\=
 \left\{   
 x\colvec{1\\1\\0 } +y \colvec{ 2\\2\\0 } +z \colvec{0\\1\\1} + w\colvec{1\\2\\1} \middle| x,y,z,w \in \R \right\}
-.\]
+.\end{gather*}
 That is 
 \[
 {\rm ran} 
@@ -95,7 +94,7 @@ It might occur to you that the range of the $3\times 4$ matrix from the last exa
 Indeed, because the span of a set of vectors does not change when we replace the vectors with another set through an invertible process, we can calculate ranges through strings of equalities of ranges of matrices that differer by Elementary Column Operations, ECOs, ending with the range of a matrix in Column Reduced Echelon Form, CREF, with its zero columns deleted.
 
 \begin{example} Calculating a range with ECOs\\
-\[
+\begin{gather*}
 {\rm ran} 
 \begin{pmatrix} 
 0&1&1\\
@@ -123,8 +122,7 @@ Indeed, because the span of a set of vectors does not change when we replace the
 1&1&1\\
 0&1&1
 \end{pmatrix} 
-\]
-\[\stackrel{c_3'= c_3-c_2}{=}
+\\\stackrel{c_3'= c_3-c_2}{=}
 {\rm ran} 
 \begin{pmatrix} 
 1&0&0\\
@@ -137,7 +135,7 @@ Indeed, because the span of a set of vectors does not change when we replace the
 1&1\\
 0&1
 \end{pmatrix}. 
-\]
+\end{gather*}
 
 
 \end{example}
@@ -343,7 +341,7 @@ Notice that in the above example we found
 In general, an efficient way to get the  kernel of a matrix is to write a string of equalities between kernels of matrices which differ by row operations and, once RREF is reached, note that the linear relationships between the columns for a basis for the nullspace.
 
 \begin{example} of calculating the kernel of a matrix.\\
-\[
+\begin{gather*}
 \ker 
 \begin{pmatrix}
 1&2&0&1 \\
@@ -364,12 +362,11 @@ In general, an efficient way to get the  kernel of a matrix is to write a string
 0&0&1&1 \\
 0&0&0&0
 \end{pmatrix}
-\]
-\[
+\\
 =\spa \left\{ 
 \colvec{-2\\1 \\0\\0}, \colvec{-1\\0\\-1 \\1 } 
  \right\} .
-\]
+\end{gather*}
 The two column vectors in this last line describe linear relations between the columns $c_1,c_2,c_3,c_4$. 
 In particular $-2c_1+1c_2=0$ and $-c_1-c_3 +c_4=0$. 
 \end{example}
