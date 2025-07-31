@@ -142,19 +142,19 @@ approximation to reality) and that he started at a downward velocity of $\frac13
 
 \section{Projection Matrices}
 We have seen that even if $MX=V$ has no solutions $M^TMX=M^T V$ does have solutions. One way to think about this is, since the codomain of $M$ is the direct sum 
-$$ \text{codom M}=\text{ran} M \oplus \ker M^T$$ 
+\[ \text{codom M}=\text{ran} M \oplus \ker M^T\] 
 there is a unique way to write  $V=V_r+V_k$ with $V_k\in \ker M^T$ and $V_r\in \text{ran }\, M$, and it is clear that $Mx=V$ only has a solution of 
 $V\in \text{ran}\, M \Leftrightarrow V_k=0$. If not, then the closest thing to a solution of $MX=V$ is a solution to $MX=V_r$. We learned to find solutions to this in the previous subsection of this book. 
 
 But here is another question, how can we determine what $V_r$ is given $M$ and $V$? The answer is simple; suppose $X$ is a solution to $MX=V_r$. Then
-$$  MX=V_r 
+\[  MX=V_r 
 \implies M^TMx=M^T V_r 
-\implies M^TMx=M^T (V_r + 0) $$ 
-$$
+\implies M^TMx=M^T (V_r + 0) \] 
+\[
 \implies M^TMx=M^T (V_r+V_k)
 \implies M^TMx=M^T V 
 \implies X=(M^TM)^{-1} M^T V 
-$$
+\]
 if indeed $M^TM$ is invertible. Since, by assumption, $X$ is a solution \\
 \begin{center}
 \shabox{ $M(M^TM)^{-1} M^T\, V =V_r. $}
@@ -169,7 +169,7 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
 \end{pmatrix}
  $ 
   multiply by the matrix 
- $$
+ \[
 \begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -190,8 +190,8 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
  1& 1 &0 \\
 1 & -1 &0 
 \end{pmatrix}
- $$
- $$
+ \]
+ \[
 =\begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -205,8 +205,8 @@ That is, the matrix which projects $V$ onto its $\text{ran} \, M$ part is $M(M^T
  1& 1 &0 \\
 1 & -1 &0 
 \end{pmatrix} 
-$$
-$$
+\]
+\[
 =\frac12 \begin{pmatrix}
  1& 1  \\
 1 & -1  \\
@@ -222,15 +222,15 @@ $$
 0 & 2  &0\\
 0 & 0 &0
 \end{pmatrix}. 
-$$
+\]
 
 This gives 
-$$\frac12 \begin{pmatrix}
+\[\frac12 \begin{pmatrix}
  2 & 0 &0 \\
 0 & 2  &0\\
 0 & 0 &0
 \end{pmatrix}
-\colvec{1\\1\\1 } = \colvec{1\\1\\0} .$$
+\colvec{1\\1\\1 } = \colvec{1\\1\\0} .\]
 \end{example}
 
 
@@ -238,9 +238,9 @@ $$\frac12 \begin{pmatrix}
 \section{Singular Value Decomposition}
 
 Suppose 
-$$
+\[
 L:V\tolinear W\, .
-$$
+\]
 It is unlikely that $\dim V=:n=m:=\dim W$ so a $m\times n$ matrix $M$ of $L$ in bases for $V$ and $W$ will not be square.
 Therefore there is no eigenvalue problem  we can use to uncover a preferred basis. However, if the vector spaces $V$ and 
 $W$ both have inner products, there does exist an analog of the eigenvalue problem, namely the singular values of $L$.
@@ -273,45 +273,45 @@ Singular values appear in many linear algebra applications, especially those inv
 Let us focus on the $m\times n$ matrix $M$ of a linear transformation $L:V\to W$ written in orthonormal bases for the input and outputs of $L$ (notice, the existence of these othonormal bases is predicated on having inner products for $V$ and $W$).
 Even though the matrix $M$ is not square, both the matrices $M M^T$ and $M^T M$ are square and symmetric! 
 In terms of linear transformations $M^T$ is the matrix of a linear transformation 
-$$
+\[
 L^*:W\tolinear V\, .
-$$
+\]
 Thus $LL^*:W\to W$ and $L^*L:V\to V$ and both have eigenvalue problems.
 Moreover,  as is shown  in Chapter~\ref{symmetricmatrices},  both $L^*L$ and $LL^*$ have orthonormal bases of eigenvectors, and
  both $MM^T$ and $M^TM$ can be diagonalized. 
  
 Next, let us make a simplifying assumption, namely $\ker L=\{0\}$. This is not necessary, but will make some of our computations simpler.
 Now suppose we have found an orthonormal basis $(u_1,\ldots , u_n)$ for $V$ composed of eigenvectors for $L^*L$. That is 
-$$
+\[
 L^*L u_i= \lambda_i u_i\, .
-$$
+\]
 Then multiplying by $L$ gives 
-$$
+\[
 L L^* L u_i = \lambda_i L u_i\, .
-$$
+\]
 {\it I.e.}, $L u_i$ is an eigenvector of $L L^*$.
 The vectors $(Lu_1,\ldots, Lu_n)$ are linearly independent, because $\ker L=\{0\}$ (this is where we use our simplifying assumption, but you can 
 try and extend our analysis to the case where it no longer holds). 
 
 Lets compute the angles between and lengths of these vectors. 
 For that we express the vectors $u_i$ in the bases used to compute the matrix $M$ of $L$. Denoting these column vectors by $U_i$ we then compute
-$$
+\[
 (MU_i)\cdot (MU_j)=U_i^T M^T M U_j = \lambda_j \, U_i^T U_j=\lambda_j \, U_i\cdot U_j = \lambda_j \delta_{ij}\, .
-$$
+\]
 We see that  vectors $(Lu_1,\ldots, Lu_n)$ are orthogonal but not orthonormal. Moreover, the length of $Lu_i$ is $\sqrt{\lambda_i}$.
 Normalizing gives the orthonormal and linearly independent ordered set
-$$
+\[
 \left(\frac{Lu_1}{\sqrt{\lambda_1}},\ldots,\frac{Lu_n}{\sqrt{\lambda_n}}\right).
-$$
+\]
 
 In general, this cannot be a basis for $W$ 
 since $\ker L=\{0\},~\dim L(V)=\dim V,$
 and in turn $\dim V\leq \dim W$, so $n\leq m$. 
 
 However,  it is a subset of the eigenvectors of $LL^*$ so there is an orthonormal basis of eigenvectors of $LL^*$ of the form 
-$$
+\[
 O'=\left(\frac{Lu_1}{\sqrt{\lambda_1}},\ldots,\frac{Lu_n}{\sqrt{\lambda_n}},v_{n+1},\ldots,v_{m}\right)=:(v_1,\ldots,v_m)\, .
-$$
+\]
 Now lets compute the matrix of $L$ with respect to the orthonormal basis $O=(u_1,\ldots,u_n)$ for $V$ and the orthonormal basis~$O'=(v_1,\ldots,v_m)$ for~$W$. As usual, our starting point is the computation of $L$ acting on the input basis vectors;
 \begin{eqnarray*}
 LO=\big(Lu_1,\ldots, Lu_n\big)&=&
@@ -335,46 +335,46 @@ LO=\big(Lu_1,\ldots, Lu_n\big)&=&
 The result is very close to diagonalization; the numbers $\sqrt{\lambda_i}$ along the leading diagonal are called the singular values of $L$.
 
 \begin{example} Let the matrix of a linear transformation be
-$$
+\[
 M=\begin{pmatrix}
 \frac12&\frac12\\[1mm]-1&1\\[1mm]-\frac12&-\frac12
 \end{pmatrix}\, .
-$$
+\]
 Clearly $\ker M=\{0\}$ while
-$$
+\[
 M^TM=\begin{pmatrix}\frac32&-\frac12\\[2mm]-\frac12&\frac32\end{pmatrix}
-$$
+\]
 which has eigenvalues and eigenvectors
-$$
+\[
  \lambda=1\, ,\,  u_1:=\colvec{\frac{1}{\sqrt2}\\[2mm]\frac{1}{\sqrt2}}; \qquad
 \lambda=2\, ,\,  u_2:=\colvec{\frac{1}{\sqrt2}\\[2mm]-\frac{1}{\sqrt2}}\,\, .
-$$
-so our orthonormal input basis is $$O=\left(\colvec{\frac{1}{\sqrt2}\\[2mm]\frac{1}{\sqrt2}},\colvec{\frac{1}{\sqrt2}\\[2mm]-\frac{1}{\sqrt2}}\right)\, .
-$$
+\]
+so our orthonormal input basis is \[O=\left(\colvec{\frac{1}{\sqrt2}\\[2mm]\frac{1}{\sqrt2}},\colvec{\frac{1}{\sqrt2}\\[2mm]-\frac{1}{\sqrt2}}\right)\, .
+\]
 These are called the {\it right singular vectors}\index{Right singular vector} of $M$.
 The vectors 
-$$
+\[
 M u_1= \colvec{\frac1{\sqrt{2}}\\[1mm]\mc{\ \ 0}\\-\frac1{\sqrt{2}}}\mbox{ and }
 M u_2=\ccolvec{0\\[1mm]-\sqrt{2}\\[1mm]0}
-$$
+\]
 are eigenvectors of 
-$$M M^T=\begin{pmatrix}\frac12&\ 0&\!-\frac12\\0&2&0\\-\frac12&0&\frac12\end{pmatrix}$$ 
+\[M M^T=\begin{pmatrix}\frac12&\ 0&\!-\frac12\\0&2&0\\-\frac12&0&\frac12\end{pmatrix}\] 
 with eigenvalues $1$ and $2$, respectively. The third eigenvector (with eigenvalue~$0$) of $MM^T$ is 
-$$v_3=\colvec{\frac1{\sqrt{2}}\\[1mm]\mc{\ \ 0}\\ \frac1{\sqrt{2}}}\, .$$
+\[v_3=\colvec{\frac1{\sqrt{2}}\\[1mm]\mc{\ \ 0}\\ \frac1{\sqrt{2}}}\, .\]
 The eigenvectors $Mu_1$ and $Mu_2$ are necessarily orthogonal, dividing them by their lengths we obtain the {\it left singular vectors}\index{Left singular vectors} and in turn  our orthonormal output basis
-$$
+\[
 O'=\left(\colvec{\frac1{\sqrt{2}}\\[1mm]\mc{\ \ 0}\\-\frac1{\sqrt{2}}},\ccolvec{0\\[1mm]-1\\[1mm]0},\colvec{\frac1{\sqrt{2}}\\[1mm]\mc{\ \ 0}\\\frac1{\sqrt{2}}}\right)\, .
-$$
+\]
 The new matrix~$M'$ of the linear transformation given by $M$ with respect to the bases $O$ and $O'$ is
-$$
+\[
 M'=\begin{pmatrix}
 1&0\\0&\sqrt{2}\\0&0
 \end{pmatrix}\, ,
-$$
+\]
 so the singular values are $1,\sqrt{2}$. 
 
 Finally note that arranging the column vectors of $O$ and $O'$ into change of basis matrices
-$$
+\[
 P=\begin{pmatrix}
 \frac1{\sqrt{2}}&\frac1{\sqrt{2}}\\[2mm]
 \frac1{\sqrt{2}}&-\frac1{\sqrt{2}}
@@ -385,11 +385,11 @@ Q=
 \mc {\ \ 0}&-1&\mc 0\\[2mm]
 \!-\frac1{\sqrt{2}}&0&\frac1{\sqrt{2}}
 \end{pmatrix}\, ,
-$$
+\]
 we have, as usual,
-$$
+\[
 M'=Q^{-1}MP\, .
-$$
+\]
 \end{example}
 
 Singular vectors and values have a very nice geometric interpretation; they provide an orthonormal bases for the domain and range of $L$
