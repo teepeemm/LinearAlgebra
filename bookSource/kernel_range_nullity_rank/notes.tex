@@ -53,7 +53,7 @@ That is
 \colvec{1\\1\\0 } , \colvec{ 2\\2\\0 } , \colvec{0\\1\\1}, \colvec{1\\2\\1} \right\}
 \]
 but since 
-\[{\rm RREF} \begin{pmatrix} 
+\[\rref\begin{pmatrix} 
 1&2&0&1\\
 1&2&1&2\\
 0&0&1&1
@@ -212,7 +212,7 @@ M^{-1} U&= \left\{  x \middle| Mx=v {\rm ~for ~some~ } v\in U \right\} \\[3mm]
 \end{align*}
 Since
 \[
-{\rm RREF }
+\rref
 \begin{amatrix}{3}
 1&0&1&2a\\
 0&1&1&a\\
@@ -375,7 +375,7 @@ $\spa \{ v_1,v_2,\dots,v_n\}$ with one vector $v_i$ for each non-pivot column.
 To agree with the standard procedure, think about how to describe each non-pivot column in terms of columns to its left; this will yield an expression of the form wherein each vector  has a 1 as its last non-zero entry. (Think of Column Reduced Echelon Form, CREF.) 
 
 Thinking again of augmented matrices, 
-if a matrix has more than one element in its kernel then it is not invertible since the existence of multiple solutions to $Mx=0$ implies that ${\rm RREF} \,M\neq I$. 
+if a matrix has more than one element in its kernel then it is not invertible since the existence of multiple solutions to $Mx=0$ implies that $\rref M\neq I$. 
 However just because the kernel of a linear function is trivial does not mean that the function is invertible. 
 
 \begin{example}
@@ -481,10 +481,10 @@ The notation for these numbers is
 
 \begin{theorem}[Dimension Formula]\index{Dimension formula}\label{dimension_formula}
 Let $L \colon V\rightarrow W$ be a linear transformation, with $V$ a finite-dimensional vector space\footnote{The formula still makes sense for infinite dimensional vector spaces, such as the space of all polynomials, but the notion of a basis for an infinite dimensional space is more sticky than in the finite-dimensional case.  Furthermore, the dimension formula for infinite dimensional vector spaces isn't useful for computing the rank of a linear transformation, since an equation like $\infty=\infty+x$ cannot be solved for $x$. As such, the proof presented assumes a finite basis for $V$.}.  Then:
-\begin{eqnarray*}
-\dim V &=& \dim \ker V + \dim L(V)\\
- &=& \nul L + \rank L.
-\end{eqnarray*}
+\begin{align*}
+\dim V &= \dim \ker V + \dim L(V)\\
+ &= \nul L + \rank L.
+\end{align*}
 \end{theorem}
 
 
@@ -498,18 +498,18 @@ where $v_1,\ldots,v_p$ is also a basis for $\ker L$.  This can always be done, f
 $\{L(u_1),\ldots,L(u_q)\}$ is a basis for $L(V)$.
 
 To see that $\{L(u_1),\ldots,L(u_q)\}$ spans $L(V)$, consider any vector $w$ in $L(V)$.  Then we can find constants $c^i, d^j$ such that:
-\begin{eqnarray*}
-w &=& L(c^1v_1 + \cdots + c^pv_p+d^1u_1 + \cdots + d^qu_q)\\
-  &=& c^1L(v_1) + \cdots + c^pL(v_p)+d^1L(u_1)+\cdots+d^qL(u_q)\\
-  &=& d^1L(u_1)+\cdots+d^qL(u_q) \text{ since $L(v_i)=0$,}\\
-\Rightarrow L(V) &=& \spa \{L(u_1), \ldots, L(u_q)  \}.
-\end{eqnarray*}
+\begin{align*}
+w &= L(c^1v_1 + \cdots + c^pv_p+d^1u_1 + \cdots + d^qu_q)\\
+  &= c^1L(v_1) + \cdots + c^pL(v_p)+d^1L(u_1)+\cdots+d^qL(u_q)\\
+  &= d^1L(u_1)+\cdots+d^qL(u_q) \text{ since $L(v_i)=0$,}\\
+\Rightarrow L(V) &= \spa \{L(u_1), \ldots, L(u_q)  \}.
+\end{align*}
 
 Now we show that $\{L(u_1),\ldots,L(u_q)\}$ is linearly independent.  We argue by contradiction. Suppose there exist constants $d^j$ (not all zero) such that
-\begin{eqnarray*}
-0 &=& d^1L(u_1)+\cdots+d^qL(u_q)\\
-  &=& L(d^1u_1+\cdots+d^qu_q).\\
-\end{eqnarray*}
+\begin{align*}
+0 &= d^1L(u_1)+\cdots+d^qL(u_q)\\
+  &= L(d^1u_1+\cdots+d^qu_q).
+\end{align*}
 But since the $u^j$ are linearly independent, then $d^1u_1+\cdots+d^qu_q\neq 0$, and so $d^1u_1+\cdots+d^qu_q$ is in the kernel of $L$.  But then $d^1u_1+\cdots+d^qu_q$ must be in the span of $\{v_1,\ldots, v_p\}$, since this was a basis for the kernel.  This contradicts the assumption that $\{ v_1,\ldots,v_p,u_1,\ldots, u_q \}$ was a basis for $V$, so we are done.
 \end{proof}
 
