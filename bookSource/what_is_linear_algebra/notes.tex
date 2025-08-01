@@ -466,7 +466,7 @@ The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equa
 %To show you what we mean, we will now give you an example of an inefficient method of solving the system from example 3:\\
 %
 %\noindent
-%{\bf Inefficient Method}:\\
+%{\bfseries Inefficient Method}:\\
 %Rearrange the first equation into~$x=10-3y$ and substitute the result into the second equation to obtain~$28=4(10-3y)+8y$. This equation has only one unknown; the jargon is ``$x$ has been eliminated". The equation implies that~$y=3$. That result can be ``back substituted" into either of the original equations, for example the first, to obtain 
 %$20=2x+6\cdot 3 \Leftrightarrow x=1$.\\
 %
@@ -482,7 +482,7 @@ The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equa
 %
 %
 %\noindent
-%{\bf More Efficient Method:}\\
+%{\bfseries More Efficient Method:}\\
 %Divide (both sides of) the second equation by 2 to obtain the equivalent system
 %\begin{eqnarray*}
 %	2\cdot x + 6\cdot y & = & 20 \\
@@ -529,10 +529,10 @@ Writing our fruity equations as an equality between 2-vectors and then using the
 \end{equation*}
 Now we  introduce a function which takes in 2-vectors\footnote{To be clear, we will use the term 2-vector to refer to stacks of two numbers such as~$\colvec{7\\11}$. If we wanted to refer to the vectors $x^2+1$ and $x^3-1$ (recall that polynomials are vectors) we would say ``consider the two vectors $x^3-1$ and $x^2+1$''. We apologize through giggles for the possibility of the phrase ``two 2-vectors."} and gives out 2-vectors. We denote it by  an array of numbers  called a {\itshape matrix\,\! .}
 \begin{equation*}
- {\rm {\bf The~function}}   \begin{pmatrix}
+ \textbf{The~function}   \begin{pmatrix}
       2     & 6 \\
       4     & 8
-    \end{pmatrix}~{\rm {\bf is~defined~by}}
+    \end{pmatrix}~\textbf{is~defined~by}
     \begin{pmatrix}
       2     & 6 \\
       4     & 8
@@ -613,7 +613,7 @@ Indeed this is an example of
 Notice, that the second way of writing the output on the right hand side of this equation is very useful because it
 tells us what all possible outputs a matrix times a vector look like -- they are just sums of the columns of the matrix
 multiplied by scalars. The set of all possible outputs of a matrix times a vector is called 
-the {\bf column space}\index{Column Space!concept of} (it is also the image of the linear function defined by the matrix).
+the {\bfseries column space}\index{Column Space!concept of} (it is also the image of the linear function defined by the matrix).
 %\reading{1}{2}
 \Reading{WhatIsLinearAlgebra}{2}
 
@@ -983,7 +983,7 @@ Proofs &
 Each chapter also has reading and skills WeBWorK problems:
 \vspace{2mm}
 
-{\bf Webwork:} 
+{\bfseries Webwork:} 
 \begin{tabular}{|c|c|}
 \hline
 Reading problems &
@@ -1009,40 +1009,40 @@ Probably you will spend most of your time on the following review questions:
 %% putting all in Ax=b is BAD! They emotionally want x to stand for a number, not a function,
 %Solve
 %\[
-%{\cal A}\, {\bf x} = {\bf b}\, ,
+%{\cal A}\, {\bfseries x} = {\bfseries b}\, ,
 %\]
 %where
 %\begin{enumext}[label=\Alph*,wrap-label=(#1)]
 %\item \label{A}
-%${\bf x}$ and ${\bf b}$ are numbers, \[{\cal A}\, {\bf x}:=10 \, {\bf x}\, ,\]
-%and ${\bf b}=3$.
+%${\bfseries x}$ and ${\bfseries b}$ are numbers, \[{\cal A}\, {\bfseries x}:=10 \, {\bfseries x}\, ,\]
+%and ${\bfseries b}=3$.
 %%What 
 %%number~$x$ satisfies~$Ax=10$ where~$Ax:=5x?$\\[-.6cm]
 %\item 
-%${\bf x}$ and ${\bf b}$ are 3-vectors,  \[{\cal A}\, {\bf x}:=\colvec{1 \\ 1\\ 0} \times {\bf x}\, ,\]\\
+%${\bfseries x}$ and ${\bfseries b}$ are 3-vectors,  \[{\cal A}\, {\bfseries x}:=\colvec{1 \\ 1\\ 0} \times {\bfseries x}\, ,\]\\
 %\vspace{-15mm}
-%and ${\bf b}=\colvec{1\\1\\0}$.
+%and ${\bfseries b}=\colvec{1\\1\\0}$.
 %%What vector~$v$ satisfies~$Bv = \colvec{0\\1\\1}$% \\
 %%where ~$Bv:=\colvec{1 \\ 1\\ 0} \times v$?\\[-.4cm]
 %\item 
-%${\bf x}$ and ${\bf b}$ are polynomials in the variable $x$, \[{\cal A}\, p(x):=x\int_{-1}^1 yp(y)dy\, ,\] 
-%and ${\bf b}=x$.
+%${\bfseries x}$ and ${\bfseries b}$ are polynomials in the variable $x$, \[{\cal A}\, p(x):=x\int_{-1}^1 yp(y)dy\, ,\] 
+%and ${\bfseries b}=x$.
 %%What polynomial~$g$ satisfies~$Cg=h$ where~$Cg$ is the function defined by \\[.3cm]
 %%$Cg(x)=\int_{-1}^1 f(x,y)g(y) dy = h(x)$ where~$f(x,y):=xy,~h(x):=x$?\\[-.5cm]
-%\item ${\bf x}$ and ${\bf b}$ are polynomials, 
+%\item ${\bfseries x}$ and ${\bfseries b}$ are polynomials, 
 %\[
 %{\cal A}\,  p(x):=\frac{dp(x)}{dx}-2p(x)\, ,
 %\]
-%and ${\bf b}=0$
+%and ${\bfseries b}=0$
 %%What polynomial~$f$ satisfies~$Df=0$ 
 %%where~$Df$ is the function \\[.3cm]
 %%$Df(x):=x\frac{d}{dx}f(x)-2f(x)$?\\[-5mm]
 %\item  \label{E}
-%${\bf x}$ and ${\bf b}$ are functions, 
+%${\bfseries x}$ and ${\bfseries b}$ are functions, 
 %\[
 %{\cal A}  \big(f(x) \big):= f''+f^3\, ,
 %\]
-%and ${\bf b}=\sqrt{x}$.
+%and ${\bfseries b}=\sqrt{x}$.
 %%What function~$f$ satisfies~$Ef=g$ where~$Ef:=f''(x)+\big(f(x)\big)^3$ and~$g(x):=\sqrt{x}$?
 %\end{enumext}
 %\end{example}
@@ -1065,7 +1065,7 @@ Probably you will spend most of your time on the following review questions:
 %where $c$ is any number, make sense.
 %
 %You might also be wondering why we wrote ${\cal A}\big(f(x)\big)$ rather than ${\cal A} f(x)$ in part~(\ref{E}) of our example,
-%or perhaps why we did not write ${\cal A}({\bf x})$ in part~(\ref{A}). In fact all the the above problems involve functions (denoted ${\cal A}$)
+%or perhaps why we did not write ${\cal A}({\bfseries x})$ in part~(\ref{A}). In fact all the the above problems involve functions (denoted ${\cal A}$)
 %of vectors. However, in the first four examples the function~${\cal A}$ (that takes in a some sort of vector and returns a vector as its output)
 %is a {\itshape linear operator} which means that it obeys a
 %very special  property called {\itshape linearity}. This is the ``Linear'' in Linear Algebras and we will explain it next. 
