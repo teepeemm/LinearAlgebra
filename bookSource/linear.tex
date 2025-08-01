@@ -144,9 +144,9 @@
 \end{center}}
 
 %%%definitions so that I can paste in some problems I wrote
-\def\bv{\left(\begin{array}{c}}
-\def\ev{\end{array}\right) }
-\def\R{{\mathbb{R}}}
+\newcommand\bv{\left(\begin{array}{c}}
+\newcommand\ev{\end{array}\right) }
+\newcommand\R{{\mathbb{R}}}
 
 
 
@@ -184,8 +184,8 @@
 
 \newcommand{\inputProblems}[1]{\newpage \section{Review Problems} \input{#1} }
 
-\def\tolinear{{\stackrel{\rm linear}{-\!\!\!-\!\!\!-\!\!\!\rightarrow}}}
-\def\nn{\nonumber}
+\newcommand\tolinear{{\stackrel{\rm linear}{-\!\!\!-\!\!\!-\!\!\!\rightarrow}}}
+\newcommand\nn{\nonumber}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -211,14 +211,14 @@
 \DeclareMathOperator{\rref}{RREF}
 
 % sideremark
-\def\sideremark#1{\ifvmode\leavevmode\fi\vadjust{\vbox to0pt{\vss
+\newcommand*{\sideremark}[1]{\ifvmode\leavevmode\fi\vadjust{\vbox to0pt{\vss
 \hbox to 0pt{\hskip\hsize\hskip1em
 \vbox{\hsize3cm\tiny\raggedright\pretolerance10000
 \noindent #1\hfill}\hss}\vbox to8pt{\vfil}\vss}}}
 
 
 \newcommand{\edz}[1]{\sideremark{#1}}
-\def\idx#1{{\em #1\/}} % ****
+\newcommand{\idx}[1]{{\em #1\/}} % ****
 
 \newcommand{\1}{{\rm 1\hspace*{-0.4ex}%
 \rule{0.1ex}{1.52ex}\hspace*{0.2ex}}}
