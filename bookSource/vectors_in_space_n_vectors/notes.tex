@@ -325,7 +325,7 @@ when $\alpha=-\frac{b}{2a}$,  and the inequality should hold for even this minim
 \[
 0\leq \langle u,u\rangle -\frac{\langle u,v\rangle^2}{\langle v,v\rangle}\, 
 \Leftrightarrow 
-\frac{|\langle u,v \rangle|}{\|u\|\, \|v\|} \leq 1.
+\frac{|\langle u,v \rangle|}{\|u\|\, \|v\|} \leq 1.\qedhere
 \]
 \end{proof}
 
@@ -335,19 +335,16 @@ For any $u,v\in \mathbb{R}^n$
 \end{theorem}
 
 \begin{proof}
-
-\begin{eqnarray*}
-\|u+v\|^2 & = & (u+v)\dotprod (u+v) \\
- 	& = & u\dotprod u + 2 u\dotprod v + v\dotprod v \\
-	& = & \|u\|^2 + \|v\|^2 + 2\,  \|u\|\,  \|v\| \cos \theta \\
-	& = & \left(\|u\| + \|v\|\right)^2 + 2 \, \|u\| \, \|v\| (\cos \theta -1) \\
-	& \leq & \left(\|u\| + \|v\|\right)^2	.
-\end{eqnarray*}
-
-\noindent
+We have
+\begin{align*}
+\|u+v\|^2 & = (u+v)\dotprod (u+v) \\
+ 	& = u\dotprod u + 2 u\dotprod v + v\dotprod v \\
+	& = \|u\|^2 + \|v\|^2 + 2\,  \|u\|\,  \|v\| \cos \theta \\
+	& = \left(\|u\| + \|v\|\right)^2 + 2 \, \|u\| \, \|v\| (\cos \theta -1) \\
+	& \leq \left(\|u\| + \|v\|\right)^2	.
+\end{align*}
 That is, the square of the left-hand side of the triangle inequality is $\leq$ the square of the right-hand side. Since both the things being squared are positive, the inequality holds without the square;
-\[ \|u+v\| \leq  \|u\| + \|v\|   \]
-
+\[ \|u+v\| \leq  \|u\| + \|v\|   \qedhere\]
 \end{proof}
 
 The triangle inequality is also ``self-evident'' when examining a sketch of $u$, $v$ and $u+v$.
