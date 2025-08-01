@@ -184,7 +184,7 @@
 
 \newcommand{\inputProblems}[1]{\newpage \section{Review Problems} \input{#1} }
 
-\newcommand\tolinear{{\stackrel{\rm linear}{-\!\!\!-\!\!\!-\!\!\!\rightarrow}}}
+\newcommand\tolinear{{\stackrel{\textrm{linear}}{-\!\!\!-\!\!\!-\!\!\!\rightarrow}}}
 \newcommand\nn{\nonumber}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -207,8 +207,6 @@
 \newenvironment{remark}[1][Remark]{\small \sffamily \begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\rref}{RREF}
 
 % sideremark
 \newcommand*{\sideremark}[1]{\ifvmode\leavevmode\fi\vadjust{\vbox to0pt{\vss
@@ -220,13 +218,23 @@
 \newcommand{\edz}[1]{\sideremark{#1}}
 \newcommand{\idx}[1]{{\em #1\/}} % ****
 
-\newcommand{\1}{{\rm 1\hspace*{-0.4ex}%
+% a blackboard 1
+\newcommand{\1}{{\mathrm 1\hspace*{-0.4ex}%
 \rule{0.1ex}{1.52ex}\hspace*{0.2ex}}}
 
+\DeclareMathOperator{\adj}{adj}
 \DeclareMathOperator{\cofactor}{cofactor}
-\DeclareMathOperator{\spa}{span}
+\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Image}{Im}
 \DeclareMathOperator{\nul}{null}
+\DeclareMathOperator{\perm}{perm}
 \DeclareMathOperator{\range}{ran}
+\DeclareMathOperator{\rref}{RREF}
+\DeclareMathOperator{\spa}{span}
+\DeclareMathOperator{\span}{span}
+\DeclareMathOperator{\tr}{tr}
 
 \newcommand{\phantomnewpage}{}
 

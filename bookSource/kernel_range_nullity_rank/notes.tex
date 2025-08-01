@@ -148,7 +148,7 @@ This is an efficient way to compute and encode the range of a matrix.
 
 \begin{definition}
 For any subset $U$ of the domain $S$ of a function $f:S\to T$  the {\bfseries image} of $U$ is 
-\[f(U)={\rm Im} \,U:= \left\{  f(x) | x\in U \right\} .\]
+\[f(U)=\Image U:= \left\{  f(x) | x\in U \right\} .\]
 \end{definition}
 
 \begin{example} 
@@ -164,14 +164,14 @@ under multiplication by the matrix
 \]
 is the parallelepiped 
 \[
-{\rm Img}\,U= 
+\Img U= 
  \left\{  a \colvec{1\\1\\0} +b \colvec{0\\1\\0}+c\colvec{0\\1\\1} \middle| a,b,c \in [0,1] \right\} .
 \]
 \end{example}
 
 Note that for most subsets $U$ of the domain $S$  of a function  $f$ the image of $U$ is not a vector space. 
-The range of a function is the particular case of the image where the subset of the domain is the entire domain; $\range  f = {\rm Img} S$. 
-For this reason, the range of $f$ is also sometimes called the {image} of $f$ and is sometimes denoted ${ \rm im}(f)$ or  $f(S).$  We have seen that the range of a matrix is always a span of vectors, and hence a vector space. 
+The range of a function is the particular case of the image where the subset of the domain is the entire domain; $\range  f = \Img S$. 
+For this reason, the range of $f$ is also sometimes called the \emph{image} of $f$ and is sometimes denoted $\im(f)$ or  $f(S).$  We have seen that the range of a matrix is always a span of vectors, and hence a vector space. 
 
 Note that we prefer the phrase ``range of $f$" to the phrase ``image of f"  
 because we wish to avoid confusion between homophones;
@@ -202,13 +202,13 @@ M=\begin{pmatrix}
 \]
 is the set 
 \begin{align*}
-M^{-1} U&= \left\{  x \middle| Mx=v {\rm ~for ~some~ } v\in U \right\} \\[3mm]
+M^{-1} U&= \left\{  x \middle| Mx=v \text{~for~some~} v\in U \right\} \\[3mm]
 &= \left\{  \colvec{x\\y\\z} \middle| 
 \begin{pmatrix}
 1&0&1\\
 0&1&1\\
 0&1&1
-\end{pmatrix} \colvec{x\\y\\z} =a\colvec{2\\1\\1}  {\rm ~for ~some~ } a\in [0,1] \right\} .
+\end{pmatrix} \colvec{x\\y\\z} =a\colvec{2\\1\\1}  \text{~for~some~} a\in [0,1] \right\} .
 \end{align*}
 Since
 \[
@@ -400,7 +400,7 @@ A trivial kernel only gives us half of what is needed for invertibility.
 
 
 \begin{theorem}
-A linear transformation $L\colon V\rightarrow W$ is injective iff \[{\rm ker} L=\{0_V\}\, .\]
+A linear transformation $L\colon V\rightarrow W$ is injective iff \[\ker L=\{0_V\}\, .\]
 \end{theorem}
 
 \begin{proof}
@@ -410,7 +410,7 @@ The proof of this theorem is Review Exercise~\ref{injectivekernalprob}.
 
 
 \begin{theorem}
-If $L \colon V\stackrel{\rm linear}{-\!\!\!-\!\!\!-\!\!\!\rightarrow} W$  then $\ker L$ is a subspace of $V$.
+If $L \colon V\stackrel{\textrm{linear}}{-\!\!\!-\!\!\!-\!\!\!\rightarrow} W$  then $\ker L$ is a subspace of $V$.
 \end{theorem}
 
 \begin{proof}
@@ -519,14 +519,14 @@ But since the $u^j$ are linearly independent, then $d^1u_1+\cdots+d^qu_q\neq 0$,
 \begin{example} (Row rank equals column rank)\\
 Suppose $M$ is an $m\times n$ matrix. The matrix  $M$ itself is a linear transformation $M:{\mathbb R}^n \rightarrow {\mathbb R}^m$ but it  must also  be the matrix of some linear transformation
 \[
-L:V\stackrel{\rm linear}\longrightarrow W\, .
+L:V\stackrel{\textrm{linear}}\longrightarrow W\, .
 \]
-Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\itshape column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\itshape i.e.} the nullity:  $ {\rm null}\, L= {\rm dim}V-{\rm rank}L=n-r$. 
+Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\itshape column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\itshape i.e.} the nullity:  $ \null L= \dim V-\rank L=n-r$. 
 
 To compute the kernel we would study the linear system \[Mx=0\, ,\] which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\itshape row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
-Each linearly independent row of $M$ gives an independent equation satisfied by the $n$-vector $x$. Every independent equation on $x$ reduces the size of the kernel by one, so if the row rank is $s$, then ${\rm null}\, L+ s = n$.  Thus we have two equations: 
+Each linearly independent row of $M$ gives an independent equation satisfied by the $n$-vector $x$. Every independent equation on $x$ reduces the size of the kernel by one, so if the row rank is $s$, then $\null L+ s = n$.  Thus we have two equations: 
 \[
-{\rm null}\, L+s=n \mbox{ and } {\rm null } \, L = n-r\, .
+\null L+s=n \text{ and } \null L = n-r\, .
 \]
 From these we conclude the $r=s$. In other words, the row rank of $M$ equals its column rank.
  \end{example}

@@ -6,12 +6,12 @@ Here are some worked problems typical for what you might expect on a second midt
 \begin{enumerate}
 
 \item
-{\itshape Determinants:} The determinant ${\rm det}\, M$ of a $2\times 2$ matrix $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ is defined~by
+{\itshape Determinants:} The determinant $\det M$ of a $2\times 2$ matrix $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ is defined~by
 \[
-{\rm det}\,  M =ad -bc\, .
+\det M =ad -bc\, .
 \] 
 \begin{enumerate}
-\item For which values of ${\rm det}\,  M$ does $M$ have an inverse?
+\item For which values of $\det M$ does $M$ have an inverse?
 \item Write down all $2\times 2$ bit matrices with determinant~1. (Remember bits are either 0 or 1 and $1+1=0$.)
 \item Write down all $2\times 2$ bit matrices with determinant~0.
 \item Use one of the above examples to show why the following statement is FALSE.
@@ -35,22 +35,22 @@ the characteristic polynomial of $A$.
 \item
 Let $M$ be any $2\times 2$ matrix. Show
 \[
-\det M = -\frac 12 {\rm tr} M^2 + \frac 12 ({\rm tr} M)^2\, .
+\det M = -\frac 12 \tr M^2 + \frac 12 (\tr M)^2\, .
 \]
 
 \item
 {\itshape The permanent:} Let $M=(M^i_j)$ be an $n\times n$ matrix. An operation producing a single number from $M$ similar
 to the determinant is the ``permanent''
 \[
-{\rm perm} \, M =\sum_\sigma M^1_{\sigma(1)} M^2_{\sigma(2)}\cdots M^n_{\sigma(n)}\, .
+\perm M =\sum_\sigma M^1_{\sigma(1)} M^2_{\sigma(2)}\cdots M^n_{\sigma(n)}\, .
 \]
 For example
 \[
-{\rm perm} \begin{pmatrix}a & b \\ c & d\end{pmatrix}=ad+bc\, .
+\perm \begin{pmatrix}a & b \\ c & d\end{pmatrix}=ad+bc\, .
 \]
 {Calculate} 
 \[
-{\rm perm} \begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{pmatrix}\, .
+\perm \begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{pmatrix}\, .
 \]
 \noindent
 What do you think would happen to the permanent of an $n\times n$ matrix~$M$ if (include a {\itshape brief} explanation with each answer):
@@ -127,7 +127,7 @@ For which values of $h$ is $\{u,v,w\}$ a basis for $\mathbb R^3$?
 \begin{enumerate}
 \item 
 \begin{enumerate}
-\item Whenever ${\rm det} M=ad-bc\neq 0$.
+\item Whenever $\det M=ad-bc\neq 0$.
 \item Unit determinant bit matrices:
 \[
 \begin{pmatrix}
@@ -203,12 +203,12 @@ It follows that the statement is false.
 
 \item
 \[
-{\rm det }A= 1.(2.6-3.5)-1.(2.6-3.4)+1.(2.5-2.4)=-1\, .
+\det A= 1.(2.6-3.5)-1.(2.6-3.4)+1.(2.5-2.4)=-1\, .
 \]
-(i) Since ${\rm det}A\neq 0$, the homogeneous system $AX=0$ only has the solution $X=0$.
+(i) Since $\det A\neq 0$, the homogeneous system $AX=0$ only has the solution $X=0$.
 (ii) It is efficient to compute the adjoint
 \[
-{\rm adj}\ A= \begin{pmatrix}-3&0& 2\\ -1&2& -1 \\1&-1 & 0 \end{pmatrix}^{\!T}
+\adj A= \begin{pmatrix}-3&0& 2\\ -1&2& -1 \\1&-1 & 0 \end{pmatrix}^{\!T}
 = \begin{pmatrix}-3&-1& 1\\ 0&2& -1 \\2&-1 & 0 \end{pmatrix}
 \]
 Hence
@@ -231,7 +231,7 @@ P_A(\lambda)=-\det \begin{pmatrix}1-\lambda&1&1\\2&2-\lambda&3\\4&5&6-\lambda\en
 =\lambda^3-9\lambda^2-\lambda+1\, .
 \end{gather*}
 \item
-Call $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$. Then ${\rm det} M= ad-bc$, yet
+Call $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$. Then $\det M= ad-bc$, yet
 \begin{gather*}
 -\frac 12 \tr M^2 + \frac12 (\tr M)^2 = -\frac 12 \tr \begin{pmatrix}a^2 + bc & * \\ * & bc + d^2\end{pmatrix} -\frac12 (a+d)^2\\ 
 =-\frac 12 (a^2 + 2bc + d^2) + \frac 12 (a^2 + 2ad + d^2) = ad - bc\, ,
@@ -241,14 +241,14 @@ which is what we were asked to show.
 \item 
 
 \[
-{\rm perm} \begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{pmatrix}
+\perm\begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{pmatrix}
 =1\cdot(5\cdot9+6\cdot8)+2\cdot(4\cdot9+6\cdot7)+3\cdot(4\cdot8+5\cdot7)=450\, .
 \]
 
 \begin{enumerate}
 \item Multiplying $M$ by $\lambda$ replaces every matrix element $M^i_{\sigma(j)}$ in the formula for the permanent
 by $\lambda M^i_{\sigma(j)}$, and therefore produces an overall factor $\lambda^n$.
-\item Multiplying the $i^{\rm th}$ row by $\lambda$ replaces $M^i_{\sigma(j)}$ in the formula for the permanent
+\item Multiplying the $i^{\text{th}}$ row by $\lambda$ replaces $M^i_{\sigma(j)}$ in the formula for the permanent
 by $\lambda M^i_{\sigma(j)}$. Therefore the permanent is multiplied by an overall factor $\lambda$.
 \item The permanent of a matrix transposed equals the permanent of the original matrix, because
 in the formula for the permanent this amounts to summing over permutations of rows rather than columns. But we could
@@ -292,7 +292,7 @@ Hence $\lambda^k v = 0$ and $v$ (being an eigenvector) cannot vanish. Thus $\lam
 
 \item Let us think about the eigenvalue problem $Mv=\lambda v$. This has solutions when
 \[
-0={\rm det} \begin{pmatrix}3-\lambda & -5 \\ 1 & -3-\lambda\end{pmatrix}=\lambda^2-4\Rightarrow \lambda = \pm 2\, .
+0=\det\begin{pmatrix}3-\lambda & -5 \\ 1 & -3-\lambda\end{pmatrix}=\lambda^2-4\Rightarrow \lambda = \pm 2\, .
 \]
 The associated eigenvalues solve the homogeneous systems (in augmented matrix form)
 \[
@@ -315,7 +315,7 @@ is simply to observe that~$M^2 = \begin{pmatrix}4 & 0 \\ 0 & 4\end{pmatrix} $.}
 
 \item 
 \[
-P_M(\lambda) = (-1)^2 {\rm det}\begin{pmatrix} a-\lambda & \mc b  \\ \mc c &d-\lambda\end{pmatrix}
+P_M(\lambda) = (-1)^2 \det\begin{pmatrix} a-\lambda & \mc b  \\ \mc c &d-\lambda\end{pmatrix}
 =(\lambda-a)(\lambda-d) - bc\, . 
 \]
 Thus
@@ -338,9 +338,8 @@ Thus we may conclude $P_A(A)=P^{-1} P_A(D) P$.
 
 Now suppose 
 $D=\begin{pmatrix}\lambda_1 & \mc0 &\cdots & \mc0 \\ \mc0 &\lambda_2 & &\mc 0\\ \mc\vdots& & \ddots &\mc\vdots \\ \mc0 &&\cdots    &\lambda_n \end{pmatrix}$. Then 
-\begin{gather*}P_A(\lambda) = {\rm det} (\lambda I - A) = {\rm det} (\lambda P^{-1} I P - P^{-1} D P) = {\rm det} P . {\rm det} (\lambda I - D). {\rm det} P\\
-= {\rm det} (\lambda I - D)={\rm det}
- \begin{pmatrix}\lambda-\lambda_1 & \mc0 &\cdots & \mc0 \\[1mm] \mc0 &\lambda-\lambda_2 & &\mc 0 \\ \mc\vdots& & \ddots &\mc\vdots \\ \mc0 &\mc 0&\cdots    &\lambda-\lambda_n \end{pmatrix}\\=(\lambda-\lambda_1)(\lambda-\lambda_2)\ldots (\lambda-\lambda_n)\, .
+\begin{gather*}P_A(\lambda) = \det(\lambda I - A) = \det(\lambda P^{-1} I P - P^{-1} D P) = \det P . \det(\lambda I - D). \det P\\
+= \det(\lambda I - D)=\det\begin{pmatrix}\lambda-\lambda_1 & \mc0 &\cdots & \mc0 \\[1mm] \mc0 &\lambda-\lambda_2 & &\mc 0 \\ \mc\vdots& & \ddots &\mc\vdots \\ \mc0 &\mc 0&\cdots    &\lambda-\lambda_n \end{pmatrix}\\=(\lambda-\lambda_1)(\lambda-\lambda_2)\ldots (\lambda-\lambda_n)\, .
 \end{gather*}
 Thus we see that $\lambda_1$, $\lambda_2, \ldots , \lambda_n$ are the eigenvalues of $M$. Finally we compute 
 \begin{gather*}
@@ -390,7 +389,7 @@ But the above system in matrix language reads
 \]
 Both requirements mean that the matrix on the left hand side must be invertible, so we examine its determinant
 \begin{gather*}
-{\rm det} \begin{pmatrix}
+\det\begin{pmatrix}
 -1 &4 &\mc{10} \\ -4 & 5 &\mc{7} \\ 3 & 0 & h+3
 \end{pmatrix}
 = -4\cdot (-4\cdot(h+3)-7\cdot3)+ 5\cdot(-1\cdot(h+3)-10\cdot3)\\=11(h-3)\, \cdot

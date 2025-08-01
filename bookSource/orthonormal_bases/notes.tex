@@ -156,7 +156,7 @@ The above computation looks a little daunting, but only the linearity property o
 Because inner products become dot products once one uses an orthonormal basis, we will quite often use the dot product notation in situations where one really should write an inner product. Conversely, dot product computations can always be rewritten in terms of an inner product, if needed.
 
 \begin{example}
-Consider the space of polynomials given by $V={\rm span}\{1,x\}$ with inner product $\langle p,p'\rangle=\int_0^1  p(x) p'(x)dx $. An obvious basis to use is $B=(1,x)$ 
+Consider the space of polynomials given by $V=\span\{1,x\}$ with inner product $\langle p,p'\rangle=\int_0^1  p(x) p'(x)dx $. An obvious basis to use is $B=(1,x)$ 
 but it is not hard to check that this is not orthonormal, instead we take \[O=\Big(1,{2\sqrt{3}}\, \big(x-\frac12\big)\Big)\, .\]
 This is an orthonormal basis  since,for example:
 \[
@@ -329,7 +329,7 @@ The matrix $M=PDP^T$ is symmetric!
 \section{Gram-Schmidt \& Orthogonal Complements}\label{gramschmidt}
 
 
-Given a vector $v$ and some other vector $u$ not in  $ {\rm span}\, \{v\} $ we can construct the new vector 
+Given a vector $v$ and some other vector $u$ not in  $\span\{v\} $ we can construct the new vector 
 \Shabox{1.1}{$
 v^\perp:=v-\frac{\textstyle u\cdot v}{\textstyle u\cdot u}\, u\, .
 $}
@@ -340,7 +340,7 @@ This new vector $v^\perp$ is orthogonal to $u$ because
 \[
 u\dotprod v^\perp = u\dotprod v - \frac{u\cdot v}{u\cdot u}u\dotprod u = 0.
 \]
-Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space ${\rm span}\, \{u,v\}$.
+Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space $\span\{u,v\}$.
 
 Sometimes we write $v = v^\perp + v^\parallel$ where:
 \begin{align*}
@@ -570,7 +570,7 @@ is the {\bfseries orthogonal complement}\index{Orthogonal complement} of $U$ in 
 \begin{remark}
 The symbols ``$U^\perp$" are often read as ``$U$-perp''.  This is the set of all vectors in $W$ orthogonal to \emph{every} vector in $U$. 
 Notice also that in the above definition we have implicitly assumed that the inner product is the dot product. For a general \hyperlink{inner_product}{inner product}, the  
-above definition would read $U^\perp := \big\{w\in W \big|\,  \langle w,u\rangle=0 \ {\rm  for\  all } \ u\in U\big\}\, $.
+above definition would read $U^\perp := \big\{w\in W \big|\,  \langle w,u\rangle=0 \text{~for~all~}u\in U\big\}\, $.
 \end{remark}
 Possibly by now you are feeling overwhelmed, it may help to watch this quick overview video.
 
