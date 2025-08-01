@@ -121,7 +121,7 @@ The domain of $L$ is a plane and its range is the line through the origin in the
 
 It is not clear how to formulate $L$ as a matrix; 
 since
-\begin{eqnarray*}
+\[
 L\ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} = 
 \begin{pmatrix}
 0&0&0\\
@@ -129,9 +129,9 @@ L\ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =
 0&0&0
 \end{pmatrix}
 \ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =(c_1+c_2)\colvec{0\\1\\0}\, ,
-\end{eqnarray*}
+\]
 {\itshape or} 
-\begin{eqnarray*}
+\[
 L\ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} = 
 \begin{pmatrix}
 0&0&0\\
@@ -139,7 +139,7 @@ L\ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =
 0&0&0
 \end{pmatrix}
 \ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =(c_1+c_2)\colvec{0\\1\\0}\, ,
-\end{eqnarray*}
+\]
 you might suspect that  $L$ is equivalent to one of these $3\times3$ matrices. It is not. By the natural domain convention, all $3\times3$ matrices have $\Re^3$ as their domain, and the domain of $L$ is smaller than that. 
 When we do realize this $L$ as a matrix it will be as a  $3\times2$ matrix. We can tell because the domain of $L$ is 2 dimensional and the codomain is $3$ dimensional. (You probably already know that the plane has dimension~2, and a line is 1~dimensional, but the careful definition of ``dimension'' takes some work; this is tackled in Chapter~\ref{basisdimension}.) This leads us to write
 \[
@@ -157,10 +157,10 @@ by the two numbers $(c_1,c_2)$.
 %L \colon V \rightarrow W
 %\]
 %Now, both $V$ and $W$ have notions of vector addition and scalar multiplication.  It would be ideal if the map $L$ \emph{preserved} these operations.  In other words, if adding vectors and then applying $L$ were the same as applying $L$ to vectors and then adding them.  Likewise, it would be nice if, when multiplying by a scalar, it didn't matter whether we multiplied before or after applying~$L$.  In formulas, this means that for any $u,v \in V$ and $c \in \Re$:
-%\begin{eqnarray*}
-%L(u+v) &=& L(u)+L(v) \\[2mm]
-%L(cv) &= &cL(v)
-%\end{eqnarray*}
+%\begin{align*}
+%L(u+v) &= L(u)+L(v) \\[2mm]
+%L(cv) &= cL(v)
+%\end{align*}
 %
 %Combining these two requirements into one equation, we get the definition of a linear function\index{Linear function} or linear transformation\index{Linear transformation}.
 
@@ -180,20 +180,20 @@ by the two numbers $(c_1,c_2)$.
 %
 %We now check linearity.  Call $u = \colvec{x\\y\\z}$ and $v=\colvec{a\\b\\c}$.  
 %
-%\begin{eqnarray*}
-%L(ru + sv) & = & L\left( r \colvec{x\\y\\z} + s \colvec{a\\b\\c} \right) \\
-% & = & L\left( \colvec{rx\\ry\\rz} + \colvec{sa\\sb\\sc} \right) \\
-% & = & L \colvec{rx+sa\\ry+sb\\rz+sx}  \\
-% & = & \colvec{rx+sa+ry+sb\\ry+sb+rz+sx\\0}
-%\end{eqnarray*}
+%\begin{align*}
+%L(ru + sv) & = L\left( r \colvec{x\\y\\z} + s \colvec{a\\b\\c} \right) \\
+% & = L\left( \colvec{rx\\ry\\rz} + \colvec{sa\\sb\\sc} \right) \\
+% & = L \colvec{rx+sa\\ry+sb\\rz+sx}  \\
+% & = \colvec{rx+sa+ry+sb\\ry+sb+rz+sx\\0}
+%\end{align*}
 %On the other hand,
 %
-%\begin{eqnarray*}
-%rL(u) + sL(v) & = & rL\colvec{x\\y\\z} + sL\colvec{a\\b\\c}\\
-% & = & r\colvec{x+y\\y+z\\0} + s\colvec{a+b\\b+c\\0}\\
-% & = & \colvec{rx+ry\\ry+rz\\0} + \colvec{sa+sb\\sb+sc\\0}\\
-% & = & \colvec{rx+sa+ry+sb\\ry+sb+rz+sx\\0}
-%\end{eqnarray*}
+%\begin{align*}
+%rL(u) + sL(v) & = rL\colvec{x\\y\\z} + sL\colvec{a\\b\\c}\\
+% & = r\colvec{x+y\\y+z\\0} + s\colvec{a+b\\b+c\\0}\\
+% & = \colvec{rx+ry\\ry+rz\\0} + \colvec{sa+sb\\sb+sc\\0}\\
+% & = \colvec{rx+sa+ry+sb\\ry+sb+rz+sx\\0}
+%\end{align*}
 %Then the two sides of the linearity requirement are equal, so $L$ is a linear transformation.
 %
 %We can write the linear transformation $L$ in the previous example using a matrix like so:
@@ -276,16 +276,16 @@ L\colvec{1\\1}= \colvec{2\\4}, {\rm ~and~} L\colvec{1\\-1}=\colvec{6\\8}.
 \] 
 This is because any vector $\colvec{x\\y}$ in $\Re^2$ is a sum of multiples of
 $\colvec{1\\1}$ and $\colvec{1\\-1}$ which can be calculated via a linear systems problem as follows:
-\begin{eqnarray*}&&
+\begin{align*}&
 \colvec{x\\y}=a\colvec{1\\1}+b\colvec{1\\-1}\\[1mm]
-&\Leftrightarrow& 
+&\Leftrightarrow&
 \begin{pmatrix}
 1&1\\
 1&-1
 \end{pmatrix}
 \colvec{a\\b}
 =\colvec{x\\y}\\[1mm]
-&\Leftrightarrow& 
+&\Leftrightarrow 
 \begin{amatrix}{2}
 1&1&x\\
 1&-1&y
@@ -294,27 +294,27 @@ $\colvec{1\\1}$ and $\colvec{1\\-1}$ which can be calculated via a linear system
 1&0& \frac{x+y}{2}\\
 0&1&\frac{x-y}2
 \end{amatrix}\\[1mm]
-&\Leftrightarrow&
+&\Leftrightarrow
 \left\{ 
 \begin{array}{l}
 a=\frac{x+y}{2}\\
 b=\frac{x-y}{2}\, .
 \end{array}
 \right.
-\end{eqnarray*}
+\end{align*}
 Thus
 \[
 \colvec{x\\[2mm]y}=\frac{x+y}{2}\colvec{1\\[2mm]1}+\frac{x-y}{2}\colvec{1\\[2mm]-1}\, .
 \]
 We can then calculate how $L$ acts on any vector by first expressing the vector as  a sum of multiples and then applying linearity;
-\begin{eqnarray*}
+\begin{align*}
 L\colvec{x\\y}
-&=&L\left[    \frac{x+y}{2} \colvec{1\\1} + \frac{x-y}{2} \colvec{1\\-1}  \right]\\[1mm]
-&=&\frac{x+y}{2} L \colvec{1\\1} + \frac{x-y}{2} L \colvec{1\\-1} \\[2mm]
-&=&\frac{x+y}{2} \colvec{2\\4} + \frac{x-y}{2}  \colvec{6\\8} \\[1mm]
-&=&\ccolvec{x+y \\ 2(x+y)} +  \colvec{3(x-y)\\4(x-y)}\\[1mm]
-&=&\ccolvec{4x-2y \\ 6x-2y}
-\end{eqnarray*}
+&=L\left[    \frac{x+y}{2} \colvec{1\\1} + \frac{x-y}{2} \colvec{1\\-1}  \right]\\[1mm]
+&=\frac{x+y}{2} L \colvec{1\\1} + \frac{x-y}{2} L \colvec{1\\-1} \\[2mm]
+&=\frac{x+y}{2} \colvec{2\\4} + \frac{x-y}{2}  \colvec{6\\8} \\[1mm]
+&=\ccolvec{x+y \\ 2(x+y)} +  \colvec{3(x-y)\\4(x-y)}\\[1mm]
+&=\ccolvec{4x-2y \\ 6x-2y}
+\end{align*}
 Thus $L$ is completely specified by its value at just two inputs. 
 %In fact, we find that $L$ is equivalent to a matrix, 
 %\[

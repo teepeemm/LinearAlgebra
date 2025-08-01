@@ -18,10 +18,10 @@
 \end{array} \right)
 \]
 This looks like the system
-\begin{eqnarray*}
-1\cdot x_1\phantom{+x_2}\ + \ 3x_3 &=& 2\\
- 1\cdot x_2\phantom{\ +\ 3x_3 } &=& 1
-\end{eqnarray*}
+\begin{align*}
+1\cdot x_1\phantom{+x_2}\ + \ 3x_3 &= 2\\
+ 1\cdot x_2\phantom{\ +\ 3x_3 } &= 1
+\end{align*}
 Notice that when the system is written this way the copy of the $2 \times 2$ identity matrix
 $
 \left( \begin{array}{cc}
@@ -31,21 +31,22 @@ $
 makes it easy to write a solution in terms of the variables $x_1$ and $x_2$. We will call  $x_1$ and $x_2$ the \emph{pivot} variables. The third column $\colvec{3 \\0 }$ does not look like part of an identity matrix, and there is no $3\times 3$ identity in the augmented matrix. Notice there are more variables than equations and  that this means we will have to write the solutions for the system in terms of the variable $x_3$. We'll call $x_3$ the \emph{free} variable.
 
 Let $x_3 = \mu$. (We could also just add a ``dummy'' equation $x_3=x_3$.) Then we can rewrite the first equation in our system
-\begin{eqnarray*}
- x_1+ 3x_3 &=& 2\\
-x_1+ 3\mu &=& 2\\
-x_1 &=& 2 -3\mu.
-\end{eqnarray*}
+\begin{align*}
+ x_1+ 3x_3 &= 2\\
+x_1+ 3\mu &= 2\\
+x_1 &= 2 -3\mu.
+\end{align*}
 Then since the second equation doesn't depend on $\mu$ we can keep the equation 
 \[  x_2 = 1, \]
 and for a third equation we can write
 \[x_3 = \mu \]
 so that we get the system
-\begin{eqnarray*}
-  \colvec{x_1 \\ x_2 \\ x_3} &=& \colvec{2 - 3\mu \\ 1 \\ \mu}\\
-	&=&  \colvec{2 \\ 1 \\ 0} +  \colvec{- 3\mu \\ 0 \\ \mu} \\
-	&=& \colvec{2 \\ 1 \\ 0} +  \mu \colvec{- 3 \\ 0 \\ 1}.
-\end{eqnarray*}
+\begin{align*}
+  \colvec{x_1 \\ x_2 \\ x_3}
+  &= \colvec{2 - 3\mu \\ 1 \\ \mu}\\
+	&=  \colvec{2 \\ 1 \\ 0} +  \colvec{- 3\mu \\ 0 \\ \mu} \\
+	&= \colvec{2 \\ 1 \\ 0} +  \mu \colvec{- 3 \\ 0 \\ 1}.
+\end{align*}
 Any value of $\mu$ will give a solution of the system, and any system can be written in this form for some value of $\mu$. Since there are multiple solutions, we can also express them as a set:
 \[
 \left\{ \colvec{x_1 \\ x_2 \\ x_3} = \colvec{2 \\ 1 \\ 0} + \mu \colvec{- 3 \\ 0 \\ 1}

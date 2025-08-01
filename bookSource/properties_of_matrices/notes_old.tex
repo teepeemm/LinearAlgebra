@@ -291,35 +291,35 @@ $ does not.
 \item There are many ways to cut up an $n\times n$ matrix into blocks.  Often context or the entries of the matrix will suggest a useful way to divide the matrix into blocks.  For example, if there are large blocks of zeros in a matrix, or blocks that look like an identity matrix, it can be useful to partition the matrix accordingly.
 
 \item Matrix operations on block matrices can be carried out by treating the blocks as matrix entries.  In the example above,
-\begin{eqnarray*}
-M^2 & = & \begin{pmat}{c|c}
+\begin{align*}
+M^2 & = \begin{pmat}{c|c}
 A & B \\
 \cline{1-2}
-C & D \\
+C & D 
 \end{pmat}
 \begin{pmat}{c|c}
 A & B \\
 \cline{1-2}
-C & D \\
+C & D 
 \end{pmat} \\
-& = & \begin{pmat}{c|c}
+& = \begin{pmat}{c|c}
 A^2+BC & AB+BD \\
 \cline{1-2}
-CA+DC & CB+D^2 \\
-\end{pmat} \\
-\end{eqnarray*}
+CA+DC & CB+D^2
+\end{pmat} 
+\end{align*}
 
 Computing the individual blocks, we get:
-\begin{eqnarray*}
-A^2+BC &=& \begin{pmatrix}
+\begin{align*}
+A^2+BC &= \begin{pmatrix}
 	30 & 37 & 44 \\
 	66 & 81 & 96 \\
-	102&127 &152 \\
+	102&127 &152 
 	\end{pmatrix} \\
-AB+BD  &=& \colvec{ 4 \\ 10 \\ 16 } \\
-CA+DC  &=& \rowvec{ 18 \\ 21 \\ 24 } \\
-CB+D^2 &=& (2) 
-\end{eqnarray*}
+AB+BD  &=\colvec{ 4 \\ 10 \\ 16 } \\
+CA+DC  &=\rowvec{ 18 \\ 21 \\ 24 } \\
+CB+D^2 &=(2) 
+\end{align*}
 
 Assembling these pieces into a block matrix gives:
 \[
@@ -362,24 +362,24 @@ M^3 = \begin{pmatrix}
 \]
 
 Hence:
-\begin{eqnarray*}
-f(M) &=& \begin{pmatrix}
+\begin{align*}
+f(M) &=\begin{pmatrix}
 	1 & t \\
-	0 & 1 \\
+	0 & 1
 	\end{pmatrix} 
 - 2 \begin{pmatrix}
 	1 & 2t \\
-	0 & 1 \\
+	0 & 1
 	\end{pmatrix} 
 + 3 \begin{pmatrix}
 	1 & 3t \\
-	0 & 1 \\
+	0 & 1
 	\end{pmatrix} \\
-&=& \begin{pmatrix}
+&= \begin{pmatrix}
 	2 & 6t \\
-	0 & 2 \\
+	0 & 2
 	\end{pmatrix}
-\end{eqnarray*}
+\end{align*}
 \end{example}
 
 Suppose $f(x)$ is any function defined by a convergent Taylor Series:
@@ -471,13 +471,13 @@ The \emph{trace} of a square matrix $M=(m_j^i)$ is the sum of its diagonal entri
 \end{example}
 While matrix multiplication does not commute, the trace of a product of matrices does not depend on the order of multiplication:
 
-\begin{eqnarray*}
-\tr(MN) & = & \tr( \sum_l M_l^i N_j^l ) \\
-& = & \sum_i \sum_l M_l^i N_i^l \\
-& = & \sum_l \sum_i N_i^l M_l^i \\
-& = & \tr( \sum_i N_i^l M_l^i ) \\
-& = & \tr( NM ).
-\end{eqnarray*}
+\begin{align*}
+\tr(MN) & = \tr( \sum_l M_l^i N_j^l ) \\
+& = \sum_i \sum_l M_l^i N_i^l \\
+& = \sum_l \sum_i N_i^l M_l^i \\
+& = \tr( \sum_i N_i^l M_l^i ) \\
+& = \tr( NM ).
+\end{align*}
 \videoscriptlink{properties_of_matrices_trace_proof.mp4}{Explanation of this Proof}{scripts_properties_of_matrices_trace_proof}
 Thus we have a Theorem:
 \begin{theorem} \[\tr(MN)=\tr(NM)\] for any square matrices $M$ and $N$.

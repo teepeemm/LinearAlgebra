@@ -120,12 +120,12 @@ For any subset $S\subset V$, $\spa(S)$ is a subspace of $V$.
 We need to show that $\spa(S)$ is a vector space.
 
 It suffices to show that $\spa(S)$ is closed under linear combinations.  Let $u,v\in \spa(S)$ and $\lambda, \mu$ be constants.  By the definition of $\spa(S)$, there are constants $c^i$ and $d^i$ (some of which could be zero) such that:
-\begin{eqnarray*}
-u & = & c^1s_1+c^2s_2+\cdots \\
-v & = & d^1s_1+d^2s_2+\cdots \\
-\Rightarrow \lambda u + \mu v & = & \lambda (c^1s_1+c^2s_2+\cdots ) + \mu (d^1s_1+d^2s_2+\cdots ) \\
-& = & (\lambda c^1+\mu d^1)s_1 + (\lambda c^2+\mu d^2)s_2 + \cdots
-\end{eqnarray*}
+\begin{aling*}
+u & = c^1s_1+c^2s_2+\cdots \\
+v & = d^1s_1+d^2s_2+\cdots \\
+\Rightarrow \lambda u + \mu v & = \lambda (c^1s_1+c^2s_2+\cdots ) + \mu (d^1s_1+d^2s_2+\cdots ) \\
+& = (\lambda c^1+\mu d^1)s_1 + (\lambda c^2+\mu d^2)s_2 + \cdots
+\end{aling*}
 This last sum is a linear combination of elements of $S$, and is thus in $\spa(S)$.  Then $\spa(S)$ is closed under linear combinations, and is thus a subspace of~$V$.
 \end{proof}
 

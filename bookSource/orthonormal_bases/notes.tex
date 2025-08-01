@@ -36,25 +36,25 @@ where $\delta_{ij}$ is the \emph{Kronecker delta}\index{Kronecker delta}.  Notic
 
 Given column vectors $v$ and $w$, we have seen that the dot product $v\dotprod w$ is the same as the matrix multiplication $v^Tw$.  This is an \emph{inner product}\index{Inner product} on~$\Re^n$.  We can also form the \emph{outer product}\index{Outer product} $vw^T$, which gives a square matrix.
 The outer product on the standard basis vectors is interesting.  Set 
-\begin{eqnarray*}
-\Pi_1 &=& e_1e_1^T \\
-  &=& \colvec{1\\0\\ \vdots \\ 0} \rowvec{1&0& \cdots & 0}\\
-  &=& \begin{pmatrix}
+\begin{align*}
+\Pi_1 &= e_1e_1^T \\
+  &= \colvec{1\\0\\ \vdots \\ 0} \rowvec{1&0& \cdots & 0}\\
+  &= \begin{pmatrix}
       1 & 0 & \cdots & 0 \\
       0 & 0 & \cdots & 0 \\
       \vdots & & & \vdots \\
-      0 & 0 &\cdots & 0\\
+      0 & 0 &\cdots & 0
       \end{pmatrix}\\
-&\vdots& \\
-\Pi_n &=& e_n e_n^T \\
-  &=& \colvec{0\\0\\ \vdots \\ 1} \rowvec{0&0& \cdots & 1}\\
-  &=& \begin{pmatrix}
+&\vdots \\
+\Pi_n &= e_n e_n^T \\
+  &= \colvec{0\\0\\ \vdots \\ 1} \rowvec{0&0& \cdots & 1}\\
+  &= \begin{pmatrix}
       0 & 0 & \cdots & 0 \\
       0 & 0 & \cdots & 0 \\
       \vdots & & & \vdots \\
-      0 & 0 &\cdots & 1\\
-      \end{pmatrix}\\
-\end{eqnarray*}
+      0 & 0 &\cdots & 1
+      \end{pmatrix}
+\end{align*}
 In short, $\Pi_i$ is the diagonal square matrix with a $1$ in the $i$th diagonal position and zeros everywhere else\footnote{This is reminiscent of an older notation, where vectors are written in juxtaposition.  This is called a \href{http://en.wikipedia.org/wiki/Dyadic_tensor}{``dyadic tensor''}\index{Dyad}, and is still used in some applications. }.
 
 Notice that 
@@ -92,14 +92,14 @@ Suppose $T=\{u_1, \ldots, u_n \}$ is an orthonormal basis for $\Re^n$.  Because 
 v=c^1u_1+\cdots c^nu_n.
 \]
 Since $T$ is orthonormal, there is a very easy way to find the coefficients of this linear combination.  By taking the dot product of $v$ with any of the vectors in $T$, we get
-\begin{eqnarray*}
-v\dotprod u_i &=& c^1u_1\dotprod u_i + \cdots + c^iu_i\dotprod u_i + \cdots + c^nu_n\dotprod u_i \\
-& = & c^1\cdot 0 + \cdots + c^i\cdot 1 + \cdots + c^n\cdot 0 \\
-& = & c^i, \\[1mm]
-\Rightarrow\, c^i &=& v\dotprod u_i \\[1mm]
-\Rightarrow\  v &=& (v\dotprod u_1) u_1 + \cdots + (v\dotprod u_n)u_n\\
-&=& \sum_i (v\dotprod u_i)u_i\, .
-\end{eqnarray*}
+\begin{align*}
+v\dotprod u_i &= c^1u_1\dotprod u_i + \cdots + c^iu_i\dotprod u_i + \cdots + c^nu_n\dotprod u_i \\
+& = c^1\cdot 0 + \cdots + c^i\cdot 1 + \cdots + c^n\cdot 0 \\
+& = c^i, \\[1mm]
+\Rightarrow\, c^i &= v\dotprod u_i \\[1mm]
+\Rightarrow\  v &= (v\dotprod u_1) u_1 + \cdots + (v\dotprod u_n)u_n\\
+&= \sum_i (v\dotprod u_i)u_i\, .
+\end{align*}
 
 This proves the following theorem.
 \begin{theorem}
@@ -128,29 +128,30 @@ the dot product makes no sense, and one must instead choose an appropriate inner
 where $\langle\cdot,\cdot\rangle$ is the inner product, you might ask whether this can be related to a dot product? The answer to this question is yes and rather easy to understand:
 
 Given an orthonormal basis, the information of two vectors $v$ and $v'$ in~$V$ can be encoded in column vectors
-\begin{eqnarray*}
-v&=&\, \langle v,u_1\rangle u_1 + \cdots +\langle v,u_n\rangle u_n\, =
+\begin{align*}
+v&= \langle v,u_1\rangle u_1 + \cdots +\langle v,u_n\rangle u_n\, =
 \hspace{.3mm}(u_1,\ldots, u_n) \colvec{\langle v,u_1\rangle\\\mc\vdots\\\langle v,u_n\rangle}\hspace{.4mm}=\colvec{\langle v,u_1\rangle\\\mc\vdots\\\langle v,u_n\rangle}_{\! O}\, ,\\[2mm]
-v'&=&\langle v',u_1\rangle u_1 + \cdots+ \langle v',u_n\rangle u_n=(u_1,\ldots, u_n)\hspace{-.2mm} \colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}\hspace{-.2mm}=
+v'&=\langle v',u_1\rangle u_1 + \cdots+ \langle v',u_n\rangle u_n=(u_1,\ldots, u_n)\hspace{-.2mm} \colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}\hspace{-.2mm}=
 \hspace{-.2mm}\colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}_{\! O}\, .
-\end{eqnarray*}
+\end{align*}
 The dot product of these two column vectors is
 \[
 \colvec{\langle v,u_1\rangle\\\mc\vdots\\\langle v,u_n\rangle}\cdot \colvec{\langle v',u_1\rangle\\\mc\vdots\\\langle v',u_n\rangle}=
 \langle v,u_1\rangle\langle v',u_1\rangle+\cdots+\langle v,u_n\rangle\langle v,'u_n\rangle\, .
 \]
 This agrees exactly with the inner product of $v$ and $v'$ because
-\begin{eqnarray*}
-\langle v,v'\rangle&=& \big\langle
+\begin{align*}
+\langle v,v'\rangle&= \big\langle
 \langle v,u_1\rangle u_1 + \cdots +\langle v,u_n\rangle u_n,\langle v',u_1\rangle u_1 + \cdots+ \langle v',u_n\rangle u_n
 \big\rangle
 \\[1mm]
-&=&
-\langle v,u_1\rangle \langle v',u_1\rangle \langle u_1,u_1\rangle + \langle v,u_2\rangle \langle v',u_1\rangle \langle u_2,u_1\rangle+\cdots \\&&\cdots+
+&=
+\langle v,u_1\rangle \langle v',u_1\rangle \langle u_1,u_1\rangle + \langle v,u_2\rangle \langle v',u_1\rangle \langle u_2,u_1\rangle+\cdots \\
+&\cdots+
 \langle v,u_{n-1}\rangle \langle v',u_n\rangle \langle u_{n-1},u_n\rangle + \langle v,u_n\rangle \langle v',u_n\rangle \langle u_n,u_n\rangle\\[1mm]
-&=&
+&=
 \langle v,u_1\rangle\langle v',u_1\rangle+\cdots+\langle v,u_n\rangle\langle v',u_n\rangle\, .
-\end{eqnarray*}
+\end{align*}
 The above computation looks a little daunting, but only the linearity property of inner products and the fact that $\langle u_i,u_j\rangle$ can  equal either zero or one was used.
 Because inner products become dot products once one uses an orthonormal basis, we will quite often use the dot product notation in situations where one really should write an inner product. Conversely, dot product computations can always be rewritten in terms of an inner product, if needed.
 
@@ -183,12 +184,12 @@ Indeed
 \section{Relating Orthonormal Bases}
 
 Suppose $T=\{u_1, \ldots, u_n \}$ and $R=\{w_1, \ldots, w_n \}$ are two orthonormal bases for $\Re^n$.  Then\\[3mm]
-\begin{eqnarray*}
-w_1 &=& (w_1\dotprod u_1) u_1 + \cdots + (w_1\dotprod u_n)u_n\\
- & \vdots & \\
-w_n &=& (w_n\dotprod u_1) u_1 + \cdots + (w_n\dotprod u_n)u_n\\
-\Rightarrow w_i &=& \sum_j u_j(u_j\dotprod w_i) \\
-\end{eqnarray*}
+\begin{align*}
+w_1 &= (w_1\dotprod u_1) u_1 + \cdots + (w_1\dotprod u_n)u_n\\
+ & \vdots \\
+w_n &= (w_n\dotprod u_1) u_1 + \cdots + (w_n\dotprod u_n)u_n\\
+\Rightarrow w_i &= \sum_j u_j(u_j\dotprod w_i)
+\end{align*}
 Thus the matrix for the change of basis from $T$ to $R$ is given by 
 \[
 P = (p^j_i) = (u_j\dotprod w_i).
@@ -199,26 +200,27 @@ We would like to calculate the product $PP^T$. For that, we first develop a dirt
 \]
 The object $v w^T$ is the square matrix made from the outer product of $v$ and~$w$. 
 Now we are ready to compute the components of the matrix product $PP^T$.
-\begin{eqnarray*}
-\sum_i(u_j\dotprod w_i)(w_i\dotprod u_k)&=&
+\begin{align*}
+\sum_i(u_j\dotprod w_i)(w_i\dotprod u_k)&=
  \sum_i(u_j^T w_i) (w_i^T u_k)\\
-&=& u_j^T \left[\sum_i (w_i w_i^T) \right] u_k \\
-&\stackrel{(*)}=& u_j^T I_n u_k \\\
-&=& u_j^T u_k = \delta_{jk}.
-\end{eqnarray*}
+&= u_j^T \left[\sum_i (w_i w_i^T) \right] u_k \\
+&\stackrel{(*)}= u_j^T I_n u_k \\\
+&= u_j^T u_k = \delta_{jk}.
+\end{align*}
 The equality $(*)$ is explained below.  Assuming $(*)$ holds, we have shown that $PP^T=I_n$, which implies that 
 \[
 P^T=P^{-1}.
 \]
 
 The equality in the line $(*)$ says that $\sum_i w_i w_i^T=I_n$.  To see this, we examine $\left(\sum_i w_i w_i^T\right)v$ for an arbitrary vector $v$.  We can find constants $c^j$ such that $v=\sum_j c^jw_j$, so that
-\begin{eqnarray*}
-\left(\sum_i w_i w_i^T\right)v &=& \left(\sum_i w_i w_i^T\right)\left(\sum_j c^jw_j\right) \\
-&=& \sum_j c^j \sum_i w_i w_i^T w_j \\
-&=& \sum_j c^j \sum_i w_i \delta_{ij} \\
-&=& \sum_j c^j w_j \text{ since all terms with $i\neq j$ vanish}\\
-&=&v.
-\end{eqnarray*}
+\begin{align*}
+\left(\sum_i w_i w_i^T\right)v
+&= \left(\sum_i w_i w_i^T\right)\left(\sum_j c^jw_j\right) \\
+&= \sum_j c^j \sum_i w_i w_i^T w_j \\
+&= \sum_j c^j \sum_i w_i \delta_{ij} \\
+&= \sum_j c^j w_j \text{ since all terms with $i\neq j$ vanish}\\
+&=v.
+\end{align*}
 Thus, as a linear transformation, $\sum_i w_i w_i^T=I_n$ fixes every vector, and thus must be the identity $I_n$.
 
 \begin{definition}
@@ -247,40 +249,42 @@ S=\left( u_1,u_2,u_3\right)
 \right).
 \]
 Let $E$ be the standard basis $(e_1,e_2,e_3 )$.  Since we are changing from the standard basis to a new basis, then the columns of the change of basis matrix are exactly the  new basis vectors.  Then the change of basis matrix from $E$ to $S$ is given by
-\begin{eqnarray*}
-P=(P^j_i)=(e_j\cdot u_i)&=&
+\begin{align*}
+P=(P^j_i)=(e_j\cdot u_i)
+&=
 \begin{pmatrix}
 e_1\dotprod u_1 & e_1\dotprod u_2 & e_1\dotprod u_3 \\
 e_2\dotprod u_1 & e_2\dotprod u_2 & e_2\dotprod u_3 \\
-e_3\dotprod u_1 & e_3\dotprod u_2 & e_3\dotprod u_3 \\
+e_3\dotprod u_1 & e_3\dotprod u_2 & e_3\dotprod u_3
 \end{pmatrix} \\
 = \begin{pmatrix}
 u_1 & u_2 & u_3
 \end{pmatrix} 
-&=&
+&=
 \begin{pmatrix}
 \frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \\[1mm]
 \frac{1}{\sqrt{6}}& \frac{1}{\sqrt{2}}&\frac{-1}{\sqrt{3}}\\[1mm]
-\frac{-1}{\sqrt{6}}& \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}\\[1mm]
-\end{pmatrix}. \\
-\end{eqnarray*}
+\frac{-1}{\sqrt{6}}& \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}
+\end{pmatrix}.
+\end{align*}
 
 From our theorem, we observe that
-\begin{eqnarray*}
-P^{-1}=P^T &=& \colvec{u_1^T\\u_2^T\\u_3^T} \\
-&=& \begin{pmatrix}
+\begin{align*}
+P^{-1}=P^T
+&= \colvec{u_1^T\\u_2^T\\u_3^T} \\
+&= \begin{pmatrix}
 \frac{2}{\sqrt{6}}& \frac{1}{\sqrt{6}}& \frac{-1}{\sqrt{6}}\\[1mm]
 0 & \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}} \\[1mm]
-\frac{1}{\sqrt{3}}& \frac{-1}{\sqrt{3}}&\frac{1}{\sqrt{3}}\\[1mm]
-\end{pmatrix}. \\
-\end{eqnarray*}
+\frac{1}{\sqrt{3}}& \frac{-1}{\sqrt{3}}&\frac{1}{\sqrt{3}}
+\end{pmatrix}.
+\end{align*}
 
 We can check that $P^TP=I$ by a lengthy computation, or more simply, notice that
-\begin{eqnarray*}
+\begin{align*}
 (P^TP)%_{ij}
-&=& \colvec{u_1^T\\u_2^T\\u_3^T} \rowvec{u_1 & u_2& u_3} \\
-&=& \begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}.
-\end{eqnarray*}
+&= \colvec{u_1^T\\u_2^T\\u_3^T} \rowvec{u_1 & u_2& u_3} \\
+&= \begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}.
+\end{align*}
 Above we are using orthonormality of the $u_i$ and the fact that matrix multiplication amounts to taking dot products between rows and columns.
 It is also very \hypertarget{basisorthog}{important to realize that the columns of an {\itshape orthogonal} matrix are made
 from an {\itshape orthonormal} set of vectors}.
@@ -292,12 +296,13 @@ Suppose $D$ is a diagonal matrix  and we are able to use an orthogonal matrix $P
 M = PDP^{-1} = PDP^T.
 \]
 Now we calculate the transpose of $M$.
-\begin{eqnarray*}
-M^T &=& (PDP^T)^T\\
-&=& (P^T)^TD^TP^T \\
-&=& PDP^T\\
-&=& M
-\end{eqnarray*}
+\begin{align*}
+M^T
+&= (PDP^T)^T\\
+&= (P^T)^TD^TP^T \\
+&= PDP^T\\
+&= M
+\end{align*}
 The matrix $M=PDP^T$ is symmetric!
 \end{remark}
 
@@ -338,10 +343,10 @@ u\dotprod v^\perp = u\dotprod v - \frac{u\cdot v}{u\cdot u}u\dotprod u = 0.
 Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space ${\rm span}\, \{u,v\}$.
 
 Sometimes we write $v = v^\perp + v^\parallel$ where:
-\begin{eqnarray*}
-v^\perp &=& v-\frac{u\cdot v}{u\cdot u}\, u \\[1mm]
-v^\parallel &=& \phantom{v-}\frac{u\cdot v}{u\cdot u}\, u.
-\end{eqnarray*}
+\begin{align*}
+v^\perp &= v-\frac{u\cdot v}{u\cdot u}\, u \\[1mm]
+v^\parallel &= \phantom{v-}\frac{u\cdot v}{u\cdot u}\, u.
+\end{align*}
 This is called an {\bfseries orthogonal decomposition}\index{Orthogonal decomposition} because we have decomposed $v$ into a sum of orthogonal vectors.  This decomposition depends on $u$; if we change the direction of $u$ we change $v^\perp$ and $v^\parallel$.
 
 If $u$, $v$ are linearly independent vectors in $\Re^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\Re^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
@@ -368,17 +373,17 @@ because \(u\) is orthogonal to \(v^\perp\). Since $w^\perp$ is orthogonal to bot
 
 \subsection{The Gram-Schmidt Procedure}
 In fact, given an ordered set $(v_1, v_2, \ldots )$ of linearly independent vectors, we can define an orthogonal basis for $\spa \{v_1,v_2, \ldots \}$ consisting of the  vectors
-\begin{eqnarray*}
-v_1^\perp&:=&v_1 \\
-v_2^\perp &:=& v_2 - \frac{v_1^\perp\cdot v_2}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp \\
-v_3^\perp &:=& v_3 - \frac{v_1^\perp\cdot v_3}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp - \frac{v_2^\perp\cdot v_3}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp\\
-&\vdots& \\
-v_i^\perp%&=&   v_i - \sum_{j<i} \frac{v_j^\perp\cdot v_i}{v_j^\perp\cdot v_j^\perp}\,v_j^\perp \\
- &:=& v_i - \frac{v_1^\perp\cdot v_i}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp   
+\begin{align*}
+v_1^\perp&:=v_1 \\
+v_2^\perp &:= v_2 - \frac{v_1^\perp\cdot v_2}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp \\
+v_3^\perp &:= v_3 - \frac{v_1^\perp\cdot v_3}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp - \frac{v_2^\perp\cdot v_3}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp\\
+&\vdots \\
+v_i^\perp%&=   v_i - \sum_{j<i} \frac{v_j^\perp\cdot v_i}{v_j^\perp\cdot v_j^\perp}\,v_j^\perp \\
+ &:= v_i - \frac{v_1^\perp\cdot v_i}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp   
  - \frac{v_2^\perp\cdot v_i}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp -\cdots
  - \frac{v_{i-1}^\perp\cdot v_i}{v_{i-1}^\perp\cdot v_{i-1}^\perp}\,v_{i-1}^\perp\\
-&\vdots& \\
-\end{eqnarray*}
+&\vdots
+\end{align*}
 Notice that each $v_i^\perp$ here depends on  $v_j^\perp$ for every $j<i$.  This allows us to inductively/algorithmically build up a linearly independent, orthogonal set of vectors 
 $\{v_1^\perp,v_2^\perp, \ldots \}$ 
 such that 
@@ -398,10 +403,10 @@ Because he Gram-Schmidt algorithm uses the first vector from the ordered set the
 := \left( \colvec{1\\1\\0}, \colvec{1\\1\\1},\colvec{3\\1\\1} \right).\]
 
 First, we set $v_1^\perp:=v_1$.  Then
-\begin{eqnarray*}
-v_2^\perp&:=& \rowvec{1\\1\\1} - \frac{2}{2}\rowvec{1\\1\\0} = \rowvec{0\\0\\1} \\[2mm]
-v_3^\perp&:=& \rowvec{3\\1\\1} - \frac{4}{2}\rowvec{1\\1\\0} - \frac{1}{1}\rowvec{0\\0\\1} = \rowvec{1\\-1\\0}. 
-\end{eqnarray*}
+\begin{align*}
+v_2^\perp&:= \rowvec{1\\1\\1} - \frac{2}{2}\rowvec{1\\1\\0} = \rowvec{0\\0\\1} \\[2mm]
+v_3^\perp&:= \rowvec{3\\1\\1} - \frac{4}{2}\rowvec{1\\1\\0} - \frac{1}{1}\rowvec{0\\0\\1} = \rowvec{1\\-1\\0}. 
+\end{align*}
 Then the set
 \[
 \left\{ \rowvec{1\\1\\0},\rowvec{0\\0\\1},\rowvec{1\\-1\\0}\right\}
@@ -598,10 +603,10 @@ u\dotprod u = 0 \Leftrightarrow u=0.
 \]
 
 Finally, we show that any vector $w\in W$ is in $U\oplus U^\perp$.  (This is where we use the assumption that $W$ is finite-dimensional.)  Let $e_1, \ldots, e_n$ be an orthonormal basis for $U$.  Set: 
-\begin{eqnarray*}
-u\ &=&(w\dotprod e_1)e_1 + \cdots + (w\dotprod e_n)e_n \in U\, ,\\
-u^\perp&=& w-u\, .
-\end{eqnarray*}
+\begin{align*}
+u\ &=(w\dotprod e_1)e_1 + \cdots + (w\dotprod e_n)e_n \in U\, ,\\
+u^\perp&= w-u\, .
+\end{align*}
 It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).  Then $w=u+u^\perp$, so $w\in U\oplus U^\perp$, and we are done.
 \end{proof}
 
@@ -612,10 +617,10 @@ It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).
 Consider any line \(L\) through the origin in \(\Re^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let 
 \[L=\spa \left\{ \colvec{1\\1\\1\\1} \right\}\] 
 be a line in \(\Re^4.\) Then 
-\begin{eqnarray*}
-L^\perp&=&\left \{  \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ (x,y,z,w) \dotprod (1,1,1,1)=0 \right\} \\
-&=&\left\{ \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ x+y+z+w=0 \right \}.
-\end{eqnarray*}
+\begin{align*}
+L^\perp&=\left \{  \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ (x,y,z,w) \dotprod (1,1,1,1)=0 \right\} \\
+&=\left\{ \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ x+y+z+w=0 \right \}.
+\end{align*}
 
 \noindent
 Using the Gram-Schmidt procedure one may  find an orthogonal basis for 
@@ -630,12 +635,12 @@ forms a basis for \(L^\perp\)  so, first, we order the basis as
 \left(
 \colvec{1\\-1\\0\\0}, \colvec{1\\0\\-1\\0}, \colvec{1\\0\\0\\-1} \right)\,. \]
 Next, we set \(v_1^\perp=v_1\). Then
-\begin{eqnarray*}
-v_2^\perp&=&\colvec{1\\0\\-1\\0}-\frac{1}{2}\colvec{1\\-1\\0\\0}
+\begin{align*}
+v_2^\perp&=\colvec{1\\0\\-1\\0}-\frac{1}{2}\colvec{1\\-1\\0\\0}
 =\colvec{\frac{1}{2}\\[1mm] \frac{1}{2} \\-1\\ 0 },\\
-v_3^\perp&=&\colvec{ 1\\0\\0\\-1} -\frac{1}{2}\colvec{1\\-1\\0\\0}-\frac{1/2}{3/2}
+v_3^\perp&=\colvec{ 1\\0\\0\\-1} -\frac{1}{2}\colvec{1\\-1\\0\\0}-\frac{1/2}{3/2}
 \colvec{ \frac{1}{2}\\[1mm] \frac{1}{2}\\-1\\0} =\colvec{ \frac{1}{3}\\[1mm]\frac{1}{3}\\[1mm]\frac{1}{3}\\-1}.
-\end{eqnarray*}
+\end{align*}
 So the set 
 \[\left\{ \colvec{ 1\\-1\\0\\0}, \colvec{\frac{1}{2}\\ \frac{1}{2}\\-1\\ 0}, \colvec{\frac{1}{3}\\\frac{1}{3}\\\frac{1}{3}\\-1} \right\} \] is an orthogonal basis for \(L^\perp\).
 Dividing each basis vector by its length yields 

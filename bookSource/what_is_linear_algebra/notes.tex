@@ -432,10 +432,10 @@ There are 20 apples and 28 bananas in the room. Find~$x$ and~$y$.
 
 \noindent
 The values are the numbers~$x$ and~$y$ that simultaneously make both of the following equations true:
-\begin{eqnarray*}
-	2\, x + 6\, y & =  & 20 \\
-	4\, x + 8\, y & = & 28\, .
-\end{eqnarray*}
+\begin{align*}
+	2\, x + 6\, y & =  20 \\
+	4\, x + 8\, y & = 28\, .
+\end{align*}
 \end{example}
 Here we have an example of a \emph{System of Linear Equations}\index{Linear System!concept of}.\footnote{Perhaps you can see that both lines are of the form $Lu=v$ with $u=\colvec{x\\y}$ an unknown, $v=20$ in the first line, $v=28$ in the second line, and $L$ different functions in each line? We give the typical less sophisticated description in the text above.}   
 It's a collection of equations in which variables are multiplied by constants and summed, and no variables are multiplied together:  There are no powers of variables 
@@ -471,33 +471,33 @@ The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equa
 %$20=2x+6\cdot 3 \Leftrightarrow x=1$.\\
 %
 %It is easy to get lost when using this method. Especially when dealing with large systems of linear equations, such as 256 equations in 256 variables. It would be nice if we could lay out our work in a way that resonates with the intuition we have built from solving simpler algebra problems, like the familiar procedure
-%\begin{eqnarray*}
-%3x+4 &=&7\\
-%{\rm Subtract}~&4&\\
-%3x&=&3\\
-%{\rm divide~by}~&3&\\
-%x&=&1 \,.
-%\end{eqnarray*}
+%\begin{align*}
+%3x+4 &=7\\
+%\text{Subtract}~&4\\
+%3x&=3\\
+%\text{divide~by}~&3\\
+%x&=1 \,.
+%\end{align*}
 %That is, lets keep the variables on the left hand side and rewrite our {\itshape system} of equations after each step. \\
 %
 %
 %\noindent
 %{\bfseries More Efficient Method:}\\
 %Divide (both sides of) the second equation by 2 to obtain the equivalent system
-%\begin{eqnarray*}
-%	2\cdot x + 6\cdot y & = & 20 \\
-%	2\cdot x + 4\cdot y  & = & 14 \,.
-%\end{eqnarray*}
+%\begin{align*}
+%	2\cdot x + 6\cdot y & = 20 \\
+%	2\cdot x + 4\cdot y  & = 14 \,.
+%\end{align*}
 %Subtract the first equation from the second, to get the equivalent system 
-%\begin{eqnarray*}
-%	2\cdot x + 6\cdot y & =  & 20  \\
-%	 0\cdot x - 2\cdot y & = & -6\, .
-%\end{eqnarray*}
+%\begin{align*}
+%	2\cdot x + 6\cdot y & =  20  \\
+%	 0\cdot x - 2\cdot y & = -6\, .
+%\end{align*}
 %Now add three times the second equation to the first
-%\begin{eqnarray*}
-%	2\cdot x + 0\cdot y & = & 2 \\
-%	0\cdot x - 2\cdot y & = & -6\, .
-%\end{eqnarray*}
+%\begin{align*}
+%	2\cdot x + 0\cdot y & = 2 \\
+%	0\cdot x - 2\cdot y & = -6\, .
+%\end{align*}
 %At this point the result~$x=1,y=3$ is obvious. Further, the elimination of~$y$ from the first equation and elimination of~$x$ from the second is clear as can be. 
 %%This is elimination, a key idea in this course. 
 %%The idea here is to follow some algorithm to have just one variable with non-zero coefficient in each equation, and to rewrite the {\itshape system} of linear equations at each step. 
@@ -520,9 +520,9 @@ Writing our fruity equations as an equality between 2-vectors and then using the
    \right\} 
 \ \Longleftrightarrow  \  \colvec{ 2x+6y \\ 4x+8y}  =\colvec{ 20\\ 28}
 %\, .
-%\end{eqnarray*}
+%\end{align*}
 %Now we can reduce the number of appearances of the symbols~$x$ and~$y$ using vector addition and scalar multiplication:
-%\begin{eqnarray*}
+%\begin{align*}
 %    \colvec{ 2x+6y \\ 4x+8y}  %=\colvec{ 20\\ 28}
 \ \Longleftrightarrow \ 
    x \colvec{ 2\\ 4} + y \colvec{ 6\\ 8} =\colvec{ 20\\ 28} \, .
@@ -1053,9 +1053,9 @@ Probably you will spend most of your time on the following review questions:
 %\begin{center}
 %\shabox{$Ax=b$}
 %\end{center}
-%%\begin{eqnarray*}
+%%\[
 %%Ax=b
-%%\end{eqnarray*}
+%%\]
 %but where $x$ and $b$ can be much more general creatures than just numbers. The technical answer to the question ``how general?'',
 %is that $x$ and $b$ will be {\itshape vectors}. We will say much more about what this means later, but for now all you need
 %to know is that vectors are objects that you can {\itshape add} and {\itshape scalar multiply}, so that the algebraic operations

@@ -50,8 +50,8 @@
 %equation 
 \def\be{\begin{equation}}
 \def\ee{\end{equation}}
-\def\bea{\begin{eqnarray}}
-\def\eea{\end{eqnarray}} 
+\def\bea{\begin{align}}
+\def\eea{\end{align}} 
 \def\nn{\nonumber}
 
 %matricies
@@ -166,13 +166,13 @@ If $h$ is to fit the data exactly then $(a,b,c)$ should be a solution to the sys
 \end{array}
 \right\}\LR
 & 
-\baa
+\begin{pmatrix}
 \frac12 &1&1\\
 2&2&1\\
 \frac92 &3&1\\
 8&4&1\\
 \frac{25}{2} &5&1
-\eaa
+\end{pmatrix}
 \bv a\\b\\c \ev = \bv 2\\4\\5\\3\\1\ev
 \end{array}.
 \eea

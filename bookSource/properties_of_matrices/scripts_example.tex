@@ -29,14 +29,15 @@ and by matrix multiplication is seen to obey
 i^2 =-I\, ,\qquad i^3=-i\, , i^4 = I\, .
 \]
 Using these facts we compute by organizing terms according to whether they have an $i$ or not:
-\begin{eqnarray*}
-\exp i\theta &=& I + \frac 1{2!}\, \theta^2 (-I) + \frac 1{4!} \,(+I) + \cdots \\
-&+&i \theta + \frac1{3!} \,\theta^3 (-i) + \frac 1{5!} \,i+\cdots\\[2mm]
-&=& I ( 1-\frac 1{2!}\, \theta^2  + \frac 1{4!}\,\theta^4  + \cdots)\\
-&+&i( \theta- \frac1{3!}\, \theta^3  + \frac 1{5!}\,\theta^5 +\cdots)\\[2mm]
-&=&I\cos\theta + i \sin\theta \\[2mm]
-&=&\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta\end{pmatrix}\, .
-\end{eqnarray*}
+\begin{align*}
+\exp i\theta
+&= I + \frac 1{2!}\, \theta^2 (-I) + \frac 1{4!} \,(+I) + \cdots \\
+&+i \theta + \frac1{3!} \,\theta^3 (-i) + \frac 1{5!} \,i+\cdots\\[2mm]
+&= I ( 1-\frac 1{2!}\, \theta^2  + \frac 1{4!}\,\theta^4  + \cdots)\\
+&+i( \theta- \frac1{3!}\, \theta^3  + \frac 1{5!}\,\theta^5 +\cdots)\\[2mm]
+&=I\cos\theta + i \sin\theta \\[2mm]
+&=\begin{pmatrix}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta\end{pmatrix}\, .
+\end{align*}
 Here we used the familiar Taylor series for the cosine and sine functions. A fun thing to think about is how the above matrix
 acts on vector in the plane.
 

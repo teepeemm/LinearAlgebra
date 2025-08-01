@@ -82,11 +82,11 @@ Having taken some calculus\footnote{In fact, he is a \emph{Calculus Superhero}\i
 v = at+b.
 \]
 Then he should find $a$ and $b$ to best fit the data.
-\begin{eqnarray*}
-11 &=& a\cdot 1 + b \\
-19 &=& a\cdot 2 + b \\
-31 &=& a\cdot 3 + b.
-\end{eqnarray*}
+\begin{align*}
+11 &= a\cdot 1 + b \\
+19 &= a\cdot 2 + b \\
+31 &= a\cdot 3 + b.
+\end{align*}
 As a system of linear equations, this becomes:
 
 \[
@@ -310,9 +310,10 @@ However,  it is a subset of the eigenvectors of $LL^*$ so there is an orthonorma
 O'=\left(\frac{Lu_1}{\sqrt{\lambda_1}},\ldots,\frac{Lu_n}{\sqrt{\lambda_n}},v_{n+1},\ldots,v_{m}\right)=:(v_1,\ldots,v_m)\, .
 \]
 Now lets compute the matrix of $L$ with respect to the orthonormal basis $O=(u_1,\ldots,u_n)$ for $V$ and the orthonormal basis~$O'=(v_1,\ldots,v_m)$ for~$W$. As usual, our starting point is the computation of $L$ acting on the input basis vectors;
-\begin{eqnarray*}
-LO=\big(Lu_1,\ldots, Lu_n\big)&=&
-\big(\sqrt{\lambda_1}\,  v_1,\ldots,\sqrt{\lambda_n}\,  v_n\big)\\[2mm]&=&\big(v_1,\ldots,v_m\big)
+\begin{align*}
+LO=\big(Lu_1,\ldots, Lu_n\big)&=
+\big(\sqrt{\lambda_1}\,  v_1,\ldots,\sqrt{\lambda_n}\,  v_n\big)\\[2mm]
+&=\big(v_1,\ldots,v_m\big)
 %\begin{pmatrix}
 %\sqrt{\lambda_1}&\mc0&\cdots&\mc0&0&\cdots&0\\[1mm]
 %\mc0&\sqrt{\lambda_2}&\cdots&\mc0&0&\cdots&0\\
@@ -328,7 +329,7 @@ LO=\big(Lu_1,\ldots, Lu_n\big)&=&
 \mc{\vdots}&\mc\vdots&&\mc\vdots\\
 \mc 0 & \mc 0& \cdots &\mc 0
 \end{pmatrix}\, .
-\end{eqnarray*}
+\end{align*}
 The result is very close to diagonalization; the numbers $\sqrt{\lambda_i}$ along the leading diagonal are called the singular values of $L$.
 
 \begin{example} Let the matrix of a linear transformation be

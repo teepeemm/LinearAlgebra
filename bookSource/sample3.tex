@@ -377,11 +377,11 @@ Indicate how the components of $V-MX$ could be obtained from your picture.
 I+J+13=0\, .
 \]
 There are three voltage loops (one on the left, one on the right and one going around the outside of the circuit). Respectively, they give the equations
-\begin{eqnarray}
-&60-I-80-3I=0&\nn\\[2mm]
-&80+2J-V+3J=0&\nn\\[2mm]
-&60-I+2J-V+3J-3I=0&\, .
-\end{eqnarray}
+\begin{align}
+60-I-80-3I=0&\nn\\[2mm]
+80+2J-V+3J=0&\nn\\[2mm]
+60-I+2J-V+3J-3I=0&\, .
+\end{align}
 The above equations are easily solved (either using an augmented matrix and row reducing, or by substitution). The result is $I=-5$ Amps, $J=-8$ Amps, $V=40$ Volts.
 
 
@@ -674,7 +674,7 @@ L(v) = L(b^1 v_1 +b^2 v_2+b^3 v_3) = b^1 L(v_1)  + b^2 L(v_2) + b^3 L(v_3) \\= \
 \end{gather*}
 \item From the notation of the previous part, we see that we can list  linear transformations $L:B^3\to B$
 by writing out all possible bit-valued row vectors
-\begin{eqnarray*}
+\begin{align*}
 &\begin{pmatrix}0 & 0 & 0\end{pmatrix} ,\\
 &\begin{pmatrix}1 & 0 & 0\end{pmatrix} ,\\
 &\begin{pmatrix}0 & 1 & 0\end{pmatrix} ,\\
@@ -683,7 +683,7 @@ by writing out all possible bit-valued row vectors
 &\begin{pmatrix}1 & 0 & 1\end{pmatrix} ,\\
 &\begin{pmatrix}0 & 1 & 1\end{pmatrix} ,\\
 &\begin{pmatrix}1 & 1  & 1\end{pmatrix} .
-\end{eqnarray*}
+\end{align*}
 There are $2^3=8$ different linear transformations $L:B^3\to B$, exactly the same as the number of elements in $B^3$.
 \item Yes, essentially just because $L_1$ and $L_2$ are linear transformations. In detail for any bits
 $(a,b)$ and vectors $(u,v)$ in $B^3$ it is easy to check the linearity property for $(\alpha L_1+\beta L_2)$
@@ -706,20 +706,24 @@ Since this (spanning) set has three (linearly independent) elements, the vector 
 \item $\frac{d^2 X}{dt^2}=\frac{d^2\cos(\omega t )}{dt^2}\colvec{a\\b\\c}=-\omega^2\cos(\omega t) \colvec{a\\b\\c}\, .$ 
 
 Hence
-\begin{eqnarray*}
-F=\cos(\omega t) \ccolvec{-a-b\\-a-2b-c\\-b-c}&=&\cos(\omega t) \begin{pmatrix}-1&-1&0\\-1&-2&-1\\0&-1&-1\end{pmatrix}\colvec{a\\b\\c}
-\\[1mm]&=&-\omega^2\cos(\omega t) \colvec{a\\b\\c}
-\, ,\end{eqnarray*}
+\begin{align*}
+F=\cos(\omega t) \ccolvec{-a-b\\-a-2b-c\\-b-c}
+&=\cos(\omega t) \begin{pmatrix}-1&-1&0\\-1&-2&-1\\0&-1&-1\end{pmatrix}
+\colvec{a\\b\\c}\\[1mm]
+&=-\omega^2\cos(\omega t) \colvec{a\\b\\c}
+\, ,
+\end{align*}
 so 
 \[
 M=\begin{pmatrix}-1&-1&0\\-1&-2&-1\\0&-1&-1\end{pmatrix}\, .
 \]
 \item
-\begin{eqnarray*}
+\begin{align*}
 \det \begin{pmatrix}\lambda+1&\mc1&\mc0\\\mc1&\lambda+2&\mc1\\\mc0&\mc1&\lambda+1\end{pmatrix}
-&=&(\lambda+1)\big((\lambda+2)(\lambda+1)-1\big)-(\lambda+1)\\
-&=&(\lambda+1)\big((\lambda+2)(\lambda+1)-2\big)\\
-&=&(\lambda+1)\big(\lambda^2+3\lambda)=\lambda(\lambda+1)(\lambda+3)\end{eqnarray*}
+&=(\lambda+1)\big((\lambda+2)(\lambda+1)-1\big)-(\lambda+1)\\
+&=(\lambda+1)\big((\lambda+2)(\lambda+1)-2\big)\\
+&=(\lambda+1)\big(\lambda^2+3\lambda)=\lambda(\lambda+1)(\lambda+3)
+\end{align*}
 so the eigenvalues are $\lambda=0,-1 ,-3 $.
 
 For the eigenvectors, when $\lambda=0$ we study:
@@ -899,14 +903,14 @@ Dividing by lengths, an orthonormal basis for ${\rm span}\{u,v,w\}$ is
 \item The columns of $M$ span ${\rm im} L$ in the basis given for $W$.
 \item The rows of $M$ span $({\rm ker}L)^\perp$% in the basis given for $V$.
 \item First we put $M$ in RREF:
-\begin{eqnarray*}
-M& = & \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
+\begin{align*}
+M& = \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
 \ \sim\
 \begin{pmatrix}1&2&1&3\\0&-3&-3&-4\\0&-2&-1&-4\\0&-7&-5&\!-12\end{pmatrix}\\[2mm]
-&\sim& 
+&\sim 
 \begin{pmatrix}1&0&-1&\frac13\\[1mm]0&1&1&\frac43\\[1mm]0&0&1&-\frac43\\[1mm]0&0&2&-\frac83\end{pmatrix}
 \ \sim\ \begin{pmatrix}1&0&0&-1\\[1mm]0&1&0&\frac83\\[1mm]0&0&1&-\frac43\\[1mm]0&0&0&0\end{pmatrix}\, .
-\end{eqnarray*}
+\end{align*}
 Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[{\rm im} L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
 Thus $\dim\ker L=1$ and $\dim{\rm im} L=3$ so \[\dim\ker L+\dim{\rm im} L=1+3=4=\dim V\, .\]
 \end{enumerate}

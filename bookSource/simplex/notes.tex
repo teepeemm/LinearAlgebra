@@ -69,11 +69,11 @@ Since there are only two variables, this is easy to plot:
 
 \begin{example}(Constraints and feasible region)
 Pablo's constraints are
-\begin{eqnarray*}
-&x\geq 5&\\
-&y\geq 7&\\[2mm]
-&15\leq x+y\leq25\, .&
-\end{eqnarray*}
+\begin{gather*}
+x\geq 5\\
+y\geq 7\\[2mm]
+15\leq x+y\leq25\, .
+\end{gather*}
 Plotted in the $(x,y)$ plane, this gives:
 \vspace{-5mm}
 \begin{center}
@@ -328,43 +328,44 @@ c_1\to c_1-x_5\, ,\qquad c_2\to c_2-x_6\, .
 The idea being that for large positive~$\alpha$,  the modified objective function \[f-\alpha x_5 - \alpha x_6\]
 is only maximal when the artificial variables vanish so the underlying problem is unchanged. 
 Lets take $\alpha=10$ (our solution will not depend on this choice) so that our augmented matrix reads 
-\begin{eqnarray*}&&
+\begin{align*}
+&
 \left(\begin{array}{rrrrrrr|r}
 1&1&-1&0&1&0&0&3\\
 1&1&0&1&0&1&0&13\\\hline
 5&10&\ 0&0&10&10&1&0
 \end{array}\right)\\[2mm]
-&\stackrel{\small R_3'=R_3-10 R_1-10R_2 }\sim&
+\stackrel{\small R_3'=R_3-10 R_1-10R_2 }\sim&
 \left(\begin{array}{rrrrrrr|r}
 1&1&-1&0&1&0&0&3\\
 1&1&0&1&0&1&0&13\\\hline
 \!-15&-10&\ 10&-10&0&0&1&-160
 \end{array}\right)
 \, .
-\end{eqnarray*}
+\end{align*}
 Here we performed one row operation to zero out the coefficients of the artificial variables.
 Now we are ready to run the simplex algorithm exactly as in section~\ref{dantzig}. The first row operation 
 uses the~$1$ in the top of the first column to zero out the most negative entry in the last row:
-\begin{eqnarray*}&&
+\begin{align*}&
 \left(\begin{array}{rrrrrrr|r}
 1&1&-1&0&1&0&0&3\\
 1&1&0&1&0&1&0&13\\\hline
 0&5&-5&-10&15&0&1&-115
 \end{array}\right)\\[2mm]
-&\stackrel{\small R_2'=R_2-R_1}\sim&
+\stackrel{\small R_2'=R_2-R_1}\sim&
 \left(\begin{array}{rrrrrrr|r}
 1&1&1&0&1&0&0&3\\
 0&0&1&1&-1&1&0&10\\\hline
 0&5&-5&-10&15&0&1&-115
 \end{array}\right)\\[2mm]
-&\stackrel{\small R_3'=R_3+10R_2}\sim&
+\stackrel{\small R_3'=R_3+10R_2}\sim&
 \left(\begin{array}{rrrrrrr|r}
 1&1&1&0&1&0&0&3\\
 0&0&1&1&-1&1&0&10\\\hline
 0&5&5&0&5&10&1&-15
 \end{array}\right)
 \, .
-\end{eqnarray*}
+\end{align*}
 Now the variables $(x_2,x_3,x_5,x_6)$ have zero coefficients so must be set to zero to maximize $f$.
 The optimum value is $f=-15$ so $s=-f+95=110$ exactly as before. Finally, to solve the constraints $x_1=3$
 and $x_4=10$ so that $x=8$ and $y=7$ which also agrees with our previous result.

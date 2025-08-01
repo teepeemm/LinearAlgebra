@@ -142,10 +142,11 @@ c^1v_1 + c^2v_2+ \cdots +c^{k-1}v_{k-1}+c^kv_k=0.
 (Note that $k>1$, since otherwise we would have $c^1v_1=0\Rightarrow v_1=0$, contradicting the assumption that none of the $v_i$ are the zero vector.)
 
 So we can rearrange the equation:
-\begin{eqnarray*}
-c^1v_1 + c^2v_2+ \cdots +c^{k-1}v_{k-1}&=&-c^kv_k\\ \Rightarrow\ 
--\frac{c^1}{c^k}v_1 - \frac{c^2}{c^k}v_2 - \cdots -\frac{c^{k-1}}{c^k}v_{k-1}&=&v_k.
-\end{eqnarray*}
+\begin{align*}
+c^1v_1 + c^2v_2+ \cdots +c^{k-1}v_{k-1}&=-c^kv_k\\
+\Rightarrow\ 
+-\frac{c^1}{c^k}v_1 - \frac{c^2}{c^k}v_2 - \cdots -\frac{c^{k-1}}{c^k}v_{k-1}&=v_k.
+\end{align*}
 
 Therefore we have expressed $v_k$ as a linear combination of the previous vectors, and we are done.
 \end{itemize}
@@ -155,13 +156,13 @@ Therefore we have expressed $v_k$ as a linear combination of the previous vector
 
 \begin{example}
 Consider the vector space $P_2(t)$ of polynomials of degree less than or equal to $2$.  Set:
-\begin{eqnarray*}
-v_1 &=& 1+t \\
-v_2 &=& 1+t^2 \\
-v_3 &=& t+t^2 \\
-v_4 &=& 2+t+t^2 \\
-v_5 &=& 1+t+t^2. \\
-\end{eqnarray*}
+\begin{align*}
+v_1 &= 1+t \\
+v_2 &= 1+t^2 \\
+v_3 &= t+t^2 \\
+v_4 &= 2+t+t^2 \\
+v_5 &= 1+t+t^2. \\
+\end{align*}
 The set $\{ v_1, \ldots, v_5 \}$ is linearly dependent, because $v_4 = v_1+v_2$.  
 \end{example}
 
@@ -260,11 +261,11 @@ with $c^1\neq 0$.  Then:
 \spa \{v_1,\ldots, v_n\} = \spa \{ v_2,\ldots, v_n\}
 \]
 because any $x\in \spa \{v_1,\ldots, v_n\}$ is given by
-\begin{eqnarray*}
-x &=& a^1v_1 + \cdots+ a^nv_n \\
-&=& a^1\left( -\frac{c^2}{c_1}v_2- \cdots -\frac{c^n}{c_1}v_n \right) + a^2v_2 + \cdots + a^nv_n \\
-&=& \left(a^2-a^1\frac{c^2}{c_1}\right)v_2 + \cdots + \left(a^n-a^1\frac{c^n}{c_1}\right)v_n.
-\end{eqnarray*}
+\begin{align*}
+x &= a^1v_1 + \cdots+ a^nv_n \\
+&= a^1\left( -\frac{c^2}{c_1}v_2- \cdots -\frac{c^n}{c_1}v_n \right) + a^2v_2 + \cdots + a^nv_n \\
+&= \left(a^2-a^1\frac{c^2}{c_1}\right)v_2 + \cdots + \left(a^n-a^1\frac{c^n}{c_1}\right)v_n.
+\end{align*}
 Then $x$ is in $\spa \{v_2,\ldots, v_n\}$.
 
 When we write a vector space as the span of a list of vectors, we would like that list to be as short as possible (this idea is explored further in \hyperref[dimension]{chapter~\ref*{sec:dimension}}).
@@ -274,10 +275,10 @@ This can be achieved by iterating the above procedure.
 In the above example, we found that $v_4=v_1+v_2$.  In this case, any expression for a vector as a linear combination involving $v_4$ can be turned into a combination without $v_4$ by making the substitution $v_4=v_1+v_2$.
 
 Then:
-\begin{eqnarray*}
-S &=& \spa \{ 1+t , 1+t^2, t+t^2, 2+t+t^2, 1+t+t^2 \} \\
-&=& \spa \{ 1+t , 1+t^2, t+t^2, 1+t+t^2 \}.
-\end{eqnarray*}
+\begin{align*}
+S &= \spa \{ 1+t , 1+t^2, t+t^2, 2+t+t^2, 1+t+t^2 \} \\
+&= \spa \{ 1+t , 1+t^2, t+t^2, 1+t+t^2 \}.
+\end{align*}
 Now we notice that $1+t+t^2=\frac{1}{2}(1+t) +\frac{1}{2}(1+t^2) + \frac{1}{2}(t+t^2)$.  So the vector $1+t+t^2=v_5$ is also extraneous, since it can be expressed as a linear combination of the remaining three vectors, $v_1, v_2,v_3$.  Therefore 
 \[
 S = \spa \{ 1+t , 1+t^2, t+t^2 \}.

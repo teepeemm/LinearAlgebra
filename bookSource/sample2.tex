@@ -329,10 +329,11 @@ P_M(M)=(M-a I )(M- d I) - bc I \\=
 Observe that any $2\times 2$ matrix is a zero of its own characteristic polynomial ({\itshape in fact this holds for square matrices of any size}).
 
 Now if $A=P^{-1}DP$ then $A^2=P^{-1}DPP^{-1}DP=P^{-1}D^2P$. Similarly $A^k=P^{-1} D^k P$. So for {\itshape any} matrix polynomial we have
-\begin{eqnarray}
-&& A^n + c_1 A^{n-1} + \cdots c_{n-1} A + c_n I \nonumber \\ &=& P^{-1}D^nP + c_1 P^{-1}D^{n-1}P + \cdots c_{n-1} P^{-1}DP + c_n P^{-1}P \nonumber \\ &=&
-P^{-1}( D^n + c_1 D^{n-1} + \cdots c_{n-1} D + c_n I)P\, .\nonumber
-\end{eqnarray}
+\begin{align*}
+& A^n + c_1 A^{n-1} + \cdots c_{n-1} A + c_n I \\
+&= P^{-1}D^nP + c_1 P^{-1}D^{n-1}P + \cdots c_{n-1} P^{-1}DP + c_n P^{-1}P \\
+&= P^{-1}( D^n + c_1 D^{n-1} + \cdots c_{n-1} D + c_n I)P\, .
+\end{align*}
 Thus we may conclude $P_A(A)=P^{-1} P_A(D) P$. 
 
 Now suppose 
