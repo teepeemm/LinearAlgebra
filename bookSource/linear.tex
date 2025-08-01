@@ -60,7 +60,22 @@
 \usepackage{makeidx}
 
 \usepackage{comment}
-\usepackage{shadow}
+%\usepackage{shadow}
+%\AddToHook{env/shabox/before}{\par\tagstructbegin{tag=Div}}
+%\AddToHook{env/shabox/after}{\par\tagstructend}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\AddToHook{env/tcolorbox/before}{\par\tagstructbegin{tag=Div}}
+\AddToHook{env/tcolorbox/after}{\par\tagstructend}
+\newcommand*{\shabox}[1]{\begin{tcolorbox}[
+	enhanced,
+%	borderline={.1pt}{0pt}{black}, % cannot get it thinner
+	colback=white,
+	drop shadow=black,
+	sharp corners,
+%	before upper={\setlength{\parindent}{14pt}},
+	add to width=-20pt,
+	halign=flush center]#1\end{tcolorbox}}
 \usepackage[english]{babel}
 \usepackage{blindtext}
 \usepackage{graphicx, color}
