@@ -88,7 +88,6 @@ Then he should find $a$ and $b$ to best fit the data.
 31 &= a\cdot 3 + b.
 \end{align*}
 As a system of linear equations, this becomes:
-
 \[
 \begin{pmatrix}
 1 & 1 \\
@@ -99,7 +98,6 @@ As a system of linear equations, this becomes:
 \colvec{11\\19\\31}.
 \]
 There is likely no actual straight line solution, so instead solve $M^TMX=M^TV$.
-
 \[
 \begin{pmatrix}
 1 & 2 & 3 \\
@@ -118,7 +116,6 @@ There is likely no actual straight line solution, so instead solve $M^TMX=M^TV$.
 \colvec{11\\19\\31}.
 \]
 This simplifies to 
-
 \[
 \begin{amatrix}{2}
 14 & 6 & 142 \\
@@ -131,7 +128,6 @@ This simplifies to
 \end{amatrix}.
 \]
 Thus, the least-squares fit is the line
-
 \[
 v = 10\ t + \frac{1}{3}\, .
 \]

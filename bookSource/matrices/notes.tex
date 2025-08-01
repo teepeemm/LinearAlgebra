@@ -294,12 +294,10 @@ and output basis
 E=\left(\colvec{1\\0\\0 } ,\colvec{0\\1\\0 } ,\colvec{0\\0\\1 }\right)\, .
 \]
 Then
-\[
-L b_1 = 0 e_1 + 1e_2+ 0  e_3 \, ,
-\]
-\[
+\begin{gather*}
+L b_1 = 0 e_1 + 1e_2+ 0  e_3 \, ,\\
 L b_2 = 0 e_1 + 1e_2+ 0  e_3 \, ,
-\]
+\end{gather*}
 or 
 \[
 \big(Lb_1, L b_2) = \big( (e_1,e_2,e_3)\colvec{0\\1\\0}, (e_1,e_2,e_3)\colvec{0\\1\\0}\big)=(e_1,e_2,e_3)\begin{pmatrix}0&0\\1&1\\0&0
@@ -455,7 +453,6 @@ Graphs occur in many applications, ranging from telephone networks to airline ro
 \includegraphics[width=10cm]{notes8-0.png}
 \end{center}
 For example, the graph pictured above would have the following matrix, where $m^i_j$ indicates the number of edges between the vertices labeled $i$~and~$j$:
-
 \[
 M = \begin{pmatrix}
 1 & 2 & 1 & 1 \\
@@ -534,7 +531,6 @@ Notice that in order for the multiplication to make sense, the columns and rows 
 
 \begin{example}
 Multiplying a $(3\times 1)$ matrix and a $(1\times 2)$ matrix yields a $(3\times 2)$ matrix.
-
 \[
 \colvec{1\\3\\2} \rowvec{2 & 3} = 
 \begin{pmatrix}
@@ -607,12 +603,10 @@ $ \Re^k \rightarrow \Re^r $
 via \[(MV)^i = \sum_{j=1}^{k} m_j^iv^j , \] which is the same rule used when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
 
 Likewise, we can use a matrix $N=(n^i_j)$ to define a linear transformation of a vector space of matrices. For example
-\[
-L \colon M^s_k \stackrel{N}{\longrightarrow} M^r_k\, ,
-\]
-\[
+\begin{gather*}
+L \colon M^s_k \stackrel{N}{\longrightarrow} M^r_k\, ,\\
 L(M)=(l^i_k) \mbox{ where } l^i_k= \sum_{j=1}^{s} n_j^im^j_k.
-\]
+\end{gather*}
 This is the same as the rule we use to multiply matrices. \hypertarget{leftmult}{In other words,} \(L(M)=NM\) is a linear transformation.
 
 \begin{definition}[Matrix Terminology]  
@@ -806,7 +800,6 @@ Notice how the endproducts of $MN$ and $NM$ are different, so $MN\neq NM$ here.
 \subsection{Block Matrices}
 
 It is often convenient to partition a matrix $M$ into smaller matrices called \hypertarget{blocks}{\emph{blocks}}. For example 
-
 \[
 M=\begin{pmat}{ccc|c}
 1 & 2 & 3 & 1 \\
@@ -932,7 +925,7 @@ f(M) = \begin{pmatrix}
 	1 & 3t \\
 	0 & 1 
 	\end{pmatrix} \\
-&=& \begin{pmatrix}
+= \begin{pmatrix}
 	2 & 6t \\
 	0 & 2 
 	\end{pmatrix}.
@@ -989,7 +982,6 @@ Thus we have a Theorem:
 
 \begin{example}
 Continuing from the previous example, 
-
 \[
 M= \begin{pmatrix}
 1 & 1 \\
@@ -1268,7 +1260,6 @@ If $M^{-1}$ exists and is known, then we can immediately solve linear systems as
 
 \begin{example}
 Consider the linear system:
-
 \[
       \begin{linsys}{2}
             -x & +2y & -3z         &=& 1  \\[1mm]
@@ -1277,7 +1268,6 @@ Consider the linear system:
       \end{linsys}
 \]
 The associated matrix equation is $MX=\colvec{1\\2\\0},$ where \(M\) is the same as in the previous section, so the system above is equivalent to the matrix equation
-
 \[
 \colvec{x\\y\\z}=\begin{pmatrix}
 -1 & 2 & -3 \\
@@ -1357,7 +1347,6 @@ $\begin{pmatrix}
 0 & 1 & 1 \\
 1 & 1 & 1 \\
 \end{pmatrix}$ is an invertible matrix over $\Z_2$;
-
 \[\begin{pmatrix}
 1 & 0 & 1 \\
 0 & 1 & 1 \\
@@ -1370,7 +1359,6 @@ $\begin{pmatrix}
 \]
 
 This can be easily verified by multiplying:
-
 \[\begin{pmatrix}
 1 & 0 & 1 \\
 0 & 1 & 1 \\
@@ -1462,14 +1450,11 @@ This is a useful trick for  computational reasons; it is much easier to compute 
 
 \begin{example}
 Linear systems associated to upper triangular matrices are very easy to solve by back substitution.
-\[
+\begin{gather*}
 \begin{amatrix}{2}
 a & b & 1 \\
 0 & c & e \\
-\end{amatrix} \ \Rightarrow \ y=\frac{e}{c}\, , \quad x=\frac{1}{a}\left(1-\frac{be}{c}\right)
-\]
-
-\[
+\end{amatrix} \ \Rightarrow \ y=\frac{e}{c}\, , \quad x=\frac{1}{a}\left(1-\frac{be}{c}\right)\\
 \begin{amatrix}{3}
 1 & 0 & 0 & d \\
 a & 1 & 0 & e \\
@@ -1479,7 +1464,7 @@ b & c & 1 & f \\
 \left\{    \begin{array}{l} x=d\\   y=e-ax\\  z=f-bx-cy \end{array} \right\}
 \Rightarrow 
 \left\{    \begin{array}{l} x=d\\   y=e-ad\\  z=f-bd-c(e-ad) \end{array} \right. .
-\]
+\end{gather*}
 For lower triangular matrices, 
 \emph{forward} substitution\index{Forward substitution} 
 gives a quick solution; for upper triangular matrices, 
@@ -1543,7 +1528,6 @@ An $LU$ decomposition for the associated matrix $M$ is
 \item{Step 1:} \hypertarget{LUproc}{Set} $W=\colvec{u\\v\\w}=UX$.  
 
 \item{Step 2:} Solve the system $LW=V$:
-
 \[
 \begin{pmatrix}
 3 & 0 & 0 \\
@@ -1767,7 +1751,6 @@ Let's find the $LU$ decomposition of $M=U_0=\begin{pmatrix}
 \end{pmatrix}$.
 
 The next step is to zero-out the first column of $M$ below the diagonal.  There is only one row to cancel, then, and it can be removed by subtracting $2$ times the first row of $M$ to the second row of $M$.  Then:
-
 \[
 L_1=\begin{pmatrix}
 1 & 0 \\

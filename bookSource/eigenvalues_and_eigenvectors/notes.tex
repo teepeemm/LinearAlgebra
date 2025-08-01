@@ -250,7 +250,6 @@ We will start by trying to find the eigenvectors for a linear transformation.
 
 \begin{example}
 Let $L \colon \Re^2\rightarrow \Re^2$ such that $L(x,y)=(2x+2y, 16x+6y)$.  First, we  find the matrix of $L$, this is quickest in the standard basis:
-
 \[
 \colvec{x\\y}\stackrel{L}{\longmapsto} \begin{pmatrix}
 2 & 2 \\
@@ -381,17 +380,14 @@ This equation says that the direction of $v$ is invariant (unchanged) under~$L$.
 Let's try to understand this equation better in terms of matrices.
 Let $V$ be a finite-dimensional vector space and let $L \colon V\rightarrow V$.  
 If we have a basis for $V$ we can represent $L$ by a square matrix $M$ and find eigenvalues $\lambda$ and associated eigenvectors $v$ by solving the homogeneous system
-
 \[
 (M-\lambda I)v=0.
 \]
 This system has non-zero solutions if and only if the matrix
-
 \[
 M-\lambda I
 \]
 is singular, and so we require that
-
 \[
 \det (\lambda I-M) = 0.
 \]
@@ -424,7 +420,6 @@ The eigenvalues $\lambda_i$ of $M$ are exactly the roots of $P_M(\lambda)$.  The
 Let $L$ be the linear transformation $L \colon \Re^3\rightarrow \Re^3$ given by 
 \[L\colvec{x\\y\\z}=\ccolvec{2x+y-z\\ x+2y-z\\ -x-y+2z}\, .\] 
 In the standard basis the matrix $M$ representing $L$ has columns $Le_i$ for each $i$, so:
-
 \[
 \colvec{x\\y\\z} \stackrel{L}{\longmapsto} 
 \begin{pmatrix}

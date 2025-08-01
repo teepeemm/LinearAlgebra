@@ -15,7 +15,6 @@ R^i(\lambda)=
 \end{pmatrix}
 \, .\]
 Then:
-
 \[
 M'=R^i(\lambda)M=\colvec{R^1 \\ \vdots \\ \lambda R^i \\ \vdots \\ R^n }
 \]
@@ -38,7 +37,6 @@ Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
 
 
 Since $R^i(\lambda)$ is just the identity matrix with a single row multiplied by $\lambda$, then by the above rule, the determinant of $R^i(\lambda)$ is $\lambda$.  Thus:
-
 \[
 \det R^i(\lambda) = \det \begin{pmatrix}
 1 & & & & \\
@@ -50,7 +48,6 @@ Since $R^i(\lambda)$ is just the identity matrix with a single row multiplied by
 \]
 
 The final row operation is adding $\lambda R^j$ to $R^i$.  This is done with the matrix~$S^i_j(\lambda)$, which is an identity matrix but with a $\lambda$ in the $i,j$ position.
-
 \[
 S^i_j(\lambda) = \begin{pmatrix}
 1 & 	& 	& 	& & & 	\\
@@ -63,7 +60,6 @@ S^i_j(\lambda) = \begin{pmatrix}
 \end{pmatrix}
 \]
 Then multiplying $S^i_j(\lambda)$ by $M$ gives the following:
-
 \[
 \begin{pmatrix}
 1 & 	& 	& 	& & & 	\\
@@ -95,7 +91,6 @@ Notice that if $M$ is the identity matrix, then we have \[\det S^i_j(\lambda) = 
 \end{figure}
 
 We now have elementary matrices associated to each of the row operations.
-
 \[
 \begin{array}{cccc}
 E^i_j &=& I \text{ with rows $i,j$ swapped;} &\det E^i_j=-1 \\[3mm]

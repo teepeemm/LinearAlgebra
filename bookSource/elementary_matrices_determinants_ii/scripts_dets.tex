@@ -25,7 +25,7 @@ Moreover, we also know what row operations do to determinants:
 \item Row addition $S^i_j(\lambda)$: adding some amount of one row to another does not change the determinant.
 \end{itemize}
 The corresponding elementary matrices are obtained by performing exactly these operations on the identity:
-\[
+\begin{gather*}
 E^i_j=\begin{pmatrix}
 1 & & & & & & \\
 & \rotatebox{-15}{$\ddots$} & & & & & \\[1mm]
@@ -34,10 +34,7 @@ E^i_j=\begin{pmatrix}
 & & 1 & & 0 & & \\
 & & & & & \rotatebox{-15}{$\ddots$}& \\
 & & & & & & 1 \\
-\end{pmatrix}\, ,
-\]
-
-\[
+\end{pmatrix}\, ,\\
 R^i(\lambda)=
 \begin{pmatrix}
 1 & & & & \\
@@ -46,9 +43,7 @@ R^i(\lambda)=
   & & & \rotatebox{-15}{$\ddots$} & \\
   & & & & 1 \\
 \end{pmatrix}
-\, ,\]
-
-\[
+\, ,\\
 S^i_j(\lambda) = \begin{pmatrix}
 1 & 	& 	& 	& & & 	\\
   & \rotatebox{-15}{$\ddots$} & 	&	& & &	\\
@@ -58,7 +53,7 @@ S^i_j(\lambda) = \begin{pmatrix}
   & 	& 	& 	& 	& \rotatebox{-15}{$\ddots$}& 	\\
   & 	& 	& 	& 	& 	 & 1	\\
 \end{pmatrix}
-\]
+\end{gather*}
 So to calculate their determinants, we just have to apply the above list of what happens to the determinant of a matrix under row operations to the determinant of the identity. This yields
 \[
 \det E^i_j=-1\, ,\qquad

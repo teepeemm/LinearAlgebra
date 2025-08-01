@@ -22,8 +22,6 @@ m^2_1 & m^2_2 \\
 m^2_2 & -m^1_2 \\[1mm]
 -m^2_1 & m^1_1 \\
 \end{pmatrix}\, .\] Thus $M$ is invertible if and only if 
-\vspace{.3cm}
-
 \[m^1_1m^2_2-m^1_2m^2_1\neq 0\, .\]  For $2\times 2$ matrices, this quantity is called the \emph{determinant of $M$}\index{Determinant!$2\times 2$ matrix}.
 \[
 \det M = \det \begin{pmatrix}
@@ -145,7 +143,7 @@ For a $4\times 4$ matrix, $M=\begin{pmatrix}
 m^1_1 & m^1_2 & m^1_3 & m^1_4\\[1mm]
 m^2_1 & m^2_2 & m^2_3 & m^2_4\\[1mm]
 m^3_1 & m^3_2 & m^3_3 & m^3_4\\[1mm]
-m^4_1 & m^4_2 & m^4_3 & m^4_4\\
+m^4_1 & m^4_2 & m^4_3 & m^4_4
 \end{pmatrix}$, then $\det M$ is:
 \begin{align*}
 \det M
@@ -342,7 +340,6 @@ Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
 
 
 Since $R^i(\lambda)$ is just the identity matrix with a single row multiplied by $\lambda$, then by the above rule, the determinant of $R^i(\lambda)$ is $\lambda$.  Thus
-
 \[
 \det R^i(\lambda) = \det \begin{pmatrix}
 1 & & & & \\
@@ -359,7 +356,6 @@ and once again we have a product of determinants formula
 
 \subsection{Row Addition}
 The final row operation is adding $\mu R^j$ to $R^i$.  This is done with the elementary matrix~$S^i_j(\mu)$, which is an identity matrix but with an additional  $\mu$ in the $i,j$ position;
-
 \[
 S^i_j(\mu) = \begin{pmatrix}
 1 & 	& 	& 	& & & 	\\
@@ -372,7 +368,6 @@ S^i_j(\mu) = \begin{pmatrix}
 \end{pmatrix}\, .
 \]
 Then multiplying $M$ by $S^i_j(\mu)$  performs a row addition;
-
 \[
 \begin{pmatrix}
 1 & 	& 	& 	& & & 	\\
@@ -420,7 +415,6 @@ Notice that if $M$ is the identity matrix, then we have \[\det S^i_j(\mu) = \det
 
 \subsection{Determinant of Products}
 In summary, the elementary matrices for each of the row operations obey
-
 \[
 \begin{array}{cccc}
 E^i_j &=& I \text{ with rows $i,j$ swapped;} &\det E^i_j=-1 \\[3mm]
@@ -693,7 +687,6 @@ For any permutation $\sigma$, there is a unique inverse permutation $\sigma^{-1}
 1 & 2 & 3 \\
 2 & 3 & 1
 \end{bmatrix}$, then we can find $\sigma^{-1}$ by flipping the permutation and then putting the columns in order:
-
 \[
 \sigma^{-1}=\begin{bmatrix} 
 2 & 3 & 1 \\
@@ -741,7 +734,6 @@ Because of this, we see that expansion by minors also works over columns.  Let \
 
 Let $M$ and $N$ be $n\times n$ matrices.
 We previously showed that 
-
 \[
 \det (MN)=\det M \det N \text{, and } \det I=1.
 \]

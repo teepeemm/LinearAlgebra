@@ -19,13 +19,11 @@ If you are wondering what it means to be in the span of these polynomials here i
 Linear combinations where the polynomials are multiplied by scalars in $\mathbb{R}$ is fine. We are not allowed to multiply the polynomials together, since in a vector space there is not necessarily a notion of multiplication for two vectors.
 
 Lets put this problem in the language of matrices. Since we can write $x^2 = 0 + 0x+1x^2 +0x^3$ we can write it as a column vector, where the coefficient of each of the terms is an entry.
-
 \[
 x^2 =\colvec{0\\0\\1\\0} \text{ , } 2x+x^2 =\colvec{0\\2\\1\\0} \text{ and }
 x+x^3 =\colvec{0\\1\\0\\1}
  \]
 Since we want to find out if $x-x^3 =\colvec{0\\1\\0\\-1}$ is in the span of these polynomials above we can ask, do there exist $r_1$, $r_2$ and $r_3$ such that 
-
 \[
 \begin{bmatrix}
 0& 0& 0\\
