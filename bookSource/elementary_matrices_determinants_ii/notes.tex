@@ -3,7 +3,7 @@
 
 In section~\ref{elementarydeterminants}, we saw the definition of the determinant and derived an elementary matrix that exchanges two rows of a matrix.  Next, we need to find elementary matrices corresponding to the other two row operations; multiplying a row by a scalar, and adding a multiple of one row to another.  As a consequence, we will derive some important properties of the determinant.
 
-Consider $M=\colvec{R^1 \\ \vdots \\ R^n }$, where $R^i$ are row vectors.  Let $R^i(\lambda)$ be the identity matrix, with the $i$th diagonal entry replaced by $\lambda$, not to be confused with the row vectors. {\it I.e.}
+Consider $M=\colvec{R^1 \\ \vdots \\ R^n }$, where $R^i$ are row vectors.  Let $R^i(\lambda)$ be the identity matrix, with the $i$th diagonal entry replaced by $\lambda$, not to be confused with the row vectors. {\itshape I.e.}
 \[
 R^i(\lambda)=
 \begin{pmatrix}
@@ -27,7 +27,7 @@ What effect does multiplication by $R^i(\lambda)$ have on the determinant?
 & = & \lambda \det M
 \end{eqnarray*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
-{\it I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
+{\itshape I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
 
 
 \begin{figure}
@@ -153,7 +153,7 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\lambda)$ is invertible, excep
 \end{corollary}
 
 
-To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\it i.e.}, $M$ is invertible), then:
+To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\itshape i.e.}, $M$ is invertible), then:
 
 \begin{eqnarray*}
 \det (MN) & = & \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
@@ -181,12 +181,12 @@ Otherwise, $M$ is not invertible, and $\det M=0=\det
 \end{eqnarray*}
 Which implies that $\det (MN)=0=\det M \det N$.
 
-Thus we have shown that for {\it any} matrices $M$ and $N$, 
+Thus we have shown that for {\itshape any} matrices $M$ and $N$, 
 \label{detmultiplicative}
 \[
 \det (MN) = \det M \det N
 \]
-This result is {\it extremely important}; do not forget it!
+This result is {\itshape extremely important}; do not forget it!
 
 \videoscriptlink{elementary_matrices_determinant_ii_product.mp4}{Alternative proof}{scripts_elementary_matrices_determinants_ii_product}
 

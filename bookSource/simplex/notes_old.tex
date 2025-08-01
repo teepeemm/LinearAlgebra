@@ -12,7 +12,7 @@ are a focus of fields such as
 For the case where the functions involved are linear,  these problems go under the
 title  
 \href{http://en.wikipedia.org/wiki/Linear_programming}{
-{{\it linear programming}}\index{linear programming}}. Originally these ideas were driven by military applications,
+{{\itshape linear programming}}\index{linear programming}}. Originally these ideas were driven by military applications,
 but by now are ubiquitous in science and industry. Gigantic computers are dedicated to implementing linear programming methods such as
 George Dantzig's 
 \href{http://en.wikipedia.org/wiki/Simplex_algorithm}{simplex algorithm}--the topic of this chapter.
@@ -63,8 +63,8 @@ The problem is asking us to minimize $s$ subject to the four linear inequalities
 Before giving a more general algorithm for handling this problem and problems like it, we note that when
 the number of variables is small (preferably~2), a graphical technique can be used.
 
-Inequalities, such as the four given in Pablo's problem, are often called {\it constraints}, and values of the variables that 
-satisfy these constraints comprise the so-called {\it feasible region}. 
+Inequalities, such as the four given in Pablo's problem, are often called {\itshape constraints}, and values of the variables that 
+satisfy these constraints comprise the so-called {\itshape feasible region}. 
 Since there are only two variables, this is easy to plot:
 
 \begin{example}(Constraints and feasible region)
@@ -115,7 +115,7 @@ there are extrema {\bf inside} the interval.
 \section{Dantzig's Algorithm}\label{dantzig}
 
 In simple situations a graphical method might suffice, but in many applications there may be thousands or even millions of variables 
-and constraints. Clearly an algorithm that can be implemented on a computer is needed. The {\it simplex algorithm} (usually attributed to George Dantzig) provides exactly that. It begins with a standard problem:
+and constraints. Clearly an algorithm that can be implemented on a computer is needed. The {\itshape simplex algorithm} (usually attributed to George Dantzig) provides exactly that. It begins with a standard problem:
 
 \begin{problem}
 Maximize $f(x_1,\ldots,x_n)$ where $f$ is linear, $x_i\geq 0$ ($i=1,\ldots, n$) subject~to  
@@ -297,7 +297,7 @@ so are not of the form $Mx = v$. To achieve this we introduce two new positive v
 \[
 c_1:=x_1+x_2-x_3=3\, ,\quad c_2:=x_1 + x_2 + x_4=13\, .
 \]
-These are called {\it slack variables} because they take up the ``slack'' required to convert inequality to equality.
+These are called {\itshape slack variables} because they take up the ``slack'' required to convert inequality to equality.
 This pair of equations can now be written as $Mx=v$,
 \[
 \begin{pmatrix}
@@ -307,7 +307,7 @@ This pair of equations can now be written as $Mx=v$,
 \colvec{x_1\\x_2\\x_3\\x_4}=
 \colvec{3\\\!13}\, .
 \]
-Finally, Pablo wants to minimize sugar $s=5x+10y$, but the standard problem maximizes $f$. Thus the so-called {\it objective function}
+Finally, Pablo wants to minimize sugar $s=5x+10y$, but the standard problem maximizes $f$. Thus the so-called {\itshape objective function}
 $f=-s+95=-5x_1-10x_2$. (Notice that it makes no difference whether we maximize $-s$ or $-s+95$, we choose the latter since it is
 a linear function of $(x_1,x_2)$.)
 Now we can build an augmented matrix whose last row reflects  the objective function equation $5 x_1+10 x_2 +f=0$:
@@ -320,7 +320,7 @@ Now we can build an augmented matrix whose last row reflects  the objective func
 \]
 Here it seems that the simplex algorithm already terminates because the last row only has positive coefficients, so that setting $x_1=0=x_2$
 would be optimal. However, this does not solve the constraints (for positive values of the slack variables $x_3$ and $x_4$).
-Thus one more (very dirty) trick is needed. We add two more, positive, (so-called) {\it artificial variables} $x_5$ and $x_6$ to the problem
+Thus one more (very dirty) trick is needed. We add two more, positive, (so-called) {\itshape artificial variables} $x_5$ and $x_6$ to the problem
 which we use to shift each constraint 
 \[
 c_1\to c_1-x_5\, ,\qquad c_2\to c_2-x_6\, .

@@ -2,9 +2,9 @@
 
 \chapter{\kernelTitle}\label{kernelrank}
 
-Given a linear transformation \[L \colon V \to W\, ,\] we often want  to know if it has an inverse, {\it i.e.}, if there exists a linear transformation \[M \colon W \to V\] such that for any vector \(v \in V\), we have \[MLv=v\, ,\] and for any vector \(w \in W\), we have \[LMw=w\, .\] A linear transformation is a special kind of function from one vector space to another. So before we discuss which linear transformations have inverses, let us first discuss inverses of arbitrary functions. When we later specialize to linear transformations, we'll also find some nice ways of creating subspaces.
+Given a linear transformation \[L \colon V \to W\, ,\] we often want  to know if it has an inverse, {\itshape i.e.}, if there exists a linear transformation \[M \colon W \to V\] such that for any vector \(v \in V\), we have \[MLv=v\, ,\] and for any vector \(w \in W\), we have \[LMw=w\, .\] A linear transformation is a special kind of function from one vector space to another. So before we discuss which linear transformations have inverses, let us first discuss inverses of arbitrary functions. When we later specialize to linear transformations, we'll also find some nice ways of creating subspaces.
 
-Let \(f \colon S \to T\) be a function from a set \(S\) to a set \(T\). \href{\webworkurl Homework0-Background/3/}{Recall} that \(S\) is called the {\it domain} of \(f\), \(T\) is called the {\it codomain} or {\it target} of \(f\).  
+Let \(f \colon S \to T\) be a function from a set \(S\) to a set \(T\). \href{\webworkurl Homework0-Background/3/}{Recall} that \(S\) is called the {\itshape domain} of \(f\), \(T\) is called the {\itshape codomain} or {\itshape target} of \(f\).  
 We now formally introduce a term that should be familar to you from many previous courses.
 
 \section{Range}
@@ -16,7 +16,7 @@ The {\bf range}  of a function $f:S\to T$ is  the set
 \]
 %is called\(f\). 
 \end{definition} 
-It is the subset of the codomain consisting of elements  to which the function \(f\) maps, {\it i.e.}, the things in \(T\) which you can get to by starting in \(S\) and applying \(f\). 
+It is the subset of the codomain consisting of elements  to which the function \(f\) maps, {\itshape i.e.}, the things in \(T\) which you can get to by starting in \(S\) and applying \(f\). 
 
 The range of a matrix is very easy to find; the range of a matrix is the span of its columns. 
 Thus, calculation of the range of a matrix is very easy until the last step: simplification. One aught to end by the calculation by writing the vector space as the span of a linearly independent set. 
@@ -261,7 +261,7 @@ A function \(f \colon S \to T\) has an inverse function \(g \colon T \to S\) if 
 \begin{proof}
 This is an ``if and only if'' statement  so the proof has two parts.
 \begin{enumerate}
-\item {\it (Existence of an inverse $\Rightarrow$ bijective.)}
+\item {\itshape (Existence of an inverse $\Rightarrow$ bijective.)}
 
 Suppose that \(f\) has an inverse function \(g\). We need to show $f$ is bijective, which
 we break down into injective and surjective.
@@ -273,14 +273,14 @@ Suppose that we have \(s,s' \in S\) such that \(f(s)=f(s')\). We must have that 
 Let \(t\) be any element of \(T\). We must have that \(f(g(t))=t\). Thus, \(g(t)\) is an element of \(S\) which maps to \(t\). So \(f\) is surjective.
 \end{itemize}
 
-\item {\it (Bijectivity $\Rightarrow$ existence of an inverse.)}
+\item {\itshape (Bijectivity $\Rightarrow$ existence of an inverse.)}
 Suppose that \(f\) is bijective. Hence \(f\) is surjective, so every element \(t \in T\) has at least one pre-image. Being bijective, \(f\) is also injective, so every \(t\) has no more than one pre-image. Therefore, to construct an inverse function \(g\), we simply define \(g(t)\) to be the unique pre-image \(f^{-1}(t)\) of \(t\).
 \end{enumerate}
 \end{proof}
 
-Now let us specialize to functions \(f\) that are linear maps between two vector spaces. Everything we said above for arbitrary functions is exactly the same for linear functions. However, the structure of vector spaces lets us say much more about one-to-one and onto functions whose domains are vector spaces than we can say about functions on general sets.  For example, we know that a linear function always sends $0_V$ to $0_W$, {\it i.e.},
+Now let us specialize to functions \(f\) that are linear maps between two vector spaces. Everything we said above for arbitrary functions is exactly the same for linear functions. However, the structure of vector spaces lets us say much more about one-to-one and onto functions whose domains are vector spaces than we can say about functions on general sets.  For example, we know that a linear function always sends $0_V$ to $0_W$, {\itshape i.e.},
 \Shabox{1.1}{$f(0_V)=0_W$}  
-In Review Exercise~\ref{injectivekernalprob}, you will show that a linear transformation is one-to-one if and only if $0_V$ is the only vector that is sent to $0_W$. Linear functions are unlike  arbitrary functions between sets in that, by looking at {\it just one} (very special) vector, we can figure out whether $f$ is one-to-one!  
+In Review Exercise~\ref{injectivekernalprob}, you will show that a linear transformation is one-to-one if and only if $0_V$ is the only vector that is sent to $0_W$. Linear functions are unlike  arbitrary functions between sets in that, by looking at {\itshape just one} (very special) vector, we can figure out whether $f$ is one-to-one!  
 \subsection{Kernel}
 Let \(L \colon V \to W\) be a linear transformation. Suppose \(L\) is \emph{not} injective.  Then we can find $v_1 \neq v_2$ such that $Lv_1=Lv_2$.  So $v_1-v_2\neq 0$, but
 \[
@@ -450,7 +450,7 @@ Thus
 \[
 L({\mathbb R}^2)=\spa \left\{\colvec{1\\1\\0},\colvec{1\\2\\1}\right\}
 \]
-Hence, when  bases and a linear transformation is are given, people often refer to its range as the {\it column space}\index{Column space}
+Hence, when  bases and a linear transformation is are given, people often refer to its range as the {\itshape column space}\index{Column space}
 of the corresponding matrix.
 \end{example}
 
@@ -521,9 +521,9 @@ Suppose $M$ is an $m\times n$ matrix. The matrix  $M$ itself is a linear transfo
 \[
 L:V\stackrel{\rm linear}\longrightarrow W\, .
 \]
-Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\it column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\it i.e.} the nullity:  $ {\rm null}\, L= {\rm dim}V-{\rm rank}L=n-r$. 
+Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\itshape column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\itshape i.e.} the nullity:  $ {\rm null}\, L= {\rm dim}V-{\rm rank}L=n-r$. 
 
-To compute the kernel we would study the linear system \[Mx=0\, ,\] which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\it row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
+To compute the kernel we would study the linear system \[Mx=0\, ,\] which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\itshape row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
 Each linearly independent row of $M$ gives an independent equation satisfied by the $n$-vector $x$. Every independent equation on $x$ reduces the size of the kernel by one, so if the row rank is $s$, then ${\rm null}\, L+ s = n$.  Thus we have two equations: 
 \[
 {\rm null}\, L+s=n \mbox{ and } {\rm null } \, L = n-r\, .
@@ -534,7 +534,7 @@ From these we conclude the $r=s$. In other words, the row rank of $M$ equals its
 
 
 \section{Summary}\label{thelist}
-We have seen that a linear transformation has an inverse if and only if it is bijective ({\it i.e.}, one-to-one and onto). We also know that linear transformations can be represented by matrices, and we have seen many ways to tell whether a matrix is invertible. Here is a list of them:
+We have seen that a linear transformation has an inverse if and only if it is bijective ({\itshape i.e.}, one-to-one and onto). We also know that linear transformations can be represented by matrices, and we have seen many ways to tell whether a matrix is invertible. Here is a list of them:
 \begin{theorem}[Invertibility]
 \label{theorem:invertibility}
 Let $V$  be an $n$-dimensional vector space  

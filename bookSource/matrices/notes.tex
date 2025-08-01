@@ -75,7 +75,7 @@ You should read this equation by saying:
 \end{quote}
 
 Again, the first notation of a column vector with a subscript~$E$ refers to the vector obtained by multiplying each basis vector
-by the corresponding scalar listed in the column and then  summing these, {\it i.e.} $xe_1+y e_2$. 
+by the corresponding scalar listed in the column and then  summing these, {\itshape i.e.} $xe_1+y e_2$. 
 The second notation denotes exactly the same thing but we first list the basis elements and then the column vector; a useful trick
 because this can be read in the same way as matrix multiplication of a row vector times a column vector--except that the entries of the row vector are themselves vectors! 
 \end{example}
@@ -105,7 +105,7 @@ As functions of $\{1,2\}$ they read
    \right.
 \end{displaymath} 
 
-Notice something important: there is no reason to say that $\beta$ comes before $b$ or vice versa. That is, there is no {\it a priori} reason to give these basis elements one order or the other. 
+Notice something important: there is no reason to say that $\beta$ comes before $b$ or vice versa. That is, there is no {\itshape a priori} reason to give these basis elements one order or the other. 
 However, it will be necessary to give the basis elements an order if we want to use them to encode other vectors.  We choose one arbitrarily; let \[B=(b,\beta)\] be the ordered basis. Note that for an unordered set we use the $\{\}$ parentheses while for lists or ordered sets we use $()$. 
 
 As before we define 
@@ -182,7 +182,7 @@ B=(\sigma_x,\sigma_y,\sigma_z)\, ,
 \sigma_y=\begin{pmatrix}0&-i\\i&0\end{pmatrix}\, ,\quad
 \sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}\, .
 \]
-These three matrices are the famous {\it Pauli matrices}\index{Pauli Matrices}; they are used to describe electrons in quantum theory, or qubits in quantum computation.
+These three matrices are the famous {\itshape Pauli matrices}\index{Pauli Matrices}; they are used to describe electrons in quantum theory, or qubits in quantum computation.
 Let 
 \[
 v=\begin{pmatrix}
@@ -200,7 +200,7 @@ For this we must solve the equation
 \begin{pmatrix}0&-i\\i&0\end{pmatrix}+\alpha^z
 \begin{pmatrix}1&0\\0&-1\end{pmatrix}\, .
 \]
-This gives four equations, {\it i.e.} a linear systems problem, for the $\alpha$'s
+This gives four equations, {\itshape i.e.} a linear systems problem, for the $\alpha$'s
 \[
 \left\{
 \begin{array}{rrrrr}
@@ -223,13 +223,13 @@ v=\begin{pmatrix}
 \]
 \end{example}
 
-To summarize, the {\it column vector 
+To summarize, the {\itshape column vector 
 of a vector}\index{Column vector! of a vector} $v$ in an ordered basis $B=(b_1,b_2,\ldots,b_n)$,
 \[\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}\, ,\] is defined by solving the linear systems problem
 \[
 v=\alpha^1 b_1 + \alpha^2b_2 +\cdots + \alpha^n b_n = \sum_{i=1}^n \alpha^i b_i\, .
 \]
-The numbers $(\alpha^1,\alpha^2,\ldots,\alpha^n)$ are called the {\it components of the vector}\index{Components of a vector}~$v$.
+The numbers $(\alpha^1,\alpha^2,\ldots,\alpha^n)$ are called the {\itshape components of the vector}\index{Components of a vector}~$v$.
 Two useful shorthand notations for this are
 \[
 v=\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}_B = (b_1,b_2,\ldots,b_n)\ccolvec{\alpha^1\\\alpha^2\\\vdots\\\alpha^n}\, .
@@ -422,7 +422,7 @@ The numbers $m^i_j$ are called {\bf entries}\index{Matrix!entries of}.  The supe
 %It is often useful to consider matrices whose entries are more general than the real numbers, so we allow that possibility.
 
 An $r\times 1$ matrix $v = (v^r_1) = (v^r)$ is called a \emph{column vector}\index{Column vector}, written \[v = \ccolvec{v^1\\v^2\\ \vdots \\ v^r }\, .\]  A $1\times k$ matrix $v = (v^1_k) = (v_k)$ is called a \emph{row vector}\index{Row vector}, written \[v = \rowvec{v_1 & v_2 & \cdots & v_k }\, .\]  
-The {\it transpose of a column vector}\index{Transpose!of a column vector} is the corresponding row vector and vice versa:
+The {\itshape transpose of a column vector}\index{Transpose!of a column vector} is the corresponding row vector and vice versa:
 
 \begin{example}
 Let 
@@ -433,7 +433,7 @@ Then
 \[
 v^T=\rowvec{1 &2 &3}\, ,
 \]
-and $(v^T)^T=v$. This is an example of an {\it involution}\index{Involution}, namely an operation which when performed twice does nothing.
+and $(v^T)^T=v$. This is an example of an {\itshape involution}\index{Involution}, namely an operation which when performed twice does nothing.
 \end{example}
 
 A matrix is  an efficient way to store information.
@@ -705,11 +705,11 @@ The proof of this theorem is left to \hyperref[MN=NTMT]{Review Question~\ref*{MN
 Many properties of matrices following from the same property for real numbers. Here is an example.
 
 \begin{example}
-{\it Associativity of matrix multiplication.} We know for real numbers $x$, $y$ and $z$ that 
+{\itshape Associativity of matrix multiplication.} We know for real numbers $x$, $y$ and $z$ that 
 \[
 x(yz)=(xy)z\, ,
 \]
-{\it i.e.}, the order of multiplications does not matter. The same property holds for matrix multiplication, let us show why.
+{\itshape i.e.}, the order of multiplications does not matter. The same property holds for matrix multiplication, let us show why.
 Suppose $M=\big( m^i_j \big)$, $N=\big( n^j_k \big)$ and  $R=\big( r^k_l \big)$ are, 
 respectively, $m\times n$, $n\times r$ and $r\times t$ matrices. Then from the rule for matrix
 multiplication we have
@@ -737,7 +737,7 @@ $(MN)R=(m^i_j n^j_k) r^k_l= m^i_j n^j_k r^k_l = m^i_j (n^j_k r^k_l ) = M(NR)$.}
 
 
 Sometimes matrices do not share the properties of regular numbers. 
-In particular, for {\it generic} $n\times n$ square matrices $M$ and $N$, 
+In particular, for {\itshape generic} $n\times n$ square matrices $M$ and $N$, 
 \begin{center}
 \shabox{\scalebox{1.1}{
 $MN\neq NM\, .$ }}
@@ -1193,7 +1193,7 @@ many columns on the right
 
 To compute $M^{-1}$, we would like $M^{-1}$, rather than $M^{-1}V$ to appear on the right side of our augmented matrix.
 This is achieved by  solving the collection of systems $MX=e_k$, where $e_k$ is the column vector of zeroes with a $1$ in the $k$th entry.  
-{\it I.e.,} the $n\times n$ identity matrix can be viewed as a bunch of column vectors $I_n=(e_1 \ e_2 \ \cdots e_n)$. So, putting the $e_k$'s together into an identity matrix, we get:
+{\itshape I.e.,} the $n\times n$ identity matrix can be viewed as a bunch of column vectors $I_n=(e_1 \ e_2 \ \cdots e_n)$. So, putting the $e_k$'s together into an identity matrix, we get:
 \[
 \begin{amatrix}{1}
 M & I
@@ -1396,11 +1396,11 @@ To make the message a bit tougher to decode, one could consider pairs (or longer
 For more on cryptography, see ``The Code Book,'' by Simon Singh (1999, Doubleday).
 \end{remark}
 
-%{\it You should now be ready to attempt the \hyperref[sample1]{first sample midterm}.}
+%{\itshape You should now be ready to attempt the \hyperref[sample1]{first sample midterm}.}
 %\begin{center}
 %\shabox{
 %\begin{tabular}{c}
-%\it \hyperref[sample1]{You are now ready to attempt the first sample midterm}. 
+%\itshape \hyperref[sample1]{You are now ready to attempt the first sample midterm}. 
 %\\
 %\hyperref[sample1]{\includegraphics[scale=.15]{midterm.jpg}}
 %\end{tabular}

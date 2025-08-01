@@ -94,7 +94,7 @@ so that inputs are interpreted as
 $\colvec{s_{G}\\s_ {A}\\s_{N}}$ 
 .} 
 \end{center}
-%as a concise reminder of how to calculate the output assigned to any particular input ... {\it but only if you know what the input means}. 
+%as a concise reminder of how to calculate the output assigned to any particular input ... {\itshape but only if you know what the input means}. 
 %The input is a column of three numbers. 
 %You need to know to interpret the 
 %top number as stock in company $a$, 
@@ -131,8 +131,8 @@ Thus, it is critical to make clear which ordering is used if the reader is to un
 Doing so is a way of organizing information. 
 
 This example is a hint at a much bigger idea central to the text; 
-our choice of order is an example of choosing a {\it basis}\footnote{
-Please note that this is an {\it example} of choosing a basis, 
+our choice of order is an example of choosing a {\itshape basis}\footnote{
+Please note that this is an {\itshape example} of choosing a basis, 
 not a statement of the definition of the technical term ``basis". 
 You can no more learn the definition of ``basis"  from this example 
 than learn the definition of  ``bird" by seeing a penguin.}\!\!. 
@@ -210,7 +210,7 @@ above, you can probably guess how to multiply a vector by a scalar. For example
 \]
 
  A very special vector can be produced from any vector of any kind by scalar multiplying any vector by the number~$0$. 
-This is called the {\it zero vector}\index{Zero vector} and is usually denoted simply $0$. This gives five very different kinds of zero from the 5 different kinds of vectors in   examples A-E above.
+This is called the {\itshape zero vector}\index{Zero vector} and is usually denoted simply $0$. This gives five very different kinds of zero from the 5 different kinds of vectors in   examples A-E above.
 \begin{enumext}[label=\Alph*,wrap-label=(#1)]
 \item $0(3)=0$ (The zero number)
 \item $0\colvec{1\\1\\0}=\colvec{0\\0\\0} $ (The zero 3-vector)
@@ -294,7 +294,7 @@ The machine needed for example~(\ref{FVC}) looks like it has just one input and 
 \[\quad p \raisebox{-11mm}{\includegraphics[scale=.14]{\whatIsPath//machine_blank.jpg} }\! \! \!\! \! \!\colvec{\int_{-1}^1  p(y) dy\\[3mm]
 \int_{-1}^1 y p(y) dy}\, .\]
 This example is important because it displays an important feature; 
-{\it the inputs for this function are functions}.
+{\itshape the inputs for this function are functions}.
 
 While this sounds complicated, %Rest assured that 
 linear algebra is the
@@ -332,7 +332,7 @@ possible outputs, and the lines tell you which inputs are turned into which outp
 
 Now think about adding $L(u)$ and $L(v)$ to get yet another vector $L(u)+L(v)$ or of multiplying $L(u)$ by $c$ to obtain the vector $cL(u)$, and placing both on the right blob of the picture above. 
 But wait! Are you certain that these are possible outputs!?
-%Hopefully you noticed that there are two vectors  apparently {\it not shown} on the blob of outputs:
+%Hopefully you noticed that there are two vectors  apparently {\itshape not shown} on the blob of outputs:
 %\[
 %L(u)+L(v)\quad \&\quad cL(u)\, .
 %\] 
@@ -352,11 +352,11 @@ The key to the whole class, from which everything else \hypertarget{twopart}{fol
 \[L(cu)=cL(u)\, .\]
 \end{enumerate}
 
-\noindent Most functions of vectors do not obey this requirement.\!\footnote{{\it E.g.:} If $f(x)=x^2$ then $f(1+1)=4 \neq f(1)+f(1)=2$. Try any other function you can think of!}  At its heart, linear algebra is the study of functions that do. 
+\noindent Most functions of vectors do not obey this requirement.\!\footnote{{\itshape E.g.:} If $f(x)=x^2$ then $f(1+1)=4 \neq f(1)+f(1)=2$. Try any other function you can think of!}  At its heart, linear algebra is the study of functions that do. 
 
 Notice that the additivity 
-requirement says that the function $L$ respects vector addition: {\it it does not matter if you first add $u$ and~$v$ and then input their sum into
-$L$, or first input $u$ and $v$ into $L$ separately and then add the outputs.} The same holds for scalar multiplication--try writing out the scalar multiplication version of the italicized sentence. When a function of vectors obeys the additivity and homogeneity properties we say that it is {\it linear} (this is the ``linear'' of linear algebra). Together, additivity and homogeneity are called {\it linearity}. 
+requirement says that the function $L$ respects vector addition: {\itshape it does not matter if you first add $u$ and~$v$ and then input their sum into
+$L$, or first input $u$ and $v$ into $L$ separately and then add the outputs.} The same holds for scalar multiplication--try writing out the scalar multiplication version of the italicized sentence. When a function of vectors obeys the additivity and homogeneity properties we say that it is {\itshape linear} (this is the ``linear'' of linear algebra). Together, additivity and homogeneity are called {\itshape linearity}. 
 Are there other, equivalent, names for linear functions? Yes:
 %\begin{enumerate}[]
 %\item Linear transformation 
@@ -407,7 +407,7 @@ $}}
 which feels a lot like the regular rules of algebra for numbers. Notice though, that ``$u L$'' makes no sense here.
 
 \begin{remark}
-A sum of multiples of vectors $c u + dv$ is called a {\it linear combination}\index{Linear combination} of $u$~and~$v$.
+A sum of multiples of vectors $c u + dv$ is called a {\itshape linear combination}\index{Linear combination} of $u$~and~$v$.
 \end{remark}
 
 \section{So, What is a Matrix?}
@@ -417,7 +417,7 @@ They appear almost ubiquitously in linear algebra because---and this is the cent
 \shabox{Matrices are the result of organizing information related to linear functions. }
 \end{center}
 This idea will take some time to develop, but we provided an elementary example in 
-Section \ref{organize}. A good starting place to  learn about matrices is by studying {\it systems of  linear equations}. 
+Section \ref{organize}. A good starting place to  learn about matrices is by studying {\itshape systems of  linear equations}. 
 
 \begin{example} 
 A room contains~$x$ bags and~$y$ boxes of fruit.
@@ -458,7 +458,7 @@ Information about the fruity contents of the room can be stored two ways:
 Intuitively, knowing the information in one form allows you to figure out the information in the other form. 
 Going from~(ii) to~(i) is easy: 
 If you knew there were~3 bags and~2 boxes it would be easy to calculate the number of apples and bananas, and doing so would have the feel of multiplication (containers times fruit per container). 
-In the example above we are required to go the other direction, from~(i) to~(ii). This  feels like the opposite of multiplication, {\it i.e.}, division. Matrix notation will 
+In the example above we are required to go the other direction, from~(i) to~(ii). This  feels like the opposite of multiplication, {\itshape i.e.}, division. Matrix notation will 
 make clear what we are ``multiplying" and ``dividing'' by. 
 
 The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equations. 
@@ -478,7 +478,7 @@ The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equa
 %{\rm divide~by}~&3&\\
 %x&=&1 \,.
 %\end{eqnarray*}
-%That is, lets keep the variables on the left hand side and rewrite our {\it system} of equations after each step. \\
+%That is, lets keep the variables on the left hand side and rewrite our {\itshape system} of equations after each step. \\
 %
 %
 %\noindent
@@ -500,7 +500,7 @@ The goal of Chapter~\ref{systems} is to efficiently solve systems of linear equa
 %\end{eqnarray*}
 %At this point the result~$x=1,y=3$ is obvious. Further, the elimination of~$y$ from the first equation and elimination of~$x$ from the second is clear as can be. 
 %%This is elimination, a key idea in this course. 
-%%The idea here is to follow some algorithm to have just one variable with non-zero coefficient in each equation, and to rewrite the {\it system} of linear equations at each step. 
+%%The idea here is to follow some algorithm to have just one variable with non-zero coefficient in each equation, and to rewrite the {\itshape system} of linear equations at each step. 
 %
 %There is a clear shortcoming to this ``efficient method": we need to rewrite too much at each step! The~$x$'s are rewritten in the same place over and over, and similarly for the~$y$'s and the equal signs. 
 %Lets work toward reducing the amount of things we rewrite by combining the pair of equations in example 3 into a singe equation using vectors from 2-space. 
@@ -527,7 +527,7 @@ Writing our fruity equations as an equality between 2-vectors and then using the
 \ \Longleftrightarrow \ 
    x \colvec{ 2\\ 4} + y \colvec{ 6\\ 8} =\colvec{ 20\\ 28} \, .
 \end{equation*}
-Now we  introduce a function which takes in 2-vectors\footnote{To be clear, we will use the term 2-vector to refer to stacks of two numbers such as~$\colvec{7\\11}$. If we wanted to refer to the vectors $x^2+1$ and $x^3-1$ (recall that polynomials are vectors) we would say ``consider the two vectors $x^3-1$ and $x^2+1$''. We apologize through giggles for the possibility of the phrase ``two 2-vectors."} and gives out 2-vectors. We denote it by  an array of numbers  called a {\it matrix\,\! .}
+Now we  introduce a function which takes in 2-vectors\footnote{To be clear, we will use the term 2-vector to refer to stacks of two numbers such as~$\colvec{7\\11}$. If we wanted to refer to the vectors $x^2+1$ and $x^3-1$ (recall that polynomials are vectors) we would say ``consider the two vectors $x^3-1$ and $x^2+1$''. We apologize through giggles for the possibility of the phrase ``two 2-vectors."} and gives out 2-vectors. We denote it by  an array of numbers  called a {\itshape matrix\,\! .}
 \begin{equation*}
  {\rm {\bf The~function}}   \begin{pmatrix}
       2     & 6 \\
@@ -761,7 +761,7 @@ Thus multiplication by a  matrix is additive and homogeneous, and so it is, by d
 
 We have come full circle; matrices are just examples of the kinds of linear operators that appear in algebra problems like those in 
 section~\ref{LTs}. 
-Any equation of the form~$Mv=w$ with~$M$ a matrix, and~$v,w$ $n$-vectors is called  a {\it matrix equation}\index{Matrix equation}. 
+Any equation of the form~$Mv=w$ with~$M$ a matrix, and~$v,w$ $n$-vectors is called  a {\itshape matrix equation}\index{Matrix equation}. 
 Chapter~\ref{systems} is about efficiently solving systems of linear equations, or equivalently matrix equations.
 
 \subsection{Matrix Multiplication is Composition of Functions}
@@ -780,7 +780,7 @@ Notice that the same final result could be achieved with a single machine:
 \[
 \colvec{x\\y}\raisebox{-11mm}{\includegraphics[scale=.15]{\whatIsPath//machine_matrix2.jpg} }\!\!\!\!\!\!\colvec{10x+22y\\4x+8y}\, .
 \]
-There is a simple matrix notation for this called {\it matrix multiplication}\index{Matrix multiplication}
+There is a simple matrix notation for this called {\itshape matrix multiplication}\index{Matrix multiplication}
 \[
 \begin{pmatrix}1&2\\0&1\end{pmatrix}
 \begin{pmatrix}2&6\\4&8\end{pmatrix}
@@ -798,7 +798,7 @@ where
 \[
 (g\circ f)(u)=g(f(u))\, .
 \]
-This is called the {\it composition of functions}\index{Composition of functions}.
+This is called the {\itshape composition of functions}\index{Composition of functions}.
 Matrix multiplication is the tool required for computing the composition of linear functions.
 
 
@@ -897,7 +897,7 @@ With this alternative notation
 0&0&2
 \end{pmatrix}
 \colvec{a\\b\\c}\right]_{B'}.\end{gather*}
-Notice that we have obtained {\it a different matrix for the same linear function}. 
+Notice that we have obtained {\itshape a different matrix for the same linear function}. 
 The  equation we started with 
 \begin{gather*}
  \left( \frac{d}{dx}+2\right) f=x+1
@@ -917,7 +917,7 @@ The  equation we started with
 \end{array}
 \end{gather*}
 has the solution 
-$\colvec{ \frac14\\[1mm] \frac12\\[1mm]0}$. Notice that we have obtained {\it a different 3-vector for the same vector},  since in the notational convention $B'$ this 3-vector represents $\frac14+\frac12x$. 
+$\colvec{ \frac14\\[1mm] \frac12\\[1mm]0}$. Notice that we have obtained {\itshape a different 3-vector for the same vector},  since in the notational convention $B'$ this 3-vector represents $\frac14+\frac12x$. 
 \end{example}
 
 One linear function can be represented (denoted) by a huge variety of matrices. %with the same effects for any choice of representation. 
@@ -1001,7 +1001,7 @@ Probably you will spend most of your time on the following review questions:
 
 %\begin{comment}
 %There are two things to notice about  this list: First,  the range of operations in algebra seems to go beyond addition, subtraction, multiplication, and division while the range of possible objects goes beyond numbers. [In fact, its best to think of the objects (numbers) being generalized while trying to maintain
-%the basic properties of addition, subtraction, {\it etc}..., as far as possible.]
+%the basic properties of addition, subtraction, {\itshape etc}..., as far as possible.]
 %%; in fact, we mean only to hint at the variety of objects and operations found in algebra.   
 %Second, these very different questions all have the same form. To emphasize this we restate them:
 %\begin{example} (Algebra \hypertarget{AandD}{Questions} Restated)
@@ -1057,8 +1057,8 @@ Probably you will spend most of your time on the following review questions:
 %%Ax=b
 %%\end{eqnarray*}
 %but where $x$ and $b$ can be much more general creatures than just numbers. The technical answer to the question ``how general?'',
-%is that $x$ and $b$ will be {\it vectors}. We will say much more about what this means later, but for now all you need
-%to know is that vectors are objects that you can {\it add} and {\it scalar multiply}, so that the algebraic operations
+%is that $x$ and $b$ will be {\itshape vectors}. We will say much more about what this means later, but for now all you need
+%to know is that vectors are objects that you can {\itshape add} and {\itshape scalar multiply}, so that the algebraic operations
 %\[
 %x+x'\, ,\mbox{ and } c\, x\, ,
 %\]
@@ -1067,8 +1067,8 @@ Probably you will spend most of your time on the following review questions:
 %You might also be wondering why we wrote ${\cal A}\big(f(x)\big)$ rather than ${\cal A} f(x)$ in part~(\ref{E}) of our example,
 %or perhaps why we did not write ${\cal A}({\bf x})$ in part~(\ref{A}). In fact all the the above problems involve functions (denoted ${\cal A}$)
 %of vectors. However, in the first four examples the function~${\cal A}$ (that takes in a some sort of vector and returns a vector as its output)
-%is a {\it linear operator} which means that it obeys a
-%very special  property called {\it linearity}. This is the ``Linear'' in Linear Algebras and we will explain it next. 
+%is a {\itshape linear operator} which means that it obeys a
+%very special  property called {\itshape linearity}. This is the ``Linear'' in Linear Algebras and we will explain it next. 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -1077,7 +1077,7 @@ Probably you will spend most of your time on the following review questions:
 %\section{Operators: Functions of Functions}
 %A few comments on jargon and notation are in order before we move on. ~$D$ takes in functions like~$x^4$ and gives out functions like~$4x^4-2x^4=2x^4$. You could say that~$D$ is a function that takes in functions and gives out functions.  
 %Alternatively, that awful combination of words can be avoided by using the word 
-%``{\it operator}" instead of ``function";
+%``{\itshape operator}" instead of ``function";
 %~$D$ is an operator that takes in functions and gives out functions. 
 % Similarly,~$C$ is an operator that takes in, for example,~$x^3$ and gives out ~$\frac12 x$. 
 %We hope you can understand why we don't always use the 
@@ -1144,14 +1144,14 @@ Probably you will spend most of your time on the following review questions:
 %
 %
 %Students often ask questions like ``how do I know when to use a particular method"? A question like ``how do I know when to use integration by parts?" is hard to  answer, but in contrast, ``when can I use  linear algebra?" is easy to answer: %for the kinds of questions given above; 
-%{\it when the operator involved is linear.} \\
+%{\itshape when the operator involved is linear.} \\
 %
 %\noindent
 %An operator~$E$ is \hypertarget{asked in chapter 1}{said to be linear} if it has two properties:\\[-.5cm]
 %\begin{enumerate}
-%\item {\it Homogeneity:} ``Constants can be pulled out"
+%\item {\itshape Homogeneity:} ``Constants can be pulled out"
 %\[E(cv)=cEv\, .\] \\[-.5cm]
-%\item {\it Additivity:} ``The operator can be distributed"
+%\item {\itshape Additivity:} ``The operator can be distributed"
 %\[E(v+u)=Ev+Eu\, .\] 
 %\end{enumerate}
 %
@@ -1240,11 +1240,11 @@ Probably you will spend most of your time on the following review questions:
 %%DII)~$D(f_1+f_2)(x)=xf_1'(x)-2f_1(x) +xf_2'(x)-2f_2(x) =(Df_1+Df_2)(x)$.\\
 %%You now know how to test if an operator is linear, and have some examples.  
 %\noindent 
-%One moral of our story is that if~$A$ is a {\it linear} operator while~$b$ and~$x$ are vectors, then~$Ax=b$ is equivalent to a matrix{\it -type} equation. 
+%One moral of our story is that if~$A$ is a {\itshape linear} operator while~$b$ and~$x$ are vectors, then~$Ax=b$ is equivalent to a matrix{\itshape -type} equation. 
 %That is why we will begin by studying matrices.\\
 %% We have only hinted at the wide range of possible examples for linear operators.
-%This moral does {\it not} apply to non-linear operators:
-%\begin{example} Show that~$E$ is {\it not} linear.\\[-5mm]
+%This moral does {\itshape not} apply to non-linear operators:
+%\begin{example} Show that~$E$ is {\itshape not} linear.\\[-5mm]
 %\begin{enumerate}  
 %\item~$E(5f)=5f''+5^3f^3 \neq 5f''+5f^3=5Ef~$\\[-5mm]
 %\item Not needed.%\\[-5mm]
@@ -1264,7 +1264,7 @@ Probably you will spend most of your time on the following review questions:
 %This proves linearity, unfortunately homogeneity fails:
 %\[Y(cx)=5cx+3=c (5x+3) +3 -3c= c\, Yx +3-3c\neq cYx \mbox{ if } c\neq1\, .\]
 %Notice that the special case $c=1$ holds (and just says $Y(1.x)=1.Yx$), but the homogeneity
-%requirement must work for {\it any} $c$. 
+%requirement must work for {\itshape any} $c$. 
 %
 %The operator~$Y$ is neither homogeneous nor additive, and therefore not linear.
 %\end{example}
@@ -1278,7 +1278,7 @@ Probably you will spend most of your time on the following review questions:
 %\[M\colvec{x\\y\\z}=2x-3y+5z\] 
 %is linear. The set of solutions to 
 %\[M\colvec{x\\y\\z}=10 \Leftrightarrow 2x-3y+5z=10\] 
-%form a plane. Lines and planes are {\it level sets} of linear functions. 
+%form a plane. Lines and planes are {\itshape level sets} of linear functions. 
 %
 %\videoscriptlink{Linear_Operator_on_Lines.mp4}{Linear Operators Preserve Lines}{scripts_H}
 %

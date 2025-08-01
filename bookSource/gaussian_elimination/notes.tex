@@ -159,7 +159,7 @@ a^2_1 & a^2_2 & \cdots & a^2_k & b^2 \\[1mm]
 a^r_1 & a^r_2 & \cdots & a^r_k & b^r 
 \end{amatrix}.
 \]
-Entries left of the divide carry two indices; subscripts denote column number and  superscripts row number. We emphasize, the superscripts here do {\it not} denote exponents.  
+Entries left of the divide carry two indices; subscripts denote column number and  superscripts row number. We emphasize, the superscripts here do {\itshape not} denote exponents.  
 %Aside: most people don't like  indexing by superscripts at first. However, kind of index placement will later facilitate Einstein's summation convention, which Einstein himself described as his greatest contribution to the sciences. 
 Make sure you can write out the system of equations and the associated matrix equation for any augmented matrix. 
 
@@ -276,7 +276,7 @@ Let the new  second equation be the old second equation divided by -1:
 \end{amatrix}\, .
   \end{eqnarray*}
 \end{example}
-Did you see what the strategy was? To {\it eliminate} $y$ from the first equation and then {\it eliminate} $x$ from the second. The result was  the solution to the system. 
+Did you see what the strategy was? To {\itshape eliminate} $y$ from the first equation and then {\itshape eliminate} $x$ from the second. The result was  the solution to the system. 
 
 Here is the big idea: 
 Everywhere in the instructions above we can replace the word ``equation" with the word ``row" and interpret them as telling us what to do with the augmented matrix instead of the system of equations.
@@ -324,7 +324,7 @@ Performed systemically, the result is the {\bf Gaussian elimination}\index{Gauss
 
 
 %Two augmented matrices corresponding to linear systems 
-%%{\it that actually have solutions} %cmon, this idea has not even been introduced
+%%{\itshape that actually have solutions} %cmon, this idea has not even been introduced
 %are said to be \hypertarget{roweq}(row) 
 %\emph{equivalent}\index{Row equivalence} if they have the \emph{same} solutions.
 %To denote this 
@@ -384,7 +384,7 @@ Note that in going from the first to second augmented matrix, we used the top le
 Similarly, to get from the second to third augmented matrix,  the bottom right entry (before the divide) was used to make the top right one vanish; so the bottom right entry is also called a pivot. 
 \end{example}
 
-This name {\it pivot}  is  used to indicate the matrix
+This name {\itshape pivot}  is  used to indicate the matrix
 entry used to ``zero out''  the other entries in its column; the pivot is the number used to eliminate another number in its column.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -519,8 +519,8 @@ The third augmented matrix above  is the RREF of the first and second. That is t
 
 For larger systems of equations redundancy and inconsistency are the obstructions to obtaining the identity matrix, and hence to a simple statement of a solution in the form $x=a,y=b,\ldots$ . 
 What can we do to maximally simplify a system of equations in general?
-We need to perform operations that simplify our system {\it without changing its solutions}.
-Because, exchanging the order of equations, multiplying one equation by a {\it non-zero} constant or adding equations does not 
+We need to perform operations that simplify our system {\itshape without changing its solutions}.
+Because, exchanging the order of equations, multiplying one equation by a {\itshape non-zero} constant or adding equations does not 
 change the system's solutions, we are lead to three operations:
 \begin{itemize}
 \item (Row Swap) Exchange any two rows.
@@ -542,8 +542,8 @@ Then, using just the three EROs, we could\footnote{This is a ``brute force" algo
 \item Make the leftmost nonzero entry in the top row 1 by multiplication.  
 \item Then use that 1 as a pivot to eliminate everything below it. 
 \item Then go to the next row and make the leftmost nonzero entry 1. 
-\item Use that 1 as a pivot to eliminate everything below {\it and above it}! 
-\item Go to the next row and make the leftmost nonzero entry 1... {\it etc}
+\item Use that 1 as a pivot to eliminate everything below {\itshape and above it}! 
+\item Go to the next row and make the leftmost nonzero entry 1... {\itshape etc}
 \end{itemize}
 In the case that the first entry of the first row is zero, we may first interchange the first row with another row whose first entry is non-vanishing  and then perform the above algorithm. If the entire first column vanishes, we may still apply the algorithm on the remaining columns.
 
@@ -566,7 +566,7 @@ This algorithm and its variations is known as Gaussian elimination. The endpoint
 \end{array}\!\right).\]
 This is called 
 \emph{Reduced Row Echelon Form}\index{Reduced row echelon form} (RREF).
-The asterisks denote the possibility of arbitrary numbers ({\it e.g.}, the second 1 in the top line of example~\ref{redundant}).
+The asterisks denote the possibility of arbitrary numbers ({\itshape e.g.}, the second 1 in the top line of example~\ref{redundant}).
 
 Learning to perform this algorithm by hand is the first step to learning linear algebra; it will be the primary means of computation for this course. You need to learn it well. So start practicing as soon as you can, and practice often. 
 
@@ -736,7 +736,7 @@ It is easier to read off solutions from the maximally simplified equations than 
 %	&&&& 8&+&         4(0) & = &8
 %\end{array}.
 %\end{eqnarray*}
-%Given that there are many solutions, what ought one report when asked to solve a system of equations? The standard thing to report is {\it the solution set}\index{solution set}\index{Solution set}; 
+%Given that there are many solutions, what ought one report when asked to solve a system of equations? The standard thing to report is {\itshape the solution set}\index{solution set}\index{Solution set}; 
 %There is a solution for each value of $w$. Better said 
 %\begin{eqnarray*}
 %{\text the ~solution~ set~ to \qquad}
@@ -756,12 +756,12 @@ There is one solution for each value of $w$, so the solution set is
 \alpha \colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1} : \alpha \in \mathbb{R} \right\}.
 \]
 \end{example}
-Here is a verbal description of the preceeding example of the \hypertarget{standard approach}{{\it standard approach}}. We say that $x,y$, and $z$ are {\it pivot variables}\index{Pivot variables} because they appeared with a  pivot coefficient in RREF. 
+Here is a verbal description of the preceeding example of the \hypertarget{standard approach}{{\itshape standard approach}}. We say that $x,y$, and $z$ are {\itshape pivot variables}\index{Pivot variables} because they appeared with a  pivot coefficient in RREF. 
 Since $w$ never appears with a pivot  coefficient, 
  it is not a pivot variable. %We call it a free variable. 
 %One way to reveal the solutions to this system of equations is to 
 In the second line we put all the pivot variables on one side 
-and all the {\it non-pivot variables}\index{Non-pivot variables} on the other side and added the trivial equation $w=w$ to obtain a system that allowed us to easily read off solutions.
+and all the {\itshape non-pivot variables}\index{Non-pivot variables} on the other side and added the trivial equation $w=w$ to obtain a system that allowed us to easily read off solutions.
 
 \begin{center}
 {\Large{\bf The Standard Approach To Solution Sets}}
@@ -772,15 +772,15 @@ and all the {\it non-pivot variables}\index{Non-pivot variables} on the other si
 \item Express the pivot variables in terms of the non-pivot variables. 
 \end{enumerate}
 There are always exactly enough non-pivot variables to index your solutions. 
-In any approach, the variables which are not expressed in terms of the other variables are called  {\it free variables}\index{free variables}. The standard approach is to use the non-pivot variables as free variables.
+In any approach, the variables which are not expressed in terms of the other variables are called  {\itshape free variables}\index{free variables}. The standard approach is to use the non-pivot variables as free variables.
 
 %vid for this?! 
 Non-standard approach: solve for $w$ in terms of $z$ and substitute into the other equations. You now have an expression for each component in terms of $z$. But why pick $z$ instead of $y$ or $x$? (or $x+y$?) The standard approach not only feels natural, 
-but is {\it canonical}, meaning that everyone will get the same RREF and hence choose the same variables to be free.
-However, it is important to remember that so long as their {\it set} of solutions is the same, any two choices of free variables is fine.
+but is {\itshape canonical}, meaning that everyone will get the same RREF and hence choose the same variables to be free.
+However, it is important to remember that so long as their {\itshape set} of solutions is the same, any two choices of free variables is fine.
 (You might think of this as the difference between using Google Maps$^{\sf TM}$ or Mapquest$^{\sf TM}$; although their maps may look different, 
 the place 
-$\langle$home {\it sic}$\rangle$ 
+$\langle$home {\itshape sic}$\rangle$ 
 they are describing is the same!)
 
 
@@ -1659,7 +1659,7 @@ E_1^{-1}E_2^{-1}E_3^{-1}
 \subsection{$LU$, $LDU$, and $PLDU$ Factorizations}\label{LUtake1}
 The process of elimination can be stopped halfway to obtain decompositions frequently used in large computations in sciences and engineering. 
 The first half of the elimination process is to eliminate entries below the diagonal  
-leaving a matrix which is called {\it upper triangular}\index{Upper triangular matrix}. The elementary matrices which perform this part of the elimination are {\it lower triangular}\index{lower triangular}, as are their inverses. But putting together the upper triangular and lower triangular parts one obtains the so-called $LU$ factorization.
+leaving a matrix which is called {\itshape upper triangular}\index{Upper triangular matrix}. The elementary matrices which perform this part of the elimination are {\itshape lower triangular}\index{lower triangular}, as are their inverses. But putting together the upper triangular and lower triangular parts one obtains the so-called $LU$ factorization.
 
 
 \begin{example}\label{factorize} ($LU$ \hypertarget{elldeeeww}{ factorization})
@@ -2192,7 +2192,7 @@ For a system of equations with $r$ equations and $k$ veriables, one can have a n
 \item[2biii.] \textbf{All of $\mathbb{R}^3$.}  If you start with no information, then any point in $\mathbb{R}^3$ is a solution.  There are three free parameters.
 \end{enumerate}
 
-In general, for systems of equations with $k$ unknowns, there are $k+2$ possible outcomes, corresponding to the possible numbers ({\it i.e.}, $0,1,2,\dots,k$) of free parameters in the solutions set, plus the possibility of no solutions.  These types of solution sets\index{Solution set} are hyperplanes\index{Hyperplane}, generalizations of planes that behave like planes in $\mathbb{R}^3$ in many ways.
+In general, for systems of equations with $k$ unknowns, there are $k+2$ possible outcomes, corresponding to the possible numbers ({\itshape i.e.}, $0,1,2,\dots,k$) of free parameters in the solutions set, plus the possibility of no solutions.  These types of solution sets\index{Solution set} are hyperplanes\index{Hyperplane}, generalizations of planes that behave like planes in $\mathbb{R}^3$ in many ways.
 
 \Reading{SystemsOfLinearEquations}{4}
 %\begin{center}\href{\webworkurl ReadingHomework4/1/}{Reading homework: problem 4.1}\end{center}
@@ -2253,7 +2253,7 @@ Another way to write the solution set is
 where 
 \[x^P = \colvec{1\\1\\0 \\0 }\, ,\quad x^H _1=\colvec{-1\\1\\1\\0 } \, ,\quad x^H _2= \colvec{1\\-1\\0 \\1 }\, .
 \]
-Here $x^P $ is a {\it particular solution} while $x^H _1$ and $x^H _2$ are called {\it homogeneous solutions}. The solution set forms a plane.
+Here $x^P $ is a {\itshape particular solution} while $x^H _1$ and $x^H _2$ are called {\itshape homogeneous solutions}. The solution set forms a plane.
 \end{example}
 
 
@@ -2282,7 +2282,7 @@ Here $x^P $ is a {\it particular solution} while $x^H _1$ and $x^H _2$ are calle
 %f(X)=MX\, .
 %\]
 %Now let us check the linearity property for $f$. 
-%The property needs to hold for {\it any} scalars $\alpha$ and $\beta$, so for simplicity
+%The property needs to hold for {\itshape any} scalars $\alpha$ and $\beta$, so for simplicity
 %let us concentrate first on the case $\alpha=\beta=1$. This means that we need to
 %compare the following two calculations:
 %\begin{enumerate}
@@ -2336,8 +2336,8 @@ Setting $\mu_1=1, \mu_2=0$, and subtracting $Mx^P =v$ we obtain
 \[Mx^H _1=0\, .\] 
 Likewise, setting $\mu_1=0, \mu_2=1$, we obtain \[Mx^H _2=0\, .\]
 Here $x^H _1$ and $x^H _2$ are examples of what are called  \emph{homogeneous} solutions\index{Homogeneous solution!an example} to the system.
-They {\it do not} solve the original equation $Mx=v$, but instead its associated 
-{\it homogeneous  equation}\index{homogeneous equation} $M y =0$.
+They {\itshape do not} solve the original equation $Mx=v$, but instead its associated 
+{\itshape homogeneous  equation}\index{homogeneous equation} $M y =0$.
 
 We have just learnt a  fundamental lesson of linear algebra: the  solution set to $Ax=b$, where $A$ is a linear operator, consists of a particular solution plus homogeneous solutions.
 

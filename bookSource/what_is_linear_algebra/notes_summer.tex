@@ -54,7 +54,7 @@ where~$\times$ is the cross product?\\[-.4cm]
 
 \noindent
 There are two things to notice about  this list: First,  the range of operations in algebra seems to go beyond addition, subtraction, multiplication, and division while the range of possible objects goes beyond numbers. [In fact, its best to think of the objects (numbers) being generalized while trying to maintain
-the basic properties of addition, subtraction, {\it etc}..., as far as possible.]
+the basic properties of addition, subtraction, {\itshape etc}..., as far as possible.]
 %; in fact, we mean only to hint at the variety of objects and operations found in algebra.   
 Second, these very different questions all have the same form. To emphasize this we restate them:
 \begin{example} (Algebra \hypertarget{AandD}{Questions} Restated) \\[-.5cm]
@@ -83,7 +83,7 @@ our main object of study will be equations of the form
 %\begin{eqnarray*}
 %Ax=b
 %\end{eqnarray*}
-where ~$A$ is a {\it linear operator} while~$x$ and~$b$ are {\it vectors}.
+where ~$A$ is a {\itshape linear operator} while~$x$ and~$b$ are {\itshape vectors}.
 \reading{1}{1}
 
 
@@ -93,7 +93,7 @@ where ~$A$ is a {\it linear operator} while~$x$ and~$b$ are {\it vectors}.
 \section{Operators: Functions of Functions}
 A few comments on jargon and notation are in order before we move on. ~$D$ takes in functions like~$x^4$ and gives out functions like~$4x^4-2x^4=2x^4$. You could say that~$D$ is a function that takes in functions and gives out functions.  
 Alternatively, that awful combination of words can be avoided by using the word 
-``{\it operator}" instead of ``function";
+``{\itshape operator}" instead of ``function";
 ~$D$ is an operator that takes in functions and gives out functions. 
  Similarly,~$C$ is an operator that takes in, for example,~$x^3$ and gives out ~$\frac12 x$. 
 We hope you can understand why we don't always use the 
@@ -146,14 +146,14 @@ The tools you will learn in linear algebra will help you answer all four of thes
 
 
 Students often ask questions like ``how do I know when to use a particular method"? A question like ``how do I know when to use integration by parts?" is hard to  answer, but in contrast, ``when can I use  linear algebra?" is easy to answer: %for the kinds of questions given above; 
-{\it when the operator involved is linear.} \\
+{\itshape when the operator involved is linear.} \\
 
 \noindent
 An operator~$E$ is \hypertarget{asked in chapter 1}{said to be linear} if it has two properties:\\[-.5cm]
 \begin{enumerate}
-\item {\it Homogeneity:} ``Constants can be pulled out"
+\item {\itshape Homogeneity:} ``Constants can be pulled out"
 \[E(cv)=cEv\, .\] \\[-.5cm]
-\item {\it Additivity:} ``The operator can be distributed"
+\item {\itshape Additivity:} ``The operator can be distributed"
 \[E(v+u)=Ev+Eu\, .\] 
 \end{enumerate}
 
@@ -242,11 +242,11 @@ Here is another example involving linear operators made from integrals where we 
 %DII)~$D(f_1+f_2)(x)=xf_1'(x)-2f_1(x) +xf_2'(x)-2f_2(x) =(Df_1+Df_2)(x)$.\\
 %You now know how to test if an operator is linear, and have some examples.  
 \noindent 
-One moral of our story is that if~$A$ is a {\it linear} operator while~$b$ and~$x$ are vectors, then~$Ax=b$ is equivalent to a matrix{\it -type} equation. 
+One moral of our story is that if~$A$ is a {\itshape linear} operator while~$b$ and~$x$ are vectors, then~$Ax=b$ is equivalent to a matrix{\itshape -type} equation. 
 That is why we will begin by studying matrices.\\
 % We have only hinted at the wide range of possible examples for linear operators.
-This moral does {\it not} apply to non-linear operators:
-\begin{example} Show that~$E$ is {\it not} linear.\\[-5mm]
+This moral does {\itshape not} apply to non-linear operators:
+\begin{example} Show that~$E$ is {\itshape not} linear.\\[-5mm]
 \begin{enumerate}  
 \item~$E(5f)=5f''+5^3f^3 \neq 5f''+5f^3=5Ef~$\\[-5mm]
 \item Not needed.%\\[-5mm]
@@ -266,7 +266,7 @@ Y(x+y)= 5(x+y)+3=(5x+3)+(5x)\neq (5x+3)+(5x+3)=Yx+Yy\, .
 This proves linearity, unfortunately homogeneity fails:
 \[Y(cx)=5cx+3=c (5x+3) +3 -3c= c\, Yx +3-3c\neq cYx \mbox{ if } c\neq1\, .\]
 Notice that the special case $c=1$ holds (and just says $Y(1.x)=1.Yx$), but the homogeneity
-requirement must work for {\it any} $c$. 
+requirement must work for {\itshape any} $c$. 
 
 The operator~$Y$ is neither homogeneous nor additive, and therefore not linear.
 \end{example}
@@ -280,7 +280,7 @@ Similarly, the  operator~$M$ on 3-space with
 \[M\colvec{x\\y\\z}=2x-3y+5z\] 
 is linear. The set of solutions to 
 \[M\colvec{x\\y\\z}=10 \Leftrightarrow 2x-3y+5z=10\] 
-form a plane. Lines and planes are {\it level sets} of linear functions. 
+form a plane. Lines and planes are {\itshape level sets} of linear functions. 
 
 \videoscriptlink{Linear_Operator_on_Lines.mp4}{Linear Operators Preserve Lines}{scripts_H}
 
@@ -294,7 +294,7 @@ form a plane. Lines and planes are {\it level sets} of linear functions.
 \noindent
 \section{What is a Matrix?}
 Matrices are linear operators of a certain kind.
-One way to learn about them is by studying {\it systems of  linear equations}. 
+One way to learn about them is by studying {\itshape systems of  linear equations}. 
 
 
 \begin{example} 
@@ -330,7 +330,7 @@ Information about the fruity contents of the room can be stored two ways:
 Intuitively, knowing the information in one form allows you to figure out the information in the other form. 
 Going from~(ii) to~(i) is easy: 
 If you knew there were~3 bags and~2 boxes it would be easy to calculate the number of apples and bananas, and doing so would have the feel of multiplication (containers times fruit per container). 
-In the example above we are required to go the other direction, from~(i) to~(ii). This  feels like the opposite of multiplication, {\it i.e.}, division. Matrix notation will 
+In the example above we are required to go the other direction, from~(i) to~(ii). This  feels like the opposite of multiplication, {\itshape i.e.}, division. Matrix notation will 
 make clear what we are ``dividing'' by. 
 
 One of our goals is to learn to solve systems of linear equations with maximal efficiency. 
@@ -350,7 +350,7 @@ One of our goals is to learn to solve systems of linear equations with maximal e
 %{\rm divide~by}~&3&\\
 %x&=&1 \,.
 %\end{eqnarray*}
-%That is, lets keep the variables on the left hand side and rewrite our {\it system} of equations after each step. \\
+%That is, lets keep the variables on the left hand side and rewrite our {\itshape system} of equations after each step. \\
 %
 %
 %\noindent
@@ -372,7 +372,7 @@ One of our goals is to learn to solve systems of linear equations with maximal e
 %\end{eqnarray*}
 %At this point the result~$x=1,y=3$ is obvious. Further, the elimination of~$y$ from the first equation and elimination of~$x$ from the second is clear as can be. 
 %%This is elimination, a key idea in this course. 
-%%The idea here is to follow some algorithm to have just one variable with non-zero coefficient in each equation, and to rewrite the {\it system} of linear equations at each step. 
+%%The idea here is to follow some algorithm to have just one variable with non-zero coefficient in each equation, and to rewrite the {\itshape system} of linear equations at each step. 
 %
 %There is a clear shortcoming to this ``efficient method": we need to rewrite too much at each step! The~$x$'s are rewritten in the same place over and over, and similarly for the~$y$'s and the equal signs. 
 %Lets work toward reducing the amount of things we rewrite by combining the pair of equations in example 3 into a singe equation using vectors from 2-space. 
@@ -399,7 +399,7 @@ Now we can write the following:
 &\Leftrightarrow&
    x \colvec{ 2\\ 4} + y \colvec{ 6\\ 8} =\colvec{ 20\\ 28} 
 \end{eqnarray*}
-This can be made more compact still by introducing an operator which takes in 2-vectors and gives out 2-vectors. This operator is denoted by an array of numbers that  is called a {\it matrix}:
+This can be made more compact still by introducing an operator which takes in 2-vectors and gives out 2-vectors. This operator is denoted by an array of numbers that  is called a {\itshape matrix}:
 \begin{equation*}
  {\rm {\bf The~operator}}   \begin{pmatrix}
       2     & 6 \\
@@ -591,7 +591,7 @@ a\colvec{2\\4} + b\colvec{6\\ 8} + c\colvec{2\\4} +d\colvec{6\\8}\\[2mm]&
 
 So we have come full circle; matrices are just examples of the kinds of linear operators that appear in algebra problems like those in 
 Section 1.1. 
-Lets call any equation of the form~$Mu=v$ with~$M$ a matrix, and~$u,v$ vectors a {\it matrix equation}\index{matrix equation}. The first part of this course is dedicated to the study of matrix equations. 
+Lets call any equation of the form~$Mu=v$ with~$M$ a matrix, and~$u,v$ vectors a {\itshape matrix equation}\index{matrix equation}. The first part of this course is dedicated to the study of matrix equations. 
 The next Chapter is about solving systems of linear equations, or equivalently matrix equations, with maximal efficiency.
 
 %\section{Where are we going?}

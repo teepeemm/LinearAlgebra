@@ -16,7 +16,7 @@ Upon applying a force $F$ on an object at point $r$ the torque~$\tau$ is  the cr
 \includegraphics[scale=.27]{\whatIsPath//torque.jpg}
 \end{center}
 \vspace{-5mm}
-Remember that the \index{Cross product}{\hypertarget{crossprod}{\it cross product}} of two $3$-vectors is given by 
+Remember that the \index{Cross product}{\hypertarget{crossprod}{\itshape cross product}} of two $3$-vectors is given by 
 \[\begin{pmatrix}x\\y\\z\end{pmatrix}\times\begin{pmatrix}x'\\y'\\z'\end{pmatrix}:=\begin{pmatrix}yz'-zy'\\zx'-xz'\\xy'-yx'\end{pmatrix}\, .\] Indeed, $3$-vectors are special, usually vectors  an only be added, not multiplied.
 
  Lets find the force $F$ (a vector)  one must apply to a wrench lying along the vector 
@@ -88,7 +88,7 @@ has a time-dependent ``constant of proportionality''.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\item\label{matmult} {\it Matrix Multiplication:}\index{Matrix multiplication} 
+\item\label{matmult} {\itshape Matrix Multiplication:}\index{Matrix multiplication} 
 Let $M$ and $N$ be matrices
 \[
 M=    \begin{pmatrix}
@@ -110,20 +110,20 @@ If we first apply $N$ and then $M$ to $v$ we obtain the vector $MNv$.\\
 \begin{enumerate}
 \item Show that the composition of matrices $MN$ is also a linear operator.\\
 \item Write out the components of the matrix product $MN$ in terms of the components of $M$ and the components of $N$.
-{\it Hint}: use the \hyperlink{ch1vecmult}{general rule} for multiplying a 2-vector by a 2$\times$2 matrix. 
+{\itshape Hint}: use the \hyperlink{ch1vecmult}{general rule} for multiplying a 2-vector by a 2$\times$2 matrix. 
 \item Try to answer the following common question, ``Is there any sense in which these rules for matrix multiplication are unavoidable, or are they just a notation that could be replaced by some other notation?"
 \item Generalize your multiplication rule to $3\times 3$ matrices.
 \end{enumerate}
 
-\item {\it \hypertarget{diagmat}{Diagonal} matrices:} A matrix $M$ can be thought of as an array of numbers $m^i_j$, known as matrix entries, or matrix components,  where $i$ and~$j$ index row and column numbers, respectively. Let 
+\item {\itshape \hypertarget{diagmat}{Diagonal} matrices:} A matrix $M$ can be thought of as an array of numbers $m^i_j$, known as matrix entries, or matrix components,  where $i$ and~$j$ index row and column numbers, respectively. Let 
 \[
 M=\begin{pmatrix}1&2\\3&4\end{pmatrix}=\big(m^i_j\big)\, .
 \]
 Compute $m^1_1$, $m^1_2$, $m^2_1$ and $m^2_2$. 
 
 \noindent
-The matrix entries $m^i_i$ whose row and column numbers are the same are called the {\it diagonal}
-of $M$. Matrix entries $m^i_j$ with $i\neq j$ are called {\it off-diagonal}. How many diagonal entries does an $n\times n$ matrix have? How many off-diagonal 
+The matrix entries $m^i_i$ whose row and column numbers are the same are called the {\itshape diagonal}
+of $M$. Matrix entries $m^i_j$ with $i\neq j$ are called {\itshape off-diagonal}. How many diagonal entries does an $n\times n$ matrix have? How many off-diagonal 
 entries does an $n\times n$ matrix have?
 
 If all the off-diagonal entries of a matrix vanish, we say that the matrix is diagonal. Let
@@ -141,16 +141,16 @@ where only one of the matrices is diagonal?\\
 \item whatever you put in, you get exactly the same thing out as what you put in. Show that it is unique. Can you write this operator as a matrix? 
 \item whatever you put in, you get exactly the same thing out as when you put something else in. Show that it is unique. Can you write this operator as a matrix? 
 \end{enumerate}
-{\it Hint:} To show something is unique, it is usually best to begin by pretending that it isn't, and then showing that this leads to a nonsensical conclusion. In mathspeak--{\it proof by contradiction}.
+{\itshape Hint:} To show something is unique, it is usually best to begin by pretending that it isn't, and then showing that this leads to a nonsensical conclusion. In mathspeak--{\itshape proof by contradiction}.
 
 %\item Show that the order of columns in a matrix matters. 
 
 \item \label{ch1rev} \hypertarget{Consider the set}{Consider the set} $S=\{*, \star, \# \}$. 
 It contains just 3 elements, and has no  ordering; 
-$\{*, \star, \# \}= \{ \# , \star, * \}$ {\it etc}. 
-(In fact the same is true for  $\{1,2,3\}=\{2,3,1\}$ {\it etc}, although we could make this an {\it ordered set} using $3>2>1$.) 
+$\{*, \star, \# \}= \{ \# , \star, * \}$ {\itshape etc}. 
+(In fact the same is true for  $\{1,2,3\}=\{2,3,1\}$ {\itshape etc}, although we could make this an {\itshape ordered set} using $3>2>1$.) 
 \begin{enumext}[label=\roman*,wrap-label=(#1)]
-\item \label{wasa} Invent a  function with domain $\{*, \star, \# \}$ and co\-domain~$\Re$. (Remember that the {\it domain}\index{Domain} of a function is the set of all its allowed  inputs and the {\it codomain}\index{Codomain} (or {\it target space})\index{Target Space|seealso{Codomain}} is the set where the outputs can live. A function is specified by assigning exactly one codomain element to each element of the domain.)\\
+\item \label{wasa} Invent a  function with domain $\{*, \star, \# \}$ and co\-domain~$\Re$. (Remember that the {\itshape domain}\index{Domain} of a function is the set of all its allowed  inputs and the {\itshape codomain}\index{Codomain} (or {\itshape target space})\index{Target Space|seealso{Codomain}} is the set where the outputs can live. A function is specified by assigning exactly one codomain element to each element of the domain.)\\
 \item Choose an ordering on  $\{*, \star, \# \}$, and then use it to write your function from part~(i) as a triple of numbers. \\
 \item Choose a new ordering on $\{*, \star, \# \}$ and then write your function from part~(i) as a triple of numbers. \\
 \item Your answers for parts (ii) and (iii) are different yet represent the same function -- explain!

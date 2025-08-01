@@ -273,7 +273,7 @@ Do you see what the strategy was? To eliminate $y$ from the first question and t
 
 Here is the big idea: 
 Everywhere in the the instructions we can replace the word ``equation" with the word ``row" and interpret the instructions as telling us what to do with the augmented matrix instead of the system of equations.
-The result is a process called called {\it Gaussian elimination}\index{Gaussian elimination}: 
+The result is a process called called {\itshape Gaussian elimination}\index{Gaussian elimination}: 
 
 \begin{example} of Gaussian elimination
 \begin{eqnarray*}
@@ -339,7 +339,7 @@ The solution can be read off very quickly, and the notation was very minimal.
 %\]
 %contain the same information: $x=9, y=18$.  
 Two augmented matrices corresponding to linear systems 
-%{\it that actually have solutions} %cmon, this idea has not even been introduced
+%{\itshape that actually have solutions} %cmon, this idea has not even been introduced
 are said to be \hypertarget{roweq}(row) 
 \emph{equivalent}\index{Row equivalence} if they have the \emph{same} solutions.
 To denote this we introduce the symbol $\sim$ which is called ``tilde" but should be read as  ``is equivalent to''. For example we found above that
@@ -394,7 +394,7 @@ Setting up a string of equivalences like this is actually a means of solving sys
 Note that we used the top left $1$ to make the bottom left entry zero. For this reason we call that number a pivot; imagine a wiper blade hanging down form the top left slot wiping the lower left slot away. Similarly the bottom right slot was used to wipe away the top right slot, so it is called a pivot. 
 \end{example}
 
-This {\it pivot} jargon is helpful for describing the goings on in Gaussian elimination. Be sure you understand the idea before moving on. 
+This {\itshape pivot} jargon is helpful for describing the goings on in Gaussian elimination. Be sure you understand the idea before moving on. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -555,7 +555,7 @@ They can be used to obtain  RREF by the following procedure
 \item Make the leftmost nonzero entry in the top row 1 by multiplication.  
 \item Then use that 1 as a pivot to eliminate everything below it. 
 \item Then go to the next row and make the leftmost non zero entry 1. 
-\item Then use that 1 as a pivot to eliminate everything below {\it and above it}! 
+\item Then use that 1 as a pivot to eliminate everything below {\itshape and above it}! 
 \item Then go to the next row and make the leftmost nonzero entry 1... etc
 \end{itemize}
 The reason we need the asterisk is demonstrated in the ``redundant equations" example above. 
@@ -683,13 +683,13 @@ One way to express the solutions to this system of equations is to put all the p
      \Leftrightarrow
 \colvec{x\\y\\z\\w} = \colvec{-5\\6\\8\\0} + w\colvec{-3\\-2\\-4\\1}
 \end{eqnarray*}
-where we have written the solution to the corresponding matrix problem. There are infinitely many solutions, one for each value of $z$. We call the collection of all solutions {\it the solution set}\index{solution set}\index{solution set} It is easy to check that the solution corresponding to $w=0$ really does fit into the matrix equation. 
+where we have written the solution to the corresponding matrix problem. There are infinitely many solutions, one for each value of $z$. We call the collection of all solutions {\itshape the solution set}\index{solution set}\index{solution set} It is easy to check that the solution corresponding to $w=0$ really does fit into the matrix equation. 
 \end{example}
 
 
 The last example demonstrated the standard approach to solving a system of linear equations in its entirety: write the augmented matrix, obtain RREF, return to the system of equations, and express the non-pivot variables in terms of the pivot variables. 
 There are always exactly enough non-pivot variables to index your solutions. 
-In any approach, the variables which are not expressed in terms of the other variables are called the {\it free variables}\index{free variables}. The standard approach is to use the non-pivot variables as free variables.
+In any approach, the variables which are not expressed in terms of the other variables are called the {\itshape free variables}\index{free variables}. The standard approach is to use the non-pivot variables as free variables.
 
 Non-standard approach: solve for $w$ in terms of $z$ and substitute into the other equations. You now have an expression for each component in terms of $z$. But why pick $z$ instead of $y$ or $x$? (or $x+y$?) The standard approach feels natural, and that is why it became the standard.
 

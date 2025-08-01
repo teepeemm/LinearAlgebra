@@ -282,8 +282,8 @@ We can check that $P^TP=I$ by a lengthy computation, or more simply, notice that
 &=& \begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}.
 \end{eqnarray*}
 Above we are using orthonormality of the $u_i$ and the fact that matrix multiplication amounts to taking dot products between rows and columns.
-It is also very \hypertarget{basisorthog}{important to realize that the columns of an {\it orthogonal} matrix are made
-from an {\it orthonormal} set of vectors}.
+It is also very \hypertarget{basisorthog}{important to realize that the columns of an {\itshape orthogonal} matrix are made
+from an {\itshape orthonormal} set of vectors}.
 \end{example}
 
 \begin{remark}[Orthonormal Change of Basis and Diagonal Matrices.]
@@ -406,7 +406,7 @@ Then the set
 \[
 \left\{ \rowvec{1\\1\\0},\rowvec{0\\0\\1},\rowvec{1\\-1\\0}\right\}
 \]
-is an orthogonal basis for $\Re^3$.  To obtain an ortho{\it normal} basis we simply divide each of these vectors by its length, yielding
+is an orthogonal basis for $\Re^3$.  To obtain an ortho{\itshape normal} basis we simply divide each of these vectors by its length, yielding
 \[
 \left\{ \rowvec{\frac{1}{\sqrt2}\\[2mm]\frac{1}{\sqrt2}\\[1mm]0},\rowvec{0\\[2mm]0\\[1mm]1},\rowvec{\frac{1}{\sqrt2}\\[2mm]\frac{-1}{\sqrt2}\\[1mm]0}\right\}.
 \]
@@ -460,7 +460,7 @@ M=\begin{pmatrix}2&-\frac75&-\frac16\\[1mm]1&\frac{14}5&\frac13\\[1mm]0&1&-\frac
 \begin{pmatrix}1&\frac15&0\\[1mm]0&1&-\frac56\\[1mm]0&0&1\end{pmatrix}\, .
 \]
 This is not quite the answer because the first matrix is now made of mutually orthogonal column vectors,
-but  a {\it bona fide} orthogonal matrix is comprised of {\it orthonormal} vectors. To achieve that we divide
+but  a {\itshape bona fide} orthogonal matrix is comprised of {\itshape orthonormal} vectors. To achieve that we divide
 each column of the first matrix by its length and multiply the corresponding row of the second matrix by the same 
 amount:
 \[
@@ -476,7 +476,7 @@ Geometrically what has happened here is easy to see. We started with three vecto
 A nice check of the above result is to verify that entry $(i,j)$  of the matrix $R$
 equals the dot product of the $i$-th column of $Q$ with the $j$-th column of $M$.
 (Some people memorize this fact and use it as a recipe for computing $QR$ decompositions.)
-{\it A good test of your own understanding is to work out why this is true!}
+{\itshape A good test of your own understanding is to work out why this is true!}
 \end{example}
 
 
@@ -484,7 +484,7 @@ equals the dot product of the $i$-th column of $Q$ with the $j$-th column of $M$
 
 \section{Orthogonal Complements}
 
-Let $U$ and $V$ be subspaces of a vector space $W$.  In \hyperref[UcapV]{Review Exercise}~\ref{UandV}, Chapter~\ref{subspacesspanning}, you are asked to show that $U\cap V$ is a subspace of $W$, and that $U\cup V$ is {\it not} a subspace.  However, $\spa (U\cup V)$ {\it is} certainly a subspace, since the span of \emph{any} subset of a vector space is a subspace.
+Let $U$ and $V$ be subspaces of a vector space $W$.  In \hyperref[UcapV]{Review Exercise}~\ref{UandV}, Chapter~\ref{subspacesspanning}, you are asked to show that $U\cap V$ is a subspace of $W$, and that $U\cup V$ is {\itshape not} a subspace.  However, $\spa (U\cup V)$ {\itshape is} certainly a subspace, since the span of \emph{any} subset of a vector space is a subspace.
 Notice that all elements of $\spa (U\cup V)$ take the form $u+v$ with $u\in U$ and $v\in V$.  We call the subspace 
 \Shabox{1}{$
 U+V:=\spa (U\cup V) = \{u+v ~| ~u\in U, v\in V \}$}
@@ -656,7 +656,7 @@ Moreover, we have
 a decomposition of $\Re^4$ into a line and its three dimensional orthogonal complement.
 \end{example}
 
-Notice that for any subspace $U$, the subspace $(U^\perp)^\perp$ is just $U$ again.  As such, $\perp$ is an {\it involution}\index{Involution} on the set of subspaces of a vector space. (An involution is any mathematical operation which performed twice does nothing.)
+Notice that for any subspace $U$, the subspace $(U^\perp)^\perp$ is just $U$ again.  As such, $\perp$ is an {\itshape involution}\index{Involution} on the set of subspaces of a vector space. (An involution is any mathematical operation which performed twice does nothing.)
 
 %\section*{References}
 %Hefferon, Chapter Three, Section VI.2: Gram-Schmidt Orthogonalization
