@@ -20,12 +20,11 @@
 %%%%%%%%%%%%%%%%%%%
 
 \item Solve the vector equation by applying ERO matrices to each side of the equation to perform elimination. Show each matrix explicitly as in \hyperlink{Undoing}{Example~\ref{slowly}}.
-
-\begin{eqnarray*}
+\[
 \begin{pmatrix}
 3	&6 	&2 \\ %-3
 5 	&9 	&4 \\ %1
-2	&4	&2 \\ %0
+2	&4	&2 %0
 \end{pmatrix} 
 \begin{pmatrix}
  x \\ 
@@ -36,18 +35,18 @@ z
 \begin{pmatrix}
 -3 \\ 
 1  \\
-0  \\
+0 
 \end{pmatrix} 
-\end{eqnarray*}
+\]
 
 %%%%%%%%%%%%%%%%%%%
 
 \item Solve this vector equation by finding the inverse of the matrix through $(M|I)\sim (I|M^{-1})$ and then applying $M^{-1}$ to both sides of the equation. 
-\begin{eqnarray*}
+\[
 \begin{pmatrix}
 2	&1 	&1 \\ %9
 1 	&1 	&1 \\ %6
-1	&1	&2 \\ %7
+1	&1	&2 %7
 \end{pmatrix} 
 \begin{pmatrix}
  x \\ 
@@ -58,21 +57,21 @@ z
 \begin{pmatrix}
 9 \\ 
 6  \\
-7  \\
+7 
 \end{pmatrix} 
-\end{eqnarray*}
+\]
 
 
 %%%%%%%%%%%%%%%%%%%
 
 \item Follow the method of  \hyperlink{elldeeeww}{Examples~\ref{factorize} and~\ref{factorizes}} to find the $LU$ and $LDU$ factorization of 
-\begin{eqnarray*}
+\[
 \begin{pmatrix}
 3	&3 	&6 \\ %0 %2
 3 	&5 	&2 \\ %1 %1
-6	&2	&5 \\ %0 %1
+6	&2	&5 %0 %1
 \end{pmatrix} .
-\end{eqnarray*}
+\]
 
 
 
@@ -82,11 +81,11 @@ z
 Multiple matrix equations with the same matrix can be solved simultaneously. 
 \begin{enumerate}
 \item Solve both systems by performing elimination on just one augmented matrix.
-\begin{eqnarray*}
+\begin{align*}
 \begin{pmatrix}
 2	&-1 	&-1 \\ %0 %2
 -1 	&1 	&1 \\ %1 %1
-1	&-1	&0 \\ %0 %1
+1	&-1	&0  %0 %1
 \end{pmatrix} 
 \begin{pmatrix}
  x \\ 
@@ -97,13 +96,13 @@ z
 \begin{pmatrix}
 0\\ 
 1  \\
-0  \\
+0  
 \end{pmatrix} 
 ,~
 \begin{pmatrix}
 2	&-1 	&-1 \\ %0 %2
 -1 	&1 	&1 \\ %1 %1
-1	&-1	&0 \\ %0 %1
+1	&-1	&0 %0 %1
 \end{pmatrix} 
 \begin{pmatrix}
  a \\ 
@@ -114,20 +113,20 @@ c
 \begin{pmatrix}
 2\\ 
 1  \\
-1  \\
+1 
 \end{pmatrix} 
-\end{eqnarray*}
+\end{align*}
 \item Give an interpretation of the columns of $M^{-1}$ in $(M|I)\sim (I|M^{-1})$ in terms of solutions to certain systems of linear equations.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \item How can you convince your fellow students to never make this mistake?
-\begin{eqnarray*}
+\begin{align*}
 \begin{amatrix}{3} 
 1 & 0 & 2 & 3 \\ 
 0 & 1 & 2& 3 \\
-2 & 0 & 1 & 4 \\
+2 & 0 & 1 & 4
 \end{amatrix} 
 & 
 \stackrel{R_1'=R_1+R_2}{
@@ -139,7 +138,7 @@ c
 1 & \!\!-1 & 0& 0 \\
 1 & 2 & 6 & 9 
 \end{amatrix}
-\end{eqnarray*}
+\end{align*}
 
 \item Is $LU$ factorization of a matrix unique?  Justify your answer.
 

@@ -19,11 +19,11 @@ write out the associated linear system and you will find the equation $0=6$ whic
 that we must avoid a row of zeros preceding a non-vanishing entry after the vertical bar.
 
 Turning to the system of equations, we first write out the augmented matrix and then perform two row operations
-\begin{eqnarray*}
-&&\left(\begin{array}{ccc|c}1&-3&0&6\\1&0&3&-3\\2&k&3-k&1\end{array}\right)\\[2mm]
-&\stackrel{R_2-R_1;R_3-2R_1}\sim&
+\begin{align*}
+&\left(\begin{array}{ccc|c}1&-3&0&6\\1&0&3&-3\\2&k&3-k&1\end{array}\right)\\[2mm]
+&\stackrel{R_2-R_1;R_3-2R_1}\sim
 \left(\begin{array}{ccc|c}1&-3&0&6\\0&3&3&-9\\0&k+6&3-k&-11\end{array}\right)\, .
-\end{eqnarray*}
+\end{align*}
 Next we would like to subtract some amount of $R_2$ from $R_3$ to achieve a zero in the third entry of the second column. But if 
 \[k+6=3-k\Rightarrow k=-\frac32\, ,\]
 this would produce zeros in the third row before the vertical line.

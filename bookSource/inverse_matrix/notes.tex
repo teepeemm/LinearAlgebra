@@ -142,27 +142,27 @@ Find $\begin{pmatrix}
 $.
 Start by writing the augmented matrix, then apply row reduction to the left side.
 
-\begin{eqnarray*}
+\begin{align*}
 \begin{pmat}{rrr|ccc}
 -1 & 2 & -3 & 1 & 0 & 0 \\[1mm]
 2  & 1 &  0 & 0 & 1 & 0 \\[1mm]
- 4 & -2 & 5 & 0 & 0 & 1 \\[1mm]
-\end{pmat} & \sim & \begin{pmat}{crr|ccc}
+ 4 & -2 & 5 & 0 & 0 & 1
+\end{pmat} & \sim \begin{pmat}{crr|ccc}
 1  & -2&  3  & 1 & 0 & 0 \\[1mm]
 0  & 5 &  -6 & 2 & 1 & 0 \\[1mm]
- 0 & 6 & -7  & 4 & 0 & 1 \\[1mm]
+ 0 & 6 & -7  & 4 & 0 & 1
 \end{pmat} \\[2mm]
-& \sim & \begin{pmat}{ccr|rrc}
+& \sim \begin{pmat}{ccr|rrc}
 1  & 0 &  \frac{3}{5}  & -\frac{1}{4} & \frac{2}{5} & 0 \\[1mm]
 0  & 1 &  -\frac{6}{5} & \frac{2}{5} & \frac{1}{5}  & 0 \\[1mm]
- 0 & 0 &  \frac{1}{5}  & \frac{4}{5} & -\frac{6}{5} & 1 \\[1mm]
+ 0 & 0 &  \frac{1}{5}  & \frac{4}{5} & -\frac{6}{5} & 1
 \end{pmat} \\[2mm]
-& \sim & \begin{pmat}{ccc|rrr}
+& \sim \begin{pmat}{ccc|rrr}
 1  & 0 &  0  & -5 & 4 & -3 \\[1mm]
 0  & 1 &  0  & 10 & -7 & 6 \\[1mm]
- 0 & 0 &  1  & 8 & -6 & 5 \\[1mm]
-\end{pmat} \\
-\end{eqnarray*}
+ 0 & 0 &  1  & 8 & -6 & 5
+\end{pmat}
+\end{align*}
 At this point, we know $M^{-1}$ assuming we didn't goof up\index{Goofing up}.  However, row reduction is a lengthy and arithmetically involved process, so we should~\emph{check our answer,} by confirming that $MM^{-1}=I$ (or if you prefer $M^{-1}M=I$):
 \[MM^{-1} = 
 \begin{pmatrix}

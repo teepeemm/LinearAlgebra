@@ -14,20 +14,20 @@ Now you will learn  an efficient algorithm  for (maximally) simplifying a system
 %In \Lecture~\ref{warmup}  we looked performed elimination on a system of equations. 
 %It was nice to do this elimination by adding subtracting an multiplying wholes equations at a time. 
 %Lets do another example with the system
-%\begin{eqnarray}
-%	x\ +\ y & = & 27\nn \\
-%	2x-\ y & = &\  0\nn \,.
-%\end{eqnarray}
+%\begin{align}
+%	x\ +\ y & = 27\nn \\
+%	2x-\ y & = \  0\nn \,.
+%\end{align}
 %Adding the first equation to the second then dividing by 3 gives
-%\begin{eqnarray}
-%	x\ +\ 0 & = & 9\nn \\
-%	2x-\ y & = &\  0\nn \,.
-%\end{eqnarray}
+%\begin{align}
+%	x\ +\ 0 & = 9\nn \\
+%	2x-\ y & = \  0\nn \,.
+%\end{align}
 %Subtracting rice the first from the second then dividing by $-1$ gives
-%\begin{eqnarray}
-%	x \phantom{\ +\ y}& = &\  9\nn \\
-%	\phantom{x\ +\ }y & = & 18\, .\nn
-%\end{eqnarray}
+%\begin{align}
+%	x \phantom{\ +\ y}& =\  9\nn \\
+%	\phantom{x\ +\ }y & = 18\, .\nn
+%\end{align}
 %
 %\noindent
 %The maximum number of terms have been eliminated from each equation, and the result is an obvious statement of the solution. 
@@ -116,11 +116,11 @@ This tells us that we are trying to find the combination of the vectors $\colvec
 
 Here is a larger example.
 The system
-\begin{eqnarray*}
-1x + 3y + 2z + 0w   &=&9 \\ 
-6x + 2y + 0z   -2w  &=&0  \\
--1x+ 0 y + 1 z + 1w  &=&3 \, ,
-\end{eqnarray*}
+\begin{align*}
+1x + 3y + 2z + 0w   &=9 \\ 
+6x + 2y + 0z   -2w  &=0  \\
+-1x+ 0 y + 1 z + 1w  &=3 \, ,
+\end{align*}
 is denoted by the augmented matrix
 \[
 \begin{amatrix}{4}
@@ -130,13 +130,13 @@ is denoted by the augmented matrix
 \end{amatrix}\, ,
 \]
 %When writing a system of equations one can write out the terms with zero for coefficients or not
-%\begin{eqnarray*}
+%\begin{gather*}
 %1x + 3y + 2z  \phantom{+ 0w}   =9 \\ 
 %6x + 2y \phantom{ + 0z}   -2w  =0  \\
 %-1x  \phantom{+0 y} + 1 z + 1w  =3 
-%\end{eqnarray*}
+%\end{gather*}
 which is equivalent to the matrix equation
-\begin{eqnarray*}
+\[
 \left(\begin{array}{rccr}
 1 & 3 & 2 & 0   \\ 
 6 & 2 & 0  & \!\!-2   \\
@@ -144,7 +144,7 @@ which is equivalent to the matrix equation
 \end{array}\right)
 \colvec{ x\\ y\\z\\w}
 =\colvec{ 9\\0\\3}\, .
-\end{eqnarray*}
+\]
 Again, we are trying to find which combination of the columns of the matrix adds up to the vector on the right hand side.
 
 
@@ -171,7 +171,7 @@ Let's put them side by side as we solve the system by strategically adding and s
 We will not tell you the motivation for this particular series of steps yet, but let you develop some intuition first. 
 
 \begin{example}  (How matrix equations and augmented matrices change in elimination)
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	x&+&y & = & 27 \\
@@ -190,9 +190,9 @@ We will not tell you the motivation for this particular series of steps yet, but
  \begin{amatrix}{2}
 1 &1 &27 \\ 2 &-1 & 0
 \end{amatrix}\, .
-  \end{eqnarray*}
+\]
 With the first equation replaced by the sum of the two equations this becomes
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	3x& +& 0 & = & 27 \\
@@ -211,9 +211,9 @@ With the first equation replaced by the sum of the two equations this becomes
  \begin{amatrix}{2}
 3 &0 &27 \\ 2 &-1 & 0
 \end{amatrix}\, .
-  \end{eqnarray*}
+\]
 Let the new first equation be the old first equation divided by 3:
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	x& +& 0 & = & 9 \\
@@ -232,9 +232,9 @@ Let the new first equation be the old first equation divided by 3:
  \begin{amatrix}{2}
 1 &0 &9 \\ 2 &-1 & 0
 \end{amatrix}\, .
-  \end{eqnarray*}
+\]
   Replace the second equation by the second equation minus two times the first equation: 
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	x& +& 0 & = & 9 \\
@@ -253,9 +253,9 @@ Let the new first equation be the old first equation divided by 3:
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &-1 & -18
 \end{amatrix}\, .
-  \end{eqnarray*}
+\]
 Let the new  second equation be the old second equation divided by -1:
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	x &+ &0 & = & \ 9 \\
@@ -274,7 +274,7 @@ Let the new  second equation be the old second equation divided by -1:
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &1 & 18
 \end{amatrix}\, .
-  \end{eqnarray*}
+\]
 \end{example}
 Did you see what the strategy was? To {\itshape eliminate} $y$ from the first equation and then {\itshape eliminate} $x$ from the second. The result was  the solution to the system. 
 
@@ -283,35 +283,35 @@ Everywhere in the instructions above we can replace the word ``equation" with th
 Performed systemically, the result is the {\bfseries Gaussian elimination}\index{Gaussian elimination} algorithm. 
 %
 %\begin{example} of Gaussian elimination
-%\begin{eqnarray*}
+%\[
 % \begin{amatrix}{2}
 %1 &1 &27 \\ 2 &-1 & 0
 %\end{amatrix}
-%  \end{eqnarray*}
+%  \]
 %Let the new first row be the sum of the first and second rows
-%\begin{eqnarray*}
+%\[
 % \begin{amatrix}{2}
 %3 &0 &27 \\ 2 &-1 & 0
 %\end{amatrix}
-%  \end{eqnarray*}
+%  \]
 %Let the new first row be the old first row divided by 3
-% \begin{eqnarray*}
+% \[
 % \begin{amatrix}{2}
 %1 &0 &9 \\ 2 &-1 & 0
 %\end{amatrix}
-%  \end{eqnarray*}
+%  \]
 %Let the new second row be the old second row minus two times the first row 
-%\begin{eqnarray*}
+%\[
 % \begin{amatrix}{2}
 %1 &0 &9 \\ 0 &-1 & -18
 %\end{amatrix}
-%  \end{eqnarray*}
+%  \]
 %Let the new  second row be the old second row divided by -1
-%\begin{eqnarray*}
+%\[
 % \begin{amatrix}{2}
 %1 &0 &9 \\ 0 &1 & 18
 %\end{amatrix}
-%  \end{eqnarray*}
+%  \]
 %The solution can be read off very quickly, and the notation was very minimal. 
 %\end{example}
 % At each step, the augmented matrices encode systems of equations which have the same solutions. Lets make this idea more formal, and introduce some notation to convey the idea.
@@ -353,7 +353,7 @@ Setting up a string of equivalences like this is a means of solving a system of 
 This next example hints at the main trick:
 
 \begin{example} (Using Gaussian elimination to solve a system of linear equations)
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x +\ y & = & 5 \\
@@ -379,7 +379,7 @@ This next example hints at the main trick:
 	 0 + y & = &\  3
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 Note that in going from the first to second augmented matrix, we used the top left $1$ to make the bottom left entry zero. For this reason we call the top left entry a pivot. 
 Similarly, to get from the second to third augmented matrix,  the bottom right entry (before the divide) was used to make the top right one vanish; so the bottom right entry is also called a pivot. 
 \end{example}
@@ -410,7 +410,7 @@ for which the identity matrix~$I$ has 1's along its \hyperlink{diagonal}{diagona
 For many systems, it is not possible to reach the identity in the augmented matrix via Gaussian elimination. In any case, a certain version of the matrix that has the maximum number of components eliminated is said to be the Row Reduced Echelon Form (RREF). 
 
 \begin{example}\label{redundant} (Redundant equations)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	 x& + & y & = & 2 \\[1mm]
@@ -436,12 +436,12 @@ For many systems, it is not possible to reach the identity in the augmented matr
 	 0& +& 0 & = &  0
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 This example demonstrates if one equation is a multiple of the other the identity matrix can not be a reached. This is because the first step in elimination will make the second row a row of zeros. Notice that solutions still exists $(1,1)$ is a solution. The last augmented matrix here is in RREF; no more than two components  can be eliminated.
 \end{example}
 
 \begin{example} (Inconsistent equations)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	x &+ & y & = & 2 \\[1mm]
@@ -467,14 +467,14 @@ This example demonstrates if one equation is a multiple of the other the identit
 	 0 &+& 0 & = &  1
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 This system of equation has a solution if there exists two numbers $x$, and $y$ such that $0+0=1$. That is a tricky way of saying there are no solutions. The last form of the augmented matrix here is the RREF.
 \end{example}
 
 
 \begin{example} (Silly order of equations)\\
 A robot might make this mistake:
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	0x &+&  y & = & -2 \\[1mm]
@@ -486,9 +486,9 @@ A robot might make this mistake:
 0 &1 & -2\\[1mm] 1 &1 & 7
 \end{amatrix}
 \sim \, \cdots\, ,
-\end{eqnarray*}  
+\]
 and then give up because the the upper left slot can not function as a pivot since the~0 that lives there can not be used to eliminate the zero below it. Of course, the right thing to do is to change the order of the equations before starting
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{ccccr}
 	 x &+ &y & = &  7
@@ -511,7 +511,7 @@ and then give up because the the upper left slot can not function as a pivot sin
 	 0 &+& y & = & -2\, .
      \end{array} 
    \right.
-\end{eqnarray*}  
+\]
 The third augmented matrix above  is the RREF of the first and second. That is to say, you can swap rows on your way to RREF.
 \end{example}
 
@@ -622,14 +622,14 @@ not every column need have a pivot, as demonstrated in examples~\ref{redundant} 
 Here is an example where multiple columns have no pivot:
 
 \begin{example} (Consecutive  columns with no pivot in RREF)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{cccccccccr}
 	 x & + & y &+ & z& + & 0w & = & 2 \\
 	2x& +& 2y& +&2z&+&2w & = &  4
      \end{array}
    \right\} 
-   &\!\Leftrightarrow\!&
+   \!\Leftrightarrow\!
 \begin{amatrix}{4}
 1 &1 &1 & 0 &2 \\ 
 2 &2 &2 & 1 & 4
@@ -639,14 +639,14 @@ Here is an example where multiple columns have no pivot:
 1 &1 &1 & 0 &2 \\ 
 0 &0 &0 & 1 & 0
 \end{amatrix}\\[2mm]
-&\!\Leftrightarrow\!&
+\!\Leftrightarrow\!
 \left\{
 \begin{array}{rrrrrr}
 	x \ +\  y\  + \  z&&& = & 2 \phantom{\, .}\\
 	&& w & = &  0\, .
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 Note that there was no hope of reaching the identity matrix, because of the shape of the augmented matrix we started with. 
 \end{example}
 
@@ -670,7 +670,7 @@ RREF is a maximally simplified version of the original system of equations in th
 It is easier to read off solutions from the maximally simplified equations than from the original equations, even when there are infinitely many solutions.
 
 \begin{example}{(Standard approach  from a system of equations to the solution set)}
- \begin{eqnarray*}
+\[
 \left.
 \begin{array}{ccccccccr}
 	x & +&y  && & +& 5w &   =& 1 \\
@@ -712,7 +712,7 @@ It is easier to read off solutions from the maximally simplified equations than 
  \\[4mm]
 \Leftrightarrow
 \colvec{x\\[.5mm]y\\[.5mm]z\\[.5mm]w} = \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} + w\colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1}\, .
-\end{eqnarray*}
+\]
 %This brings up the issue of what constitutes a solution to a system of equations; the last thing written above was a vector equation... and if it sounds wrong to say  ``an equation is a solution to an equation" you are in good company.  
 %There are infinitely many solutions to the , one for each value of $w$. 
 %For example
@@ -721,7 +721,7 @@ It is easier to read off solutions from the maximally simplified equations than 
 %\left( -.75\right)^{\pi-1}\colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1}\, 
 %\]
 %is one of the solutions. Notice that this solution is not an equation; it is an ordered set of numbers that, if substituted  for the variables in the equations, yields true statements. This might be annoying to check because of the annoying number $(-.75)^{\pi-1}$ we chose to replace $w$. We just wanted to show you that ANY number can go there. You probably want a way to check a solution which is not annoying. A good check is to see if the system is solved by the expression with $w$ replaced by $0$. Indeed
-%\begin{eqnarray*}
+%\[
 % \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} {\text ~is~a ~solution ~to \qquad}
 %\begin{array}{ccccccccr}
 %	x & +&y  && & +& 5w &   =& 1 \\
@@ -735,10 +735,10 @@ It is easier to read off solutions from the maximally simplified equations than 
 %	 &&6 & &   &+& 2 (0) & = &6 \\
 %	&&&& 8&+&         4(0) & = &8
 %\end{array}.
-%\end{eqnarray*}
+%\]
 %Given that there are many solutions, what ought one report when asked to solve a system of equations? The standard thing to report is {\itshape the solution set}\index{solution set}\index{Solution set}; 
 %There is a solution for each value of $w$. Better said 
-%\begin{eqnarray*}
+%\[
 %{\text the ~solution~ set~ to \qquad}
 %\begin{array}{ccccccccr}
 %	x & +&y  && & +& 5w &   =& 1 \\
@@ -748,7 +748,7 @@ It is easier to read off solutions from the maximally simplified equations than 
 %is \qquad\left\{    \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} 
 %+ 
 %\alpha \colvec{-3\\[.5mm]-2\\[.5mm]-4\\[.5mm]1} : \alpha \in \mathbb{R} \right\}
-%\end{eqnarray*}
+%\]
 There is one solution for each value of $w$, so the solution set is 
 \[
 \left\{    \colvec{-5\\[.5mm]6\\[.5mm]8\\[.5mm]0} 
@@ -788,18 +788,18 @@ When you see an RREF augmented matrix with two columns that have no pivot, you k
 
 \begin{example}{(Standard approach, multiple free variables)}
 
- \begin{eqnarray*}
+\[
  \begin{amatrix}{4} 
 1 & 0 & 7 & 0 & 4 \\ 
 0 & 1 & 3 & 4 & 1 \\ 
 0 & 0 & 0 & 0 & 0 \\ 
-0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 0 
 \end{amatrix}
 \Leftrightarrow
 \left\{
 \begin{array}{lcr}
 	x \phantom{+y}    + 7z  \phantom{+w} & = 4 \\
-	\phantom {x+}   y + 3z  {+4w} & = 1 \\
+	\phantom {x+}   y + 3z  {+4w} & = 1 
 	%\phantom{x+y+z+}          w & = 2
      \end{array}
      \right\}
@@ -816,7 +816,7 @@ When you see an RREF augmented matrix with two columns that have no pivot, you k
      \right\}
      \Leftrightarrow
 \colvec{x\\y\\z\\w} = \colvec{4\\1\\0\\0} + z\colvec{-7\\-3\\1\\0} + w\colvec{0\\-4\\0\\1}
-\end{eqnarray*}
+\]
 %There are infinitely many solutions; one for each pair of numbers $z,w$. 
 so the solution set is 
 \[  \left\{  \colvec{4\\1\\0\\0} + z\colvec{-7\\-3\\1\\0} + w\colvec{0\\-4\\0\\1} : z,w\in \mathbb{R} \right\}. \]
@@ -1032,7 +1032,7 @@ Interestingly, the matrix
 that describes the relationship between old and new rows 
 performs the corresponding ERO on the augmented matrix.
 \begin{example} (Performing EROs with Matrices)
-\begin{eqnarray*}
+\begin{align*}
 \begin{pmatrix}
 0 & 1 & 0  \\ 
 1 & 0 & 0 \\
@@ -1043,30 +1043,32 @@ performs the corresponding ERO on the augmented matrix.
 2 & 0 & 0& 4 \\
 0& 0 & 1 & 4 
 \end{amatrix} 
-&=&
+&=
 \begin{amatrix}{3} 
 2 & 0 & 0 & 4 \\
 0 & 1 & 1& 7 \\
-0 & 0 & 1 & 4 \\ 
+0 & 0 & 1 & 4 
 \end{amatrix}
-\\[3mm] &&\qquad\quad \rotatebox{90}{$\sim$} \\[3mm]%second line
+\\[3mm]
+&\qquad\quad \rotatebox{90}{$\sim$} \\[3mm]%second line
 \begin{pmatrix}
 \frac12 & 0 & 0  \\ 
 0 & 1 & 0 \\
-0& 0 & 1  \\
+0& 0 & 1 
 \end{pmatrix}
 \begin{amatrix}{3} 
 2 & 0 & 0 & 4 \\
 0 & 1 & 1& 7 \\
-0 & 0 & 1 & 4 \\ 
+0 & 0 & 1 & 4 
 \end{amatrix}
-&=&
+&=
 \begin{amatrix}{3} 
 1 & 0 & 0 & 2 \\
 0 & 1 & 1& 7 \\
-0 & 0 & 1 & 4 \\ 
+0 & 0 & 1 & 4 
 \end{amatrix}
-\\[3mm] &&\qquad\quad \rotatebox{90}{$\sim$} \\[3mm]%third line
+\\[3mm]
+&\qquad\quad \rotatebox{90}{$\sim$} \\[3mm]%third line
 \begin{pmatrix}
 1&0&0\\
 0&1&\!\!\!-1\\
@@ -1075,15 +1077,15 @@ performs the corresponding ERO on the augmented matrix.
 \begin{amatrix}{3} 
 1 & 0 & 0 & 2 \\
 0 & 1 & 1& 7 \\
-0 & 0 & 1 & 4 \\ 
+0 & 0 & 1 & 4 
 \end{amatrix} 
-&=&
+&=
 \begin{amatrix}{3} 
 1 & 0 & 0 & 2 \\
 0 & 1 & 0& 3 \\
-0 & 0 & 1 & 4 \\ 
+0 & 0 & 1 & 4 
 \end{amatrix}
-\end{eqnarray*}
+\end{align*}
 Here we have multiplied the augmented matrix with the matrices that acted on rows listed on the right  of example~\ref{Rsystem}. 
 \end{example}
 
@@ -1336,20 +1338,20 @@ There is no need to write the EROs as systems of equations or as matrices while 
 %That is, perform the EROs without the their corresponding matrices.
 
 \begin{example} \label{undo_a_matrix}(Collecting EROs that \hypertarget{undo a matrix}{undo a matrix})
-\begin{eqnarray*}
+\begin{align*}
 \left(\begin{array}{ccc|ccc}
 0 & 1 & 1 &1 &0 &0\\ 
 2 & 0 & 0 &0&1&0\\
 0& 0 & 1   &0  &0 &1\\
 \end{array}  \right)
-&\!\!\sim\!\!&
+&\!\!\sim
 \left(\begin{array}{ccc|ccc}
 2 & 0 & 0 &0&1&0\\
 0 & 1 & 1 &1 &0 &0\\ 
 0& 0 & 1   &0  &0 &1\\
 \end{array}  \right)
 \\[2mm]
-&\!\!\sim\!\!&
+&\!\!\sim
 \left(\begin{array}{ccc|ccc}
 1 & 0 & 0 &0&\frac12&0\\
 0 & 1 & 1 &1 &0 &0\\ 
@@ -1361,31 +1363,31 @@ There is no need to write the EROs as systems of equations or as matrices while 
 0 & 1 & 0 &1 &0 &\!\!\!-1\\ 
 0& 0 & 1   &0  &0 &1\\
 \end{array}  \right)\, .
-\end{eqnarray*}
+\end{align*}
 \end{example}
 \noindent
 As we changed the left side from the matrix $M$ to the identity matrix, the right side changed from the identity matrix to the matrix which undoes $M$. 
 \begin{example} (Checking that \hypertarget{inversie}{one matrix undoes another})
-\begin{eqnarray*}
+\[
 \left(\begin{array}{rrr}
 0&\frac12&0\\
 1 &0 &\!\!\!-1\\ 
-0  &0 &1\\
+0  &0 &1
 \end{array}  \right)
 \left(\begin{array}{ccc}
 0&1&1\\
 2 &0 &0\\ 
-0  &0 &1\\
+0  &0 &1
 \end{array}  \right)
 =
 \left(\begin{array}{ccc}
 1  &0 &0\\
 0  &1 &0\\ 
-0  &0 &1\\
+0  &0 &1
 \end{array}  \right) \, .
-\end{eqnarray*}
+\]
 If the matrices are composed in the opposite order, the result is the same.
-\begin{eqnarray*}
+\[
 \left(\begin{array}{ccc}
 0&1&1\\
 2 &0 &0\\ 
@@ -1402,7 +1404,7 @@ If the matrices are composed in the opposite order, the result is the same.
 0  &1 &0\\ 
 0  &0 &1\\
 \end{array}  \right) \, .
-\end{eqnarray*}
+\]
 \end{example}
 
 %\reading{3}{1}
@@ -1505,7 +1507,7 @@ We can write an explicit factorization of a matrix into EROs by keeping track of
 Note that in the previous example 
 one of each of the kinds of EROs is used, in the order just given.
 Elimination looked like 
-\begin{eqnarray*}
+\[
 M=
 \left(\begin{array}{ccc}
 0 & 1 & 1 \\ 
@@ -1531,9 +1533,9 @@ M=
 0& 0 & 1  
 \end{array}  \right)
 =I\, ,
-\end{eqnarray*}
+\]
 where the EROs matrices are 
-\begin{eqnarray*}
+\[
 E_1
 = \left(\begin{array}{ccc}
 0  &1 &0\\
@@ -1553,9 +1555,9 @@ E_3
 0  &1 & -1\\ 
 0  &0 &1\\
 \end{array}  \right) \,.
-\end{eqnarray*}
+\]
 %Composing these gives (by matrix multiplication rules worked out in %\hyperref{}
-%\begin{eqnarray*}
+%\[
 %E_3E_2E_1
 %&= &
 % \left(\begin{array}{ccc}
@@ -1591,10 +1593,10 @@ E_3
 %0  	&0 		&1
 %\end{array}  \right) 
 % \, .
-%\end{eqnarray*}
+%\]
 %We showed this was $M^{-1}$ \hyperlink{inversie}{earlier}. 
 The inverse of the ERO matrices (corresponding to the description of the reverse row maniplulations)
-\begin{eqnarray*}
+\[
 E_1^{-1}
 = \left(\begin{array}{ccc}
 0  &1 &0\\
@@ -1614,11 +1616,11 @@ E_3^{-1}
 0  &1 & 1\\ 
 0  &0 &1\\
 \end{array}  \right) \,.
-\end{eqnarray*}
+\]
 Multiplying these gives 
-\begin{eqnarray*}
+\begin{align*}
 E_1^{-1}E_2^{-1}E_3^{-1}
-&=& 
+&=
 \left(\begin{array}{ccc}
 0  &1 &0\\
 1  &0 &0\\ 
@@ -1635,7 +1637,7 @@ E_1^{-1}E_2^{-1}E_3^{-1}
 0  &0 &1\\
 \end{array}  \right) 
 \\[2mm] %2nd line
-&=&
+&=
 \left(\begin{array}{ccc}
 0  &1 &0\\
 1  &0 &0\\ 
@@ -1652,7 +1654,7 @@ E_1^{-1}E_2^{-1}E_3^{-1}
 2  &0 &0\\ 
 0  &0 &1\\
 \end{array}  \right)  = M \, .
-\end{eqnarray*}
+\end{align*}
 \end{example}
 
 \subsection{$LU$, $LDU$, and $PLDU$ Factorizations}\label{LUtake1}
@@ -1662,62 +1664,62 @@ leaving a matrix which is called {\itshape upper triangular}\index{Upper triangu
 
 
 \begin{example}\label{factorize} ($LU$ \hypertarget{elldeeeww}{ factorization})
-\begin{eqnarray*}
+\begin{align*}
 M=
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 -4&0&9&2\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
-&\stackrel{E_1}{\sim}&
+&\stackrel{E_1}{\sim}
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
 \\[2mm]
-&\stackrel{E_2}{\sim}&
+&\stackrel{E_2}{\sim}
 ~~\begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&3&1\\
+0&0&3&1
 \end{pmatrix}
 ~~\stackrel{E_3}{\sim}~
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix}
 :=U\, ,
-\end{eqnarray*}
+\end{align*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 where the EROs and their inverses are 
 %%%%%%%%%%%%%%%
-\begin{eqnarray*}
+\begin{gather*}
 E_1=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 2&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix} \, ,~~~~
 E_2=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&1&0&1\\
+0&1&0&1
 \end{pmatrix} \, ,~~
 E_3=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&0&-1&1\\
+0&0&-1&1
 \end{pmatrix} \, 
 \\[2mm] %%%%%%%%second line
 E_1^{-1}=
@@ -1725,97 +1727,97 @@ E_1^{-1}=
 1&0&0&0\\
 0&1&0&0\\
 -2&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}  , \,
 E_2^{-1}=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&-1&0&1\\
+0&-1&0&1
 \end{pmatrix}  , \,
 E_3^{-1}=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&0&1&1\\
+0&0&1&1
 \end{pmatrix} \, .
-\end{eqnarray*}
+\end{gather*}
 Applying inverse elementary matrices to both sides of the equality  $U=E_3E_2E_1M$ gives 
 $M=E_1^{-1}E_2^{-1}E_3^{-1}U$ or 
 %\scalebox{.97}
-\begin{eqnarray*}
+\begin{align*}
  %oi vey
 \begin{pmatrix}
 2&0&\!\!-3&1\\
 0&1&2&2\\
 \!-4&0&9&2\\
-0&-1&1&\!\!-1\\
+0&-1&1&\!\!-1
 \end{pmatrix}
-\!\!\!\!\!\!&=&\!\!\!\!\!\!
+\!\!\!\!\!\!&=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 \!-2&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix} \!\!\!
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&\!\!\!-1&0&1\\
+0&\!\!\!-1&0&1
 \end{pmatrix}\!\!\!
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&0&1&1\\
+0&0&1&1
 \end{pmatrix}\!\!\!
 \begin{pmatrix}
 2&0&\!\!\!-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&\!\!-3\\
+0&0&0&\!\!-3
 \end{pmatrix}
 \\[2mm]
-&=&\!\!\!\!
+&=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 \!-2&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix} 
 %%%%%%%%
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 0&0&1&0\\
-0&\!\!-1&1&1\\
+0&\!\!-1&1&1
 \end{pmatrix}
 %%%%%%%%%%
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix}
 \\[2mm]
-&=&\!\!\!\!
+&=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 \!-2&0&1&0\\
-0&\!\!-1&1&1\\
+0&\!\!-1&1&1
 \end{pmatrix} 
 %
 \begin{pmatrix}
 2&0&\!\!-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&\!\!-3\\
+0&0&0&\!\!-3
 \end{pmatrix} \, .
-\end{eqnarray*}
+\end{align*}
 %\end{scalebox}
 This is a lower triangular matrix times an upper triangular matrix. 
 \end{example}
@@ -1824,48 +1826,47 @@ This is a lower triangular matrix times an upper triangular matrix.
 What if we stop at a different point in elimination? 
 We could multiply rows so that the entries in the diagonal are 1 next. Note that the EROs that do this are diagonal. This gives a slightly different factorization.
 \begin{example} \label{factorizes}($LDU$ factorization building from previous example)
-\begin{eqnarray*}
+\begin{align*}
 M=
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 -4&0&9&2\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
 &\stackrel{E_3E_2E_1}{\sim}&
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix}
 \stackrel{E_4}{\sim}
 \begin{pmatrix}
 1&0&-\frac{3}{2}&\frac{1}{2}\\
 0&1&2&2\\
 0&0&3&4\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix}
 \\[2mm]
-&\stackrel{E_5}{\sim}&
+&\stackrel{E_5}{\sim}
 \begin{pmatrix}
 1&0&-\frac{3}{2}&\frac{1}{2}\\
 0&1&2&2\\
 0&0&1&\frac43\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix}
 \stackrel{E_6}{\sim}
 \begin{pmatrix}
 1&0&-\frac{3}{2}&\frac{1}{2}\\
 0&1&2&2\\
 0&0&1&\frac43\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}
 =:U
-\end{eqnarray*}
+\end{align*}
 The corresponding elementary matrices are
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 %%%%%%%%the EROs
 E_4=
 \begin{pmatrix}
@@ -1911,118 +1912,109 @@ E_6^{-1}=
 0&0&1&0\\
 0&0&0&-3\\
 \end{pmatrix} \, .
-\end{aligned}
-\end{equation*}
+\end{align*}
 The equation $U=E_6E_5E_4E_3E_2E_1 M$ can be rearranged as
 \[M=(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1})U.\] 
 We calculated the product of the first three factors in the previous example; it was named $L$ there, and we will reuse that name here. The product of the next three factors is diagonal and we wil name it $D$. The last factor we named $U$ (the name means something different in this example than the last example.) The $LDU$ factorization of our matrix is
-\begin{eqnarray*}
+\begin{align*}
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 -4&0&9&2\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
 =
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 -2&0&1&0\\
-0&-1&1&1\\
+0&-1&1&1
 \end{pmatrix} 
 \begin{pmatrix}
 2&0&0&0\\
 0&1&0&0\\
 0&0&3&0\\
-0&0&0&-3\\
+0&0&0&-3
 \end{pmatrix} 
 \begin{pmatrix}
 1&0&\!\!-\frac{3}{2}&\frac{1}{2}\\
 0&1&2&2\\
 0&0&1&\frac43\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}\, .
-\end{eqnarray*}
+\end{align*}
 \end{example}
 
 The $LDU$ factorization of a matrix is a factorization into blocks of EROs of a various types: $L$ is the product of the inverses of EROs which eliminate below the diagonal by row addition, $D$ the product of inverses of EROs which set the diagonal elements to 1 by row multiplication, and $U$ is the product of inverses of EROs which eliminate above the diagonal by row addition.
 
-\hypertarget{LDPU}{
-You} may notice that one of the three kinds of row operation is missing from this story. 
+\hypertarget{LDPU}{You} may notice that one of the three kinds of row operation is missing from this story. 
 Row exchange may  be necessary to obtain RREF. Indeed, 
 so far in this chapter we have been working under the tacit assumption that 
 $M$ can be brought to the identity by just row multiplication and row addition. 
 If row exchange is necessary, the resulting factorization is $LDPU$ where $P$ is the product of inverses of EROs that perform row exchange. 
 
 \begin{example} ($LDPU$ factorization, building from previous examples)
-\begin{eqnarray*}
-M=
+\begin{align*}
+M&=
 \begin{pmatrix}
 0&1&2&2\\
 2&0&-3&1\\
 -4&0&9&2\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
 \stackrel{P}{\sim}
 \begin{pmatrix}
 2&0&-3&1\\
 0&1&2&2\\
 -4&0&9&2\\
-0&-1&1&-1\\
+0&-1&1&-1
 \end{pmatrix}
-\stackrel{E_6E_5E_4E_3E_2E_1}{\sim} L
-\end{eqnarray*}
-\begin{eqnarray*}
-P=
+\stackrel{E_6E_5E_4E_3E_2E_1}{\sim} L\\
+P&=
 \begin{pmatrix}
 0&1&0&0\\
 1&0&0&0\\
 0&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}
-=P^{-1}
-\end{eqnarray*}
-\begin{eqnarray*}
-M=P(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1}) (E_7^{-1}) U=PLDU\\
-\end{eqnarray*}
-%%%%%%%last line!
-\begin{center}
-\scalebox{.91}{$
+=P^{-1}\\
+M&=P(E_1^{-1}E_2^{-1}E_3^{-1})(E_4^{-1}E_5^{-1}E_6^{-1}) (E_7^{-1}) U=PLDU\\
 \!\!\!\begin{pmatrix}
 0&1&2&2\\
 2&0&-3&1\\
 -4&0&9&2\\
-0&\!\!-1&1&\!\!-1\\
+0&\!\!-1&1&\!\!-1
 \end{pmatrix}
 =
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
 -2&0&1&0\\
-0&\!\!-1&1&1\\
+0&\!\!-1&1&1
 \end{pmatrix} 
 \!\!\!
 \begin{pmatrix}
 2&0&0&0\\
 0&1&0&0\\
 0&0&3&0\\
-0&0&1&\!\!\!-3\\
+0&0&1&\!\!\!-3
 \end{pmatrix} 
 \!\!\!
 \begin{pmatrix}
 0&1&0&0\\
 1&0&0&0\\
 0&0&1&0\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}
 \!\!\!
 \begin{pmatrix}
 1&0&\!\!-\frac{3}{2}&\frac{1}{2}\\
 0&1&2&2\\
 0&0&1&\frac43\\
-0&0&0&1\\
+0&0&0&1
 \end{pmatrix}
-$}\end{center}
+%\end{center}
+\end{align*}
 
 \end{example}
 
@@ -2232,7 +2224,7 @@ In the \hyperlink{standard approach}{standard approach}, variables corresponding
      \right.
 \]
 Following the standard approach, express the pivot variables in terms of the non-pivot variables and add ``empty equations". Here $x_3$ and $x_4$ are non-pivot variables.  
-\begin{eqnarray*}
+\[
 \left.
 \begin{array}{rcl}
 	x_1 & = &1 -x_3+x_4 \\
@@ -2244,7 +2236,7 @@ Following the standard approach, express the pivot variables in terms of the non
      \Leftrightarrow
 \colvec{x_1\\x_2\\x_3\\x_4} 
 = \colvec{1\\1\\0\\0} + x_3\colvec{-1\\1\\1\\0} + x_4\colvec{1\\-1\\0\\1}
-\end{eqnarray*}
+\]
 The preferred way to write a solution set $S$ is with set notation\index{Solution set!set notation};  \[S = \left\{\colvec{x_1\\x_2\\x_3\\x_4} = \colvec{1\\1\\ 0\\0 } + \mu_1 \colvec{-1\\1\\1\\0 }  + \mu_2  \colvec{1\\-1\\ 0 \\1 } : \mu_1,\mu_2\in  {\mathbb R} \right\} .\]
 Notice that the first two components of the second two terms come from the non-pivot columns.
 Another way to write the solution set is

@@ -147,18 +147,19 @@ m^2_1 & m^2_2 & m^2_3 & m^2_4\\[1mm]
 m^3_1 & m^3_2 & m^3_3 & m^3_4\\[1mm]
 m^4_1 & m^4_2 & m^4_3 & m^4_4\\
 \end{pmatrix}$, then $\det M$ is:
-\begin{eqnarray*}
-\det M &=& 
+\begin{align*}
+\det M
+&=
  m^1_1m^2_2m^3_3m^4_4
 -m^1_1m^2_3m^3_2m^4_4
 -m^1_1m^2_2m^3_4m^4_3 \\[1mm]
-& -&m^1_2m^2_1m^3_3m^4_4
+& -m^1_2m^2_1m^3_3m^4_4
 +m^1_1m^2_3m^3_4m^4_2
 +m^1_1m^2_4m^3_2m^4_3 \\[1mm]
-&+ & m^1_2m^2_3m^3_1m^4_4
+&+  m^1_2m^2_3m^3_1m^4_4
 +m^1_2m^2_1m^3_4m^4_3
 \pm \text{16 more terms}.
-\end{eqnarray*}
+\end{align*}
 \end{example}
 This is very cumbersome.
 
@@ -177,13 +178,13 @@ We would like to use the determinant to decide whether a matrix is invertible.  
 \begin{remark}[Swapping rows]
 Lets \hypertarget{rowswap}{swap}
  rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly \[\text{sgn}(\hat{\sigma})=-\text{sgn}(\sigma)\, .\]  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
-\begin{eqnarray}
-\det M' & = & \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\
-& = & \sum_{\sigma} \text{sgn}(\sigma) \,m^1_{\sigma(1)}\cdots m^i_{\sigma(j)}\cdots m^j_{\sigma(i)} \cdots m^n_{\sigma(n)} \nonumber \\
-& = & \sum_{\sigma}(-\text{sgn}(\hat{\sigma})) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
-& = & - \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma}) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
-& = & -\det M.\nn
-\end{eqnarray}
+\begin{align}
+\det M' & = \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\
+& = \sum_{\sigma} \text{sgn}(\sigma) \,m^1_{\sigma(1)}\cdots m^i_{\sigma(j)}\cdots m^j_{\sigma(i)} \cdots m^n_{\sigma(n)} \nonumber \\
+& = \sum_{\sigma}(-\text{sgn}(\hat{\sigma})) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
+& = - \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma}) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
+& = -\det M.\nn
+\end{align}
 The step replacing $\sum_\sigma$ by $\sum_{\hat \sigma}$ often causes confusion; it holds since we sum over all permutations (see review problem~\ref{hatsum}).
 Thus we see that swapping rows changes the sign of the determinant. {\itshape I.e.}, \[\det M' = - \det M\, .\]
 
@@ -323,11 +324,11 @@ equals $M$ with one row multiplied by~$\lambda$.
 
 What effect does multiplication by the elementary matrix $R^i(\lambda)$ have on the determinant?
 
-\begin{eqnarray*}
-\det M' & = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = & \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = & \lambda \det M
-\end{eqnarray*}
+\begin{align*}
+\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \det M
+\end{align*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
 {\itshape I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
 
@@ -388,12 +389,12 @@ Then multiplying $M$ by $S^i_j(\mu)$  performs a row addition;
 What is the effect of multiplying by $S^i_j(\mu)$ on the determinant?  Let $M'=S^i_j(\mu)M$, and let $M''$ be the matrix $M$ but with $R^i$ replaced by $R^j$
 Then
 
-\begin{eqnarray*}
-\det M' & = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \mu m^j_{\sigma(i)}) \cdots m^n_{\sigma(n)} \\
-& = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-&   & \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \mu m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
-& = & \det M + \mu \det M''
-\end{eqnarray*}
+\begin{align*}
+\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \mu m^j_{\sigma(i)}) \cdots m^n_{\sigma(n)} \\
+& = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+&   \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \mu m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
+& = \det M + \mu \det M''
+\end{align*}
 Since $M''$ has two identical rows, its determinant is $0$ so
 \[
 \det M' = \det M,
@@ -482,28 +483,25 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\mu)$ is invertible, except fo
 
 To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\itshape i.e.}, $M$ is invertible), then:
 
-\begin{eqnarray*}
-\det (MN) & = & \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
-& = & \det (E_1E_2\cdots E_k I F_1F_2\cdots F_l\,  \rref(N) )\\
-& = & \det (E_1) \cdots \det(E_k)\det(I)\det(F_1)\cdots\det(F_l)\det\rref(N)\\
-& = & \det(M)\det(N)
-\end{eqnarray*}
+\begin{align*}
+\det (MN) & = \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
+& = \det (E_1E_2\cdots E_k I F_1F_2\cdots F_l\,  \rref(N) )\\
+& = \det (E_1) \cdots \det(E_k)\det(I)\det(F_1)\cdots\det(F_l)\det\rref(N)\\
+& = \det(M)\det(N)
+\end{align*}
 Otherwise, $M$ is not invertible, and $\det M=0=\det 
 \rref(M)$.  Then there exists a row of zeros in $
 \rref(M)$, so $R^n(\lambda)
 \rref(M)=
 \rref(M)$ {\itshape for any~$\lambda$}.  Then:
-\begin{eqnarray*}
-\det (MN) & = & 
-\det (E_1E_2\cdots E_k \, \rref(M) N )\\
-& = & 
-\det (E_1) \cdots \det(E_k)\det( \rref(M)N)\\
-& = & \det (E_1) \cdots \det(E_k)\det( R^n(\lambda) 
-\, \rref(M)N)\\
-& = & \det (E_1) \cdots \det(E_k)\lambda \det( 
-\rref(M)N)\\
-& = & \lambda \det (MN)
-\end{eqnarray*}
+\begin{align*}
+\det (MN)
+& = \det (E_1E_2\cdots E_k \, \rref(M) N )\\
+& = \det (E_1) \cdots \det(E_k)\det( \rref(M)N)\\
+& = \det (E_1) \cdots \det(E_k)\det( R^n(\lambda) \, \rref(M)N)\\
+& = \det (E_1) \cdots \det(E_k)\lambda \det( \rref(M)N)\\
+& = \lambda \det (MN)
+\end{align*}
 Which implies that $\det (MN)=0=\det M \det N$.
 
 Thus we have shown that for {\itshape any} matrices $M$ and $N$, 
@@ -582,13 +580,13 @@ A \emph{minor}\index{Minor} of an $n\times n$ matrix $M$ is the determinant of a
 
 It is possible to write the determinant of a matrix in terms of  its minors\index{Expansion by minors} as follows:
 
-\begin{eqnarray*}
-\det M &=& \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&=& m^1_1\, \sum_{\slashed{\sigma}^1} \text{sgn}(\slashed{\sigma}^1)\, m^2_{\slashed{\sigma}^1(2)}\cdots m^n_{\slashed{\sigma}^1(n)} \\
-& +&  m^1_2\, \sum_{\slashed{\sigma}^2} \text{sgn}(\slashed{\sigma}^2)\, m^2_{\slashed{\sigma}^2(1)}
+\begin{align*}
+\det M &=\sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&=m^1_1\, \sum_{\slashed{\sigma}^1} \text{sgn}(\slashed{\sigma}^1)\, m^2_{\slashed{\sigma}^1(2)}\cdots m^n_{\slashed{\sigma}^1(n)} \\
+& + m^1_2\, \sum_{\slashed{\sigma}^2} \text{sgn}(\slashed{\sigma}^2)\, m^2_{\slashed{\sigma}^2(1)}
 m^3_{\slashed{\sigma}^2(3)}\cdots m^n_{\slashed{\sigma}^2(n)} \\
-& +&  m^1_3\,  \sum_{\slashed{\sigma}^3} \text{sgn}(\slashed{\sigma}^3)\, m^2_{\slashed{\sigma}^3(1)}m^3_{\slashed{\sigma}^3(2)}m^4_{\slashed{\sigma}^3(4)}\cdots m^n_{\slashed{\sigma}^3(n)}\\ &+& \cdots
-\end{eqnarray*}
+& + m^1_3\,  \sum_{\slashed{\sigma}^3} \text{sgn}(\slashed{\sigma}^3)\, m^2_{\slashed{\sigma}^3(1)}m^3_{\slashed{\sigma}^3(2)}m^4_{\slashed{\sigma}^3(4)}\cdots m^n_{\slashed{\sigma}^3(n)}\\ &+& \cdots
+\end{align*}
 Here the symbols $\slashed{\sigma}^k$ 
 refers to the permutation $\sigma$ with the input $k$ removed.
 The summand on  the $j$'th line of the above formula looks like the determinant of the minor obtained by removing the first  and $j$'th column of $M$. However we still need to  replace sum of $\slashed{\sigma}^j$ by a sum over permutations of  column numbers of the matrix entries of this minor. This costs a minus sign whenever $j-1$ is odd.
@@ -605,8 +603,8 @@ Let's compute the determinant of
 7 & 8 & 9 \\
 \end{pmatrix}\] using expansion by minors:
 
-\begin{eqnarray*}
-\det M & = & 1\det \begin{pmatrix}
+\begin{align*}
+\det M & = 1\det \begin{pmatrix}
 5 & 6 \\
 8 & 9 \\
 \end{pmatrix}
@@ -618,9 +616,9 @@ Let's compute the determinant of
 4 & 5 \\
 7 & 8 \\
 \end{pmatrix} \\
-& = & 1(5\cdot 9- 8\cdot 6) -2 (4\cdot 9- 7\cdot 6) + 3 (4\cdot 8- 7\cdot 5) \\[1mm]
-& = & 0 \\
-\end{eqnarray*}
+& = 1(5\cdot 9- 8\cdot 6) -2 (4\cdot 9- 7\cdot 6) + 3 (4\cdot 8- 7\cdot 5) \\[1mm]
+& = 0 \\
+\end{align*}
 Here, $M^{-1}$ does not exist because\footnote{A fun exercise is to compute the determinant of a $4\times 4$ matrix filled in order, from left to right,  with the numbers $1,2,3,\ldots, 16$. What do you observe? Try the same for a $5\times 5$ matrix with $1,2,3,\ldots, 25$. Is there a pattern? Can you explain it?} $\det M=0.$
 \end{example}
 
@@ -632,22 +630,23 @@ Sometimes the entries of a matrix allow us to simplify the calculation of the de
 7 & 8 & 9 \\
 \end{pmatrix}$.  Notice that the second row has many zeros; then we can switch the first and second rows of $N$ before expanding in minors to get:
 
-\begin{eqnarray*}
+\begin{align*}
 \det \begin{pmatrix}
 1 & 2 & 3 \\
 4 & 0 & 0 \\
-7 & 8 & 9 \\
-\end{pmatrix} & = & -\det \begin{pmatrix}
+7 & 8 & 9 
+\end{pmatrix}
+& = -\det \begin{pmatrix}
 4 & 0 & 0 \\
 1 & 2 & 3 \\
-7 & 8 & 9 \\
+7 & 8 & 9
 \end{pmatrix}\\
-&=& -4 \det \begin{pmatrix}
+&= -4 \det \begin{pmatrix}
 2 & 3 \\
-8 & 9 \\
+8 & 9 
 \end{pmatrix} \\
-&=& 24
-\end{eqnarray*}
+&= 24
+\end{align*}
 \end{example}
  
 \Videoscriptlink{properties_of_determinant_practice.mp4}{Example}{video_properties_of_determinant_practice}
@@ -656,25 +655,25 @@ Since we know how the determinant of a matrix changes when you perform row opera
 operations before computing the determinant by brute force.
 
 \begin{example}
-\begin{eqnarray*}
+\[
 \det\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
-7 & 8 & 9 \\
+7 & 8 & 9
 \end{pmatrix}
 =
 \det\begin{pmatrix}
 1 & 2 & 3 \\
 3 & 3 & 3 \\
-6 & 6 & 6 \\
+6 & 6 & 6 
 \end{pmatrix}
 =
 \det\begin{pmatrix}
 1 & 2 & 3 \\
 3 & 3 & 3 \\
-0 & 0 & 0 \\
+0 & 0 & 0
 \end{pmatrix}=0\, .
-\end{eqnarray*}
+\]
 Try to determine which row operations we made at each step of this computation.
 \end{example}
 
@@ -710,13 +709,13 @@ Since any permutation can be built up by transpositions, one can also find the i
 \Reading{Determinants}{5}
 
 Then we can write out the above in formulas as follows:
-\begin{eqnarray*}
-\det M &=& \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&=& \sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&=& \sum_{\sigma} \text{sgn}(\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&=& \sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
-&=& \det M^T.
-\end{eqnarray*}
+\begin{align*}
+\det M &=\sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&=\sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&=\sum_{\sigma} \text{sgn}(\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&=\sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
+&=\det M^T.
+\end{align*}
 The second-to-last equality is due to the existence of a unique inverse permutation: summing over permutations is the same as summing over all inverses of permutations (see review problem~\ref{invsum}).  The final equality is by the definition of the transpose.
 \end{proof}
 
@@ -901,33 +900,34 @@ Continuing with the previous example,
 
 Now, multiply:
 
-\begin{eqnarray*}
+\begin{align*}
 \begin{pmatrix}
 3 & -1 & -1 \\
 1 & 2 & 0 \\
-0 & 1 & 1 \\
+0 & 1 & 1 
 \end{pmatrix}
 \begin{pmatrix}
 2 & 0 & 2 \\
 -1 & 3 & -1 \\
-1 & -3 & 7 \\
+1 & -3 & 7 
 \end{pmatrix}
-&=&
+&=
 \begin{pmatrix}
 6 & 0 & 0 \\
 0 & 6 & 0 \\
-0 & 0 & 6 \\
+0 & 0 & 6 
 \end{pmatrix} \\[1mm]
 \Rightarrow \begin{pmatrix}
 3 & -1 & -1 \\
 1 & 2 & 0 \\
-0 & 1 & 1 \\
-\end{pmatrix}^{-1} & = & \frac{1}{6}\begin{pmatrix}
+0 & 1 & 1 
+\end{pmatrix}^{-1}
+& = \frac{1}{6}\begin{pmatrix}
 2 & 0 & 2 \\
 -1 & 3 & -1 \\
-1 & -3 & 7 \\
+1 & -3 & 7 
 \end{pmatrix}
-\end{eqnarray*}
+\end{align*}
 
 This process for finding the inverse matrix is sometimes called \emph{Cramer's~Rule}~\index{Cramer's rule}.
 \end{example}

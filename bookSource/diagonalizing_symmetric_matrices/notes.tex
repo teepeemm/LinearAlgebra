@@ -28,14 +28,14 @@ One very nice property of symmetric matrices is that they always have real eigen
 
 \begin{example}
 For a general symmetric $2\times 2$ matrix, we have:
-\begin{eqnarray*}
+\begin{align*}
 P_\lambda \begin{pmatrix} a & b \\ b& d \end{pmatrix}
- &=&
+ &=
 \det\begin{pmatrix}\lambda-a&\mc{-b}\\\mc{-b}&\lambda-d \end{pmatrix}\\[1mm]
-&=& (\lambda-a)(\lambda-d)-b^2 \\[2mm]
-&=& \lambda^2-(a+d)\lambda-b^2+ad\\[1mm]
-\Rightarrow \lambda &=& \frac{a+d}{2}\pm \sqrt{b^2+\left(\frac{a-d}{2}\right)^2}.
-\end{eqnarray*}
+&= (\lambda-a)(\lambda-d)-b^2 \\[2mm]
+&= \lambda^2-(a+d)\lambda-b^2+ad\\[1mm]
+\Rightarrow \lambda &= \frac{a+d}{2}\pm \sqrt{b^2+\left(\frac{a-d}{2}\right)^2}.
+\end{align*}
 Notice that the discriminant $4b^2+(a-d)^2$ is always positive, so that the eigenvalues must be real.
 \end{example}
 
@@ -44,17 +44,17 @@ Now, suppose a symmetric matrix $M$ has two distinct eigenvalues $\lambda \neq \
 Mx=\lambda x, \qquad My=\mu y.
 \] 
 Consider the dot product $x\dotprod y = x^Ty = y^Tx$ and calculate
-\begin{eqnarray*}
-x^TM y &=& x^T\mu y = \mu x\dotprod y, \text{ and }\\[3mm]
-x^TM y &=& (y^TMx)^T \text{ (by transposing a $1\times 1$ matrix)}\\[1mm]
-       &=& (y^T\lambda x)^T \\
-       &=& (\lambda x\dotprod y)^T \\
-             &=& \lambda x\dotprod y.
-\end{eqnarray*}
+\begin{align*}
+x^TM y &= x^T\mu y = \mu x\dotprod y, \text{ and }\\[3mm]
+x^TM y &= (y^TMx)^T \text{ (by transposing a $1\times 1$ matrix)}\\[1mm]
+       &= (y^T\lambda x)^T \\
+       &= (\lambda x\dotprod y)^T \\
+       &= \lambda x\dotprod y.
+\end{align*}
 Subtracting these two results tells us that:
-\begin{eqnarray*}
-0 &=& x^TMy-x^TMy=(\mu-\lambda)\,x\dotprod y.
-\end{eqnarray*}
+\[
+0 = x^TMy-x^TMy=(\mu-\lambda)\,x\dotprod y.
+\]
 Since $\mu$ and $\lambda$ were assumed to be distinct eigenvalues, $\lambda-\mu$ is non-zero, and so $x\dotprod y=0$.  We have proved the following theorem.
 
 \begin{theorem}
@@ -99,27 +99,27 @@ Then
 MP=\rowvec{\lambda_1 x_1 & Mx_2 & \cdots & Mx_n}.
 \]
 But $P$ is an orthogonal matrix, so $P^{-1}=P^T$.  Then:
-\begin{eqnarray*}
-P^{-1}=P^T &=& \ccolvec{x_1^T\\ \vdots \\ x_n^T} \\[1mm]
-\Rightarrow P^TMP &=& \begin{pmatrix}
+\begin{align*}
+P^{-1}=P^T &= \ccolvec{x_1^T\\ \vdots \\ x_n^T} \\[1mm]
+\Rightarrow P^TMP &= \begin{pmatrix}
   x_1^T\lambda_1x_1  & * & \cdots & *\\
   x_2^T\lambda_1x_1  & * & \cdots & *\\
   \mc\vdots             &   & & \mc\vdots\\
    x_n^T\lambda_1x_1 & * & \cdots & *\\
   \end{pmatrix}\\[2mm]
-&=& \begin{pmatrix}
+&= \begin{pmatrix}
   \lambda_1  & * & \cdots & *\\
   \mc 0  & * & \cdots & *\\
  \mc \vdots             & *  & & \mc\vdots\\
   \mc 0 & * & \cdots & *\\
   \end{pmatrix}\\[2mm]
-&=& \begin{pmatrix}
+&= \begin{pmatrix}
   \lambda_1  & 0 & \cdots & 0\\
   \mc 0          & & & \\
   \mc\vdots     & & \hat{M} & \\
   \mc0          & & & \\
   \end{pmatrix}\, .\\
-\end{eqnarray*}
+\end{align*}
 The last equality follows since $P^TMP$ is symmetric.  The asterisks in the matrix are where ``stuff'' happens; this extra information is denoted by $\hat{M}$ in the final expression.  We know nothing about $\hat{M}$ except that it is an $(n-1)\times (n-1)$ matrix and that it is symmetric.  But then, by finding an (unit) eigenvector for $\hat{M}$, we could repeat this procedure successively.  The end result would be a diagonal matrix with eigenvalues of $M$ on the diagonal. Again, we have proved a theorem: %we also need that every matrix has an eigenvector.
 
 \begin{theorem}

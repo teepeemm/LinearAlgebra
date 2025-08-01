@@ -21,11 +21,11 @@ M'=R^i(\lambda)M=\colvec{R^1 \\ \vdots \\ \lambda R^i \\ \vdots \\ R^n }
 \]
 What effect does multiplication by $R^i(\lambda)$ have on the determinant?
 
-\begin{eqnarray*}
-\det M' & = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = & \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = & \lambda \det M
-\end{eqnarray*}
+\begin{align*}
+\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \det M
+\end{align*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
 {\itshape I.e.,} \[\det R^i(\lambda) M = \lambda \det M\, .\]
 
@@ -79,12 +79,12 @@ Then multiplying $S^i_j(\lambda)$ by $M$ gives the following:
 \]
 What is the effect of multiplying by $S^i_j(\lambda)$ on the determinant?  Let $M'=S^i_j(\lambda)M$, and let $M''$ be the matrix $M$ but with $R^i$ replaced by $R^j$.
 
-\begin{eqnarray*}
-\det M' & = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \lambda m^j_{\sigma(j)}) \cdots m^n_{\sigma(n)} \\
-& = & \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-&   & \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
-& = & \det M + \lambda \det M''
-\end{eqnarray*}
+\begin{align*}
+\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \lambda m^j_{\sigma(j)}) \cdots m^n_{\sigma(n)} \\
+& = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+&   \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
+& = \det M + \lambda \det M''
+\end{align*}
 Since $M''$ has two identical rows, its determinant is $0$.  Then \[\det S^i_j(\lambda)M = \det M\, .\]
 Notice that if $M$ is the identity matrix, then we have \[\det S^i_j(\lambda) = \det (S^i_j(\lambda)I) = \det I = 1\, .\]
 
@@ -155,30 +155,26 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\lambda)$ is invertible, excep
 
 To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\itshape i.e.}, $M$ is invertible), then:
 
-\begin{eqnarray*}
-\det (MN) & = & \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
-& = & \det (E_1E_2\cdots E_k I F_1F_2\cdots F_l\,  \rref(N) )\\
-& = & \det (E_1) \cdots \det(E_k)\det(I)\det(F_1)\cdots\det(F_l)\det(\rref(N)\\
-& = & \det(M)\det(N)
-\end{eqnarray*}
+\begin{align*}
+\det (MN) & = \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
+& = \det (E_1E_2\cdots E_k I F_1F_2\cdots F_l\,  \rref(N) )\\
+& = \det (E_1) \cdots \det(E_k)\det(I)\det(F_1)\cdots\det(F_l)\det(\rref(N)\\
+& = \det(M)\det(N)
+\end{align*}
 Otherwise, $M$ is not invertible, and $\det M=0=\det 
 \rref(M)$.  Then there exists a row of zeros in $
 \rref(M)$, so $R^n(\lambda)
 \rref(M)=
 \rref(M)$.  Then:
-\begin{eqnarray*}
-\det (MN) & = & \det (E_1E_2\cdots E_k 
-\, \rref(M) N )\\
-& = & \det (E_1E_2\cdots E_k 
-\, \rref(M) N )\\
-& = & \det (E_1) \cdots \det(E_k)\det( 
-\rref(M)N)\\
-& = & \det (E_1) \cdots \det(E_k)\det( R^n(\lambda) 
-\, \rref(M)N)\\
-& = & \det (E_1) \cdots \det(E_k)\lambda \det( 
-\rref(M)N)\\
-& = & \lambda \det (MN)
-\end{eqnarray*}
+\begin{align*}
+\det (MN)
+& = \det (E_1E_2\cdots E_k \, \rref(M) N )\\
+& = \det (E_1E_2\cdots E_k \, \rref(M) N )\\
+& = \det (E_1) \cdots \det(E_k)\det( \rref(M)N)\\
+& = \det (E_1) \cdots \det(E_k)\det( R^n(\lambda) \, \rref(M)N)\\
+& = \det (E_1) \cdots \det(E_k)\lambda \det( \rref(M)N)\\
+& = \lambda \det (MN)
+\end{align*}
 Which implies that $\det (MN)=0=\det M \det N$.
 
 Thus we have shown that for {\itshape any} matrices $M$ and $N$, 

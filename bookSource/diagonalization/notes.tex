@@ -10,12 +10,12 @@ Suppose we are lucky, and we have $L \colon V\to V$, and the ordered basis
 $B=(v_1, \ldots, v_n )$ is a set of %linearly independent 
 eigenvectors for $L$, with eigenvalues $\lambda_1, \ldots, \lambda_n$.  Then:
 
-\begin{eqnarray*}
-L(v_1)&=&\lambda_1 v_1 \\
-L(v_2)&=&\lambda_2 v_2 \\
-&\vdots & \\
-L(v_n)&=&\lambda_n v_n \\
-\end{eqnarray*}
+\begin{align*}
+L(v_1)&=\lambda_1 v_1 \\
+L(v_2)&=\lambda_2 v_2 \\
+&\vdots  \\
+L(v_n)&=\lambda_n v_n
+\end{align*}
 As a result, the matrix of $L$ in the basis of eigenvectors $B$ is diagonal:
 \[
 L\begin{pmatrix}
@@ -183,18 +183,22 @@ L(1)=\colvec{1\\2}\, \quad L(t)=\colvec{2\\1}\, ,\quad L(t^2)=\colvec{3\\3}\, .
 \]
 From this information we can immediately read off the matrix~$M$ of $L$ in the bases $S=(1,t,t^2)$ and $T=(e_1,e_2)$, the standard basis for ${\mathbb R}^2$,
 because
-\begin{eqnarray*}\big(L(1),L(t),L(t^2)\big)&=&(e_1+2 e_2,2e_1+e_2, 3 e_1+3e_2)\\[2mm]&=&(e_1,e_2)\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, \Rightarrow \, M\ =\ 
-\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, .\end{eqnarray*}
+\begin{align*}
+\big(L(1),L(t),L(t^2)\big)
+&=(e_1+2 e_2,2e_1+e_2, 3 e_1+3e_2)\\[2mm]
+&=(e_1,e_2)\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, \Rightarrow \, M\ =\ 
+\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}\, .
+\end{align*}
 Now suppose we are more interested in the bases \[S'=(1+t,t+t^2,1+t^2)\, , \quad T'=\left(\colvec{1\\2},\colvec{2\\1}\right)=:(w_1',w_2')\, .\]
 To compute the new matrix $M'$ of $L$ we could simply calculate what $L$ does the the new input basis vectors in terms of the new output basis vectors:
-\begin{eqnarray*}
-\big(L(1+t),L(t+t^2),L(1+t^2))&=&\left(\colvec{1\\2}+\colvec{2\\1},
-\colvec{2\\1}+\colvec{3\\3},\colvec{1\\2}+\colvec{3\\3}
-\right)\\[2mm]
-&=&(w'_1+w'_2,w'_1+2w'_2,2w'_1+w'_2)\\[2mm]&=&(w'_1,w'_2)
+\begin{align*}
+\big(L(1+t),L(t+t^2),L(1+t^2))&=\left(\colvec{1\\2}+\colvec{2\\1},
+\colvec{2\\1}+\colvec{3\\3},\colvec{1\\2}+\colvec{3\\3}\right)\\[2mm]
+&=(w'_1+w'_2,w'_1+2w'_2,2w'_1+w'_2)\\[2mm]
+&=(w'_1,w'_2)
 \begin{pmatrix}1&1&2\\1&2&1\end{pmatrix}\, \Rightarrow \, 
 M'=\begin{pmatrix}1&1&2\\1&2&1\end{pmatrix}\, .
-\end{eqnarray*}
+\end{align*}
 Alternatively we could calculate the change of basis matrices $P$ and $Q$ by noting that
 \[
 (1+t,t+t^2,1+t^2)=(1,t,t^2)\begin{pmatrix}1&0&1\\1&1&0\\0&1&1\end{pmatrix}\, \Rightarrow\, P=\begin{pmatrix}1&0&1\\1&1&0\\0&1&1\end{pmatrix}

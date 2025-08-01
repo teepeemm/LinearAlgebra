@@ -16,10 +16,10 @@ u\dotprod v^\perp = u\dotprod v - \frac{u\cdot v}{u\cdot u}u\dotprod u = 0.
 Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space ${\rm span}\, \{u,v\}$.
 
 Sometimes we write $v = v^\perp + v^\parallel$ where:
-\begin{eqnarray*}
-v^\perp &=& v-\frac{u\cdot v}{u\cdot u}u \\
-v^\parallel &=& \phantom{v-}\frac{u\cdot v}{u\cdot u}u.
-\end{eqnarray*}
+\begin{align*}
+v^\perp &= v-\frac{u\cdot v}{u\cdot u}u \\
+v^\parallel &= \phantom{v-}\frac{u\cdot v}{u\cdot u}u.
+\end{align*}
 This is called an \emph{orthogonal decomposition}\index{Orthogonal decomposition} because we have decomposed $v$ into a sum of orthogonal vectors.  This decomposition depends on $u$; if we change the direction of $u$ we change $v^\perp$ and $v^\parallel$.
 
 If $u$, $v$ are linearly independent vectors in $\Re^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\Re^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
@@ -47,17 +47,17 @@ because \(u\) is orthogonal to \(v^\perp\). Since $w^\perp$ is orthogonal to bot
 
 \section{The Gram-Schmidt Procedure}
 In fact, given a set $\{v_1, v_2, \ldots \}$ of linearly independent vectors, we can define an orthogonal basis for $\spa \{v_1,v_2, \ldots \}$ consisting of the following vectors:
-\begin{eqnarray*}
-v_1^\perp&:=&v_1 \\
-v_2^\perp &:=& v_2 - \frac{v_1^\perp\cdot v_2}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp \\
-v_3^\perp &:=& v_3 - \frac{v_1^\perp\cdot v_3}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp - \frac{v_2^\perp\cdot v_3}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp\\
-&\vdots& \\
+\begin{align*}
+v_1^\perp&:=v_1 \\
+v_2^\perp &:= v_2 - \frac{v_1^\perp\cdot v_2}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp \\
+v_3^\perp &:= v_3 - \frac{v_1^\perp\cdot v_3}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp - \frac{v_2^\perp\cdot v_3}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp\\
+&\vdots \\
 v_i^\perp%&=&   v_i - \sum_{j<i} \frac{v_j^\perp\cdot v_i}{v_j^\perp\cdot v_j^\perp}\,v_j^\perp \\
- &:=& v_i - \frac{v_1^\perp\cdot v_i}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp -  
+ &:= v_i - \frac{v_1^\perp\cdot v_i}{v_1^\perp\cdot v_1^\perp}\,v_1^\perp -  
  - \frac{v_2^\perp\cdot v_3}{v_2^\perp\cdot v_2^\perp}\,v_2^\perp -\cdots
  - \frac{v_{i-1}^\perp\cdot v_i}{v_{i-1}^\perp\cdot v_{i-1}^\perp}\,v_{i-1}^\perp\\
-&\vdots& \\
-\end{eqnarray*}
+&\vdots
+\end{align*}
 Notice that each $v_i^\perp$ here depends on  $v_j^\perp$ for every $j<i$.  This allows us to inductively/algorithmically build up a linearly independent, orthogonal set of vectors 
 $\{v_1^\perp,v_2^\perp, \ldots \}$ 
 such that 
@@ -68,10 +68,10 @@ We'll  obtain an orthogonal basis for $\Re^3$ by appling Gram-Schmidt to the lin
 $\left\{ v_1=\colvec{1\\1\\0}, v_2=\colvec{1\\1\\1},v_3=\colvec{3\\1\\1} \right\}$.
 
 First, we set $v_1^\perp:=v_1$.  Then:
-\begin{eqnarray*}
-v_2^\perp&=& \rowvec{1\\1\\1} - \frac{2}{2}\rowvec{1\\1\\0} = \rowvec{0\\0\\1} \\
-V_3^\perp&=& \rowvec{3\\1\\1} - \frac{4}{2}\rowvec{1\\1\\0} - \frac{1}{1}\rowvec{0\\0\\1} = \rowvec{1\\-1\\0}. 
-\end{eqnarray*}
+\begin{align*}
+v_2^\perp&= \rowvec{1\\1\\1} - \frac{2}{2}\rowvec{1\\1\\0} = \rowvec{0\\0\\1} \\
+V_3^\perp&= \rowvec{3\\1\\1} - \frac{4}{2}\rowvec{1\\1\\0} - \frac{1}{1}\rowvec{0\\0\\1} = \rowvec{1\\-1\\0}. 
+\end{align*}
 Then the set
 \[
 \left\{ \rowvec{1\\1\\0},\rowvec{0\\0\\1},\rowvec{1\\-1\\0}\right\}
@@ -227,10 +227,10 @@ u\dotprod u = 0 \Leftrightarrow u=0.
 \]
 
 Finally, we show that any vector $w\in W$ is in $U\oplus U^\perp$.  (This is where we use the assumption that $W$ is finite-dimensional.)  Let $e_1, \ldots, e_n$ be an orthonormal basis for $W$.  Set: 
-\begin{eqnarray*}
+\begin{align*}
 u&=&(w\dotprod e_1)e_1 + \cdots + (w\dotprod e_n)e_n \in U\\
-u^\perp&=& w-u
-\end{eqnarray*}
+u^\perp&= w-u
+\end{align*}
 It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).  Then $w=u+u^\perp$, so $w\in U\oplus U^\perp$, and we are done.
 \end{proof}
 
@@ -240,10 +240,10 @@ It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).
 \begin{example}
 Consider any line \(L\) through the origin in \(\Re^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let \(L\) be the line 
 $\spa \{ (1,1,1,1)^T\}$ in \(\Re^4.\) Then \(L^\perp\) is given by
-\begin{eqnarray*}
-L^\perp&=&\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } (x,y,z,w)^T \dotprod (1,1,1,1)^T=0\} \\
-&=&\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } x,y,z,w=0\}.
-\end{eqnarray*}
+\begin{align*}
+L^\perp&=\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } (x,y,z,w)^T \dotprod (1,1,1,1)^T=0\} \\
+&=\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } x,y,z,w=0\}.
+\end{align*}
 It is easy to check that 
 \[
 \left\{
@@ -252,12 +252,12 @@ v_1=\colvec{1\\-1\\0\\0}, v_2=\colvec{1\\0\\-1\\0}, v_3=\colvec{1\\0\\0\\-1} \ri
 forms a basis for \(L^\perp\). We use Gram-Schmidt to find an orthogonal basis for \(L^\perp\):
 
 First, we set \(v_1^\perp=v_1\). Then:
-\begin{eqnarray*}
-v_2^\perp&=&\colvec{1\\0\\-1\\0}-\frac{1}{2}\colvec{1,-1,0,0}
+\begin{align*}
+v_2^\perp&=\colvec{1\\0\\-1\\0}-\frac{1}{2}\colvec{1,-1,0,0}
 =\colvec{\frac{1}{2}\\ \frac{1}{2} \\-1\\ 0 },\\
-v_3^\perp&=&\colvec{ 1\\0\\0\\-1} -\frac{1}{2}\colvec{1\\-1\\0\\0}-\frac{1/2}{3/2}
+v_3^\perp&=\colvec{ 1\\0\\0\\-1} -\frac{1}{2}\colvec{1\\-1\\0\\0}-\frac{1/2}{3/2}
 \colvec{ \frac{1}{2}\\\frac{1}{2}\\-1\\0} =\colvec{ \frac{1}{3}\\\frac{1}{3}\\\frac{1}{3}\\-1}.
-\end{eqnarray*}
+\end{align*}
 So the set \[\left\{ (1,-1,0,0)^T, \left(\frac{1}{2},\frac{1}{2},-1,0\right)^T, \left(\frac{1}{3},\frac{1}{3},\frac{1}{3},-1\right)^T \right\} \] is an orthogonal basis for \(L^\perp\).
 We find an orthonormal basis for \(L^\perp\) by dividing each basis vector by its length:
 \[

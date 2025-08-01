@@ -37,11 +37,11 @@ Since $S$ is a basis for $V$, then $\spa S=V$, and so there exist constants~$c^i
 
 Suppose there exists a second set of constants $d^i$ such that 
 \[w=d^1v_1+\cdots + d^nv_n\, .\]  Then
-\begin{eqnarray*}
-0_V&=&w-w\\
-&=&c^1v_1+\cdots + c^nv_n-d^1v_1-\cdots - d^nv_n \\[1mm]
-&=&(c^1-d^1)v_1+\cdots + (c^n-d^n)v_n. \\
-\end{eqnarray*}
+\begin{align*}
+0_V&=w-w\\
+&=c^1v_1+\cdots + c^nv_n-d^1v_1-\cdots - d^nv_n \\[1mm]
+&=(c^1-d^1)v_1+\cdots + (c^n-d^n)v_n.
+\end{align*}
 If it occurs exactly once that $c^i\neq d^i$, then the equation reduces to $0=(c^i-d^i)v_i$, which is a contradiction since the vectors $v_i$ are assumed to be non-zero.
 
 If we have more than one $i$ for which $c^i\neq d^i$, we can use this last equation to write one of the vectors in $S$ as a linear combination of other vectors in $S$, which contradicts the assumption that $S$ is linearly independent.  Then for every $i$, $c^i=d^i$.
@@ -210,30 +210,29 @@ The numbers $m^i_j$ naturally form a matrix whose $j$th column is the column vec
 %we can see that the $j$th column of $M$ is the coefficients of $L(e_j)$ in the basis $F$.
 %The most efficient way to see this is through Einstein notation:
 %by linearity, for any vector $v$ in $V$ 
-%\begin{eqnarray*}
+%\[
 %Lv=L(e_iv^i)=L(e_i)v^i=f_i M^i_j v^j
-%\\
-%\end{eqnarray*}
-%\begin{eqnarray*}
-%L(v) & = & L( v^1e_1 + v^2e_2 + \cdots + v^ne_n) \\[2mm]
-%     & = & v^1L(e_1) + v^2L(e_2) + \cdots + v^nL(e_n)\\[2mm]
-%     &=&\rowvec{L(e_1) & L(e_2) & \cdots & L(e_n)}\colvec{v^1 \\ v^2 \\ \vdots \\ v^n}\, .
-%\end{eqnarray*}
+%\]
+%\begin{align*}
+%L(v) & = L( v^1e_1 + v^2e_2 + \cdots + v^ne_n) \\[2mm]
+%     & = v^1L(e_1) + v^2L(e_2) + \cdots + v^nL(e_n)\\[2mm]
+%     &=\rowvec{L(e_1) & L(e_2) & \cdots & L(e_n)}\colvec{v^1 \\ v^2 \\ \vdots \\ v^n}\, .
+%\end{align*}
 %This is a vector in $W$.  Let's compute its components in $W$.
 %
 %%%%%%%%%%%%%%%%%%%
 Indeed, if \[v=e_1v^1+\cdots+e_n v^n\, ,\]
 Then
-\begin{eqnarray*}
-L(v) & = & L( v^1e_1 + v^2e_2 + \cdots + v^ne_n) \\[1mm]
-     & = & v^1L(e_1) + v^2L(e_2) + \cdots + v^nL(e_n) 
+\begin{align*}
+L(v) & = L( v^1e_1 + v^2e_2 + \cdots + v^ne_n) \\[1mm]
+     & = v^1L(e_1) + v^2L(e_2) + \cdots + v^nL(e_n) 
      \: = \: \sum_{j=1}^m L(e_j) v^j \\
-     & = & \sum_{j=1}^m ( f_1 m^1_j+ \cdots + f_mm^m_j) v^j 
+     & = \sum_{j=1}^m ( f_1 m^1_j+ \cdots + f_mm^m_j) v^j 
      \: = \: \sum_{i=1}^n f_i \left[ \sum_{j=1}^m M^i_jv^j \right]\\
-     &=&\rowvec{f_1 & f_2 & \cdots & f_m}
+     &=\rowvec{f_1 & f_2 & \cdots & f_m}
              \left(\!\begin{array}{cccc}m^1_1&m^1_2&\cdots &m^1_n\\ m^2_1 & m^2_2 && \\
                                               \vdots &&\ddots&\vdots\\ m^m_1 &&\cdots & m^m_n\end{array}\!\right)\colvec{v^1 \\ v^2 \\ \vdots \\ v^n}
-\end{eqnarray*}
+\end{align*}
 %The last equality above comes from the definition of matrix multiplication. 
 In the column vector-basis notation this equality looks familiar: 
 \[
@@ -264,12 +263,12 @@ basis vectors of $W$.
 
 \noindent
 Let $L \colon P_1(t) \mapsto P_1(t)$, such that $L(a+bt)=(a+b)t$.  Since $V=P_1(t)=W$, let's choose the same ordered basis $B=(1-t, 1+t )$ for $V$ and $W$.
-\begin{eqnarray*}
-L(1-t)&=&(1-1)t=\ 0\ =(1-t)\cdot 0 + (1+t)\cdot 0=
+\begin{align*}
+L(1-t)&=(1-1)t=\ 0\ =(1-t)\cdot 0 + (1+t)\cdot 0=
 \rowvec{1-t, 1+t}\colvec{0\\0} \\[2mm]
-L(1+t)&=&(1+1)t=2t\ =(1-t)\cdot -1 + (1+t)\cdot 1=
+L(1+t)&=(1+1)t=2t\ =(1-t)\cdot -1 + (1+t)\cdot 1=
 \rowvec{1-t, 1+t}\colvec{-1\\1}\\[2mm]
-&\Rightarrow& 
+&\Rightarrow
 L\colvec {a\\b }_B= 
 \left( 
 \begin{pmatrix}
@@ -278,7 +277,7 @@ L\colvec {a\\b }_B=
 \end{pmatrix}
 \colvec{a\\b}
 \right)_B.
-\end{eqnarray*}
+\end{align*}
 \end{example}
 
 
@@ -337,12 +336,11 @@ You could either rewrite this  as
 L\colvec{x\\y\\z}=\begin{pmatrix}1&2&3\\4&5&6\\7&8&9\end{pmatrix}\colvec{x\\y\\z}\, ,
 \]
 to immediately learn the matrix of $L$, or taking a more circuitous route:
-\begin{eqnarray*}
-L\colvec{x\\y\\z}&=&L\left[x\colvec{1\\0\\0}+y\colvec{0\\0\\1}+z
-\colvec{0\\0\\1}\right]\\[2mm]&=&
-x\colvec{1\\4\\7}+y\colvec{2\\5\\8}+z
+\begin{align*}
+L\colvec{x\\y\\z}&=L\left[x\colvec{1\\0\\0}+y\colvec{0\\0\\1}+z\colvec{0\\0\\1}\right]\\[2mm]
+&=x\colvec{1\\4\\7}+y\colvec{2\\5\\8}+z
 \colvec{3\\6\\9}\:=\:\begin{pmatrix}1&2&3\\4&5&6\\7&8&9\end{pmatrix}\colvec{x\\y\\z}\, .
-\end{eqnarray*}
+\end{align*}
 \end{example}
 
 %\section*{References}

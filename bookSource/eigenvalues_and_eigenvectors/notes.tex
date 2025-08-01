@@ -119,10 +119,10 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 %To generalize this discussion, let $V$ and $W$ be vector spaces, with ordered bases $E=(e_1, \ldots, e_n)$ and 
 %$F=(f_1, \ldots, f_m)$ respectively.  
 %Since these are bases, there exist constants $v^i$ and $w^j$ such that any vectors $v\in V$ and $w\in W$ can be written as:
-%\begin{eqnarray*}
-%v & = & v^1e_1 \ + v^2e_2 \ + \cdots + v^ne_n \\
-%w & = & w^1f_1 + w^2f_2 + \cdots + w^mf_m \\
-%\end{eqnarray*}
+%\begin{align*}
+%v & = v^1e_1 \ + v^2e_2 \ + \cdots + v^ne_n \\
+%w & = w^1f_1 + w^2f_2 + \cdots + w^mf_m \\
+%\end{align*}
 %We call the coefficients $v^1, \ldots, v^n$ the \emph{components}\index{Components of a vector} of $v$ in the ordered basis\footnote{To avoid confusion, it helps to note that components of a vector are labeled by a superscript, while basis vectors are labeled by subscripts. This is part of Einstein's notation convention.} $(e_1, \ldots, e_n)$. It is often convenient to arrange the components $v^i$ in a column vector and the basis vectors in a row vector by writing
 %\[
 %v=\rowvec{e_1 & e_2 & \cdots & e_n}\colvec{v^1 \\ v^2 \\ \vdots \\  v^n}\, .
@@ -434,56 +434,56 @@ In the standard basis the matrix $M$ representing $L$ has columns $Le_i$ for eac
 \end{pmatrix}\colvec{x\\y\\z}.
 \]
 Then the characteristic polynomial of $L$ is\footnote{It is often easier (and equivalent) to solve $\det (M-\lambda I)=0$.}
-\begin{eqnarray*}
-P_M(\lambda)&=&\det \begin{pmatrix}
+\begin{align*}
+P_M(\lambda)&=\det \begin{pmatrix}
 \mc{\lambda - 2} &\mc{ -1} & \mc{1}\\
 \mc{-1} &\mc{ \lambda - 2} & \mc{1}\\
 \mc{1} & \mc{1} & \mc{\lambda - 2}\\
 \end{pmatrix}\\[2mm]
-&=& (\lambda - 2)[ (\lambda - 2)^2-1 ] + 
+&= (\lambda - 2)[ (\lambda - 2)^2-1 ] + 
 [-(\lambda - 2)-1 ] +
 [-(\lambda - 2)-1] \\[2mm]
-&=& (\lambda - 1)^2(\lambda - 4)\, .
-\end{eqnarray*}
+&= (\lambda - 1)^2(\lambda - 4)\, .
+\end{align*}
 So $L$ has eigenvalues $\lambda_1=1$ (with multiplicity $2$), and $\lambda_2=4$ (with multiplicity $1$).
 
 To find the eigenvectors associated to each eigenvalue, we solve the homogeneous system $(M-\lambda_iI)X=0$ for each $i$.
 
 \begin{itemize}
 \item[\underline{$\lambda=4$:}] We set up the augmented matrix for the linear system:
-\begin{eqnarray*}
+\begin{align*}
 \begin{amatrix}{3}
 -2 & 1 &-1 & 0 \\
 1 & -2 &-1 & 0 \\
--1 & -1 &-2 & 0 \\
+-1 & -1 &-2 & 0
 \end{amatrix} 
- & \sim & \begin{amatrix}{3}
+ & \sim \begin{amatrix}{3}
 1 & -2 &-1 & 0 \\
 0 & -3 &-3 & 0 \\
-0 & -3 &-3 & 0 \\
+0 & -3 &-3 & 0
 \end{amatrix} \\
- & \sim & \begin{amatrix}{3}
+ & \sim \begin{amatrix}{3}
 1 & 0 & 1 & 0 \\
 0 & 1 & 1 & 0 \\
-0 & 0 & 0 & 0 \\
-\end{amatrix}. \\
-\end{eqnarray*}
+0 & 0 & 0 & 0
+\end{amatrix}.
+\end{align*}
 %So we see that $z=:t$, $y=-t$, and $x=-t$ gives a formula for eigenvectors in terms of the free parameter $t$.  
 Any vector of the form $t\colvec{-1\\-1\\1}$ is then an eigenvector with eigenvalue $4$; thus~$L$ leaves a line through the origin invariant.
 
 \item[\underline{$\lambda=1$:}]  Again we set up an augmented matrix and find the solution set:
-\begin{eqnarray*}
+\begin{align*}
 \begin{amatrix}{3}
 1 & 1 &-1 & 0 \\
 1 & 1 &-1 & 0 \\
--1 & -1 & 1 & 0 \\
+-1 & -1 & 1 & 0
 \end{amatrix} 
- & \sim & \begin{amatrix}{3}
+ & \sim \begin{amatrix}{3}
 1 & 1 &\!\!-1 & 0 \\
 0 & 0 &0 & 0 \\
-0 & 0 &0 & 0 \\
+0 & 0 &0 & 0
 \end{amatrix}.
-\end{eqnarray*}
+\end{align*}
 Then the solution set has two free parameters, $s$ and $t$, such that $z=z=:t$, $y=y=:s$, and $x=-s+t$.  Thus $L$ leaves invariant the set:
 \[
 \left\{ s\colvec{-1\\1\\0}+t\colvec{1\\0\\1} \middle| s,t\in \Re   \right\}.
@@ -507,11 +507,12 @@ In the previous example, we found two eigenvectors  \[\colvec{-1\\1\\0} \mbox{ a
 \colvec{0\\1\\1}\] is also an eigenvector of $L$ with eigenvalue $1$.  In fact, any linear combination \[r\colvec{-1\\1\\0} + s\colvec{1\\0\\1}\] of these two eigenvectors will be another eigenvector with the same eigenvalue.  
 
 More generally, let $\{ v_1, v_2, \ldots \}$ be eigenvectors of some linear transformation $L$ with the same eigenvalue $\lambda$.  A \emph{linear combination}\index{Linear combination} of the $v_i$ is given by $c^1v_1+c^2v_2+\cdots$ for some constants $c^1, c^2,\ldots$.  Then
-\begin{eqnarray*}
-L(c^1v_1+c^2v_2+\cdots) &=& c^1Lv_1+c^2Lv_2+\cdots \text{ by linearity of $L$}\\
-&=& c^1\lambda v_1\,+c^2\lambda v_2+\cdots \hspace{.5mm} \text{ since $Lv_i=\lambda v_i$ }\\
-&=& \lambda (c^1v_1+c^2v_2+\cdots).
-\end{eqnarray*}
+\begin{align*}
+L(c^1v_1+c^2v_2+\cdots)
+&= c^1Lv_1+c^2Lv_2+\cdots \text{ by linearity of $L$}\\
+&= c^1\lambda v_1\,+c^2\lambda v_2+\cdots \hspace{.5mm} \text{ since $Lv_i=\lambda v_i$ }\\
+&= \lambda (c^1v_1+c^2v_2+\cdots).
+\end{align*}
 So every linear combination of the $v_i$ is an eigenvector of $L$ with the same eigenvalue $\lambda$.
 In simple terms, any sum of eigenvectors is again an eigenvector {\itshape if they share the same eigenvalue}.
 

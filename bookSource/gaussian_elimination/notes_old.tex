@@ -16,20 +16,20 @@ You will see that Gaussian elimination is an efficient shorthand for (maximally)
 %In \Lecture~\ref{warmup}  we looked performed elimination on a system of equations. 
 %It was nice to do this elimination by adding subtracting an multiplying wholes equations at a time. 
 %Lets do another example with the system
-%\begin{eqnarray}
-%	x\ +\ y & = & 27\nn \\
-%	2x-\ y & = &\  0\nn \,.
-%\end{eqnarray}
+%\begin{align}
+%	x\ +\ y & = 27\nn \\
+%	2x-\ y & =\  0\nn \,.
+%\end{align}
 %Adding the first equation to the second then dividing by 3 gives
-%\begin{eqnarray}
-%	x\ +\ 0 & = & 9\nn \\
-%	2x-\ y & = &\  0\nn \,.
-%\end{eqnarray}
+%\begin{align}
+%	x\ +\ 0 & = 9\nn \\
+%	2x-\ y & = \  0\nn \,.
+%\end{align}
 %Subtracting rice the first from the second then dividing by $-1$ gives
-%\begin{eqnarray}
-%	x \phantom{\ +\ y}& = &\  9\nn \\
-%	\phantom{x\ +\ }y & = & 18\, .\nn
-%\end{eqnarray}
+%\begin{align}
+%	x \phantom{\ +\ y}& =\  9\nn \\
+%	\phantom{x\ +\ }y & = 18\, .\nn
+%\end{align}
 %
 %\noindent
 %The maximum number of terms have been eliminated from each equation, and the result is an obvious statement of the solution. 
@@ -76,10 +76,10 @@ You will see that Gaussian elimination is an efficient shorthand for (maximally)
 %A useful shorthand for a  system of linear equations is an \hypertarget{augmented_matrix}{\emph{Augmented Matrix}}\index{Augmented matrix~$2\times2$}. 
 We will introduce this notation through examples: 
 The linear system 
-\begin{eqnarray}
-	x\ +\ y & = & 27\nn \\
-	2x-\ y & = &\  0\nn \,
-\end{eqnarray}
+\begin{align}
+	x\ +\ y & = 27\nn \\
+	2x-\ y & =\  0\nn \,
+\end{align}
 is denoted by the augmented matrix
 
 \[
@@ -106,11 +106,11 @@ All three of the above equations denote the same thing.
 
 Going up in size,
 the system
-\begin{eqnarray*}
+\begin{gather*}
 1x + 3y + 2z + 0w   =9 \\ 
 6x + 2y + 0z   -2w  =0  \\
 -1x+ 0 y + 1 z + 1w  =3 
-\end{eqnarray*}
+\end{gather*}
 is denoted by the augmented matrix
 \[
 \begin{amatrix}{4}
@@ -120,13 +120,13 @@ is denoted by the augmented matrix
 \end{amatrix}
 \]
 %When writing a system of equations one can write out the terms with zero for coefficients or not
-%\begin{eqnarray*}
+%\begin{gather*}
 %1x + 3y + 2z  \phantom{+ 0w}   =9 \\ 
 %6x + 2y \phantom{ + 0z}   -2w  =0  \\
 %-1x  \phantom{+0 y} + 1 z + 1w  =3 
-%\end{eqnarray*}
+%\end{gather*}
 As a matrix equation the system reads
-\begin{eqnarray*}
+\[
 \left(\begin{array}{cccc}
 1 & 3 & 2 & 0   \\ 
 6 & 2 & 0  & -2   \\
@@ -134,7 +134,7 @@ As a matrix equation the system reads
 \end{array}\right)
 \colvec{ x\\ y\\z\\w}
 =\colvec{ 9\\0\\3}
-\end{eqnarray*}
+\]
 
 
 
@@ -164,7 +164,7 @@ We now have three ways or writing the same question.
 Lets write them side by side as we solve the system using a nice algebra trick: we will strategically add and subtract  equations.
 
 \begin{example} of how equations, matrix equations, and augmented matrices change during elimination
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x\ +\ y & = & 27 \\
@@ -183,9 +183,9 @@ Lets write them side by side as we solve the system using a nice algebra trick: 
  \begin{amatrix}{2}
 1 &1 &27 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new first equation be the sum of the first and second equations
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	3x\ +\ 0 & = & 27 \\
@@ -204,9 +204,9 @@ Let the new first equation be the sum of the first and second equations
  \begin{amatrix}{2}
 3 &0 &27 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new first equation be the old first equation divided by 3
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x\ +\ 0 & = & 9 \\
@@ -225,9 +225,9 @@ Let the new first equation be the old first equation divided by 3
  \begin{amatrix}{2}
 1 &0 &9 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new second equation be the old second equation minus two times the first equation 
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x\ +\ 0 & = & 9 \\
@@ -246,9 +246,9 @@ Let the new second equation be the old second equation minus two times the first
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &-1 & -18
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new  second equation be the old second equation divided by -1
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x + 0 & = & \ 9 \\
@@ -267,7 +267,7 @@ Let the new  second equation be the old second equation divided by -1
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &1 & 18
 \end{amatrix}
-  \end{eqnarray*}
+\]
 \end{example}
 Do you see what the strategy was? To eliminate $y$ from the first question and then eliminate $x$ from the second. The result was a plain statement of the solution. But the quantity of writing here was atrocious. 
 
@@ -276,35 +276,35 @@ Everywhere in the the instructions we can replace the word ``equation" with the 
 The result is a process called called {\itshape Gaussian elimination}\index{Gaussian elimination}: 
 
 \begin{example} of Gaussian elimination
-\begin{eqnarray*}
+\[
  \begin{amatrix}{2}
 1 &1 &27 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new first row be the sum of the first and second rows
-\begin{eqnarray*}
+\[
  \begin{amatrix}{2}
 3 &0 &27 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new first row be the old first row divided by 3
- \begin{eqnarray*}
+\[
  \begin{amatrix}{2}
 1 &0 &9 \\ 2 &-1 & 0
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new second row be the old second row minus two times the first row 
-\begin{eqnarray*}
+\[
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &-1 & -18
 \end{amatrix}
-  \end{eqnarray*}
+\]
 Let the new  second row be the old second row divided by -1
-\begin{eqnarray*}
+\[
  \begin{amatrix}{2}
 1 &0 &9 \\ 0 &1 & 18
 \end{amatrix}
-  \end{eqnarray*}
+\]
 The solution can be read off very quickly, and the notation was very minimal. 
 \end{example}
  At each step, the augmented matrices encode systems of equations which have the same solutions. Lets make this idea more formal, and introduce some notation to convey the idea.
@@ -364,7 +364,7 @@ and certainly the last of these is our favorite!
 Setting up a string of equivalences like this is actually a means of solving systems of linear equations. This is the main idea of this chapter.
 
 \begin{example} (Using Gaussian elimination to solve a system of linear equations)
-\begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	x +\ y & = & 5 \\
@@ -390,7 +390,7 @@ Setting up a string of equivalences like this is actually a means of solving sys
 	 0 + y & = &\  3
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 Note that we used the top left $1$ to make the bottom left entry zero. For this reason we call that number a pivot; imagine a wiper blade hanging down form the top left slot wiping the lower left slot away. Similarly the bottom right slot was used to wipe away the top right slot, so it is called a pivot. 
 \end{example}
 
@@ -414,7 +414,7 @@ This can't always be done.
 %The situation is a bit more complicated for a variety of reasons. Some examples will elucidate them.
 
 \begin{example} (Redundant equations)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	\ x + \ y & = & 2 \\
@@ -440,12 +440,12 @@ This can't always be done.
 	 0 + 0 & = &  0
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 This example demonstrates if one equation is a multiple of the other the identity matrix can not be a reached. This is because the first step in elimination will make the second row a row of zeros. Notice that solutions still exists $x=1,y=1$ is a solution. The last augmented matrix here is in RREF.
 \end{example}
 
 \begin{example} (Inconsistant equations)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	\ x + \ y & = & 2 \\
@@ -471,14 +471,14 @@ This example demonstrates if one equation is a multiple of the other the identit
 	 0 + 0 & = &  1
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 This system of equation has a solution if there exists two numbers $x$, and $y$ such that $0+0=1$. That is a tricky way of saying there are no solutions. The last form of the augmented matrix here is in RREF.
 \end{example}
 
 
 \begin{example} (Silly order of equations)\\
 A robot might make the following mistake
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	0x +  \ y & = & -2 \\
@@ -490,9 +490,9 @@ A robot might make the following mistake
 0 &1 & -2\\ 1 &1 & 7
 \end{amatrix}
 \sim \cdots
-\end{eqnarray*}  
+\]
 and then give up because the the upper left slot can not function as a pivot since the 0 that lives there can not be used to eliminate the zero below it. Of course, the right thing to do is to change the order of the equations before starting
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	\ x + y & = &  7
@@ -515,7 +515,7 @@ and then give up because the the upper left slot can not function as a pivot sin
 	 0 + y & = & -2
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 The third appearance of an augmented matrix here is RREF of the first, and second. That is to say, you can swap rows on your way to RREF.
 \end{example}
 
@@ -562,7 +562,7 @@ The reason we need the asterisk is demonstrated in the ``redundant equations" ex
 Actually, in full generality where we have asterisks one can have multiple numbers with columns of zeros below them, as one would have in the following
 
 \begin{example} (Inconsistant equations)
- \begin{eqnarray*}
+\[
    \left.
 \begin{array}{lcr}
 	\ x \ + \ y + \ z +  0w & = & 2 \\
@@ -587,7 +587,7 @@ Actually, in full generality where we have asterisks one can have multiple numbe
 	 w & = &  0
      \end{array}
    \right.
-\end{eqnarray*}  
+\]
 Note that there was no hope of reaching the identity matrix just because of the shape of the augmented matrix we started with. 
 \end{example}
 
@@ -638,7 +638,7 @@ RREF represents a maximally simplified version of the original system of equatio
 It is easier to read off solutions from the maximally simplified equations than from the original equations, even when there are infinitely many solutions.
 
 \begin{example}
- \begin{eqnarray*}
+\[
 \left.
 \begin{array}{lcr}
 	x  +y    \phantom{+ z}  + 5w & ~  = 1 \\
@@ -667,11 +667,11 @@ It is easier to read off solutions from the maximally simplified equations than 
 	\phantom{x+y+} z+         4w & = 8
      \end{array}
      \right.
-\end{eqnarray*}
+\]
 In this case, we say that $x,y$, and $z$ are ``pivot variables" because they appear with pivots as coefficients. Since $w$ never appears with a pivot as a coefficient, 
 we say that it is not a pivot variable. %We call it a free variable. 
 One way to express the solutions to this system of equations is to put all the pivot variables on one side and all the non-pivot variables on the other side. It is also nice to add the ``freebee equation" $w=w$ to obtain the system
-\begin{eqnarray*}
+\[
 \left.
 \begin{array}{lcr}
 	x & = -5 -3w \\
@@ -682,7 +682,7 @@ One way to express the solutions to this system of equations is to put all the p
      \right\}
      \Leftrightarrow
 \colvec{x\\y\\z\\w} = \colvec{-5\\6\\8\\0} + w\colvec{-3\\-2\\-4\\1}
-\end{eqnarray*}
+\]
 where we have written the solution to the corresponding matrix problem. There are infinitely many solutions, one for each value of $z$. We call the collection of all solutions {\itshape the solution set}\index{solution set}\index{solution set} It is easy to check that the solution corresponding to $w=0$ really does fit into the matrix equation. 
 \end{example}
 
@@ -696,7 +696,7 @@ Non-standard approach: solve for $w$ in terms of $z$ and substitute into the oth
 When you see a RREF augmented matrix with two columns that have no pivot, you know there will be two free variables. 
 
 \begin{example}
- \begin{eqnarray*}
+\[
  \begin{amatrix}{4} 
 1 & 0 & 7 & 0 & 4 \\ 
 0 & 1 & 3 & 4 & 1 \\ 
@@ -711,9 +711,9 @@ When you see a RREF augmented matrix with two columns that have no pivot, you kn
 	%\phantom{x+y+z+}          w & = 2
      \end{array}
      \right.
-\end{eqnarray*}  
+\]
 Expressing the pivot variables in terms of the non-pivot variables, and using two freebee equations gives
-\begin{eqnarray*}
+\[
 \left.
 \begin{array}{lcr}
 	x & = 4 -7z \\
@@ -724,7 +724,7 @@ Expressing the pivot variables in terms of the non-pivot variables, and using tw
      \right\}
      \Leftrightarrow
 \colvec{x\\y\\z\\w} = \colvec{4\\1\\0\\0} + z\colvec{-7\\-3\\1\\0} + w\colvec{0\\-2\\0\\1}
-\end{eqnarray*}
+\]
 There are infinitely many solutions. One solution for each pair of numbers $z,w$. 
 \end{example}
 You can imagine having three, four, or fifty-six non-pivot columns and the same number of free variables indexing your solutions set. You need to become very adept at reading off solutions of linear systems from the RREF
