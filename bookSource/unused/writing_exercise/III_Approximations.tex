@@ -139,9 +139,9 @@ To measure the strength of the gravitational field at the surface of mars, a mar
 \[
 \begin{array}{|l|c|c|c|c|c|}
 \hline
-{\rm Frame~ number}& 1&2&3&4&5\\%[.5mm]
+\textrm{Frame~ number}& 1&2&3&4&5\\%[.5mm]
 \hline
-{\rm Estimated~height}& 2&4&5&3&1\\
+\textrm{Estimated~height}& 2&4&5&3&1\\
 \hline
 \end{array}
 \]
@@ -151,7 +151,7 @@ Describe ways that more data can be obtained to yield a better estimation.\\
 
 \noindent {\bfseries Response:}\\
 If the acceleration of the rock due to gravity is constant $a$ then the function $h:[0,5]\to \R$ that gives the height of the rock (in the units were used to describe the height of the rock) as a function of time (in units of time equal to the time between video frames) satisfies 
-\[ \frac{d^2}{dt^2} h(t)=a \implies h(t)=\frac12 a t^2+bt+c {\rm ~for~some ~}b,c\in \R.\]
+\[ \frac{d^2}{dt^2} h(t)=a \implies h(t)=\frac12 a t^2+bt+c \text{~for~some~}b,c\in \R.\]
 If $h$ is to fit the data exactly then $(a,b,c)$ should be a solution to the system of equations 
 \bea \nn
 \begin{array}{cc}
@@ -221,7 +221,7 @@ This system has no solution, as shown by row reduction of the associated augment
 \end{gather*}
 The system encoded by the augmented matrix $(M|V)$ does not have a solution if $V$ can not be expressed as a linear combination of the columns of $M$ since this means that $V$ is not in the range of $M$. 
 Out of all the systems of equations $(M|U)$ that do have solutions the system with $U$ closest to $V$ is the system $(M|V_r)$ where $V_r$ is the projection of 
-$V$ onto ${\rm ran~} M$. The matrix that projects a vector onto ${\rm ran~} M$ is 
+$V$ onto $\ran M$. The matrix that projects a vector onto $\ran M$ is 
 $M(M^TM)^-1 M $
 \begin{gather*}= 
 \left( \begin{array}{rrr}

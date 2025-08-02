@@ -302,15 +302,15 @@ Use Gram--Schmidt to find an orthonormal basis for
 \]
 
 \item Let $M$ be the matrix of a linear transformation $L:V\to W$ in given bases for $V$ and $W$.
-Fill in the blanks below with one of the following six vector spaces: $V$, $W$, ${\rm ker} L$, 
-$\big({\rm ker} L\big)^\perp$, ${\rm im} L$, $\big({\rm im} L\big)^\perp$.
+Fill in the blanks below with one of the following six vector spaces: $V$, $W$, $\ker L$, 
+$\big(\ker L\big)^\perp$, $\im L$, $\big(\im L\big)^\perp$.
 \begin{enumerate}
 \item The columns of $M$ span \underline{\phantom{answer}} in the basis given for \underline{\phantom{answer}}.
 \item The rows of $M$ span \underline{\phantom{answer}} in the basis given for \underline{\phantom{answer}}.
 \end{enumerate} 
 Suppose \[M=\begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}\]
 is the matrix of $L$ in the bases $\{v_1,v_2,v_3,v_4\}$ for $V$ and $\{w_1,w_2,w_3,w_4\}$ for~$W$.
-Find bases for ${\rm ker} L$ and ${\rm im} L$. Use the dimension formula to check your result.
+Find bases for $\ker L$ and $\im L$. Use the dimension formula to check your result.
 
 \item
 Captain Conundrum collects the following data set
@@ -393,7 +393,7 @@ The above equations are easily solved (either using an augmented matrix and row 
 \item Yes.
 \item $n\times n$.
 \item $m\times m$.
-\item Yes. This relies on ${\rm ker} M=0$ because if $M^T M$ had a non-trivial kernel, then there would be a non-zero solution $X$ to $M^T M X=0$. But then by multiplying on the left by $X^T$ we see that $||MX||=0$. This in turn implies $MX=0$ which contradicts the triviality of the kernel of $M$. 
+\item Yes. This relies on $\ker M=0$ because if $M^T M$ had a non-trivial kernel, then there would be a non-zero solution $X$ to $M^T M X=0$. But then by multiplying on the left by $X^T$ we see that $||MX||=0$. This in turn implies $MX=0$ which contradicts the triviality of the kernel of $M$. 
 \item Yes because $\big(M^T M\big)^T=M^T (M^T)^T=M^T M$.
 \item Yes, all symmetric matrices have a basis of eigenvectors.
 \item No, because otherwise it would not be invertible.
@@ -453,11 +453,11 @@ X=c^1\begin{pmatrix}1\\0\\1\end{pmatrix}+c^2\begin{pmatrix}1\\2\\-3\end{pmatrix}
 =\begin{pmatrix}1&1&a\\0&2&1\\1&-3&0\end{pmatrix}\begin{pmatrix}c^1\\c^2\\c^3\end{pmatrix}\, ,
 \]
 for some coefficients $c^1$, $c^2$ and $c^3$. This is a linear system. We could solve for $c^1$, $c^2$ and $c^3$ using an
-augmented matrix and row operations. However, since we know that ${\rm dim}\, {\mathbb R}^3=3$, if $U$ spans ${\mathbb R}^3$,
+augmented matrix and row operations. However, since we know that $\dim{\mathbb R}^3=3$, if $U$ spans ${\mathbb R}^3$,
 it will also be a basis. Then the solution for  $c^1$, $c^2$ and $c^3$ would be unique. Hence, the $3\times 3$ matrix above must 
 be invertible, so we examine its determinant
 \[
-{\rm det} \begin{pmatrix}1&1&a\\0&2&1\\1&-3&0\end{pmatrix}
+\det\begin{pmatrix}1&1&a\\0&2&1\\1&-3&0\end{pmatrix}
 =1.(2.0-1.(-3))+1.(1.1-a.2)=4-2a\, .
 \]
 Thus $U$ spans ${\mathbb R}^3$ whenever $a\neq 2$. When $a=2$ we can write the third vector in $U$ in terms of the preceding ones as
@@ -567,7 +567,7 @@ vectors in columns corresponding to the non-pivot variables can be removed.
 \begin{enumerate}
 \item
 \[
-{\rm det} \begin{pmatrix} \lambda&-\frac12 & -1 \\[2mm] -\frac12 &\lambda-\frac12 &-\frac12 \\[2mm] -1 & -\frac12 &\lambda\end{pmatrix}
+\det\begin{pmatrix} \lambda&-\frac12 & -1 \\[2mm] -\frac12 &\lambda-\frac12 &-\frac12 \\[2mm] -1 & -\frac12 &\lambda\end{pmatrix}
 =\lambda\Big((\lambda-\frac12\Big)\lambda-\frac14)+\frac12\Big(-\frac{\lambda}2-\frac12\Big)-\Big(-\frac14+\lambda\Big)
 \]
 \[
@@ -900,8 +900,8 @@ Dividing by lengths, an orthonormal basis for $\span\{u,v,w\}$ is
 \item 
 
 \begin{enumerate}
-\item The columns of $M$ span ${\rm im} L$ in the basis given for $W$.
-\item The rows of $M$ span $({\rm ker}L)^\perp$% in the basis given for $V$.
+\item The columns of $M$ span $\im L$ in the basis given for $W$.
+\item The rows of $M$ span $(\ker L)^\perp$% in the basis given for $V$.
 \item First we put $M$ in RREF:
 \begin{align*}
 M& = \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
@@ -911,8 +911,8 @@ M& = \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
 \begin{pmatrix}1&0&-1&\frac13\\[1mm]0&1&1&\frac43\\[1mm]0&0&1&-\frac43\\[1mm]0&0&2&-\frac83\end{pmatrix}
 \ \sim\ \begin{pmatrix}1&0&0&-1\\[1mm]0&1&0&\frac83\\[1mm]0&0&1&-\frac43\\[1mm]0&0&0&0\end{pmatrix}\, .
 \end{align*}
-Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[{\rm im} L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
-Thus $\dim\ker L=1$ and $\dim{\rm im} L=3$ so \[\dim\ker L+\dim{\rm im} L=1+3=4=\dim V\, .\]
+Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[\im L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
+Thus $\dim\ker L=1$ and $\dim\im L=3$ so \[\dim\ker L+\dim\im L=1+3=4=\dim V\, .\]
 \end{enumerate}
 
 \item 

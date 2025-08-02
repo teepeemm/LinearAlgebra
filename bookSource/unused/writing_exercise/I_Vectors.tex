@@ -219,34 +219,34 @@ Choose a  basis for the subspace space and use that basis to write i) a particul
 %In particular, 
 The supply package $f$ can be modeled as the function that assigns to 
 each type of supply item (slabs, fasters, and brackets) the number of items that come in that package. That is 
-%\[ f: \{ {\rm slabs, fasters,brackets} \} \to \{ 3,4,6,7,5\} \]
+%\[ f: \{ \text{ slabs, fasters, brackets } \} \to \{ 3,4,6,7,5\} \]
 %with rule of correspondence explicitly given by
-%\[  f({\rm slabs})=3,f({\rm fasters})=4, f({\rm brackets})= 6.\]
+%\[  f(\text{slabs})=3,f(\text{fasters})=4, f(\text{brackets})= 6.\]
 %Similarly
-%\[ g: \{ {\rm slabs, fasters,brackets} \} \to  \{ 3,4,6,7,5\} \]
+%\[ g: \{ \text{ slabs, fasters, brackets } \} \to  \{ 3,4,6,7,5\} \]
 %with rule of correspondence
 %\begin{gather*}  g(slabs)=7,g(fasters)=5, g(brackets)= 3. \\
 %\{3,4,6\} \subseteq  \{ 3,4,6,7,5\}\end{gather*}
 %and
 %\[ \{7,5,3\} \subseteq  \{ 3,4,6,7,5\}.\]
-\[ f: \{ {\rm slabs, fasters,brackets} \} \to \R \]
+\[ f: \{ \text{ slabs, fasters, brackets } \} \to \R \]
 with rule of correspondence explicitly given by
-\[  f({\rm slabs})=3,f({\rm fasters})=4, f({\rm brackets})= 6.\]
+\[  f(\text{slabs})=3,f(\text{fasters})=4, f(\text{brackets})= 6.\]
 Similarly
-\[ g: \{ {\rm slabs, fasters,brackets} \} \to  \R \]
+\[ g: \{ \text{ slabs, fasters, brackets } \} \to  \R \]
 with rule of correspondence
-\[  g({\rm slabs})=7,g({\rm fasters})=5, g({\rm brackets})= 3. \]
+\[  g(\text{slabs})=7,g(\text{fasters})=5, g(\text{brackets})= 3. \]
 
-\item The range of $f$ is $\{ f(x)~|~x\in{\rm dom}(f)\}= \{3,4,6\} \}$
-while the range of $g$ is $\{ g(a)~|~a\in {\rm dom}(g)\}= \{7,5,3\}\} $. These are both subsets of the codomain $\R$; 
+\item The range of $f$ is $\{ f(x)~|~x\in\dom(f)\}= \{3,4,6\} \}$
+while the range of $g$ is $\{ g(a)~|~a\in \dom(g)\}= \{7,5,3\}\} $. These are both subsets of the codomain $\R$; 
 \[ \{3,4,6\} \subseteq  \R\]
 and
 \[ \{7,5,3\} \subseteq  \R.\]
 
 \item By the usual scalar multiplication of functions 
-\[ \frac1\pi f: \{ {\rm slabs, fasters,brackets} \} \to \R \]
+\[ \frac1\pi f: \{ \text{ slabs, fasters, brackets } \} \to \R \]
 with rule of correspondence explicitly given by
-\[  \frac1\pi f({\rm slabs})=\frac1\pi 3~,~~f({\rm fasters})=\frac1\pi 4~,~~ f({\rm brackets})= \frac1\pi 6.\] That is 
+\[  \frac1\pi f(\text{slabs})=\frac1\pi 3~,~~f(\text{fasters})=\frac1\pi 4~,~~ f(\text{brackets})= \frac1\pi 6.\] That is 
 $\frac1\pi f$ has the same domain as $f$. This is the case because the codomain of $f$ is a set that is closed under scalar multiplication; if the codomain of $f$ had been chosen to be $\{1,2,3,4,5,6,7\}$ then in order to give $\frac1\pi f$ meaning the codomain of $\frac1\pi f$ would need to be different from that of $f$. 
 
 The function $\frac1\pi f$ has no interpretation in terms of supply packages for the door shop; a fraction of items such as a hinge might in some cases have an interpretation (such as when two halves are held together my a pin) but this fraction is of a supply package is a purely mathematical entity with no obvious interpretation. The same is true for most multiples of $f$.
@@ -281,15 +281,15 @@ This property can be interpreted as follows: any ordered can be doubled, tripled
 The model vector space is a subspace of space of all functions with a particular domain and a codomain:
 \[ W:=\{  F: \{ slabs, fasters,brackets \} \to \R \}.\]
 In particular, 
-%\begin{gather*} f: \{ {\rm slabs, fasters,brackets} \} \to \R \\
-%f({\rm slabs})=3,f({\rm fasters})=4, f({\rm brackets})= 6\end{gather*}
+%\begin{gather*} f: \{ \text{ slabs, fasters, brackets } \} \to \R \\
+%f(\text{slabs})=3,f(\text{fasters})=4, f(\text{brackets})= 6\end{gather*}
 %and
-%\begin{gather*} g: \{ {\rm slabs, fasters,brackets } \} \to \R \\
+%\begin{gather*} g: \{ \text{ slabs, fasters, brackets } \} \to \R \\
 %g(slabs)=7,g(fasters)=5, g(brackets)= 3 \end{gather*}
 $f$ and $g$ and any sum of multiples of them are in $W$.
 However, some elements of $W$, such as 
 \begin{gather*}h:\{ slabs, fasters,brackets \} \to \R \\
- h({\rm slabs})=1,f({\rm fasters})=0, f({\rm brackets})= 0\end{gather*}
+ h(\text{slabs})=1,f(\text{fasters})=0, f(\text{brackets})= 0\end{gather*}
 are not. This claim, that $h\notin V$, can be backed up with a brief calculation after a basis for $V$ or $W$ is chosen. 
 
 \item 
@@ -298,9 +298,9 @@ Let
 \[B:=( e_s,e_f,e_b)\] 
 be a basis for $V$ defined by 
 \begin{gather*}
-e_s(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm slabs}\\ 0 {\rm ~else~} \end{array} \right.\, , ~
-e_f(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm fasteners}\\ 0 {\rm{~else~}} \end{array} \right.\, , \\
-e_b(x)=\left\{ \begin{array}{l} 1 {\rm ~if~} x={\rm brackets }\\ 0 {\rm ~else~} \end{array} \right. .
+e_s(x)=\left\{ \begin{array}{l} 1 \text{~if~} x=\text{slabs}\\ 0 \text{~else~} \end{array} \right.\, , ~
+e_f(x)=\left\{ \begin{array}{l} 1 \text{~if~} x=\text{fasteners}\\ 0 \text{~else~} \end{array} \right.\, , \\
+e_b(x)=\left\{ \begin{array}{l} 1 \text{~if~} x=\text{brackets }\\ 0 \text{~else~} \end{array} \right. .
 \end{gather*}
 i) The function $h\in W$ with the property $h\notin V$ can be written in this basis as follows.
 \[h=1e_s+0e_f+0e_b \bv 1\\0\\0 \ev_B.\]
