@@ -13,7 +13,7 @@
 .*.lb
 
 ## created by unicode-math / lualatex / tagpdf
-*-luamml-mathml.html
+**/*-luamml-mathml.html
 
 ## Intermediate documents:
 *.dvi
