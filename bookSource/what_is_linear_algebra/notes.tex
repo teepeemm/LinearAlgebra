@@ -769,13 +769,13 @@ Chapter~\ref{systems} is about efficiently solving systems of linear equations, 
 What would happen if we placed two of our expensive machines end to end?
 \[
 \includegraphics[alt={A function box labeled with the matrix [[2,6],[4,8]].},scale=.15]{\whatIsPath/machine_matrix.jpg}
-\raisebox{1mm}{\includegraphics[alt={A function box labeled with [[1,2],[0,1]].},scale=.15]{\whatIsPath/machine_matrix1.jpg}}
+\raisebox{1mm}{\includegraphics[alt={A function box labeled with the matrix [[1,2],[0,1]].},scale=.15]{\whatIsPath/machine_matrix1.jpg}}
 \raisebox{12mm}{\Huge ?}
 \]
 The output of the first machine would be fed into the second. 
 \[
 \scalebox{.7}{$\colvec{x\\y}$}\hspace{-.6mm}\raisebox{-9mm}{\includegraphics[alt={A function box labeled with the matrix [[2,6],[4,8]].},scale=.12]{\whatIsPath/machine_matrix.jpg} }\!\!\!\!\!\!\scalebox{.7}{$\colvec{2x+6y\\4x+8y}$}
-\raisebox{-9mm}{\includegraphics[alt={A function box labeled with [[1,2],[0,1]].},scale=.12]{\whatIsPath//machine_matrix1.jpg} }\!\!\!\!\!\!\!\!\!\!\!\!\!
+\raisebox{-9mm}{\includegraphics[alt={A function box labeled with the matrix [[1,2],[0,1]].},scale=.12]{\whatIsPath//machine_matrix1.jpg} }\!\!\!\!\!\!\!\!\!\!\!\!\!
   \raisebox{-3mm}{ \scalebox{.7}{$\begin{array}{l}\ \ \ \ \colvec{1.(2x+6y)+2.(4x+8y)\\0.(2x+6y)+1.(4x+8y)}\\[4mm] \ =\colvec{10x+22y\\4x+8y}\end{array}$}}
 \]
 Notice that the same final result could be achieved with a single machine:
@@ -869,11 +869,11 @@ but keep this example in mind throughout the course.
 
 The general idea is presented in the picture below; sometimes a linear equation is too hard to solve as is, but by organizing information and reformulating the equation as a matrix equation the process of finding solutions becomes tractable. 
 \begin{center}
-{\includegraphics[width=.8\textwidth]{\whatIsPath/detourAbs} }\\
+{\includegraphics[alt={As explained, suppose we have a problem Lu=v with a linear function L and vector V where it is too hard to solve to find u.  We can use a notation convention to transform to a matrix equation Mx=B, solve this to find solution(s) x, and reverse the convention to find the solution u.},width=.8\textwidth]{\whatIsPath/detourAbs} }\\
 \end{center}
 A simple example with the knowns ($L$ and $V$ are $\frac{d}{dx}$ and $3$, respectively) is shown below, although the detour is unnecessary in this case since you know how to anti-differentiate.
 \begin{center}
-{\includegraphics[width=.8\textwidth]{\whatIsPath/detourEg} }\\
+{\includegraphics[alt={As explained, an example of the previous image is with L=d/dx and V=3.  Differentiation of 2nd order polynomial vectors represented as vectors is multiplication by the matrix [[0,0,0],[2,0,0],[0,1,0]].  The vectors that become [0,0,3] are [0,3,0]+c[0,0,1], which corresponds to the polynomial 3x+c.},width=.8\textwidth]{\whatIsPath/detourEg} }\\
 \end{center}
 
 

@@ -23,7 +23,8 @@ One choice of basis is the ordered set (or list) of matrices
 Given a particular vector and a basis, your job is to write that vector as a sum of multiples of basis elements. Here
 an arbitrary vector $v\in V$ is just a matrix, so we write
 \begin{align*}
-v\ =\ \begin{pmatrix}a&b\\c&d\end{pmatrix}&=&\quad\!\! \begin{pmatrix}a&0\\0&0\end{pmatrix}+\begin{pmatrix}0&b\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\ c&0\end{pmatrix}+\begin{pmatrix}0&0\\0&d\end{pmatrix}\\[1mm]
+v\ =\ \begin{pmatrix}a&b\\c&d\end{pmatrix}
+&=\quad\!\! \begin{pmatrix}a&0\\0&0\end{pmatrix}+\begin{pmatrix}0&b\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\ c&0\end{pmatrix}+\begin{pmatrix}0&0\\0&d\end{pmatrix}\\[1mm]
 &=a\begin{pmatrix}1&0\\0&0\end{pmatrix}+b\begin{pmatrix}0&1\\0&0\end{pmatrix}+c\begin{pmatrix}0&0\\ 1&0\end{pmatrix}
 +d\begin{pmatrix}0&0\\0&1\end{pmatrix}\\[1mm]
 &=a\,  e^1_1+b \, e^1_2+c \, e^2_1+d \, e^2_2\, .
@@ -450,7 +451,7 @@ Finally, a compression algorithm is applied to the matrix to reduce the file siz
 Graphs occur in many applications, ranging from telephone networks to airline routes.  In the subject of \emph{graph theory}\index{Graph theory}, a graph is just a collection of vertices and some edges connecting vertices.  A matrix can be used to indicate how many edges attach one vertex to another.
 
 \begin{center}
-\includegraphics[width=10cm]{notes8-0.png}
+\includegraphics[alt={Four vertices (dots).  Dots 1 and 3 are singly connected.  Dots 1 and 4 are singly connected.  Dots 2 and 3 are singly connected.  Dots 1 and 2 are doubly connected.  Dot 1 has a loop.  Dot 4 has three loops.},width=10cm]{notes8-0.png}
 \end{center}
 For example, the graph pictured above would have the following matrix, where $m^i_j$ indicates the number of edges between the vertices labeled $i$~and~$j$:
 \[
@@ -790,7 +791,7 @@ N=\begin{pmatrix}1&\multicolumn{1}{c}{0}&\multicolumn{1}{c}{0}\\0&\cos\theta & \
 \]
 perform rotations by an angle $\theta$ in the $xy$ and $yz$ planes, respectively. Because, they rotate single vectors, you can also use them to rotate objects built from a collection of vectors like pretty colored blocks! Here is a picture of $M$ and then $N$ acting on such a block, compared with the case of $N$ followed by $M$. The special case of $\theta=90^\circ$ is shown.
 \begin{center}
-\includegraphics[scale=.3]{MNNM.jpg}
+\includegraphics[alt={A block with visible sides colored red, green, and blue is rotated by M to show sides of yellow, red, and blue, and then rotated by N to show sides of yellow, blue and pink.  If rotated by N first, it show red, blue, and yellow and then rotated by M to show cyan, red, and yellow.},scale=.3]{MNNM.jpg}
 \end{center}
 Notice how the endproducts of $MN$ and $NM$ are different, so $MN\neq NM$ here.
 \end{example}
@@ -1103,7 +1104,7 @@ d & -b \\
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.24]{\inverseMatPath/2x2_inverse.jpg}
+\includegraphics[alt={The formula for the inverse of a 2x2 matrix, surrounded by colors.},scale=.24]{\inverseMatPath/2x2_inverse.jpg}
 \end{center}
 \caption{The formula for the inverse of a 2$\times$2 matrix is worth memorizing!}
 \end{figure}
@@ -1307,7 +1308,7 @@ On the other hand, $Mx=0$ always has the solution $x=0$.  If no other solutions 
 
 %\begin{figure}
 \begin{center}
-\includegraphics[scale=.26]{\inverseMatPath/inverse_theorem.jpg}
+\includegraphics[alt={The theorem, handwritten.},scale=.26]{\inverseMatPath/inverse_theorem.jpg}
 \end{center}
 %\end{figure}
 
@@ -1560,10 +1561,17 @@ Then $X=\colvec{-3\\3\\-11}$, and we're done.
 \Videoscriptlink{lu_decomposition_using_lu_decomp.mp4}{Using an $LU$ decomposition}{scripts_lu_decomposition_using_lu_example}
 
 %\begin{figure}
-\begin{center}
-\includegraphics[scale=.3]{\luDecompPath/LU_solution.jpg}
-\end{center}
+%\begin{center}
+%\includegraphics[scale=.3]{\luDecompPath/LU_solution.jpg}
+%\end{center}
 %\end{figure}
+
+\shabox{LU method for $MX=V$:
+\begin{enumerate}
+\item Write $M=LU\Rightarrow LUX=V$, where $W=UX$.
+\item Solve $LW=V$
+\item Solve $UX=W$
+\end{enumerate}}
 
 \subsection{Finding an $LU$ Decomposition.}
 \label{finding_LU_decomp}
@@ -1825,7 +1833,7 @@ By multiplying the diagonal matrix by the upper triangular matrix, we get the st
 \begin{tabular}{c}
 \bfseries \hyperref[sample1]{You are now ready to attempt the first sample midterm}. 
 \\
-\hyperref[sample1]{\includegraphics[scale=.15]{midterm.jpg}}
+\hyperref[sample1]{\includegraphics[alt={Student working on a midterm.},scale=.15]{midterm.jpg}}
 \end{tabular}
 }
 \end{center}

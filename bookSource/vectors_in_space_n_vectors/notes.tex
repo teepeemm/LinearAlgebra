@@ -101,11 +101,11 @@ $\left\{ \colvec{1\\2\\3\\4} + t\colvec{1\\0\\0\\0} \middle\arrowvert t \in \mat
 
 Given two non-zero vectors $u,v$, they will \emph{usually} determine a plane, 
 \begin{center}
-\includegraphics[scale=.28]{uvplane.jpg}
+\includegraphics[alt={A plane in space with vectors u and v in the plane.},scale=.28]{uvplane.jpg}
 \end{center}
 unless both vectors are in the same line,  in which case, one of the vectors is a scalar multiple of the other.  The sum of $u$ and $v$ corresponds to laying the two vectors head-to-tail and drawing the connecting vector.  If $u$ and $v$ determine a plane, then their sum lies in the plane determined by $u$ and~$v$.
 \begin{center}
-\includegraphics[scale=.28]{u+v.jpg}
+\includegraphics[alt={The same plane, but the vector v has been moved so that it starts where u ends.  The vector u+v goes from the start of u to the end of v.},scale=.28]{u+v.jpg}
 \end{center}
 The plane determined by two vectors $u$ and $v$ can be written as 
 \[\{ P + su + tv ~|~ s, t \in \mathbb{R} \}\, .\]  
@@ -192,16 +192,16 @@ Consider the {\itshape Euclidean length}\index{Euclidean length} of an $n$-vecto
 \]
 Using the Law of Cosines\index{Law of Cosines}, we can then figure out the angle between two vectors.  Given two vectors $v$ and $u$ that {\itshape span} a plane in $\mathbb{R}^n$, we can then connect the ends of $v$ and $u$ with the vector $v-u$. 
  \begin{center}
-\includegraphics[scale=.24]{triangleineq.jpg}
+\includegraphics[alt={A plane with vectors u and v starting at the same point with angle θ between them.  The vector v-u points from the end of u to the end of v, making a triangle.  The sides of the triangle have lengths given by the lengths of the vectors.},scale=.24]{triangleineq.jpg}
 \end{center}
 Then the Law of Cosines states that:
 \[ 
 \|v-u\|^2 = \|u\|^2 + \|v\|^2 - 2\|u\|\,  \|v\| \cos \theta 
 \]
 Then isolate $\cos \theta$:
-
 \begin{align*}
-\|v-u\|^2 - \|u\|^2 - \|v\|^2 &=& (v^1-u^1)^2 + \cdots + (v^n-u^n)^2 \\
+\|v-u\|^2 - \|u\|^2 - \|v\|^2
+&= (v^1-u^1)^2 + \cdots + (v^n-u^n)^2 \\
 & \quad - \big((u^1)^2 + \cdots + (u^n)^2\big) \\
 & \quad - \big((v^1)^2 + \cdots + (v^n)^2\big) \\
 & = -2 u^1v^1 - \cdots - 2u^nv^n
@@ -348,7 +348,7 @@ That is, the square of the left-hand side of the triangle inequality is $\leq$ t
 
 The triangle inequality is also ``self-evident'' when examining a sketch of $u$, $v$ and $u+v$.
 \begin{center}
-\includegraphics[scale=.25]{triangleagain.jpg}
+\includegraphics[alt={Vectors u and v, with v starting at the end of u.  The vector u+v goes from the beginning of u to the end of v, forming a triangle.  The sides of the triangle have lengths given by the lengths of the vectors.},scale=.25]{triangleagain.jpg}
 \end{center}
 
 \begin{example}
@@ -375,7 +375,7 @@ in accordance with the Cauchy--Schwarz inequality.
 If you were  going shopping you might make something like the following list.
 
 \begin{center}
-\includegraphics[scale =.3]{list.jpg}
+\includegraphics[alt={A shopping list with apples, oranges, onions, carton of milk, and carrots written on it.},scale =.3]{list.jpg}
 \end{center}
 
 \noindent
@@ -386,7 +386,7 @@ one another?
 If you were a more careful shopper your list might look like the following.
 
 \begin{center}
-\includegraphics[scale =.5]{shoplist}
+\includegraphics[alt={To buy at 5:23pm tonight: onions: 3.0, oranges: 2.0, milk cartons: 1.0, apples: 5.0, carrots: 8.0},scale =.5]{shoplist}
 \end{center}
 
 \noindent

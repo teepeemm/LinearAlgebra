@@ -9,7 +9,7 @@ for exfilename in glob('**/*.tex'):
 #    if r'$$' not in lines:
 #        continue
 #    print(exfilename)
-    if re.search(r'\n\n\\\[', lines, re.MULTILINE):
+    if re.search(r'\n\n\\begin{align', lines, re.MULTILINE):
         print(exfilename)
 #        breakpoint()
 #    quit()
