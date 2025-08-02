@@ -21,7 +21,7 @@ We say that a subset $U$ of a vector space $V$ is a {\bfseries subspace}\index{S
 \end{definition}
 
 \begin{example}
-Consider a plane $P$ in $\Re^3$ through the origin:
+Consider a plane $P$ in $\mathbb{R}3$ through the origin:
 \[
 ax+by+cz=0.
 \]
@@ -33,7 +33,7 @@ This equation can be expressed as the homogeneous system $\rowvec{a & b & c}\col
 \[
 M(\mu X_1 + \nu X_2) = \mu MX_1 + \nu MX_2 = 0.
 \]
-So $P$ is closed under addition and scalar multiplication.  Additionally, $P$ contains the origin (which can be derived from the above by setting $\mu=\nu=0$).  All other vector space requirements hold for $P$ because they hold for all vectors in $\Re^3$.
+So $P$ is closed under addition and scalar multiplication.  Additionally, $P$ contains the origin (which can be derived from the above by setting $\mu=\nu=0$).  All other vector space requirements hold for $P$ because they hold for all vectors in $\mathbb{R}3$.
 \end{example}
 
 
@@ -71,7 +71,7 @@ If the answer to both of these questions is yes, then \(U\) is a vector space. I
 
 Consider the set 
 \[
-U= \left\{ \colvec{1\\0\\0}, \colvec{0\\1\\0} \right\} \subset \Re^3.
+U= \left\{ \colvec{1\\0\\0}, \colvec{0\\1\\0} \right\} \subset \mathbb{R}3.
 \]
 Because $U$ consists of only two vectors, it clear that $U$ is \emph{not} a vector space, since any constant multiple of these vectors should also be in $U$.  For example, the $0$-vector is not in $U$, nor is $U$ closed under vector addition.
 
@@ -79,7 +79,7 @@ But we know that any two vectors define a plane:
 \begin{center}
 \includegraphics[alt={A plane P with vectors u and v starting from the point O},scale=.3]{\subspacesPath/span_plane.jpg}
 \end{center}
- In this case, the vectors in $U$ define the $xy$-plane in $\Re^3$.  We can view the $xy$-plane as the set of all vectors that arise as a linear combination of the two vectors in $U$.  We call this set of all linear combinations the \emph{span}\index{Span} of $U$:
+ In this case, the vectors in $U$ define the $xy$-plane in $\mathbb{R}3$.  We can view the $xy$-plane as the set of all vectors that arise as a linear combination of the two vectors in $U$.  We call this set of all linear combinations the \emph{span}\index{Span} of $U$:
 \[
 \spa(U)=\left\{ x \colvec{1\\0\\0}+y \colvec{0\\1\\0} \middle| x,y\in \Re \right\}.
 \]
@@ -99,7 +99,7 @@ That is, the span of \(S\) is the set of all finite linear combinations\footnote
  }.
 
 \begin{example}
-Let $V=\Re^3$ and $X\subset V$ be the $x$-axis.  Let $P=\colvec{0\\1\\0}$, and set \[S=X \cup \{P\}\, .\]
+Let $V=\mathbb{R}3$ and $X\subset V$ be the $x$-axis.  Let $P=\colvec{0\\1\\0}$, and set \[S=X \cup \{P\}\, .\]
 The vector \(\colvec{2 \\ 3 \\ 0}\) is in \(\spa(S),\) because \(\colvec{2\\3\\0}=\colvec{2\\0\\0}+3\colvec{0\\1\\0}.\) Similarly, the vector \(\colvec{-12 \\ 17.5 \\ 0}\) is in \(\spa(S),\) because \(\colvec{-12\\17.5\\0}=\colvec{-12\\0\\0}+17.5\colvec{0\\1\\0}.\)
 Similarly, any vector of the form
 \[
@@ -136,9 +136,9 @@ Note that this proof, like many proofs, consisted of little more than just writi
 \begin{example}
 For which values of $a$ does
 \[
-\spa \left\{ \colvec{1\\0\\a} , \colvec{1\\2\\-3} , \colvec{a\\1\\0}   \right\} = \Re^3?
+\spa \left\{ \colvec{1\\0\\a} , \colvec{1\\2\\-3} , \colvec{a\\1\\0}   \right\} = \mathbb{R}3?
 \]
-Given an arbitrary vector $\colvec{x\\y\\z}$ in $\Re^3$, we need to find constants $r^1, r^2, r^3$ such that
+Given an arbitrary vector $\colvec{x\\y\\z}$ in $\mathbb{R}3$, we need to find constants $r^1, r^2, r^3$ such that
 \[
 r^1 \colvec{1\\0\\a} + r^2\colvec{1\\2\\-3} +r^3 \colvec{a\\1\\0} = \colvec{x\\y\\z}.
 \]
@@ -160,13 +160,13 @@ a & -3 & 0
 \[
 M^{-1}\colvec{x\\y\\z}=\colvec{r^1\\r^2\\r^3}
 \]
-for \emph{any} vector $\colvec{x\\y\\z} \in \Re^3$.
+for \emph{any} vector $\colvec{x\\y\\z} \in \mathbb{R}3$.
 
 Therefore we should choose $a$ so that $M$ is invertible:  
 \[
 i.e.,\;  0 \neq \det M = -2a^2 + 3 + a = -(2a-3)(a+1). 
 \]
-Then the span is $\Re^3$ if and only if $a \neq -1, \frac{3}{2}$.
+Then the span is $\mathbb{R}3$ if and only if $a \neq -1, \frac{3}{2}$.
 \end{example}
 
 \Videoscriptlink{subspaces_and_spanning_sets_example.mp4}{Linear systems as spanning sets}{scripts_subspaces_and_spanning_sets_example}
