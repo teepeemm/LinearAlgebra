@@ -694,7 +694,8 @@ The matrix-function is homogeneous if the expressions on the left hand side and 
 +   
       \colvec{6\lambda b \\ 8\lambda b}=  \underline{\colvec{2\lambda a+6\lambda b\\4\lambda a+8\lambda b}} \end{split}\end{equation*}
 while
- \begin{equation*}\begin{split} \lambda  \begin{pmatrix}
+\begin{align*}
+\lambda  \begin{pmatrix}
       2             &6 \\
       4            &8
     \end{pmatrix}
@@ -703,16 +704,15 @@ while
      \lambda\left[ a \colvec{2 \\ 4} 
 +   
      b \colvec{6 \\ 8} \right]
-   &=\lambda\left[\colvec{2a\\4a}+\colvec{6b\\8b}\right]\\[2mm]&=\lambda\colvec{2a+6b\\4a+8b} =  \underline{\colvec{2\lambda a+6\lambda b\\4\lambda a+8\lambda b} .}
-     \end{split}\end{equation*}
+   &=\lambda\left[\colvec{2a\\4a}+\colvec{6b\\8b}\right]\\[2mm]
+   &=\lambda\colvec{2a+6b\\4a+8b} =  \underline{\colvec{2\lambda a+6\lambda b\\4\lambda a+8\lambda b} .}
+\end{align*}
 \vspace{3mm}
 \noindent
 The underlined expressions are  identical, so the matrix is homogeneous. \\
 
 The matrix-function is additive if the left and right side of the equation  in part~\ref{ITEM2} above are indeed equal. 
-
-\begin{equation*}
-\begin{split}
+\begin{align*}
      \begin{pmatrix}
       2             &6 \\
       4            &8
@@ -734,10 +734,9 @@ The matrix-function is additive if the left and right side of the equation  in p
         \colvec{6(b+d) \\ 8(b+d)}
              =
        \underline{ \colvec{2a+2c +6b+6d\\ 4a+4c+8b+8d} }
-       \end{split}\end{equation*}
+\end{align*}
  which we need to compare to  
-\begin{equation*}
-\begin{split}
+\begin{align*}
   \begin{pmatrix}
       2             &6 \\
       4            &8
@@ -753,7 +752,7 @@ The matrix-function is additive if the left and right side of the equation  in p
 a\colvec{2\\4} + b\colvec{6\\ 8} + c\colvec{2\\4} +d\colvec{6\\8}\\[2mm]&
 =\colvec{2a\\4a} + \colvec{6b\\ 8b} + \colvec{2c\\4c} +\colvec{6d\\8d}
 =\underline{\colvec{2a+2c +6b+6d\\ 4a+4c+8b+8d} }\, .
-\end{split}\end{equation*}
+\end{align*}
 Thus multiplication by a  matrix is additive and homogeneous, and so it is, by definition, linear. 
 \end{example}
 
