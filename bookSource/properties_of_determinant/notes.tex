@@ -11,7 +11,6 @@ Recall that:
 A \emph{minor}\index{Minor} of an $n\times n$ matrix $M$ is the determinant of any square matrix obtained from $M$ by deleting one row and one column.  In particular, any entry $m^i_j$ of a square matrix~$M$ is associated to a minor obtained by deleting the $i$th row and $j$th column of~$M$.
 
 It is possible to write the determinant of a matrix in terms of  its minors\index{Expansion by minors} as follows:
-
 \begin{align*}
 \det M &= \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
 &= m^1_1\, \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma})\, m^2_{\hat{\sigma}(2)}\cdots m^n_{\hat{\sigma}(n)} \\
@@ -31,7 +30,6 @@ $M=\begin{pmatrix}
 4 & 5 & 6 \\
 7 & 8 & 9 \\
 \end{pmatrix}$ using expansion by minors.
-
 \begin{align*}
 \det M & = 1\det \begin{pmatrix}
 5 & 6 \\
@@ -58,7 +56,6 @@ Sometimes the entries of a matrix allow us to simplify the calculation of the de
 4 & 0 & 0 \\
 7 & 8 & 9 \\
 \end{pmatrix}$.  Notice that the second row has many zeros; then we can switch the first and second rows of $N$ to get:
-
 \begin{align*}
 \det \begin{pmatrix}
 1 & 2 & 3 \\
@@ -291,7 +288,6 @@ Continuing with the previous example,
 \]
 
 Now, multiply:
-
 \begin{align*}
 \begin{pmatrix}
 3 & -1 & -1 \\

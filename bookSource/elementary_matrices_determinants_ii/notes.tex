@@ -19,7 +19,6 @@ Then:
 M'=R^i(\lambda)M=\colvec{R^1 \\ \vdots \\ \lambda R^i \\ \vdots \\ R^n }
 \]
 What effect does multiplication by $R^i(\lambda)$ have on the determinant?
-
 \begin{align*}
 \det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
 & = \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
@@ -74,7 +73,6 @@ Then multiplying $S^i_j(\lambda)$ by $M$ gives the following:
 \colvec{\\ \vdots \\ R^i +\lambda R^j \\ \vdots \\ R^j \\ \vdots\\ \\ }
 \]
 What is the effect of multiplying by $S^i_j(\lambda)$ on the determinant?  Let $M'=S^i_j(\lambda)M$, and let $M''$ be the matrix $M$ but with $R^i$ replaced by $R^j$.
-
 \begin{align*}
 \det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \lambda m^j_{\sigma(j)}) \cdots m^n_{\sigma(n)} \\
 & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
@@ -149,7 +147,6 @@ Any elementary matrix $E^i_j, R^i(\lambda), S^i_j(\lambda)$ is invertible, excep
 
 
 To obtain one last important result, suppose that $M$ and $N$ are square $n\times n$ matrices, with reduced row echelon forms such that, for elementary matrices  $E_i$ and $F_i$, \[M=E_1E_2\cdots E_k \, \rref(M)\, ,\] and  \[N=F_1F_2\cdots F_l \, \rref(N)\, .\]  If $\rref(M)$ is the identity matrix ({\itshape i.e.}, $M$ is invertible), then:
-
 \begin{align*}
 \det (MN) & = \det (E_1E_2\cdots E_k\,  \rref(M) F_1F_2\cdots F_l \, \rref(N) )\\
 & = \det (E_1E_2\cdots E_k I F_1F_2\cdots F_l\,  \rref(N) )\\
