@@ -3,7 +3,7 @@
 
 %Thus far we have thought of vectors as lists of numbers% in $\mathbb{R}^n$.  As it turns out, The notion of a vector applies to a much more general class of structures than this.
 As suggested at the end of chapter~\ref{vectorsinspace}, the vector spaces $\mathbb{R}^n$ are not the only vector spaces. 
-We now give a general definition that  includes $\Re^n$ for all values of $n$, and $\mathbb{R}^{S}$ for all sets $S$, and more.
+We now give a general definition that  includes $\mathbb{R}^n$ for all values of $n$, and $\mathbb{R}^{S}$ for all sets $S$, and more.
 %The main idea is to  define vectors based on their most important properties.  
 %Vectors in $\mathbb{R}^n$ will fit our definition, but so will many other extremely useful notions of vectors. 
 This mathematical structure
@@ -55,7 +55,7 @@ Similarly
 \[
 +:V\times V \rightarrow V\, .
 \]
-On the other hand, the dot product takes two vectors and returns a number.  Succinctly: $\dotprod \colon V\times V \rightarrow \Re$.
+On the other hand, the dot product takes two vectors and returns a number.  Succinctly: $\dotprod \colon V\times V \rightarrow \mathbb{R}$.
 Once the properties of a vector space have been verified, we'll just write scalar multiplication with juxtaposition $cv=c\cdot v$, though, to keep our notation efficient. 
 \end{remark}
 
@@ -69,7 +69,7 @@ One can  find many interesting vector spaces, such as the following:
 \Videoscriptlink{vector_spaces_example.mp4}{Example of a vector space}{scripts_vector_spaces_example}
 
 \begin{example}
-\[ \mathbb{R}^\mathbb{N} = \{f \mid f \colon \mathbb{N} \rightarrow \Re \} \]
+\[ \mathbb{R}^\mathbb{N} = \{f \mid f \colon \mathbb{N} \rightarrow \mathbb{R} \} \]
 Here the vector space is the set of functions that take in a natural number~$n$ and return a real number.  The addition is just addition of functions: $(f_1 + f_2)(n) = f_1(n) + f_2(n)$.  Scalar multiplication is just as simple: $c \cdot f(n) = cf(n)$.
 
 %We can think of these functions as infinite column vectors: $f(0)$ is the first entry, $f(1)$ is the second entry, and so on.  Then for example the function $f(n) = n^3$ would look like this:
@@ -83,14 +83,14 @@ We can think of these functions as infinitely large ordered lists of numbers: \(
 \[
 f=\ccolvec{1\\ 8\\ 27\\ \vdots\\ n^3\\ \vdots }.
 \]
-Thinking this way, \(\Re^\mathbb{N}\) is the space of all infinite sequences. 
+Thinking this way, \(\mathbb{R}^\mathbb{N}\) is the space of all infinite sequences. 
 Because we can not write a list infinitely long (without infinite time and ink), one can not define an element of this space explicitly; definitions that are implicit, as above, or algebraic as in $f(n)=n^3$ (for all $n \in \mathbb{N}$) suffice.
 
 Let's check some axioms.
 
 \begin{itemize}
 \item[(+i)] (Additive Closure) $(f_1 + f_2)(n)=f_1(n) +f_2(n)$ is indeed a function 
-$\mathbb{N} \rightarrow \Re$, since the sum of two real numbers is a real number.
+$\mathbb{N} \rightarrow \mathbb{R}$, since the sum of two real numbers is a real number.
 
 \item[(+iv)] (Zero) We need to propose a zero vector.  The constant zero function $g(n) = 0$ works because then $f(n) + g(n) = f(n) + 0 = f(n)$.
 \end{itemize}
@@ -99,9 +99,9 @@ The other axioms should also be checked.  This can be done using  properties of 
 \end{example}
 
 \begin{example} The space of functions of one real variable.\\
-\[ \mathbb{R}^\mathbb{R} = \{f \mid f \colon \Re \to \Re \} \]
+\[ \mathbb{R}^\mathbb{R} = \{f \mid f \colon \mathbb{R} \to \mathbb{R} \} \]
 The addition is point-wise \[(f+g)(x)=f(x)+g(x)\, ,\] as is scalar multiplication \[c\cdot f(x)=cf(x)\, .\]  
-To check that $\Re^\Re$ is a vector space use the properties of addition of functions and scalar multiplication of functions as in the previous example. 
+To check that $\mathbb{R}^\mathbb{R}$ is a vector space use the properties of addition of functions and scalar multiplication of functions as in the previous example. 
 
 
 We can not write out an explicit definition for one of these functions either, there are not only infinitely many components, but even infinitely many components between any two components!  
@@ -116,26 +116,26 @@ You are familiar with algebraic definitions like $f(x)=e^{x^2-x+5}$. However, mo
 \end{displaymath} 
 \end{example}
 
-\begin{example} $\Re^{ \{*, \star, \# \}} = \{ f : \{*, \star, \# \} \to \Re \}$. Again, the properties of addition and scalar multiplication of functions show that this is a vector space.
+\begin{example} $\mathbb{R}^{ \{*, \star, \# \}} = \{ f : \{*, \star, \# \} \to \mathbb{R} \}$. Again, the properties of addition and scalar multiplication of functions show that this is a vector space.
 \end{example}
 
-You can probably figure out how to show that $\Re^S$ is vector space for any set $S$.  
-This might lead you to guess that all vector spaces are of the form $\Re^S$ for some set $S$. The following is a counterexample. 
+You can probably figure out how to show that $\mathbb{R}^S$ is vector space for any set $S$.  
+This might lead you to guess that all vector spaces are of the form $\mathbb{R}^S$ for some set $S$. The following is a counterexample. 
 
 \begin{example}
 Another very important example of a vector space is the space of all differentiable functions: 
 \[
-\left\{ f \colon \Re\rightarrow \Re \, \Big|\, \frac{d}{dx}f \text{ exists} \right\}.
+\left\{ f \colon \mathbb{R}\rightarrow \mathbb{R} \, \Big|\, \frac{d}{dx}f \text{ exists} \right\}.
 \]
 
-From calculus, we know that the sum of any two differentiable functions is differentiable, since the derivative distributes over addition.  A scalar multiple of a function is also differentiable, since the derivative commutes with scalar multiplication ($\frac{d}{d x}(cf)=c\frac{d}{dx}f$).  The zero function is just the function such that $0(x)=0$ for every $x$.  The rest of the vector space properties are inherited from addition and scalar multiplication in $\Re$.
+From calculus, we know that the sum of any two differentiable functions is differentiable, since the derivative distributes over addition.  A scalar multiple of a function is also differentiable, since the derivative commutes with scalar multiplication ($\frac{d}{d x}(cf)=c\frac{d}{dx}f$).  The zero function is just the function such that $0(x)=0$ for every $x$.  The rest of the vector space properties are inherited from addition and scalar multiplication in $\mathbb{R}$.
 \end{example}
 
 Similarly, the set of functions with at least $k$ derivatives is always a vector space, as is the space of functions with infinitely many derivatives. 
-None of these examples can be written as $\Re^S$ for some set $S$.
+None of these examples can be written as $\mathbb{R}^S$ for some set $S$.
 Despite our emphasis on such examples, it is also not true that all vector spaces consist of functions. Examples are somewhat esoteric, so we omit them.
 
-Another important class of examples is vector spaces that live inside $\Re^n$ but are not themselves $\Re^n$. 
+Another important class of examples is vector spaces that live inside $\mathbb{R}^n$ but are not themselves $\mathbb{R}^n$. 
 
 \begin{example} (Solution set to a homogeneous linear equation.)\\
 Let 
@@ -145,8 +145,8 @@ Let
       3&3&3
     \end{pmatrix}.\]
     The solution set to the homogeneous equation $Mx=0$ is 
-\[\left\{ c_1\colvec{-1\\1\\0} + c_2 \colvec{-1\\0\\1} \middle\vert c_1,c_2\in \Re \right\}.\]
-    This set is not equal to $\Re^3$ since it does not contain, for example,  $\colvec{1\\0\\0}$. 
+\[\left\{ c_1\colvec{-1\\1\\0} + c_2 \colvec{-1\\0\\1} \middle\vert c_1,c_2\in \mathbb{R} \right\}.\]
+    This set is not equal to $\mathbb{R}^3$ since it does not contain, for example,  $\colvec{1\\0\\0}$. 
 The sum of any two solutions is a solution, for example 
 \[
     \left[ 2\colvec{-1\\1\\0} + 3 \colvec{-1\\0\\1} \right] 
@@ -172,8 +172,8 @@ solution sets are vector spaces.
 
 More generally, if $V$ is any vector space, then any hyperplane through the origin of $V$ is a vector space. 
 
-\begin{example} Consider the functions $f(x)=e^x$ and $g(x)=e^{2x}$ in $\Re^\Re$. By taking combinations of these two vectors we can form the plane $\{ c_1 f+ c_2 g | c_1,c_2 \in \Re\}$
-inside of $\Re^\Re$. This is a vector space; 
+\begin{example} Consider the functions $f(x)=e^x$ and $g(x)=e^{2x}$ in $\mathbb{R}^\mathbb{R}$. By taking combinations of these two vectors we can form the plane $\{ c_1 f+ c_2 g | c_1,c_2 \in \mathbb{R}\}$
+inside of $\mathbb{R}^\mathbb{R}$. This is a vector space; 
 some examples of vectors in it are 
 $4e^x-31e^{2x},~\pi e^{2x}-4e^x$ and $\frac12e^{2x}$. 
 \end{example}
@@ -207,7 +207,7 @@ The solution set to
       1 & 1 \\
       0 & 0 
     \end{pmatrix} \colvec{x\\y} = \colvec{1\\0} \]
-is  $\left\{ \colvec{1\\0} + c \colvec{-1\\1} \Big|\, c \in \Re \right\}$.
+is  $\left\{ \colvec{1\\0} + c \colvec{-1\\1} \Big|\, c \in \mathbb{R} \right\}$.
 The vector $\colvec{0\\0}$ is not in this set.
 \end{example}
 Do notice that if just one of the vector space rules is broken, the example is not a vector space.
@@ -219,12 +219,12 @@ $\colvec{1\\1}\in P$ but $-2\colvec{1\\1} =\colvec{-2\\-2} \notin P$.
 \end{example}
 
 
-Sets of functions other than those of the form $\Re^S$ should be carefully checked for compliance with the definition of a vector space.
+Sets of functions other than those of the form $\mathbb{R}^S$ should be carefully checked for compliance with the definition of a vector space.
 
 
 \begin{example}
 The set of all functions which are nowhere zero 
-\[\left\{ f \colon \Re\rightarrow \Re \mid f(x)\neq 0 \text{~for~any}~x\in\Re \right\}\, ,\]
+\[\left\{ f \colon \mathbb{R}\rightarrow \mathbb{R} \mid f(x)\neq 0 \text{~for~any}~x\in\mathbb{R} \right\}\, ,\]
 does not form a vector space because it does not satisfy (+i). The functions $f(x)=x^2+1$ and $g(x)= -5$ are in the set, but their sum $(f+g)(x)=x^2-4=(x+2)(x-2)$ is not since $(f+g)(2)=0$.
 \end{example}
 
@@ -235,7 +235,7 @@ This is referred to as choosing a different {\itshape base field}\index{Base fie
   A field is a collection of ``numbers'' satisfying  properties which are listed in appendix~\ref{fields}.
 An example of a field is the complex numbers, 
 \[
-\mathbb{C}= \left\{x+iy \mid i^2=-1, x,y\in \Re \right\}.
+\mathbb{C}= \left\{x+iy \mid i^2=-1, x,y\in \mathbb{R} \right\}.
 \]
 
 \begin{example}

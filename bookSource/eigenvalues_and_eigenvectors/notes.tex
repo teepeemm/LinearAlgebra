@@ -141,10 +141,10 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 %
 %When describing general cases the adroit reader will also enjoy the compact Einstein summation notation $v=e_iv^i$.
 %
-%%We may consider these components as vectors in $\Re^n$ and $\Re^m$:
+%%We may consider these components as vectors in $\mathbb{R}^n$ and $\mathbb{R}^m$:
 %%\[
-%%\colvec{v^1\\ \vdots \\ v^n}\in \Re^n, \qquad 
-%%\colvec{w^1\\ \vdots \\ w^m}\in \Re^m.
+%%\colvec{v^1\\ \vdots \\ v^n}\in \mathbb{R}^n, \qquad 
+%%\colvec{w^1\\ \vdots \\ w^m}\in \mathbb{R}^m.
 %%\]
 
 
@@ -249,7 +249,7 @@ We will start by trying to find the eigenvectors for a linear transformation.
 \Videoscriptlink{eigenvectors_and_eigenvalues_example.mp4}{$2\times 2$ Example}{scripts_eigenvalseigenvects_example}
 
 \begin{example}
-Let $L \colon \Re^2\rightarrow \Re^2$ such that $L(x,y)=(2x+2y, 16x+6y)$.  First, we  find the matrix of $L$, this is quickest in the standard basis:
+Let $L \colon \mathbb{R}^2\rightarrow \mathbb{R}^2$ such that $L(x,y)=(2x+2y, 16x+6y)$.  First, we  find the matrix of $L$, this is quickest in the standard basis:
 \[
 \colvec{x\\y}\stackrel{L}{\longmapsto} \begin{pmatrix}
 2 & 2 \\
@@ -363,7 +363,7 @@ Our process was the following:
 
 \section{The Eigenvalue--Eigenvector Equation}\label{evalsevectsII}
 
-In section~\ref{eigenvalseigenvects}, we developed the idea of eigenvalues and eigenvectors in the case of linear transformations $\Re^2\rightarrow \Re^2$.  In this section, we will develop the idea more generally.
+In section~\ref{eigenvalseigenvects}, we developed the idea of eigenvalues and eigenvectors in the case of linear transformations $\mathbb{R}^2\rightarrow \mathbb{R}^2$.  In this section, we will develop the idea more generally.
 
 \Videoscriptlink{eigenvalues_and_eigenvectors_ii_lecture.mp4}{Eigenvalues}{scripts_eigenvalues_and_eigenvectors_ii_lecture}
 
@@ -417,7 +417,7 @@ The eigenvalues $\lambda_i$ of $M$ are exactly the roots of $P_M(\lambda)$.  The
 
 
 \begin{example}
-Let $L$ be the linear transformation $L \colon \Re^3\rightarrow \Re^3$ given by 
+Let $L$ be the linear transformation $L \colon \mathbb{R}^3\rightarrow \mathbb{R}^3$ given by 
 \[L\colvec{x\\y\\z}=\ccolvec{2x+y-z\\ x+2y-z\\ -x-y+2z}\, .\] 
 In the standard basis the matrix $M$ representing $L$ has columns $Le_i$ for each $i$, so:
 \[
@@ -481,17 +481,17 @@ Any vector of the form $t\colvec{-1\\-1\\1}$ is then an eigenvector with eigenva
 \end{align*}
 Then the solution set has two free parameters, $s$ and $t$, such that $z=z=:t$, $y=y=:s$, and $x=-s+t$.  Thus $L$ leaves invariant the set:
 \[
-\left\{ s\colvec{-1\\1\\0}+t\colvec{1\\0\\1} \middle| s,t\in \Re   \right\}.
+\left\{ s\colvec{-1\\1\\0}+t\colvec{1\\0\\1} \middle| s,t\in \mathbb{R}   \right\}.
 \]
 This set is a plane through the origin.  So the multiplicity two eigenvalue has two independent eigenvectors, $\colvec{-1\\1\\0}$ and $\colvec{1\\0\\1}$ that determine an invariant plane.
 \end{itemize}
 \end{example}
 
 \begin{example}
-Let $V$ be the vector space of smooth (\textit{i.e.} infinitely differentiable) functions $f \colon \Re\rightarrow \Re$.  Then the derivative is a linear operator $\frac{d}{dx} \colon V\rightarrow V$.  What are the eigenvectors of the derivative?  In this case, we don't have a matrix to work with, so we have to make do.
+Let $V$ be the vector space of smooth (\textit{i.e.} infinitely differentiable) functions $f \colon \mathbb{R}\rightarrow \mathbb{R}$.  Then the derivative is a linear operator $\frac{d}{dx} \colon V\rightarrow V$.  What are the eigenvectors of the derivative?  In this case, we don't have a matrix to work with, so we have to make do.
 
 A function $f$ is an eigenvector of $\frac{d}{dx}$ if there exists some number $\lambda$ such that \[\frac{d}{dx}f=\lambda f\, .\]  An obvious candidate is the exponential function, $e^{\lambda x}$; indeed, $\frac{d}{dx} e^{\lambda x} = \lambda e^{\lambda x}$.
-The operator $\frac{d}{dx}$ has an eigenvector $e^{\lambda x}$ for every $\lambda \in \Re$.
+The operator $\frac{d}{dx}$ has an eigenvector $e^{\lambda x}$ for every $\lambda \in \mathbb{R}$.
 %This is actually the all of the eigenvectors for $\frac{d}{dx}$. 
 %(This can be proved using the fact that every infinitely differentiable function has a Taylor series with infinite radius of convergence, and then using the Taylor series to show that if two functions are eigenvectors of $\frac{d}{dx}$ with eigenvalues $\lambda$, then they are scalar multiples of each other.)
 \end{example}

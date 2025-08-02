@@ -22,10 +22,10 @@ v^\parallel &= \phantom{v-}\frac{u\cdot v}{u\cdot u}u.
 \end{align*}
 This is called an \emph{orthogonal decomposition}\index{Orthogonal decomposition} because we have decomposed $v$ into a sum of orthogonal vectors.  This decomposition depends on $u$; if we change the direction of $u$ we change $v^\perp$ and $v^\parallel$.
 
-If $u$, $v$ are linearly independent vectors in $\Re^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\Re^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
+If $u$, $v$ are linearly independent vectors in $\mathbb{R}^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\mathbb{R}^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
 
 However, it often occurs that we are interested in vector spaces with dimension greater than $3$, and must resort to craftier means than cross products to obtain an orthogonal basis.
-\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of $T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\Re^3$.  This only gets us the \emph{last} orthogonal vector, though; the process in this Section gives a way to get a full orthogonal basis.}
+\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of $T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\mathbb{R}^3$.  This only gets us the \emph{last} orthogonal vector, though; the process in this Section gives a way to get a full orthogonal basis.}
 %yeah, and who is going to teach them about the Hodge star in office hours? I say nix this footnote -cherney
 
 Given a third vector $w$, we should first check that $w$ does not lie in the span of $u$ and $v$, \textit{i.e.} check that $u,v$ and $w$ are linearly independent.   We then can define:
@@ -64,7 +64,7 @@ such that
 $\spa \{v_1^\perp,v_2^\perp, \ldots \}=\spa \{v_1, v_2, \ldots \}$. That is, on orthogonal basis for the latter vector space. This algorithm bears the name \emph{Gram--Schmidt orthogonalization procedure}\index{Gram--Schmidt orthogonalization procedure}\label{GramSchmidt}.
 
 \begin{example}
-We'll  obtain an orthogonal basis for $\Re^3$ by appling Gram-Schmidt to the linearly independent set 
+We'll  obtain an orthogonal basis for $\mathbb{R}^3$ by appling Gram-Schmidt to the linearly independent set 
 $\left\{ v_1=\colvec{1\\1\\0}, v_2=\colvec{1\\1\\1},v_3=\colvec{3\\1\\1} \right\}$.
 
 First, we set $v_1^\perp:=v_1$.  Then:
@@ -76,7 +76,7 @@ Then the set
 \[
 \left\{ \rowvec{1\\1\\0},\rowvec{0\\0\\1},\rowvec{1\\-1\\0}\right\}
 \]
-is an orthogonal basis for $\Re^3$.  To obtain an orthonormal basis, as always we simply divide each of these vectors by its length, yielding:
+is an orthogonal basis for $\mathbb{R}^3$.  To obtain an orthonormal basis, as always we simply divide each of these vectors by its length, yielding:
 \[
 \left\{ \rowvec{\frac{1}{\sqrt2}\\\frac{1}{\sqrt2}\\0},\rowvec{0\\0\\1},\rowvec{\frac{1}{\sqrt2}\\\frac{-1}{\sqrt2}\\0}\right\}.
 \]
@@ -208,9 +208,9 @@ The set $U^\perp$ (pronounced ``$U$-perp'') is the set of all vectors in $W$ ort
 
 
 \begin{example}
-Consider any plane $P$ through the origin in $\Re^3$.  Then $P$ is a subspace, and $P^\perp$ is the line through the origin orthogonal to $P$.  For example, if $P$ is the $xy$-plane, then
+Consider any plane $P$ through the origin in $\mathbb{R}^3$.  Then $P$ is a subspace, and $P^\perp$ is the line through the origin orthogonal to $P$.  For example, if $P$ is the $xy$-plane, then
 \[
-\Re^3=P\oplus P^\perp=\{(x,y,0)| x,y\in \Re \} \oplus \{(0,0,z)| z\in \Re \}.
+\mathbb{R}^3=P\oplus P^\perp=\{(x,y,0)| x,y\in \mathbb{R} \} \oplus \{(0,0,z)| z\in \mathbb{R} \}.
 \]
 \end{example}
 
@@ -238,11 +238,11 @@ It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).
 %\begin{center}\href{\webworkurl ReadingHomework22/2/}{Reading homework: problem \ref{gramschmidt}.2}\end{center}
 
 \begin{example}
-Consider any line \(L\) through the origin in \(\Re^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let \(L\) be the line 
-$\spa \{ (1,1,1,1)^T\}$ in \(\Re^4.\) Then \(L^\perp\) is given by
+Consider any line \(L\) through the origin in \(\mathbb{R}^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let \(L\) be the line 
+$\spa \{ (1,1,1,1)^T\}$ in \(\mathbb{R}^4.\) Then \(L^\perp\) is given by
 \begin{align*}
-L^\perp&=\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } (x,y,z,w)^T \dotprod (1,1,1,1)^T=0\} \\
-&=\{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } x,y,z,w=0\}.
+L^\perp&=\{(x,y,z,w)^T \mid x,y,z,w \in \mathbb{R} \text{ and } (x,y,z,w)^T \dotprod (1,1,1,1)^T=0\} \\
+&=\{(x,y,z,w)^T \mid x,y,z,w \in \mathbb{R} \text{ and } x,y,z,w=0\}.
 \end{align*}
 It is easy to check that 
 \[
@@ -269,7 +269,7 @@ We find an orthonormal basis for \(L^\perp\) by dividing each basis vector by it
 \]
 Moreover, we have
 \[
-\Re^4=L \oplus L^\perp = \{(c,c,c,c)^T \mid c \in \Re\} \oplus \{(x,y,z,w)^T \mid x,y,z,w \in \Re \text{ and } x+y+z+w=0\}.
+\mathbb{R}^4=L \oplus L^\perp = \{(c,c,c,c)^T \mid c \in \mathbb{R}\} \oplus \{(x,y,z,w)^T \mid x,y,z,w \in \mathbb{R} \text{ and } x+y+z+w=0\}.
 \]
 \end{example}
 

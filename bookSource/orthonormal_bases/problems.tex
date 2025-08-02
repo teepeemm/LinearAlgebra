@@ -23,18 +23,18 @@ M=\frac{1}{ad-bc}\begin{pmatrix}
 
 \phantomnewpage
 
-\item \label{orthogprob} Suppose $S=\{v_1, \ldots, v_n \}$ is an \emph{orthogonal} (not orthonormal) basis for~$\Re^n$.  Then we can write any vector $v$ as $v=\sum_ic^iv_i$ for some constants $c^i$.  Find a formula for the constants $c^i$ in terms of $v$ and the vectors in~$S$.
+\item \label{orthogprob} Suppose $S=\{v_1, \ldots, v_n \}$ is an \emph{orthogonal} (not orthonormal) basis for~$\mathbb{R}^n$.  Then we can write any vector $v$ as $v=\sum_ic^iv_i$ for some constants $c^i$.  Find a formula for the constants $c^i$ in terms of $v$ and the vectors in~$S$.
 
 \videoscriptlink{orthonormal_bases_hint.mp4}{Hint for ~\ref{orthogprob} }{scripts_orthonormal_bases_hint}
 \phantomnewpage
 
-\item \label{orthogprojprob} Let $u,v$ be linearly independent vectors in $\Re^3$, and $P=\spa \{ u,v\}$ be the plane spanned by $u$ and $v$.  
+\item \label{orthogprojprob} Let $u,v$ be linearly independent vectors in $\mathbb{R}^3$, and $P=\spa \{ u,v\}$ be the plane spanned by $u$ and $v$.  
 \begin{enumerate}
 \item Is the vector $v^\bot := v-\frac{u\cdot v}{u\cdot u}u$ in the plane $P$?
 \item  What is the (cosine of the) angle between $v^\bot$ and $u$?
 \item %Given your solution to the above, 
 How can you find a third vector perpendicular to both $u$ and $v^\bot$?
-\item  Construct an orthonormal basis for $\Re^3$ from $u$ and $v$.
+\item  Construct an orthonormal basis for $\mathbb{R}^3$ from $u$ and $v$.
 \item  Test your abstract formulae starting with 
 \[
 u=\rowvec{1 & 2 & 0} \text{ and } v=\rowvec{0 & 1 & 1}.
@@ -47,7 +47,7 @@ u=\rowvec{1 & 2 & 0} \text{ and } v=\rowvec{0 & 1 & 1}.
 
 
 
-\item Find an orthonormal  basis for $\Re^4$ which includes $(1,1,1,1)^T$ through the following procedure:\\
+\item Find an orthonormal  basis for $\mathbb{R}^4$ which includes $(1,1,1,1)^T$ through the following procedure:\\
 \begin{enumerate} 
 \item Pick a vector perpendicular to the vector $v_1$ defined by $v_1^T=(1,1,1,1)$ from the solution set of the matrix equation $v_1^Tx=0$. Pick the vector $v_2$ obtained from the standard procedure which is the coefficient of $x_2$.
 \item Pick a vector perpendicular to both $v_1$ and $v_2$ from the solutions set of the matrix equation $\colvec{v_1^T\\v_2^T}x=0$. Pick the vector $v_3$ obtained from the standard procedure with $x_3$ as the coefficient. 
@@ -61,7 +61,7 @@ u=\rowvec{1 & 2 & 0} \text{ and } v=\rowvec{0 & 1 & 1}.
 \item 
 \begin{enumerate}
 \item
-Show that if $Q$ is an orthogonal $n\times n$ matrix then $u\cdot v = (Qu)\cdot (Qv)$ for any $u,v\in \Re^n$. That is, $Q$ preserves the inner product. 
+Show that if $Q$ is an orthogonal $n\times n$ matrix then $u\cdot v = (Qu)\cdot (Qv)$ for any $u,v\in \mathbb{R}^n$. That is, $Q$ preserves the inner product. 
 \item Does $Q$ preserve the outer product? 
 \item  If $\{ u_1,\dots,u_n\}$ is an orthonormal set and $\{ \lambda_1,\cdots,\lambda_n\}$ is a set of numbers 
 then what are the eigenvalues and eigenvectors of the matrix

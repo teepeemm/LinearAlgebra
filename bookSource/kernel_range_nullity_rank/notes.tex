@@ -418,18 +418,18 @@ Notice that if $L(v)=0$ and $L(u)=0$, then for any constants $c,d$, $L(cu+dv)=0$
 \end{proof}
 
 \begin{example}
-Let \(L \colon \Re^3 \to \Re\) be the linear transformation defined by \(L(x,y,z)=(x+y+z)\). Then \(\ker L\) consists of all vectors \((x,y,z) \in \Re^3\) such that \(x+y+z=0\). Therefore, the set
+Let \(L \colon \mathbb{R}^3 \to \mathbb{R}\) be the linear transformation defined by \(L(x,y,z)=(x+y+z)\). Then \(\ker L\) consists of all vectors \((x,y,z) \in \mathbb{R}^3\) such that \(x+y+z=0\). Therefore, the set
 \[
-V=\{(x,y,z) \in \Re^3 \mid x+y+z=0\}
+V=\{(x,y,z) \in \mathbb{R}^3 \mid x+y+z=0\}
 \]
-is a subspace of \(\Re^3\).
+is a subspace of \(\mathbb{R}^3\).
 \end{example}
 
 When $L:V\to V$, the above theorem has an interpretation in terms of the eigenspaces of $L$. Suppose $L$ has a zero eigenvalue.  Then the associated eigenspace consists of all vectors $v$ such that $Lv=0v=0$; the $0$-eigenspace of $L$ is exactly the kernel of $L$.  
 
 
 
-In the example where $L(x,y)=(x+y,x+2y,y)$, the map $L$ is clearly not surjective, since $L$ maps $\Re^2$ to a plane through the origin in $\Re^3$. But any plane through the origin is a subspace. In general notice 
+In the example where $L(x,y)=(x+y,x+2y,y)$, the map $L$ is clearly not surjective, since $L$ maps $\mathbb{R}^2$ to a plane through the origin in $\mathbb{R}^3$. But any plane through the origin is a subspace. In general notice 
 that if $w=L(v)$ and $w'=L(v')$, then for any constants $c,d$, linearity of $L$ ensures that \[cw+dw' = L(cv+dv')\, .\]  Now the subspace theorem strikes again, and we have the following theorem:
 
 \begin{theorem}
@@ -540,11 +540,11 @@ We have seen that a linear transformation has an inverse if and only if it is bi
 Let $V$  be an $n$-dimensional vector space  
 and suppose  $L:V\to V$ is a linear transformation with matrix $M$ in some basis.
 Then \(M\) is an \(n \times n\) matrix, and 
-%let \[L \colon \Re^n \to \Re^n\] be the linear transformation defined by \(L(v)=Mv\). Then 
+%let \[L \colon \mathbb{R}^n \to \mathbb{R}^n\] be the linear transformation defined by \(L(v)=Mv\). Then 
 the following statements are equivalent:
 \newpage
 \begin{enumerate}
-\item If $v$ is any vector in \(\Re^n\), then the system \(Mx=v\) has exactly one solution.
+\item If $v$ is any vector in \(\mathbb{R}^n\), then the system \(Mx=v\) has exactly one solution.
 \item The matrix \(M\) is row-equivalent to the identity matrix.
 \item If \(v\) is any vector in \(V\), then \(L(x)=v\) has exactly one solution.
 \item The matrix \(M\) is invertible.
@@ -555,9 +555,9 @@ the following statements are equivalent:
 \item The matrix \(M\) does not have \(0\) as an eigenvalue.
 \item The linear transformation \(L\) does not have \(0\) as an eigenvalue.
 \item The characteristic polynomial \(\det(\lambda I-M)\) does not have \(0\) as a root.
-\item The columns (or rows) of \(M\) span \(\Re^n\).
+\item The columns (or rows) of \(M\) span \(\mathbb{R}^n\).
 \item The columns (or rows) of \(M\) are linearly independent.
-\item The columns (or rows) of \(M\) are a basis for \(\Re^n\).
+\item The columns (or rows) of \(M\) are a basis for \(\mathbb{R}^n\).
 \item The linear transformation \(L\) is injective.
 \item The linear transformation \(L\) is surjective.
 \item The linear transformation \(L\) is bijective.

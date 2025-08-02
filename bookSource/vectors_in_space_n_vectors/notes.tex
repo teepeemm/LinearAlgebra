@@ -91,7 +91,7 @@ The line $L$ along the direction defined by a vector $v$ and through a point $P$
 Sometimes, since we know that a point $P$ corresponds to a vector,  we will be lazy and just write $L=\{P + tv ~|~ t \in \mathbb{R} \}$.  
 
 \begin{example} %A line in ${\mathbb{R}}^4$.\\[.2cm]
-$\left\{ \colvec{1\\2\\3\\4} + t\colvec{1\\0\\0\\0} \middle\arrowvert t \in \mathbb{R} \right\}$ describes a line in ${\mathbb{R}}^4$ parallel to the $x_1$-axis.
+$\left\{ \colvec{1\\2\\3\\4} + t\colvec{1\\0\\0\\0} \middle\vert t \in \mathbb{R} \right\}$ describes a line in ${\mathbb{R}}^4$ parallel to the $x_1$-axis.
 \end{example}
 
 
@@ -112,7 +112,7 @@ The plane determined by two vectors $u$ and $v$ can be written as
 
 
 \begin{example}{(A plane in a higher dimensional space)} \label{2hyperplaneeg}
-\[\left\{ \colvec{3\\1\\4\\1\\5\\9} + s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0} \middle\arrowvert s, t \in \mathbb{R} \right\}\] describes a plane in 6-dimensional space parallel to the $xy$-plane.
+\[\left\{ \colvec{3\\1\\4\\1\\5\\9} + s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0} \middle\vert s, t \in \mathbb{R} \right\}\] describes a plane in 6-dimensional space parallel to the $xy$-plane.
 \end{example}
 
 \Videoscriptlink{vectors_in_space_parametric.mp4}{Parametric Notation}{scripts_vectors_in_space_n_vectors_parametric}
@@ -133,12 +133,15 @@ unless any of the vectors $v_j$ lives in the $(k-1)$-dimensional hyperplane dete
 
 
 \begin{example}{(3+1 vectors that do not specify a  3-dimensional hyperplane)}
-\[S:=\left\{ \colvec{3\\1\\4\\1\\5\\9} + s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0} +u \colvec{1\\1\\0\\0\\0\\0}\middle\arrowvert s, t,u \in \mathbb{R} \right\}\] 
+\[S:=\left\{ \colvec{3\\1\\4\\1\\5\\9} + s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0} +u \colvec{1\\1\\0\\0\\0\\0}\middle\vert s, t,u \in \mathbb{R} \right\}\] 
 is not a 3-dimensional hyperplane because 
-\[\colvec{1\\1\\0\\0\\0\\0}=1\colvec{1\\0\\0\\0\\0\\0} + 1\colvec{0\\1\\0\\0\\0\\0} \in  \left\{     s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0}  \middle\arrowvert  s,t \in \mathbb{R} \right\}.\]
+\[\colvec{1\\1\\0\\0\\0\\0}=1\colvec{1\\0\\0\\0\\0\\0} + 1\colvec{0\\1\\0\\0\\0\\0} \in  \left\{     s\colvec{1\\0\\0\\0\\0\\0} + t\colvec{0\\1\\0\\0\\0\\0}  \middle\vert  s,t \in \mathbb{R} \right\}.\]
 In fact, the set could be rewritten as 
-\begin{gather*}S=\left\{ \colvec{3\\1\\4\\1\\5\\9} + (s+u)\colvec{1\\0\\0\\0\\0\\0} + (t+u)\colvec{0\\1\\0\\0\\0\\0} \middle\arrowvert s, t,u \in \mathbb{R} \right\}\\=
-\left\{ \colvec{3\\1\\4\\1\\5\\9} + a\colvec{1\\0\\0\\0\\0\\0} + b\colvec{0\\1\\0\\0\\0\\0} \middle\arrowvert a,b \in \mathbb{R} \right\}\end{gather*} 
+\begin{align*}
+S&=\left\{ \colvec{3\\1\\4\\1\\5\\9} + (s+u)\colvec{1\\0\\0\\0\\0\\0} + (t+u)\colvec{0\\1\\0\\0\\0\\0} \middle\vert s, t,u \in \mathbb{R} \right\}\\
+&=
+\left\{ \colvec{3\\1\\4\\1\\5\\9} + a\colvec{1\\0\\0\\0\\0\\0} + b\colvec{0\\1\\0\\0\\0\\0} \middle\vert a,b \in \mathbb{R} \right\}
+\end{align*}
 and so is actually the same 2-dimensional hyperplane in $\mathbb{R}^6$  as in example~\ref{2hyperplaneeg}.
 \end{example}
 
@@ -179,7 +182,7 @@ s_2 \colvec{-1\\1\\0\\0\\0} +
 s_3 \colvec{-1\\0\\1\\0\\0} + 
 s_4 \colvec{-1\\0\\0\\1\\0} + 
 s_5 \colvec{-1\\1\\0\\0\\1}
-\middle\arrowvert s_2,s_3,s_4,s_5 \in \mathbb{R} \right\},\]
+\middle\vert s_2,s_3,s_4,s_5 \in \mathbb{R} \right\},\]
 a 4-dimensional hyperplane in $\mathbb{R}^5$.
 \end{example}
 

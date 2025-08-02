@@ -8,7 +8,7 @@ and the properties of matrices.
 \section{Linear Transformations and Matrices}
 
 Ordered, finite-dimensional, bases for  vector spaces allows us to express linear operators as matrices.
-%We represent vectors from $\Re^n$ as matrices with one column, so lets begin there.
+%We represent vectors from $\mathbb{R}^n$ as matrices with one column, so lets begin there.
 
 \subsection{Basis Notation}
 \hypertarget{Basis notation}{~}
@@ -39,13 +39,13 @@ The 4-vector $\colvec{a\\b\\c\\d} \in \mathbb{R}^4$ encodes the vector $\begin{p
  
 Next, lets consider a tautological example showing how to label column vectors in terms of column vectors:
 
-\begin{example} (Standard Basis of $\Re^2$)\index{Standard basis!for ${\mathbb R}^2$}\\
+\begin{example} (Standard Basis of $\mathbb{R}^2$)\index{Standard basis!for ${\mathbb R}^2$}\\
 The vectors 
 \[
 e_1=\colvec{1\\0},~~~
 e_2=\colvec{0\\1}
 \]
-are called the standard basis vectors of $\Re^2=\Re^{\{1,2\}}$. 
+are called the standard basis vectors of $\mathbb{R}^2=\mathbb{R}^{\{1,2\}}$. 
 Their description as functions of~$\{1,2\}$ are 
 \begin{displaymath}
    e_1 (k)= \left\{
@@ -62,7 +62,7 @@ Their description as functions of~$\{1,2\}$ are
    \right.
 \end{displaymath} 
 It is  natural to assign these  the order: $e_1$ is first and $e_2$ is second.
-An arbitrary vector~$v$ of $\Re^2$ can be written as  
+An arbitrary vector~$v$ of $\mathbb{R}^2$ can be written as  
 \[
 v=\colvec{x\\y}=x e_1+ ye_2 .
 \]
@@ -81,12 +81,12 @@ The second notation denotes exactly the same thing but we first list the basis e
 because this can be read in the same way as matrix multiplication of a row vector times a column vector--except that the entries of the row vector are themselves vectors! 
 \end{example}
 
-You should already try to write down the standard basis vectors for $\Re^n$ for other values of $n$ and express an arbitrary vector in $\Re^n$  in terms of them.%webwork problem? 
+You should already try to write down the standard basis vectors for $\mathbb{R}^n$ for other values of $n$ and express an arbitrary vector in $\mathbb{R}^n$  in terms of them.%webwork problem? 
 
 The last example probably seems pedantic because column vectors are already just ordered lists of numbers and the basis notation 
-has simply allowed us to ``re-express'' these as lists of numbers. Of course, this objection does not apply to more complicated vector spaces like our first matrix example. Moreover, as we saw \hypertarget{nonstandard r2 basis}{earlier}, there are infinitely many other pairs of vectors in $\Re^2$ that form a basis.
+has simply allowed us to ``re-express'' these as lists of numbers. Of course, this objection does not apply to more complicated vector spaces like our first matrix example. Moreover, as we saw \hypertarget{nonstandard r2 basis}{earlier}, there are infinitely many other pairs of vectors in $\mathbb{R}^2$ that form a basis.
 
-\begin{example}(A Non-Standard Basis of $\Re^2=\Re^{\{1,2\}}$)\\
+\begin{example}(A Non-Standard Basis of $\mathbb{R}^2=\mathbb{R}^{\{1,2\}}$)\\
 \[
 b=\colvec{1\\1}\, ,\quad \beta=\colvec{1\\-1}.
 \]
@@ -144,14 +144,14 @@ v=\colvec{1\\0}_B\, ,
 \]
 which is actually a simpler column vector!
 The fact that there are many bases for any given vector space allows us to choose a basis in which our computation is easiest. 
-In any case, the standard basis only makes sense for $\Re^n$. Suppose your vector space was the set of solutions to a differential equation--what would a standard basis then be?
+In any case, the standard basis only makes sense for $\mathbb{R}^n$. Suppose your vector space was the set of solutions to a differential equation--what would a standard basis then be?
 
 
 
 \begin{example} (A Basis For a Hyperplane)\\
 Lets again consider the hyperplane
 \[
-V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle| c_1,c_2\in \Re \right\} 
+V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle| c_1,c_2\in \mathbb{R} \right\} 
 \]
 One possible choice of ordered basis is 
 \[b_1=\colvec{1\\1\\0},~~~b_2=\colvec{0\\1\\1}, ~~~
@@ -277,7 +277,7 @@ m_1^j & m_2^j & \cdots & m_i^j& \cdots \\
 
 \begin{example}
 Consider 
-$L:V\to \Re^3$ (as in example~\ref{Vdef}) defined by 
+$L:V\to \mathbb{R}^3$ (as in example~\ref{Vdef}) defined by 
 \[
 L\colvec{1\\1\\0 } = \colvec{0\\1\\0}\, ,\quad
 L\colvec{0\\1\\1 } = \colvec{0\\1\\0}\, .
@@ -342,7 +342,7 @@ Linear operators become matrices when given ordered~input~and~output~bases. }
 
 \begin{example} Lets compute a matrix for the derivative operator acting on the vector space of  polynomials of degree 2 or less:
 \[
-V = \{a_01 + a_1x + a_2 x^2 \,|\,  a_0,a_1,a_2 \in \Re \}\, .
+V = \{a_01 + a_1x + a_2 x^2 \,|\,  a_0,a_1,a_2 \in \mathbb{R} \}\, .
 \]
 In the ordered basis $B=( 1,x,x^2)$ we write 
 \[
@@ -478,7 +478,7 @@ $M+N = (m_j^i) + (n_j^i) = ( m_j^i + n_j^i )$\\[2mm]
 $rM = r(m_j^i) = (rm_j^i)$\end{tabular}}
 
 In other words, addition just adds corresponding entries in two matrices, and scalar multiplication multiplies every entry.
-Notice that $M_1^n = \Re^n$ is just the vector space of column vectors.
+Notice that $M_1^n = \mathbb{R}^n$ is just the vector space of column vectors.
 
 Recall that we can multiply an \(r \times k\) matrix by a \(k \times 1\) column vector to produce a \(r \times 1\) column vector using the rule
 \[MV = \big(\sum_{j=1}^k m_j^i v^j\big)\, .\]
@@ -600,7 +600,7 @@ Remember that the set of all vectors that can be obtained by adding up scalar mu
 %\begin{center}\href{\webworkurl ReadingHomework8/1/}{Reading homework: problem 8.1}\end{center}
 
 We know that $r\times k$ matrices can be used to represent linear transformations 
-$ \Re^k \rightarrow \Re^r $
+$ \mathbb{R}^k \rightarrow \mathbb{R}^r $
 via \[(MV)^i = \sum_{j=1}^{k} m_j^iv^j , \] which is the same rule used when we multiply an $r\times k$ matrix by a $k\times 1$ vector to produce an $r\times1$ vector.
 
 Likewise, we can use a matrix $N=(n^i_j)$ to define a linear transformation of a vector space of matrices. For example
@@ -772,8 +772,8 @@ while, on the other hand,
 \end{pmatrix}\, .
 \]
 \end{example}
-Since $n\times n$ matrices are linear transformations $\Re^n \rightarrow \Re^n$, we can see that the order of successive linear transformations matters.  
-%In general  for two linear transformations $K$ and $L$ taking $\Re^n \rightarrow \Re^n$, and $v\in \Re^n$,  one has
+Since $n\times n$ matrices are linear transformations $\mathbb{R}^n \rightarrow \mathbb{R}^n$, we can see that the order of successive linear transformations matters.  
+%In general  for two linear transformations $K$ and $L$ taking $\mathbb{R}^n \rightarrow \mathbb{R}^n$, and $v\in \mathbb{R}^n$,  one has
 %\[K(L(v)) \neq L(K(v))\, .\]
 %Finding matrices such that $MN=NM$ is an important problem in mathematics.
 %We promise
@@ -1377,7 +1377,7 @@ This can be easily verified by multiplying:
 \begin{remark}[Application: Cryptography]  
 A very simple way to hide information is to use a substitution cipher, in which the alphabet is permuted and each letter in a message is systematically exchanged for another.  For example, the ROT-13 cypher just exchanges a letter with the letter thirteen places before or after it in the alphabet.  For example, HELLO becomes URYYB.  Applying the algorithm again decodes the message, turning URYYB back into HELLO.  Substitution ciphers are easy to break, but the basic idea can be extended to create cryptographic systems that are practically uncrackable.  For example, a \emph{one-time pad} is a system that uses a different substitution for each letter in the message.  So long as a particular set of substitutions is not used on more than one message, the one-time pad is unbreakable.
 
-English characters are often stored in computers in the ASCII format.  In ASCII, a single character is represented by a string of eight bits, which we can consider as a vector in $\Z_2^8$ (which is like vectors in $\Re^8$, where the entries are zeros and ones).  One way to create a substitution cipher, then, is to choose an $8\times 8$ invertible bit matrix $M$, and multiply each letter of the message by $M$.  Then to decode the message, each string of eight characters would be multiplied by $M^{-1}$.  
+English characters are often stored in computers in the ASCII format.  In ASCII, a single character is represented by a string of eight bits, which we can consider as a vector in $\Z_2^8$ (which is like vectors in $\mathbb{R}^8$, where the entries are zeros and ones).  One way to create a substitution cipher, then, is to choose an $8\times 8$ invertible bit matrix $M$, and multiply each letter of the message by $M$.  Then to decode the message, each string of eight characters would be multiplied by $M^{-1}$.  
 
 To make the message a bit tougher to decode, one could consider pairs (or longer sequences) of letters as a single vector in $\Z_2^{16}$ (or a higher-dimensional space), and then use an appropriately-sized invertible matrix.
 For more on cryptography, see ``The Code Book,'' by Simon Singh (1999, Doubleday).

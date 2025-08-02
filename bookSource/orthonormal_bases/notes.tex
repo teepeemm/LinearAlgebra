@@ -34,7 +34,7 @@ e_i^Te_j=\delta_{ij}=\left\{ \begin{array}{cc}
 \]
 where $\delta_{ij}$ is the \emph{Kronecker delta}\index{Kronecker delta}.  Notice that the Kronecker delta gives the entries of the identity matrix.
 
-Given column vectors $v$ and $w$, we have seen that the dot product $v\dotprod w$ is the same as the matrix multiplication $v^Tw$.  This is an \emph{inner product}\index{Inner product} on~$\Re^n$.  We can also form the \emph{outer product}\index{Outer product} $vw^T$, which gives a square matrix.
+Given column vectors $v$ and $w$, we have seen that the dot product $v\dotprod w$ is the same as the matrix multiplication $v^Tw$.  This is an \emph{inner product}\index{Inner product} on~$\mathbb{R}^n$.  We can also form the \emph{outer product}\index{Outer product} $vw^T$, which gives a square matrix.
 The outer product on the standard basis vectors is interesting.  Set 
 \begin{align*}
 \Pi_1 &= e_1e_1^T \\
@@ -87,7 +87,7 @@ u_i\dotprod u_j = \delta_{ij}.
 In addition to being orthogonal, each vector has unit length.
 \end{itemize}
 
-Suppose $T=\{u_1, \ldots, u_n \}$ is an orthonormal basis for $\Re^n$.  Because $T$ is a basis, we can write any vector $v$ uniquely as a linear combination of the vectors in $T$;
+Suppose $T=\{u_1, \ldots, u_n \}$ is an orthonormal basis for $\mathbb{R}^n$.  Because $T$ is a basis, we can write any vector $v$ uniquely as a linear combination of the vectors in $T$;
 \[
 v=c^1u_1+\cdots c^nu_n.
 \]
@@ -183,7 +183,7 @@ Indeed
 
 \section{Relating Orthonormal Bases}
 
-Suppose $T=\{u_1, \ldots, u_n \}$ and $R=\{w_1, \ldots, w_n \}$ are two orthonormal bases for $\Re^n$.  Then\\[3mm]
+Suppose $T=\{u_1, \ldots, u_n \}$ and $R=\{w_1, \ldots, w_n \}$ are two orthonormal bases for $\mathbb{R}^n$.  Then\\[3mm]
 \begin{align*}
 w_1 &= (w_1\dotprod u_1) u_1 + \cdots + (w_1\dotprod u_n)u_n\\
  & \vdots \\
@@ -239,7 +239,7 @@ $}
 %\begin{center}\href{\webworkurl ReadingHomework21/2/}{Reading homework: problem \ref{orthonormalbases}.2}\end{center}
 
 \begin{example}
-Consider $\Re^3$ with the ordered orthonormal basis 
+Consider $\mathbb{R}^3$ with the ordered orthonormal basis 
 \[
 S=\left( u_1,u_2,u_3\right) 
 =\left(
@@ -349,9 +349,9 @@ v^\parallel &= \phantom{v-}\frac{u\cdot v}{u\cdot u}\, u.
 \end{align*}
 This is called an {\bfseries orthogonal decomposition}\index{Orthogonal decomposition} because we have decomposed $v$ into a sum of orthogonal vectors.  This decomposition depends on $u$; if we change the direction of $u$ we change $v^\perp$ and $v^\parallel$.
 
-If $u$, $v$ are linearly independent vectors in $\Re^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\Re^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
+If $u$, $v$ are linearly independent vectors in $\mathbb{R}^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\mathbb{R}^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
 
-However, it often occurs that we are interested in vector spaces with dimension greater than $3$, and must resort to craftier means than cross products to obtain an orthogonal basis\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of~$T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\Re^3$.  This only gets us the ``\emph{last}'' orthogonal vector, though; the Gram--Schmidt process described in this section gives a way to get a full orthogonal basis.}.
+However, it often occurs that we are interested in vector spaces with dimension greater than $3$, and must resort to craftier means than cross products to obtain an orthogonal basis\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of~$T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\mathbb{R}^3$.  This only gets us the ``\emph{last}'' orthogonal vector, though; the Gram--Schmidt process described in this section gives a way to get a full orthogonal basis.}.
 %yeah, and who is going to teach them about the Hodge star in office hours? I say nix this footnote -cherney
 
 Given a third vector $w$, we should first check that $w$ does not lie in the 
@@ -395,7 +395,7 @@ Note that the set of vectors you start out with needs to be ordered to uniquely 
 This algorithm is called the {\bfseries Gram--Schmidt orthogonalization procedure}\index{Gram--Schmidt orthogonalization procedure}\label{GramSchmidt}--Gram worked at a Danish insurance company over one hundred years ago, Schmidt was a student of Hilbert (the famous German mathmatician).
 
 \begin{example}
-We'll  obtain an orthogonal basis for $\Re^3$ by appling Gram-Schmidt to the linearly independent set 
+We'll  obtain an orthogonal basis for $\mathbb{R}^3$ by appling Gram-Schmidt to the linearly independent set 
 $\left\{\colvec{1\\1\\1}, \colvec{1\\1\\0},\colvec{3\\1\\1} \right\}$.\\
 
 Because he Gram-Schmidt algorithm uses the first vector from the ordered set the largest number of times, we will choose the vector with the most zeros to be the first in hopes of simplifying computations; we choose to order the set as
@@ -411,7 +411,7 @@ Then the set
 \[
 \left\{ \rowvec{1\\1\\0},\rowvec{0\\0\\1},\rowvec{1\\-1\\0}\right\}
 \]
-is an orthogonal basis for $\Re^3$.  To obtain an ortho{\itshape normal} basis we simply divide each of these vectors by its length, yielding
+is an orthogonal basis for $\mathbb{R}^3$.  To obtain an ortho{\itshape normal} basis we simply divide each of these vectors by its length, yielding
 \[
 \left\{ \rowvec{\frac{1}{\sqrt2}\\[2mm]\frac{1}{\sqrt2}\\[1mm]0},\rowvec{0\\[2mm]0\\[1mm]1},\rowvec{\frac{1}{\sqrt2}\\[2mm]\frac{-1}{\sqrt2}\\[1mm]0}\right\}.
 \]
@@ -579,9 +579,9 @@ Possibly by now you are feeling overwhelmed, it may help to watch this quick ove
 
 
 \begin{example}
-Consider any plane $P$ through the origin in $\Re^3$.  Then $P$ is a subspace, and $P^\perp$ is the line through the origin orthogonal to $P$.  For example, if $P$ is the $xy$-plane, then
+Consider any plane $P$ through the origin in $\mathbb{R}^3$.  Then $P$ is a subspace, and $P^\perp$ is the line through the origin orthogonal to $P$.  For example, if $P$ is the $xy$-plane, then
 \[
-\Re^3=P\oplus P^\perp=\{(x,y,0)| x,y\in \Re \} \oplus \{(0,0,z)| z\in \Re \}.
+\mathbb{R}^3=P\oplus P^\perp=\{(x,y,0)| x,y\in \mathbb{R} \} \oplus \{(0,0,z)| z\in \mathbb{R} \}.
 \]
 \end{example}
 
@@ -614,12 +614,12 @@ It is easy to check that $u^\perp \in U^\perp$ (see the Gram-Schmidt procedure).
 %\begin{center}\href{\webworkurl ReadingHomework22/2/}{Reading homework: problem \ref{gramschmidt}.2}\end{center}
 
 \begin{example}
-Consider any line \(L\) through the origin in \(\Re^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let 
+Consider any line \(L\) through the origin in \(\mathbb{R}^4\). Then \(L\) is a subspace, and \(L^\perp\) is a \(3\)-dimensional subspace orthogonal to \(L\). For example, let 
 \[L=\spa \left\{ \colvec{1\\1\\1\\1} \right\}\] 
-be a line in \(\Re^4.\) Then 
+be a line in \(\mathbb{R}^4.\) Then 
 \begin{align*}
-L^\perp&=\left \{  \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ (x,y,z,w) \dotprod (1,1,1,1)=0 \right\} \\
-&=\left\{ \colvec{x\\y\\z\\w} \in \Re^4 ~\middle| ~ x+y+z+w=0 \right \}.
+L^\perp&=\left \{  \colvec{x\\y\\z\\w} \in \mathbb{R}^4 ~\middle| ~ (x,y,z,w) \dotprod (1,1,1,1)=0 \right\} \\
+&=\left\{ \colvec{x\\y\\z\\w} \in \mathbb{R}^4 ~\middle| ~ x+y+z+w=0 \right \}.
 \end{align*}
 
 \noindent
@@ -654,11 +654,11 @@ Dividing each basis vector by its length yields
 and orthonormal basis for \(L^\perp\). 
 Moreover, we have
 \[
-\Re^4=L \oplus L^\perp = 
-\left\{ \colvec{c\\c\\c\\c} \middle| c \in \Re  \right\} 
-\oplus \left\{   \colvec{x\\y\\z\\w} \in \Re^4 \middle| \,  x+y+z+w=0\right\},
+\mathbb{R}^4=L \oplus L^\perp = 
+\left\{ \colvec{c\\c\\c\\c} \middle| c \in \mathbb{R}  \right\} 
+\oplus \left\{   \colvec{x\\y\\z\\w} \in \mathbb{R}^4 \middle| \,  x+y+z+w=0\right\},
 \]
-a decomposition of $\Re^4$ into a line and its three dimensional orthogonal complement.
+a decomposition of $\mathbb{R}^4$ into a line and its three dimensional orthogonal complement.
 \end{example}
 
 Notice that for any subspace $U$, the subspace $(U^\perp)^\perp$ is just $U$ again.  As such, $\perp$ is an {\itshape involution}\index{Involution} on the set of subspaces of a vector space. (An involution is any mathematical operation which performed twice does nothing.)

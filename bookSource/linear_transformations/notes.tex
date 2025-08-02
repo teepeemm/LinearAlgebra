@@ -10,7 +10,7 @@ A function $L \colon V\rightarrow W$ is {\bfseries linear} if $V$ and $W$ are ve
 \shabox{$
 L(ru + sv) = rL(u) + sL(v) $}
 \end{center}
- for all $u,v \in V$ and $r,s \in \Re$.
+ for all $u,v \in V$ and $r,s \in \mathbb{R}$.
 \end{definition}
 
 \Reading{LinearTransformations}{1}
@@ -36,7 +36,7 @@ Think about what is required to fully specify a real function of one variable.
 %There are many more functions than these. 
 %Imagine assigning a random  output to each of the 
 %One output for each input.
-%from $\Re^\mathbb{N}$. 
+%from $\mathbb{R}^\mathbb{N}$. 
 One output must be specified for each input. 
 That is an infinite amount of information. 
 
@@ -63,12 +63,12 @@ then you don't need any more information to compute
 L\colvec{1\\1}= L \left[ \colvec{1\\0} + \colvec{0\\1} \right] 
 =L\colvec{1\\0} + L \colvec{0\\1} = \colvec{5\\3} +\colvec{2\\2} =\colvec{7\\5}.
 \]
-In fact, since every vector in $\Re^2$ can be expressed as 
+In fact, since every vector in $\mathbb{R}^2$ can be expressed as 
 \[
 \colvec{x\\y}= x\colvec{1\\0}+y\colvec{0\\1}\, ,
 \] 
 we know how $L$ acts on every vector from 
-$\Re^2$ by linearity based on just  two pieces of information;
+$\mathbb{R}^2$ by linearity based on just  two pieces of information;
 \[
 L\colvec{x\\y}
 = L \left[ x\colvec{1\\0}+y\colvec{0\\1} \right]
@@ -82,7 +82,7 @@ Thus, the value of $L$ at infinitely many inputs is completely specified by its 
 5&2\\
 3&2 \end{pmatrix}
 \]
-acts on vectors from $\Re^2$.)
+acts on vectors from $\mathbb{R}^2$.)
 \end{example}
 
 \Reading{LinearTransformations}{2}
@@ -94,11 +94,11 @@ they are secretly very simple functions by virtue of two characteristics:
 \end{enumerate}
 
 
-A linear transformation with domain $\Re^3$ is completely specified by the way it acts on the three vectors 
+A linear transformation with domain $\mathbb{R}^3$ is completely specified by the way it acts on the three vectors 
 \[
 \colvec{1\\0\\0}\, ,\:\colvec{0\\1\\0}\, ,\:\colvec{0\\0\\1}\, .
 \]
-Similarly, a linear transformation with domain $\Re^n$ is completely specified by its action on the $n$ different $n$-vectors that have exactly one non-zero component, and its matrix form can be read off this information. However, not all linear functions have such nice domains.
+Similarly, a linear transformation with domain $\mathbb{R}^n$ is completely specified by its action on the $n$ different $n$-vectors that have exactly one non-zero component, and its matrix form can be read off this information. However, not all linear functions have such nice domains.
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -107,7 +107,7 @@ Similarly, a linear transformation with domain $\Re^n$ is completely specified b
 It is not always so easy to write a linear operator as a matrix. 
 Generally, this will amount to solving a linear systems problem. Examining a linear function whose domain is a hyperplane is instructive.
 
-\begin{example}\label{Vdef} Let \[V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle| c_1,c_2\in \Re \right\} \] and consider $L:V\to \Re^3$ be a linear function that obeys 
+\begin{example}\label{Vdef} Let \[V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle| c_1,c_2\in \mathbb{R} \right\} \] and consider $L:V\to \mathbb{R}^3$ be a linear function that obeys 
 \[
 L\colvec{1\\1\\0 } = \colvec{0\\1\\0},\qquad
 L\colvec{0\\1\\1 } = \colvec{0\\1\\0}.
@@ -140,7 +140,7 @@ L\ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =
 \end{pmatrix}
 \ccolvec{c_1\\\!\!c_1+c_2\!\!\\c_2} =(c_1+c_2)\colvec{0\\1\\0}\, ,
 \]
-you might suspect that  $L$ is equivalent to one of these $3\times3$ matrices. It is not. By the natural domain convention, all $3\times3$ matrices have $\Re^3$ as their domain, and the domain of $L$ is smaller than that. 
+you might suspect that  $L$ is equivalent to one of these $3\times3$ matrices. It is not. By the natural domain convention, all $3\times3$ matrices have $\mathbb{R}^3$ as their domain, and the domain of $L$ is smaller than that. 
 When we do realize this $L$ as a matrix it will be as a  $3\times2$ matrix. We can tell because the domain of $L$ is 2 dimensional and the codomain is $3$ dimensional. (You probably already know that the plane has dimension~2, and a line is 1~dimensional, but the careful definition of ``dimension'' takes some work; this is tackled in Chapter~\ref{basisdimension}.) This leads us to write
 \[
 L\left[ c_1\colvec{1\\1\\0 } + c_2 \colvec{0\\1\\1} \right]=c_1\colvec{0\\1\\0}+c_2\colvec{0\\1\\0}=\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix}\colvec{c_1\\c_2}\, .
@@ -156,7 +156,7 @@ by the two numbers $(c_1,c_2)$.
 %\[
 %L \colon V \rightarrow W
 %\]
-%Now, both $V$ and $W$ have notions of vector addition and scalar multiplication.  It would be ideal if the map $L$ \emph{preserved} these operations.  In other words, if adding vectors and then applying $L$ were the same as applying $L$ to vectors and then adding them.  Likewise, it would be nice if, when multiplying by a scalar, it didn't matter whether we multiplied before or after applying~$L$.  In formulas, this means that for any $u,v \in V$ and $c \in \Re$:
+%Now, both $V$ and $W$ have notions of vector addition and scalar multiplication.  It would be ideal if the map $L$ \emph{preserved} these operations.  In other words, if adding vectors and then applying $L$ were the same as applying $L$ to vectors and then adding them.  Likewise, it would be nice if, when multiplying by a scalar, it didn't matter whether we multiplied before or after applying~$L$.  In formulas, this means that for any $u,v \in V$ and $c \in \mathbb{R}$:
 %\begin{align*}
 %L(u+v) &= L(u)+L(v) \\[2mm]
 %L(cv) &= cL(v)
@@ -171,12 +171,12 @@ by the two numbers $(c_1,c_2)$.
 
 
 %\begin{example}
-%Take $L \colon \Re^3\rightarrow \Re^3$ defined by:
+%Take $L \colon \mathbb{R}^3\rightarrow \mathbb{R}^3$ defined by:
 %
 %\[
 %L\colvec{x\\y\\z} = \colvec{ x+y\\y+z\\0 }
 %\]
-%The domain of $L$ is $\Re^3$. The range is not all of $\Re^3$, but just the plane comprised of vecotrs whose third component is zero. We say that $L$ transforms $\Re^3$ into this plane.\\
+%The domain of $L$ is $\mathbb{R}^3$. The range is not all of $\mathbb{R}^3$, but just the plane comprised of vecotrs whose third component is zero. We say that $L$ transforms $\mathbb{R}^3$ into this plane.\\
 %
 %We now check linearity.  Call $u = \colvec{x\\y\\z}$ and $v=\colvec{a\\b\\c}$.  
 %
@@ -218,7 +218,7 @@ Your calculus class became much easier when you stopped using the limit definiti
 \begin{example}
 Let $V$ be the vector space of polynomials of degree 2 or less with standard addition and scalar multiplication;
 \[
-V := \{a_0\cdot1 + a_1x + a_2 x^2 \, | \,  a_0,a_1,a_2 \in \Re \}
+V := \{a_0\cdot1 + a_1x + a_2 x^2 \, | \,  a_0,a_1,a_2 \in \mathbb{R} \}
 \]
 Let $\frac{d}{dx} \colon V\rightarrow V$ be \hypertarget{derivative_linear}{the derivative operator.}  
 The following three equations, along with linearity of the derivative operator, allow one to take the derivative of any 2nd degree polynomial:
@@ -267,14 +267,14 @@ Thus, the derivative acting any of the infinitely many second order polynomials 
 The central idea of linear algebra is to exploit the hidden simplicity of linear functions. 
 It ends up there is a lot of freedom in how to do this. That freedom is what makes linear algebra powerful.
 
-You saw that a linear operator acting on $\Re^2$ is completely specified by how it acts on the pair of vectors $\colvec{1\\0}$ and $\colvec{0\\1}$. 
-In fact, any linear operator acting on $\Re^2$ is also completely specified by how it acts on the pair of vectors $\colvec{1\\1}$ and $\colvec{1\\-1}$.
+You saw that a linear operator acting on $\mathbb{R}^2$ is completely specified by how it acts on the pair of vectors $\colvec{1\\0}$ and $\colvec{0\\1}$. 
+In fact, any linear operator acting on $\mathbb{R}^2$ is also completely specified by how it acts on the pair of vectors $\colvec{1\\1}$ and $\colvec{1\\-1}$.
 
 \begin{example} The linear operator $L$ is a linear operator then it is completely specified \hypertarget{nonstandard r2 basis}{by the two equalities} 
 \[
 L\colvec{1\\1}= \colvec{2\\4}, \text{~and~} L\colvec{1\\-1}=\colvec{6\\8}.
 \] 
-This is because any vector $\colvec{x\\y}$ in $\Re^2$ is a sum of multiples of
+This is because any vector $\colvec{x\\y}$ in $\mathbb{R}^2$ is a sum of multiples of
 $\colvec{1\\1}$ and $\colvec{1\\-1}$ which can be calculated via a linear systems problem as follows:
 \begin{align*}&
 \colvec{x\\y}=a\colvec{1\\1}+b\colvec{1\\-1}\\[1mm]
@@ -325,22 +325,22 @@ Thus $L$ is completely specified by its value at just two inputs.
 %\end{pmatrix}
 %\colvec{a\\b}.
 %\]
-%but only by virtue of it having domain and targert $\Re^2$.
+%but only by virtue of it having domain and targert $\mathbb{R}^2$.
 \end{example}
 
-It should not surprise you to learn there are infinitely many pairs of vectors from $\Re^2$ 
-with the property that any vector can be expressed as a linear combination of them; any pair that when used as columns of a matrix gives an invertible matrix works. Such a pair is called a {\itshape basis}\index{basis} for $\Re^2$.
+It should not surprise you to learn there are infinitely many pairs of vectors from $\mathbb{R}^2$ 
+with the property that any vector can be expressed as a linear combination of them; any pair that when used as columns of a matrix gives an invertible matrix works. Such a pair is called a {\itshape basis}\index{basis} for $\mathbb{R}^2$.
 
-Similarly, there are infinitely many triples of vectors with the property that any vector from $\Re^3$ can be expressed as a linear combination of them: these are the triples that used as columns of a matrix give an invertible matrix. Such a triple is called a basis for $\Re^3$.
+Similarly, there are infinitely many triples of vectors with the property that any vector from $\mathbb{R}^3$ can be expressed as a linear combination of them: these are the triples that used as columns of a matrix give an invertible matrix. Such a triple is called a basis for $\mathbb{R}^3$.
 
 In a similar spirit, there are infinitely many pairs of vectors with the property that every vector in 
-\[V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle\vert \, c_1,c_2\in \Re \right\} \] 
+\[V=\left\{  c_1\colvec{1\\1\\0} +c_2\colvec{0\\1\\1} \middle\vert \, c_1,c_2\in \mathbb{R} \right\} \] 
 can be expressed as a linear combination of them. Some examples are 
 \[V=
-\left\{ c_1\colvec{1\\1\\0} +c_2\colvec{0\\2\\2}  \middle\vert c_1,c_2\in \Re \right\} 
-=\left\{c_1 \colvec{1\\1\\0}+c_2 \colvec{1\\3\\2}  \middle\vert c_1,c_2\in \Re \right\} 
+\left\{ c_1\colvec{1\\1\\0} +c_2\colvec{0\\2\\2}  \middle\vert c_1,c_2\in \mathbb{R} \right\} 
+=\left\{c_1 \colvec{1\\1\\0}+c_2 \colvec{1\\3\\2}  \middle\vert c_1,c_2\in \mathbb{R} \right\} 
 %\\
-%=\left\{  c_1\colvec{2\\4\\2} +c_2 \colvec{1\\3\\2}  | c_1,c_2\in \Re \right\} 
+%=\left\{  c_1\colvec{2\\4\\2} +c_2 \colvec{1\\3\\2}  | c_1,c_2\in \mathbb{R} \right\} 
 \]
 Such a pair is a  called a basis for $V$.
 
@@ -350,14 +350,14 @@ Such a pair is a  called a basis for $V$.
 
 You probably have some intuitive notion of what dimension\index{Dimension!concept of} means
 (the careful mathematical definition is given in chapter~\ref{sec:dimension}).
-%Some of the examples of vector spaces we have worked with have been finite dimensional.  (For example, $\Re^n$ will turn out to have dimension $n$.)  
+%Some of the examples of vector spaces we have worked with have been finite dimensional.  (For example, $\mathbb{R}^n$ will turn out to have dimension $n$.)  
 %The polynomial example above is an example of an infinite dimensional vector space.  
 Roughly speaking, dimension is the number of independent directions available.  To figure out the dimension of a vector space, I stand at the origin, and pick a direction.  If there are any vectors in my vector space that aren't in that direction, then I choose another direction that isn't in the line determined by the direction I chose.  If there are any vectors in my vector space not in the plane determined by the first two directions, then I choose one of them as my next direction.  In other words, I choose a collection of \emph{independent} vectors in the vector space (independent vectors are defined in Chapter~\ref{linearind}).  
 A minimal set of independent vectors is called a {\itshape basis}\index{basis} (see Chapter~\ref{basisdimension} for the precise definition). 
 The number of vectors in my basis is the dimension of the vector space. 
 Every vector space has many bases, but all bases for a particular vector space have the same number of vectors. Thus dimension is a well-defined concept. 
 
-The fact that every vector space (over~$\Re$) has infinitely many bases is actually very useful. 
+The fact that every vector space (over~$\mathbb{R}$) has infinitely many bases is actually very useful. 
 Often a good choice of  basis can reduce the time required to run a calculation in dramatic ways! 
 
 In summary:

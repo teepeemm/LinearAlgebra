@@ -1,6 +1,6 @@
 \chapter{\linIndepTitle}\label{linearind}
 
-Consider a plane $P$ that includes the origin in $\Re^3$ and non-zero vectors $\{u,v,w\}$ in $P$.
+Consider a plane $P$ that includes the origin in $\mathbb{R}^3$ and non-zero vectors $\{u,v,w\}$ in $P$.
 \begin{center}
 \includegraphics[alt={A plane P with vectors u, v, and w all starting from the point O},scale=.3]{\linIndepPath/span_plane.jpg}
 \end{center}
@@ -8,7 +8,7 @@ If no two of $u, v$ and $w$ are parallel, then $P=\spa \{u,v,w\}$.  But any two 
 $w=d^1u+d^2v$.  Since $w$ can be expressed in terms of $u$ and $v$ we say that it is not independent.
 More generally, the relationship
 \[
-c^1u+c^2v+c^3w=0 \qquad c^i \in \Re, \text{ some $c^i\neq 0$}
+c^1u+c^2v+c^3w=0 \qquad c^i \in \mathbb{R}, \text{ some $c^i\neq 0$}
 \]
 expresses the fact that $u,v,w$ are not all independent.
 
@@ -26,7 +26,7 @@ The zero vector $0_V$ can {\itshape never} be on a list of independent vectors b
 \end{remark}
 
 \begin{example}
-Consider the following vectors in \(\Re^3\):
+Consider the following vectors in \(\mathbb{R}^3\):
 \[
 v_1=\colvec{4\\-1\\3}, \qquad
 v_2=\colvec{-3\\7\\4}, \qquad
@@ -44,7 +44,7 @@ No, since \(3v_1+2v_2-v_3+v_4=0\), the vectors are linearly {\itshape dependent}
 In the above example we were given the linear combination \(3v_1+2v_2-v_3+v_4\) seemingly by magic. The next example shows how to find such a linear combination, if it exists.
 
 \begin{example}
-Consider the following vectors in $\Re^3$:
+Consider the following vectors in $\mathbb{R}^3$:
 \[
 v_1=\colvec{0\\0\\1}, 
 \qquad v_2=\colvec{1\\2\\1},
@@ -170,7 +170,7 @@ The set $\{ v_1, \ldots, v_5 \}$ is linearly dependent, because $v_4 = v_1+v_2$.
 We have seen two different ways to show a set of vectors is linearly dependent: we can either find a linear combination of the vectors which is equal to zero, or we can express one of the vectors as a linear combination of the other vectors. On the other hand, to check that a set of vectors is linearly {\itshape independent}, we must check that every  linear combination of our vectors with non-vanishing coefficients gives something other than the zero vector. Equivalently, to show that the set \(v_1, v_2, \ldots, v_n\) is linearly independent, we must show that the equation \(c_1 v_1+c_2v_2 + \cdots + c_n v_n=0\) has no solutions other than \(c_1=c_2=\cdots=c_n=0.\)
 
 \begin{example}
-Consider the following vectors in $\Re^3$:
+Consider the following vectors in $\mathbb{R}^3$:
 \[
 v_1=\colvec{0\\0\\2},
 \qquad v_2=\colvec{2\\2\\1},
