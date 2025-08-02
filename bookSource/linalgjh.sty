@@ -45,11 +45,11 @@
 
 
 %%%%THIS CENTERS MATRIX ELEMENTS
-\makeatletter
+%\makeatletter
 \renewcommand*\env@matrix[1][r]{\hskip -\arraycolsep
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols #1}}
-\makeatother
+%\makeatother
 
 
 %-------------amatrix
@@ -198,14 +198,18 @@
 %  I like to use a slightly different circle for dot product, for
 % a visual distinction.
 %  The AtBeginDocument makes pdflatex happier
-\AtBeginDocument{\newlength{\heightofcdot}
-\newlength{\widthofcdot}
-\settoheight{\heightofcdot}{$\cdot$}
-\settowidth{\widthofcdot}{$\cdot$}
-\newsavebox{\dotprodcircle}       
-\savebox{\dotprodcircle}{\includegraphics[alt={dot}]{dotprod.1}} 
-\newcommand{\dotprod}{\mathbin{\raisebox{.5\heightofcdot}{%
-          \makebox[\widthofcdot]{$\smash{\usebox{\dotprodcircle}}$}}}}}
+%\AtBeginDocument{\newlength{\heightofcdot}
+%\newlength{\widthofcdot}
+%\settoheight{\heightofcdot}{$\cdot$}
+%\settowidth{\widthofcdot}{$\cdot$}
+%\newsavebox{\dotprodcircle}       
+%\savebox{\dotprodcircle}{\includegraphics[alt={dot}]{dotprod.1}} 
+%\newcommand{\dotprod}{\mathbin{\raisebox{.5\heightofcdot}{%
+%          \makebox[\widthofcdot]{$\smash{\usebox{\dotprodcircle}}$}}}}}
+\newcommand*{\dotprod}{\mathpalette\bigcdot@{.7}}
+\newcommand*{\bigcdot@}[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+
+
 
 \newcommand{\nbyn}[1]{#1 \! \times \! #1 }       % \! is negative thinspace
 \newcommand{\nbym}[2]{#1 \! \times \! #2 }       % Use in math mode.
