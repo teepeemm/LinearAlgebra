@@ -13,7 +13,7 @@
 \hypertarget{scripts_diagonalization_basis}{This video} returns to 
 the example of a barrel filled with fruit
 \begin{center}
-\includegraphics[scale=.3]{\diagPath/barrel.jpg}
+\includegraphics[alt={A barrel of apples and oranges.},scale=.3]{\diagPath/barrel.jpg}
 \end{center}
 as a demonstration of changing basis.
 
@@ -38,7 +38,7 @@ Since this is the method ordinary people would use, we will call this the
 
 But this is not the approach nutritionists would use. They would note the amount of sugar and total number of fruit~$(s,f)$:
 \begin{center}
-\begin{tikzpicture}[domain=0:4]
+\begin{tikzpicture}[alt={A graph with horizontal axis sugar and vertical axis fruit.},domain=0:4]
     \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {sugar};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {fruit};
@@ -55,7 +55,7 @@ is in terms of a pair of basis vectors $\vec f_1$ and $\vec f_2$:
 
 Thus our vector space now has a bunch of interesting vectors:
 \begin{center}
-\includegraphics[scale=.3]{\diagPath/barrel3.jpg}
+\includegraphics[alt={A barrel of apples and oranges and fruit and sugar, labeled with vectors e1, e2, x, f1, and f2.},scale=.3]{\diagPath/barrel3.jpg}
 \end{center}
 The vector $\vec x$ labels generally the contents of the barrel. The 
 vector $\vec e_1$ corresponds to one apple and one orange. The vector $\vec e_2$ is one orange and no apples. The vector $\vec f_1$ means one unit of sugar and zero total fruit (to achieve this you could  lend out some apples and keep a few oranges). Finally the vector $\vec f_2$ represents a total of one piece of fruit and no sugar.
