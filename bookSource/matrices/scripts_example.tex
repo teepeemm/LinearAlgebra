@@ -27,7 +27,7 @@ Suppose we have the following relationships
 Now draw a picture where each person is a dot, and then draw a line between the dots of people who are friends. This is an example of a graph if you think of the people as nodes, and the friendships as edges.
 
 Now lets make a $4 \times 4$ matrix, which is an adjacency matrix for the graph. Make a column and a row for each of the four people. It will look a lot like a table. When two people are friends put a 1 the row of one and the column of the other. For example Alice and Carl are friends so we can label the table below.
-\begin{center}
+\begin{center}\tagpdfsetup{table/header-columns={1},table/header-rows={1}}
 \begin{tabular}{r | c c c c}
  & A & B& C & D \\
  \hline
@@ -40,7 +40,7 @@ Now lets make a $4 \times 4$ matrix, which is an adjacency matrix for the graph.
 
 We can continue to label the entries for each friendship. Here lets assume that people are friends with themselves, so the diagonal will be all ones.
 
-\begin{center}
+\begin{center}\tagpdfsetup{table/header-columns={1},table/header-rows={1}}
 \begin{tabular}{r | c c c c}
  & A & B& C & D \\
  \hline
