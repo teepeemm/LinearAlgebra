@@ -476,13 +476,13 @@ The {\bfseries rank} of a linear transformation $L$ is the dimension of its rang
 The {\bfseries nullity}\index{Nullity} of a linear transformation is the dimension of the kernel.
 \end{definition}
 The notation for these numbers is 
- \Shabox{1}{$\nul L:=\dim \ker L$,}  
- \Shabox{1}{$\rank L:=\dim L(V) = \dim\, \text{ran}\, L$.} 
+ \Shabox{1}{$\nul L:=\dimension \ker L$,}  
+ \Shabox{1}{$\rank L:=\dimension L(V) = \dimension\range L$.} 
 
 \begin{theorem}[Dimension Formula]\index{Dimension formula}\label{dimension_formula}
 Let $L \colon V\rightarrow W$ be a linear transformation, with $V$ a finite-dimensional vector space\footnote{The formula still makes sense for infinite dimensional vector spaces, such as the space of all polynomials, but the notion of a basis for an infinite dimensional space is more sticky than in the finite-dimensional case.  Furthermore, the dimension formula for infinite dimensional vector spaces isn't useful for computing the rank of a linear transformation, since an equation like $\infty=\infty+x$ cannot be solved for $x$. As such, the proof presented assumes a finite basis for $V$.}.  Then:
 \begin{align*}
-\dim V &= \dim \ker V + \dim L(V)\\
+\dimension V &= \dimension \ker V + \dimension L(V)\\
  &= \nul L + \rank L.
 \end{align*}
 \end{theorem}
@@ -494,7 +494,7 @@ Pick a basis for $V$:
 \[
 \{ v_1,\ldots,v_p,u_1,\ldots, u_q \},
 \]
-where $v_1,\ldots,v_p$ is also a basis for $\ker L$.  This can always be done, for example, by finding a basis for the kernel of $L$ and then extending to a basis for $V$.  Then $p=\nul L$ and $p+q=\dim V$.  Then we need to show that $q=\rank L$.  To accomplish this, we show that 
+where $v_1,\ldots,v_p$ is also a basis for $\ker L$.  This can always be done, for example, by finding a basis for the kernel of $L$ and then extending to a basis for $V$.  Then $p=\nul L$ and $p+q=\dimension V$.  Then we need to show that $q=\rank L$.  To accomplish this, we show that 
 $\{L(u_1),\ldots,L(u_q)\}$ is a basis for $L(V)$.
 
 To see that $\{L(u_1),\ldots,L(u_q)\}$ spans $L(V)$, consider any vector $w$ in $L(V)$.  Then we can find constants $c^i, d^j$ such that:
@@ -521,7 +521,7 @@ Suppose $M$ is an $m\times n$ matrix. The matrix  $M$ itself is a linear transfo
 \[
 L:V\stackrel{\textrm{linear}}\longrightarrow W\, .
 \]
-Here we only know that $\dim V =n$ and $\dim W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\itshape column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\itshape i.e.} the nullity:  $ \null L= \dim V-\rank L=n-r$. 
+Here we only know that $\dimension V =n$ and $\dimension W =m$. The rank of the map $L$ is the dimension of its image and also the number of linearly independent columns of $M$. Hence, this is sometimes called the \index{Rank!column rank}{\itshape column rank} of $M$. The dimension formula predicts  the dimension of the kernel, {\itshape i.e.} the nullity:  $ \null L= \dimension V-\rank L=n-r$. 
 
 To compute the kernel we would study the linear system \[Mx=0\, ,\] which gives $m$ equations for the $n$-vector~$x$. The \index{Rank!row rank}{\itshape row rank} of a matrix is the number of linearly independent rows (viewed as vectors).
 Each linearly independent row of $M$ gives an independent equation satisfied by the $n$-vector $x$. Every independent equation on $x$ reduces the size of the kernel by one, so if the row rank is $s$, then $\null L+ s = n$.  Thus we have two equations: 

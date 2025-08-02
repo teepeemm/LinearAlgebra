@@ -245,7 +245,7 @@ $(\lambda,\mu,g)$ which produce each of these cases.
 \begin{enumerate}
 \item Suppose that \(L\) is bijective (i.e., one-to-one and onto).
 \begin{enumerate}
-\item Show that \(\dim V=\rank L=\dim W\).
+\item Show that \(\dimension V=\rank L=\dimension W\).
 \item Show that \(0\) is not an eigenvalue of \(M\).
 \item Show that \(M\) is an invertible matrix. 
 \end{enumerate}
@@ -453,7 +453,7 @@ X=c^1\begin{pmatrix}1\\0\\1\end{pmatrix}+c^2\begin{pmatrix}1\\2\\-3\end{pmatrix}
 =\begin{pmatrix}1&1&a\\0&2&1\\1&-3&0\end{pmatrix}\begin{pmatrix}c^1\\c^2\\c^3\end{pmatrix}\, ,
 \]
 for some coefficients $c^1$, $c^2$ and $c^3$. This is a linear system. We could solve for $c^1$, $c^2$ and $c^3$ using an
-augmented matrix and row operations. However, since we know that $\dim{\mathbb R}^3=3$, if $U$ spans ${\mathbb R}^3$,
+augmented matrix and row operations. However, since we know that $\dimension{\mathbb R}^3=3$, if $U$ spans ${\mathbb R}^3$,
 it will also be a basis. Then the solution for  $c^1$, $c^2$ and $c^3$ would be unique. Hence, the $3\times 3$ matrix above must 
 be invertible, so we examine its determinant
 \[
@@ -810,33 +810,33 @@ conic sections.
  		\begin{enumerate}
  		\item  Since  \(L\)  is  injective,  its  kernel  consists  of  the  zero  vector  alone.  Hence
  		\[
- 		\null  L=\dim  \ker  L=0.
+ 		\null  L=\dimension  \ker  L=0.
  		\]
  		So  by  the  Dimension  Formula,
  		\[
- 		\dim  V=\null  L+\rank  L=\rank  L.
+ 		\dimension  V=\null  L+\rank  L=\rank  L.
  		\]
  		Since  \(L\)  is  surjective,  \(L(V)=W.\)  Thus
  		\[
- 		\rank  L=\dim  L(V)=\dim  W.
+ 		\rank  L=\dimension  L(V)=\dimension  W.
  		\]
- 		Thereby  \[\dim  V=\rank  L=\dim  W.\]
- 		\item  Since  \(\dim  V=\dim  W\),  the  matrix  \(M\)  is  square  so  we  can  talk  about  its  eigenvalues.  Since  \(L\)  is  injective,  its  kernel  is  the  zero  vector  alone.  That  is,  the  only  solution  to  \(LX=0\)  is  \(X=0_V\).  But  \(LX\)  is  the  same  as  \(MX\),  so  the  only  solution  to  \(MX=0\)  is  \(X=0_V\).  So  \(M\)  does  not  have  zero  as  an  eigenvalue.
+ 		Thereby  \[\dimension  V=\rank  L=\dimension  W.\]
+ 		\item  Since  \(\dimension  V=\dimension  W\),  the  matrix  \(M\)  is  square  so  we  can  talk  about  its  eigenvalues.  Since  \(L\)  is  injective,  its  kernel  is  the  zero  vector  alone.  That  is,  the  only  solution  to  \(LX=0\)  is  \(X=0_V\).  But  \(LX\)  is  the  same  as  \(MX\),  so  the  only  solution  to  \(MX=0\)  is  \(X=0_V\).  So  \(M\)  does  not  have  zero  as  an  eigenvalue.
  		\item  Since  \(MX=0\)  has  no  non-zero  solutions,  the  matrix  \(M\)  is  invertible.
 	\end{enumerate}
  		\item  Now  we  suppose  that  \(M\)  is  an  invertible  matrix.
  		\begin{enumerate}
  		\item  Since  \(M\)  is  invertible,  the  system  \(MX=0\)  has  no  non-zero  solutions.  But  \(LX\)  is  the  same  as  \(MX\),  so  the  only  solution  to  \(LX=0\)  is  \(X=0_V\).  So  \(L\)  does  not  have  zero  as  an  eigenvalue.
  		\item  Since  \(LX=0\)  has  no  non-zero  solutions,  the  kernel  of  \(L\)  is  the  zero  vector  alone.  So  \(L\)  is  injective.
- 		\item  Since  \(M\)  is  invertible,  we  must  have  that  \(\dim  V=\dim  W\).  By  the  Dimension  Formula,  we  have
+ 		\item  Since  \(M\)  is  invertible,  we  must  have  that  \(\dimension  V=\dimension  W\).  By  the  Dimension  Formula,  we  have
  		\[
- 		\dim  V=\null  L+\rank  L
+ 		\dimension  V=\null  L+\rank  L
  		\]
- 		and  since  \(\ker  L=\{0_V\}\)  we  have  \(\null  L=\dim  \ker  L=0\),  so
+ 		and  since  \(\ker  L=\{0_V\}\)  we  have  \(\null  L=\dimension  \ker  L=0\),  so
  		\[
- 		\dim  W=\dim  V=\rank  L=\dim  L(V).
+ 		\dimension  W=\dimension  V=\rank  L=\dimension  L(V).
  		\]
- 		Since  \(L(V)\)  is  a  subspace  of  \(W\)  with  the  same  dimension  as  \(W\),  it  must  be  equal  to  \(W\).  To  see  why,  pick  a  basis  \(B\)  of  \(L(V)\).  Each  element  of  \(B\)  is  a  vector  in  \(W\),  so  the  elements  of  \(B\)  form  a  linearly  independent  set  in  \(W\).  Therefore  \(B\)  is  a  basis  of  \(W\),  since  the  size  of  \(B\)  is  equal  to  \(\dim  W\).  So  \(L(V)=\spa  B=W.\)  So  \(L\)  is  surjective.
+ 		Since  \(L(V)\)  is  a  subspace  of  \(W\)  with  the  same  dimension  as  \(W\),  it  must  be  equal  to  \(W\).  To  see  why,  pick  a  basis  \(B\)  of  \(L(V)\).  Each  element  of  \(B\)  is  a  vector  in  \(W\),  so  the  elements  of  \(B\)  form  a  linearly  independent  set  in  \(W\).  Therefore  \(B\)  is  a  basis  of  \(W\),  since  the  size  of  \(B\)  is  equal  to  \(\dimension  W\).  So  \(L(V)=\spa  B=W.\)  So  \(L\)  is  surjective.
  		\end{enumerate}
  		\end{enumerate}
 
@@ -912,7 +912,7 @@ M& = \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
 \ \sim\ \begin{pmatrix}1&0&0&-1\\[1mm]0&1&0&\frac83\\[1mm]0&0&1&-\frac43\\[1mm]0&0&0&0\end{pmatrix}\, .
 \end{align*}
 Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[\Img L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
-Thus $\dim\ker L=1$ and $\dim\Img L=3$ so \[\dim\ker L+\dim\Img L=1+3=4=\dim V\, .\]
+Thus $\dimension\ker L=1$ and $\dimension\Img L=3$ so \[\dimension\ker L+\dimension\Img L=1+3=4=\dimension V\, .\]
 \end{enumerate}
 
 \item 
@@ -997,33 +997,33 @@ The least squares solution is $a=1$, $b=-\frac35$ and $c=0$.
 %\begin{enumerate}
 %\item Since \(L\) is injective, its kernel consists of the zero vector alone. So
 %\[
-%\null L=\dim \ker L=0.
+%\null L=\dimension \ker L=0.
 %\]
 %By the dimension formula,
 %\[
-%\dim V=\null L+\rank L=\rank L.
+%\dimension V=\null L+\rank L=\rank L.
 %\]
 %Since \(L\) is surjective, \(L(V)=W.\) So
 %\[
-%\rank L=\dim L(V)=\dim W.
+%\rank L=\dimension L(V)=\dimension W.
 %\]
-%So \[\dim V=\rank L=\dim W.\]
-%\item Since \(\dim V=\dim W\), the matrix \(M\) is square so we can talk about its eigenvalues. Since \(L\) is injective, its kernel is the zero vector alone. That is, the only solution to \(LX=0\) is \(X=0_V\). But \(LX\) is the same as \(MX\), so the only solution to \(MX=0\) is \(X=0_V\). So \(M\) does not have zero as an eigenvalue.
+%So \[\dimension V=\rank L=\dimension W.\]
+%\item Since \(\dimension V=\dimension W\), the matrix \(M\) is square so we can talk about its eigenvalues. Since \(L\) is injective, its kernel is the zero vector alone. That is, the only solution to \(LX=0\) is \(X=0_V\). But \(LX\) is the same as \(MX\), so the only solution to \(MX=0\) is \(X=0_V\). So \(M\) does not have zero as an eigenvalue.
 %\item Since \(MX=0\) has no non-zero solutions, the matrix \(M\) is invertible.
 %\end{enumerate}
 %\item Now we suppose that \(M\) is an invertible matrix.
 %\begin{enumerate}
 %\item Since \(M\) is invertible, the system \(MX=0\) has no non-zero solutions. But \(LX\) is the same as \(MX\), so the only solution to \(LX=0\) is \(X=0_V\). So \(L\) does not have zero as an eigenvalue.
 %\item Since \(LX=0\) has no non-zero solutions, the kernel of \(L\) is the zero vector alone. So \(L\) is injective.
-%\item Since \(M\) is invertible, we must have that \(\dim V=\dim W\). By the Dimension Formula, we have
+%\item Since \(M\) is invertible, we must have that \(\dimension V=\dimension W\). By the Dimension Formula, we have
 %\[
-%\dim V=\null L+\rank L
+%\dimension V=\null L+\rank L
 %\]
-%and since \(\ker L=\{0_V\}\) we have \(\null L=\dim \ker L=0\), so
+%and since \(\ker L=\{0_V\}\) we have \(\null L=\dimension \ker L=0\), so
 %\[
-%\dim W=\dim V=\rank L=\dim L(V).
+%\dimension W=\dimension V=\rank L=\dimension L(V).
 %\]
-%Since \(L(V)\) is a subspace of \(W\) with the same dimension as \(W\), it must be equal to \(W\). To see why, pick a basis \(B\) of \(L(V)\). Each element of \(B\) is a vector in \(W\), so the elements of \(B\) form a linearly independent set in \(W\). Therefore \(B\) is a basis of \(W\), since the size of \(B\) is equal to \(\dim W\). So \(L(V)=\spa B=W.\) So \(L\) is surjective.
+%Since \(L(V)\) is a subspace of \(W\) with the same dimension as \(W\), it must be equal to \(W\). To see why, pick a basis \(B\) of \(L(V)\). Each element of \(B\) is a vector in \(W\), so the elements of \(B\) form a linearly independent set in \(W\). Therefore \(B\) is a basis of \(W\), since the size of \(B\) is equal to \(\dimension W\). So \(L(V)=\spa B=W.\) So \(L\) is surjective.
 %\end{enumerate}
 %\end{enumerate}
 
