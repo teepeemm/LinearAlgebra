@@ -84,9 +84,9 @@
 \usepackage{linalgjh}
 \usepackage{multirow}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red]{hyperref}
-\usepackage[toc]{glossaries}
-\makeglossaries
-\newglossaryentry{shorthand}{name=shorthand,description={is a small hand.}}
+%\usepackage[toc]{glossaries}
+%\makeglossaries
+%\newglossaryentry{shorthand}{name=shorthand,description={is a small hand.}}
 
 \usepackage{textcomp}
 %\usepackage{fancyhdr}
@@ -94,6 +94,9 @@
 \usepackage{enumext}
 
 \usepackage{linalgdir} % Get the directory and title information
+
+% Review problems have this setup
+\tagpdfsetup{table/header-columns={1},table/header-rows={}}
 
 \usepackage{unicode-math}
 
@@ -117,26 +120,26 @@
 % \videoscriptlink{gaussian_elimination_more_background.mp4}{Augmented Matrix Notation~\ref{ge4} and~\ref{ge5}}{script_gaussian_elimination_more}
 \newcommand{\videoscriptlink}[3]{
 \begin{center}
-\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\tt #2}
+\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[alt={movie clapper board},scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\ttfamily #2}
 \end{center}
 } 
 %with scripts gets capitol V
 \newcommand{\Videoscriptlink}[3]{
 \begin{center}
-\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\tt #2}
-\hspace{1cm} \hyperlink{#3}{\raisebox{-.3cm}{\includegraphics[scale=.08]{script.jpg}}}
+\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[alt={movie clapper board},scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\ttfamily #2}
+\hspace{1cm} \hyperlink{#3}{\raisebox{-.3cm}{\includegraphics[alt={movie script},scale=.08]{script.jpg}}}
 \end{center}
 } 
 %%% notes: my videos do not have scripts. It is on my to do list. -Cherney
 
 
 %%%This links to Mark's videos
-\newcommand{\markvideolink}[2]{
-\begin{center}
-\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\tt #2}
-\hspace{1cm} {\raisebox{-.3cm}{\includegraphics[scale=.2]{mark.jpg}}}
-\end{center}
-}
+%\newcommand{\markvideolink}[2]{
+%\begin{center}
+%\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[alt={movie clapper board},scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\ttfamily #2}
+%\hspace{1cm} {\raisebox{-.3cm}{\includegraphics[scale=.2]{mark.jpg}}}
+%\end{center}
+%}
 
 %%Shadowbox
 \newcommand{\Shabox}[2]{
@@ -148,17 +151,17 @@
 %%%definitions so that I can paste in some problems I wrote
 \newcommand\bv{\left(\begin{array}{c}}
 \newcommand\ev{\end{array}\right) }
-\newcommand\R{{\mathbb{R}}}
+%\newcommand\R{{\mathbb{R}}}
 
 
 
 %%%This links to Kat's videos
-\newcommand{\katvideolink}[2]{
-\begin{center}
-\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\tt #2}
-\hspace{1cm} {\raisebox{-.3cm}{\includegraphics[scale=.2]{kat.jpg}}}
-\end{center}
-}
+%\newcommand{\katvideolink}[2]{
+%\begin{center}
+%\href{\videourl #1}{\raisebox{-.4cm}{\includegraphics[alt={movie clapper board},scale=.075]{take1.jpg}}} \hspace{1cm}\scalebox{1.2}{\ttfamily #2}
+%\hspace{1cm} {\raisebox{-.3cm}{\includegraphics[scale=.2]{kat.jpg}}}
+%\end{center}
+%}
 
 %%%This links to reading homeworks:
 \newcommand{\reading}[2]{\begin{center}
@@ -167,7 +170,7 @@
 
 %\newcommand{\Reading}[2]{\begin{center}
 %\href{\webworkurl ReadingHomework#1/#2/}{
-%\raisebox{-3mm}{\includegraphics[scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}%\end{center}}
+%\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}%\end{center}}
 
 \newcommand{\Reading}[2]{\begin{center}
 \href{\webworkurl #1/#2/}{
@@ -241,7 +244,7 @@
 
 \makeindex
 
-\makeglossaries
+%\makeglossaries
 
 
 %------------------------------------------------
@@ -295,15 +298,14 @@ First Edition. Davis California, 2013.\\
 
 \noindent
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}{\includegraphics[alt={CC-BY-NC-SA logo},scale=.7]{cc.jpg}}
-\begin{tabular}{l}
+\begin{minipage}{.6\textwidth}
 {\small This work is licensed under a}\\
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}{\small Creative Commons Attribution-NonCommercial-}\\
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}{\small ShareAlike 3.0 Unported License.}
-\end{tabular}
+\end{minipage}
 
 
-
-
+\end{document}
 
 
 \newpage
@@ -632,7 +634,7 @@ First Edition. Davis California, 2013.\\
 
 %\begin{figure}
 %\begin{center}
-%\includegraphics[scale=.6]{conumdrum.jpg}
+%\includegraphics[alt={Captain Conundrum},scale=.6]{conumdrum.jpg} % huh?!?!?
 %\caption{Captain Conundrum\index{Captain Conundrum}}
 %\end{center}
 %\end{figure}
