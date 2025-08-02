@@ -156,7 +156,7 @@ The above computation looks a little daunting, but only the linearity property o
 Because inner products become dot products once one uses an orthonormal basis, we will quite often use the dot product notation in situations where one really should write an inner product. Conversely, dot product computations can always be rewritten in terms of an inner product, if needed.
 
 \begin{example}
-Consider the space of polynomials given by $V=\span\{1,x\}$ with inner product $\langle p,p'\rangle=\int_0^1  p(x) p'(x)dx $. An obvious basis to use is $B=(1,x)$ 
+Consider the space of polynomials given by $V=\spa\{1,x\}$ with inner product $\langle p,p'\rangle=\int_0^1  p(x) p'(x)dx $. An obvious basis to use is $B=(1,x)$ 
 but it is not hard to check that this is not orthonormal, instead we take \[O=\Big(1,{2\sqrt{3}}\, \big(x-\frac12\big)\Big)\, .\]
 This is an orthonormal basis  since,for example:
 \[
@@ -329,7 +329,7 @@ The matrix $M=PDP^T$ is symmetric!
 \section{Gram-Schmidt \& Orthogonal Complements}\label{gramschmidt}
 
 
-Given a vector $v$ and some other vector $u$ not in  $\span\{v\} $ we can construct the new vector 
+Given a vector $v$ and some other vector $u$ not in  $\spa\{v\} $ we can construct the new vector 
 \Shabox{1.1}{$
 v^\perp:=v-\frac{\textstyle u\cdot v}{\textstyle u\cdot u}\, u\, .
 $}
@@ -340,7 +340,7 @@ This new vector $v^\perp$ is orthogonal to $u$ because
 \[
 u\dotprod v^\perp = u\dotprod v - \frac{u\cdot v}{u\cdot u}u\dotprod u = 0.
 \]
-Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space $\span\{u,v\}$.
+Hence, $\{u, v^\perp\}$ is an orthogonal basis for $\spa \{u,v\}$.  When $v$ is not parallel to $u$, $v^\perp \neq 0$, and normalizing these vectors we obtain $\left\{\frac{u}{|u|}, \frac{v^\perp}{|v^\perp|} \right\}$, an orthonormal basis for the vector space $\spa\{u,v\}$.
 
 Sometimes we write $v = v^\perp + v^\parallel$ where:
 \begin{align*}

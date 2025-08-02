@@ -105,7 +105,7 @@ Now test your skills on
 {\itshape Make sure to jot down a few brief notes explaining any clever tricks you use.}
 
 \item
-For which values of $a$ does \[U=\span\left\{
+For which values of $a$ does \[U=\spa\left\{
 \begin{pmatrix}1\\0\\1\end{pmatrix},\begin{pmatrix}1\\2\\-3\end{pmatrix},\begin{pmatrix}a\\1\\0\end{pmatrix}\right\}={\mathbb R}^3\ ?\]
  For any special values of $a$ at which $U\neq{\mathbb R}^3$, express the subspace $U$ as the span of the least number of vectors possible. Give the dimension of $U$ for these cases and
  draw a picture showing $U$ inside ${\mathbb R}^3$.
@@ -287,7 +287,7 @@ the formula for the number of doves  $F_n$ in year~$n$ expressed in terms of $\v
 \item
 Use Gram--Schmidt to find an orthonormal basis for
 \[
-\span
+\spa
 \left\{
 \begin{pmatrix}
 1\\1\\1\\1
@@ -303,14 +303,14 @@ Use Gram--Schmidt to find an orthonormal basis for
 
 \item Let $M$ be the matrix of a linear transformation $L:V\to W$ in given bases for $V$ and $W$.
 Fill in the blanks below with one of the following six vector spaces: $V$, $W$, $\ker L$, 
-$\big(\ker L\big)^\perp$, $\im L$, $\big(\im L\big)^\perp$.
+$\big(\ker L\big)^\perp$, $\Img L$, $\big(\Img L\big)^\perp$.
 \begin{enumerate}
 \item The columns of $M$ span \underline{\phantom{answer}} in the basis given for \underline{\phantom{answer}}.
 \item The rows of $M$ span \underline{\phantom{answer}} in the basis given for \underline{\phantom{answer}}.
 \end{enumerate} 
 Suppose \[M=\begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}\]
 is the matrix of $L$ in the bases $\{v_1,v_2,v_3,v_4\}$ for $V$ and $\{w_1,w_2,w_3,w_4\}$ for~$W$.
-Find bases for $\ker L$ and $\im L$. Use the dimension formula to check your result.
+Find bases for $\ker L$ and $\Img L$. Use the dimension formula to check your result.
 
 \item
 Captain Conundrum collects the following data set
@@ -890,7 +890,7 @@ and
 w^\perp = w - \frac{u\dotprod w}{u\dotprod u} u-\frac{v^\perp\dotprod w}{v^\perp\dotprod v^\perp} v^\perp
 =w-\frac{3}{4} u -\frac{\frac34}{\frac34}v^\perp =\begin{pmatrix}-1\\0\\0\\1\end{pmatrix}
 \]
-Dividing by lengths, an orthonormal basis for $\span\{u,v,w\}$ is
+Dividing by lengths, an orthonormal basis for $\spa\{u,v,w\}$ is
 \[
 \left\{\begin{pmatrix}\frac12\\[2mm]\frac12\\[2mm]\frac12\\[2mm]\frac12\end{pmatrix},
 \begin{pmatrix}\frac{\sqrt{3}}6\\[1mm]-\frac{\sqrt{3}}2\\[1mm]\frac{\sqrt{3}}6\\[1mm]\frac{\sqrt{3}}6\end{pmatrix},
@@ -900,7 +900,7 @@ Dividing by lengths, an orthonormal basis for $\span\{u,v,w\}$ is
 \item 
 
 \begin{enumerate}
-\item The columns of $M$ span $\im L$ in the basis given for $W$.
+\item The columns of $M$ span $\Img L$ in the basis given for $W$.
 \item The rows of $M$ span $(\ker L)^\perp$% in the basis given for $V$.
 \item First we put $M$ in RREF:
 \begin{align*}
@@ -911,8 +911,8 @@ M& = \begin{pmatrix}1&2&1&3\\2&1&\!-1&2\\1&0&0&\!-1\\4&1&\!-1&0\end{pmatrix}
 \begin{pmatrix}1&0&-1&\frac13\\[1mm]0&1&1&\frac43\\[1mm]0&0&1&-\frac43\\[1mm]0&0&2&-\frac83\end{pmatrix}
 \ \sim\ \begin{pmatrix}1&0&0&-1\\[1mm]0&1&0&\frac83\\[1mm]0&0&1&-\frac43\\[1mm]0&0&0&0\end{pmatrix}\, .
 \end{align*}
-Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[\im L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
-Thus $\dim\ker L=1$ and $\dim\im L=3$ so \[\dim\ker L+\dim\im L=1+3=4=\dim V\, .\]
+Hence \[\ker L=\spa\{v_1-\frac83v_2+\frac43 v_3+v_4\}\] and \[\Img L=\spa\{v_1+2v_2+v_3+4v_4,2v_1+v_2+v_4,v_1-v_2-v_4\}\, .\]
+Thus $\dim\ker L=1$ and $\dim\Img L=3$ so \[\dim\ker L+\dim\Img L=1+3=4=\dim V\, .\]
 \end{enumerate}
 
 \item 
