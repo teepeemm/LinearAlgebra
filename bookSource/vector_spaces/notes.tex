@@ -69,7 +69,7 @@ One can  find many interesting vector spaces, such as the following:
 \Videoscriptlink{vector_spaces_example.mp4}{Example of a vector space}{scripts_vector_spaces_example}
 
 \begin{example}
-\[ \mathbb{R}^\mathbb{N} = \{f \mid f \colon \mathbb{N} \rightarrow \mathbb{R} \} \]
+\[ \mathbb{R}^{\mathbb{N}} = \{f \mid f \colon \mathbb{N} \rightarrow \mathbb{R} \} \]
 Here the vector space is the set of functions that take in a natural number~$n$ and return a real number.  The addition is just addition of functions: $(f_1 + f_2)(n) = f_1(n) + f_2(n)$.  Scalar multiplication is just as simple: $c \cdot f(n) = cf(n)$.
 
 %We can think of these functions as infinite column vectors: $f(0)$ is the first entry, $f(1)$ is the second entry, and so on.  Then for example the function $f(n) = n^3$ would look like this:
@@ -83,7 +83,7 @@ We can think of these functions as infinitely large ordered lists of numbers: \(
 \[
 f=\ccolvec{1\\ 8\\ 27\\ \vdots\\ n^3\\ \vdots }.
 \]
-Thinking this way, \(\mathbb{R}^\mathbb{N}\) is the space of all infinite sequences. 
+Thinking this way, \(\mathbb{R}^{\mathbb{N}}\) is the space of all infinite sequences. 
 Because we can not write a list infinitely long (without infinite time and ink), one can not define an element of this space explicitly; definitions that are implicit, as above, or algebraic as in $f(n)=n^3$ (for all $n \in \mathbb{N}$) suffice.
 
 Let's check some axioms.
@@ -99,9 +99,9 @@ The other axioms should also be checked.  This can be done using  properties of 
 \end{example}
 
 \begin{example} The space of functions of one real variable.\\
-\[ \mathbb{R}^\mathbb{R} = \{f \mid f \colon \mathbb{R} \to \mathbb{R} \} \]
+\[ \mathbb{R}^{\mathbb{R}} = \{f \mid f \colon \mathbb{R} \to \mathbb{R} \} \]
 The addition is point-wise \[(f+g)(x)=f(x)+g(x)\, ,\] as is scalar multiplication \[c\cdot f(x)=cf(x)\, .\]  
-To check that $\mathbb{R}^\mathbb{R}$ is a vector space use the properties of addition of functions and scalar multiplication of functions as in the previous example. 
+To check that $\mathbb{R}^{\mathbb{R}}$ is a vector space use the properties of addition of functions and scalar multiplication of functions as in the previous example. 
 
 
 We can not write out an explicit definition for one of these functions either, there are not only infinitely many components, but even infinitely many components between any two components!  
@@ -172,8 +172,8 @@ solution sets are vector spaces.
 
 More generally, if $V$ is any vector space, then any hyperplane through the origin of $V$ is a vector space. 
 
-\begin{example} Consider the functions $f(x)=e^x$ and $g(x)=e^{2x}$ in $\mathbb{R}^\mathbb{R}$. By taking combinations of these two vectors we can form the plane $\{ c_1 f+ c_2 g | c_1,c_2 \in \mathbb{R}\}$
-inside of $\mathbb{R}^\mathbb{R}$. This is a vector space; 
+\begin{example} Consider the functions $f(x)=e^x$ and $g(x)=e^{2x}$ in $\mathbb{R}^{\mathbb{R}}$. By taking combinations of these two vectors we can form the plane $\{ c_1 f+ c_2 g | c_1,c_2 \in \mathbb{R}\}$
+inside of $\mathbb{R}^{\mathbb{R}}$. This is a vector space; 
 some examples of vectors in it are 
 $4e^x-31e^{2x},~\pi e^{2x}-4e^x$ and $\frac12e^{2x}$. 
 \end{example}
