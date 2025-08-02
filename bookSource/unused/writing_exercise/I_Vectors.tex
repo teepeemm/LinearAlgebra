@@ -215,7 +215,7 @@ Choose a  basis for the subspace space and use that basis to write i) a particul
 \item 
 
 %The packages of supplies are elements of the vector space 
-%\[ V:=\{  F: \{ slabs, fasters,brackets \} \to \R \}.\]
+%\[ V:=\{  F: \{ slabs, fasters,brackets \} \to \mathbb{R}\}.\]
 %In particular, 
 The supply package $f$ can be modeled as the function that assigns to 
 each type of supply item (slabs, fasters, and brackets) the number of items that come in that package. That is 
@@ -229,11 +229,11 @@ each type of supply item (slabs, fasters, and brackets) the number of items that
 %\{3,4,6\} \subseteq  \{ 3,4,6,7,5\}\end{gather*}
 %and
 %\[ \{7,5,3\} \subseteq  \{ 3,4,6,7,5\}.\]
-\[ f: \{ \text{ slabs, fasters, brackets } \} \to \R \]
+\[ f: \{ \text{ slabs, fasters, brackets } \} \to \mathbb{R}\]
 with rule of correspondence explicitly given by
 \[  f(\text{slabs})=3,f(\text{fasters})=4, f(\text{brackets})= 6.\]
 Similarly
-\[ g: \{ \text{ slabs, fasters, brackets } \} \to  \R \]
+\[ g: \{ \text{ slabs, fasters, brackets } \} \to  \mathbb{R}\]
 with rule of correspondence
 \[  g(\text{slabs})=7,g(\text{fasters})=5, g(\text{brackets})= 3. \]
 
@@ -244,7 +244,7 @@ and
 \[ \{7,5,3\} \subseteq  \R.\]
 
 \item By the usual scalar multiplication of functions 
-\[ \frac1\pi f: \{ \text{ slabs, fasters, brackets } \} \to \R \]
+\[ \frac1\pi f: \{ \text{ slabs, fasters, brackets } \} \to \mathbb{R}\]
 with rule of correspondence explicitly given by
 \[  \frac1\pi f(\text{slabs})=\frac1\pi 3~,~~f(\text{fasters})=\frac1\pi 4~,~~ f(\text{brackets})= \frac1\pi 6.\] That is 
 $\frac1\pi f$ has the same domain as $f$. This is the case because the codomain of $f$ is a set that is closed under scalar multiplication; if the codomain of $f$ had been chosen to be $\{1,2,3,4,5,6,7\}$ then in order to give $\frac1\pi f$ meaning the codomain of $\frac1\pi f$ would need to be different from that of $f$. 
@@ -266,7 +266,7 @@ The set $P$ is  closed under addition-- if $m_1f+n_1g,~m_2f+n_2g \in P$ then the
 The set $P$ is not closed under scalar multiplication since $f$ is in $P$ but $\frac12 f$ is not. 
 
 For this reason, the set 
-\[V:= \{ af+bg~\vert ~a,b\in \R \}\]
+\[V:= \{ af+bg~\vert ~a,b\in \mathbb{R}\}\]
 is needed to model the ways supplies can be purchased as a vector space, even though most of the elements of this set have no interpretation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -279,16 +279,16 @@ This property can be interpreted as follows: any ordered can be doubled, tripled
 
 \item 
 The model vector space is a subspace of space of all functions with a particular domain and a codomain:
-\[ W:=\{  F: \{ slabs, fasters,brackets \} \to \R \}.\]
+\[ W:=\{  F: \{ slabs, fasters,brackets \} \to \mathbb{R}\}.\]
 In particular, 
-%\begin{gather*} f: \{ \text{ slabs, fasters, brackets } \} \to \R \\
+%\begin{gather*} f: \{ \text{ slabs, fasters, brackets } \} \to \mathbb{R}\\
 %f(\text{slabs})=3,f(\text{fasters})=4, f(\text{brackets})= 6\end{gather*}
 %and
-%\begin{gather*} g: \{ \text{ slabs, fasters, brackets } \} \to \R \\
+%\begin{gather*} g: \{ \text{ slabs, fasters, brackets } \} \to \mathbb{R}\\
 %g(slabs)=7,g(fasters)=5, g(brackets)= 3 \end{gather*}
 $f$ and $g$ and any sum of multiples of them are in $W$.
 However, some elements of $W$, such as 
-\begin{gather*}h:\{ slabs, fasters,brackets \} \to \R \\
+\begin{gather*}h:\{ slabs, fasters,brackets \} \to \mathbb{R}\\
  h(\text{slabs})=1,f(\text{fasters})=0, f(\text{brackets})= 0\end{gather*}
 are not. This claim, that $h\notin V$, can be backed up with a brief calculation after a basis for $V$ or $W$ is chosen. 
 
