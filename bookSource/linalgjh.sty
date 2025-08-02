@@ -170,22 +170,22 @@
 % sometimes want to have a bunch of equations
 %  a = b
 %  c = d
-%    \vdots   <-- these should be cnetered on the `='
+%    \vdots   <-- these should be centered on the `='
 %  e = f
-\newlength{\equalsignwd} \settowidth{\equalsignwd}{$=$}
+\newlength{\equalsignwd}
+\settowidth{\equalsignwd}{$=$}
 \newcommand{\alignedvdots}[1][10pt]{\mskip2.5mu\makebox[.5\equalsignwd][r]{}%
                             \smash{\vdots}\rule{0pt}{#1}}
 
 \newcommand{\stdbasis}{{\cal E}}
 \newcommand{\basis}[2]{\sequence{\vec{#1}_1,\ldots,\vec{#1}_{#2}}}
-\newcommand{\rowspace}[1]{ \mathop{{\mbox{Rowspace}}}(#1) }
-\newcommand{\colspace}[1]{ \mathop{{\mbox{Columnspace}}}(#1) }
-\newcommand{\linmaps}[2]{ \mathop{{\cal L}}(#1,#2) }
-\newcommand{\lincombo}[2]{
-      #1_1#2_1+#1_2#2_2+\cdots +#1_n#2_n}
-\newcommand{\rep}[2]{ {\mathrm{Rep}}_{#2}(#1) }
-\newcommand{\wrt}[1]{{\mbox{\scriptsize w.r.t. \( #1 \)} }}
-\newcommand{\trans}[1]{ {{#1}^{\mathrm{trans}}} }
+\newcommand{\rowspace}[1]{\mathop{{\mbox{Rowspace}}}(#1)}
+\newcommand{\colspace}[1]{\mathop{{\mbox{Columnspace}}}(#1)}
+\newcommand{\linmaps}[2]{\mathop{{\cal L}}(#1,#2)}
+\newcommand{\lincombo}[2]{#1_1#2_1+#1_2#2_2+\cdots +#1_n#2_n}
+\newcommand{\rep}[2]{{\mathrm{Rep}}_{#2}(#1)}
+\newcommand{\wrt}[1]{{\mbox{\scriptsize w.r.t. \( #1 \)}}}
+\newcommand{\trans}[1]{{{#1}^{\mathrm{trans}}}}
 \newcommand{\proj}[2]{\mbox{proj}_{#2}({#1}) }
 
 \newcommand{\spanof}[1]{\relax [#1\relax ]} % no optional argument!
@@ -203,7 +203,7 @@
 \settoheight{\heightofcdot}{$\cdot$}
 \settowidth{\widthofcdot}{$\cdot$}
 \newsavebox{\dotprodcircle}       
-\savebox{\dotprodcircle}{\includegraphics{dotprod.1}} 
+\savebox{\dotprodcircle}{\includegraphics[alt={dot}]{dotprod.1}} 
 \newcommand{\dotprod}{\mathbin{\raisebox{.5\heightofcdot}{%
           \makebox[\widthofcdot]{$\smash{\usebox{\dotprodcircle}}$}}}}}
 
