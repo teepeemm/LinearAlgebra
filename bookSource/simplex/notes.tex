@@ -176,10 +176,11 @@ the last row has the information of the function $f$. The general case is depict
 \end{example}
 
 \begin{figure}
-\begin{center}\tagpdfsetup{table/tagging=presentation}
+\begin{center}\tagpdfsetup{table/header-rows={3},table/header-columns={2}}
 \begin{tabular}{ll}
-\ \ {$\overbrace{\phantom{VERYVERYERY}}^{\mbox{\tiny variables (incl. slack and artificial)}}$}\ 
-{$\overbrace{\phantom{F}}^{\mbox{\tiny objective}}$}&\\
+\ \ %
+{$\overbrace{\phantom{VERYVERYERY}}^{\mbox{\tiny variables (incl. slack and artificial)}}$}\ %
+{$\overbrace{\phantom{F}}^{\mbox{\tiny objective}}$}&\\ % end row 1
 {$
 \left(
 \begin{array}{c|c}
@@ -189,8 +190,8 @@ the last row has the information of the function $f$. The general case is depict
 \\
 \end{array}
 \right)
-$} &{$\begin{array}{l} \\ \leftarrow  \mbox{constraint equations} \\[6mm] \leftarrow \mbox{objective equation}\end{array}$}\\
-\hspace{4.3cm}{$\begin{array}{c}\uparrow\\ \mbox{objective value}\end{array}\!\!\!\!\!\!\!\!$}
+$} &{$\begin{array}{l} \\ \leftarrow  \mbox{constraint equations} \\[6mm] \leftarrow \mbox{objective equation}\end{array}$}\\ % end row two
+\hspace{4.3cm}{$\begin{array}{c}\uparrow\\ \mbox{objective value}\end{array}\!\!\!\!\!\!\!\!$} % end row three
 \end{tabular}
 \end{center}
 \caption{Arranging the information of an optimization problem in an augmented matrix.\label{augD}}
