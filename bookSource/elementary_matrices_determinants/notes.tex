@@ -117,13 +117,13 @@ The {\bfseries sign function}\index{Sign function} is a function $\text{sgn}$ th
 We can use permutations to give a definition of the determinant.
 
 \begin{definition}  The {\bfseries determinant}\index{Determinant} of $n \times n$ matrix $M$ is 
-\begin{center}
-\scalebox{1.2}{
-\shabox{
-$
-\det M = {\textstyle \sum\limits_{\sigma}}\  \text{sgn}(\sigma)\,  m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
-$
-}}\end{center}
+%\begin{center}
+%\scalebox{1.2}{
+\shabox{%
+\[%$
+\det M = {\sum_{\sigma}}\  \text{sgn}(\sigma)\,  m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\]%$
+}%}\end{center}
 \end{definition}
 The sum is over all permutations of $n$ objects; a sum over the all elements of $\{ \sigma: \{1,\dots,n\}\to  \{1,\dots,n\}\}$.  Each summand is a product of n entries from the matrix  with each factor from a different row. 
 In different terms of the sum the column numbers are shuffled by different permutations~$\sigma$.
