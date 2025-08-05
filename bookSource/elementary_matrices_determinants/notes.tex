@@ -99,8 +99,8 @@ If this number happens to be even, then $\sigma$ is called an \emph{even permuta
 \end{itemize}
 
 \begin{definition}
-The {\bfseries sign function}\index{Sign function} is a function $\text{sgn}$ that sends permutations to the set $\{-1,1\}$ with rule of correspondence defined by
-\[ \text{sgn}(\sigma) = 
+The {\bfseries sign function}\index{Sign function} is a function $\sgn $ that sends permutations to the set $\{-1,1\}$ with rule of correspondence defined by
+\[ \sgn (\sigma) = 
 \left\{ \begin{array}{rl}
 1 & \mbox{if $\sigma$ is even}\\
 -1 & \mbox{if $\sigma$ is odd}.\end{array} \right.
@@ -121,7 +121,7 @@ We can use permutations to give a definition of the determinant.
 %\scalebox{1.2}{
 \shabox{%
 \[%$
-\det M = {\sum_{\sigma}}\  \text{sgn}(\sigma)\,  m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\det M = {\sum_{\sigma}}\  \sgn (\sigma)\,  m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
 \]%$
 }%}\end{center}
 \end{definition}
@@ -163,7 +163,7 @@ This is very cumbersome.
 
 Luckily, it is very easy to compute the determinants of certain matrices.  For example, if $M$ is diagonal, meaning that $M^i_j=0$ whenever $i\neq j$,  then all summands of the determinant involving off-diagonal entries vanish and 
 \[
-\det M = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}= m^1_{1}m^2_{2}\cdots m^n_{n}.
+\det M = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}= m^1_{1}m^2_{2}\cdots m^n_{n}.
 \]
 \shabox{\centering The determinant of a diagonal matrix is\\  the product of its diagonal entries.}
 Since the identity matrix is diagonal with all diagonal entries equal to one, we have
@@ -175,12 +175,12 @@ We would like to use the determinant to decide whether a matrix is invertible.  
 
 \begin{remark}[Swapping rows]
 Lets \hypertarget{rowswap}{swap}
- rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly \[\text{sgn}(\hat{\sigma})=-\text{sgn}(\sigma)\, .\]  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
+ rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly \[\sgn (\hat{\sigma})=-\sgn (\sigma)\, .\]  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
 \begin{align}
-\det M' & = \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\
-& = \sum_{\sigma} \text{sgn}(\sigma) \,m^1_{\sigma(1)}\cdots m^i_{\sigma(j)}\cdots m^j_{\sigma(i)} \cdots m^n_{\sigma(n)} \nonumber \\
-& = \sum_{\sigma}(-\text{sgn}(\hat{\sigma})) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
-& = - \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma}) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
+\det M' & = \sum_{\sigma} \sgn (\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\
+& = \sum_{\sigma} \sgn (\sigma) \,m^1_{\sigma(1)}\cdots m^i_{\sigma(j)}\cdots m^j_{\sigma(i)} \cdots m^n_{\sigma(n)} \nonumber \\
+& = \sum_{\sigma}(-\sgn (\hat{\sigma})) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
+& = - \sum_{\hat{\sigma}} \sgn (\hat{\sigma}) \,m^1_{\hat{\sigma}(1)}\cdots m^i_{\hat{\sigma}(i)}\cdots m^j_{\hat{\sigma}(j)} \cdots m^n_{\hat{\sigma}(n)} \nonumber \\
 & = -\det M.\nn
 \end{align}
 The step replacing $\sum_\sigma$ by $\sum_{\hat \sigma}$ often causes confusion; it holds since we sum over all permutations (see review problem~\ref{hatsum}).
@@ -322,8 +322,8 @@ equals $M$ with one row multiplied by~$\lambda$.
 
 What effect does multiplication by the elementary matrix $R^i(\lambda)$ have on the determinant?
 \begin{align*}
-\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+\det M' & = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
 & = \lambda \det M
 \end{align*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
@@ -383,9 +383,9 @@ Then multiplying $M$ by $S^i_j(\mu)$  performs a row addition;
 What is the effect of multiplying by $S^i_j(\mu)$ on the determinant?  Let $M'=S^i_j(\mu)M$, and let $M''$ be the matrix $M$ but with $R^i$ replaced by $R^j$
 Then
 \begin{align*}
-\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \mu m^j_{\sigma(i)}) \cdots m^n_{\sigma(n)} \\
-& = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-&   \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \mu m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
+\det M' & = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \mu m^j_{\sigma(i)}) \cdots m^n_{\sigma(n)} \\
+& = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+&   \qquad + \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots \mu m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
 & = \det M + \mu \det M''
 \end{align*}
 Since $M''$ has two identical rows, its determinant is $0$ so
@@ -564,18 +564,18 @@ that the determinant is a \emph{multiplicative} function\index{Multiplicative fu
 
 Recall that:
 \[
-\det M = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\det M = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
 \]
 
 A \emph{minor}\index{Minor} of an $n\times n$ matrix $M$ is the determinant of any square matrix obtained from $M$ by deleting one row and one column.  In particular, any entry $m^i_j$ of a square matrix~$M$ is associated to a minor obtained by deleting the $i$th row and $j$th column of~$M$.
 
 It is possible to write the determinant of a matrix in terms of  its minors\index{Expansion by minors} as follows:
 \begin{align*}
-\det M &=\sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&=m^1_1\, \sum_{\slashed{\sigma}^1} \text{sgn}(\slashed{\sigma}^1)\, m^2_{\slashed{\sigma}^1(2)}\cdots m^n_{\slashed{\sigma}^1(n)} \\
-& + m^1_2\, \sum_{\slashed{\sigma}^2} \text{sgn}(\slashed{\sigma}^2)\, m^2_{\slashed{\sigma}^2(1)}
+\det M &=\sum_{\sigma} \sgn (\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&=m^1_1\, \sum_{\slashed{\sigma}^1} \sgn (\slashed{\sigma}^1)\, m^2_{\slashed{\sigma}^1(2)}\cdots m^n_{\slashed{\sigma}^1(n)} \\
+& + m^1_2\, \sum_{\slashed{\sigma}^2} \sgn (\slashed{\sigma}^2)\, m^2_{\slashed{\sigma}^2(1)}
 m^3_{\slashed{\sigma}^2(3)}\cdots m^n_{\slashed{\sigma}^2(n)} \\
-& + m^1_3\,  \sum_{\slashed{\sigma}^3} \text{sgn}(\slashed{\sigma}^3)\, m^2_{\slashed{\sigma}^3(1)}m^3_{\slashed{\sigma}^3(2)}m^4_{\slashed{\sigma}^3(4)}\cdots m^n_{\slashed{\sigma}^3(n)}\\ &+& \cdots
+& + m^1_3\,  \sum_{\slashed{\sigma}^3} \sgn (\slashed{\sigma}^3)\, m^2_{\slashed{\sigma}^3(1)}m^3_{\slashed{\sigma}^3(2)}m^4_{\slashed{\sigma}^3(4)}\cdots m^n_{\slashed{\sigma}^3(n)}\\ &+& \cdots
 \end{align*}
 Here the symbols $\slashed{\sigma}^k$ 
 refers to the permutation $\sigma$ with the input $k$ removed.
@@ -674,7 +674,7 @@ You might suspect that determinants have similar properties with respect to colu
 
 \begin{proof}
   By definition, \[
-\det M = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\det M = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
 \]
 
 For any permutation $\sigma$, there is a unique inverse permutation $\sigma^{-1}$ that undoes $\sigma$.  If $\sigma$ sends $i\rightarrow j$, then $\sigma^{-1}$ sends $j\rightarrow i$.  In the two-line notation for a permutation, this corresponds to just flipping the permutation over.  For example, if $\sigma=\begin{bmatrix} 
@@ -697,10 +697,10 @@ Since any permutation can be built up by transpositions, one can also find the i
 
 Then we can write out the above in formulas as follows:
 \begin{align*}
-\det M &=\sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&=\sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&=\sum_{\sigma} \text{sgn}(\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&=\sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
+\det M &=\sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&=\sum_{\sigma} \sgn (\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&=\sum_{\sigma} \sgn (\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&=\sum_{\sigma} \sgn (\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
 &=\det M^T.
 \end{align*}
 The second-to-last equality is due to the existence of a unique inverse permutation: summing over permutations is the same as summing over all inverses of permutations (see review problem~\ref{invsum}).  The final equality is by the definition of the transpose.

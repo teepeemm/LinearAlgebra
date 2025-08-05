@@ -5,17 +5,17 @@ In Lecture~\ref{elementarydeterminantsII} we \hyperref[detinvertible]{showed} th
 
 Recall that:
 \[
-\det M = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\det M = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
 \]
 
 A \emph{minor}\index{Minor} of an $n\times n$ matrix $M$ is the determinant of any square matrix obtained from $M$ by deleting one row and one column.  In particular, any entry $m^i_j$ of a square matrix~$M$ is associated to a minor obtained by deleting the $i$th row and $j$th column of~$M$.
 
 It is possible to write the determinant of a matrix in terms of  its minors\index{Expansion by minors} as follows:
 \begin{align*}
-\det M &= \sum_{\sigma} \text{sgn}(\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&= m^1_1\, \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma})\, m^2_{\hat{\sigma}(2)}\cdots m^n_{\hat{\sigma}(n)} \\
-& -  m^1_2\, \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma})\, m^2_{\hat{\sigma}(1)}m^3_{\hat{\sigma}(3)}\cdots m^n_{\hat{\sigma}(n)} \\
-& +  m^1_3\,  \sum_{\hat{\sigma}} \text{sgn}(\hat{\sigma})\, m^2_{\hat{\sigma}(1)}m^3_{\hat{\sigma}(2)}m^4_{\hat{\sigma}(4)}\cdots m^n_{\hat{\sigma}(n)} \pm \cdots
+\det M &= \sum_{\sigma} \sgn (\sigma)\, m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&= m^1_1\, \sum_{\hat{\sigma}} \sgn (\hat{\sigma})\, m^2_{\hat{\sigma}(2)}\cdots m^n_{\hat{\sigma}(n)} \\
+& -  m^1_2\, \sum_{\hat{\sigma}} \sgn (\hat{\sigma})\, m^2_{\hat{\sigma}(1)}m^3_{\hat{\sigma}(3)}\cdots m^n_{\hat{\sigma}(n)} \\
+& +  m^1_3\,  \sum_{\hat{\sigma}} \sgn (\hat{\sigma})\, m^2_{\hat{\sigma}(1)}m^3_{\hat{\sigma}(2)}m^4_{\hat{\sigma}(4)}\cdots m^n_{\hat{\sigma}(n)} \pm \cdots
 \end{align*}
 Here the symbols $\hat{\sigma}$ refer to permutations of $n-1$ objects.  What we're doing here is collecting up all of the terms of the original sum that contain the first row entry $m^1_j$ for each column number $j$.  Each term in that collection is associated to a permutation sending $1\rightarrow j$.  The remainder of any such permutation maps the set $\{2, \ldots, n \}\rightarrow \{1, \ldots, j-1, j+1, \ldots, n \}$.  We call this partial permutation $\hat{\sigma}=\begin{bmatrix} \sigma(2) & \cdots & \sigma(n) \end{bmatrix}$.
 
@@ -85,7 +85,7 @@ For any square matrix $M$, we have:
 \end{theorem}
 \begin{proof}
   By definition, \[
-\det M = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
+\det M = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)}.
 \]
 
 For any permutation $\sigma$, there is a unique inverse permutation $\sigma^{-1}$ that undoes $\sigma$.  If $\sigma$ sends $i\rightarrow j$, then $\sigma^{-1}$ sends $j\rightarrow i$.  In the two-line notation for a permutation, this corresponds to just flipping the permutation over.  For example, if $\sigma=\begin{bmatrix} 
@@ -108,10 +108,10 @@ Since any permutation can be built up by transpositions, one can also find the i
 
 Then we can write out the above in formulas as follows:
 \begin{align*}
-\det M &= \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
-&=\sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&=\sum_{\sigma} \text{sgn}(\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
-&= \sum_{\sigma} \text{sgn}(\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
+\det M &= \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}m^2_{\sigma(2)}\cdots m^n_{\sigma(n)} \\
+&=\sum_{\sigma} \sgn (\sigma) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&=\sum_{\sigma} \sgn (\sigma^{-1}) m_1^{\sigma^{-1}(1)}m_2^{\sigma^{-1}(2)}\cdots m_n^{\sigma^{-1}(n)} \\
+&= \sum_{\sigma} \sgn (\sigma) m_1^{\sigma(1)}m_2^{\sigma(2)}\cdots m_n^{\sigma(n)} \\
 &= \det M^T.
 \end{align*}
 The second-to-last equality is due to the existence of a unique inverse permutation: summing over permutations is the same as summing over all inverses of permutations.  The final equality is by the definition of the transpose.

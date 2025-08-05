@@ -20,8 +20,8 @@ M'=R^i(\lambda)M=\colvec{R^1 \\ \vdots \\ \lambda R^i \\ \vdots \\ R^n }
 \]
 What effect does multiplication by $R^i(\lambda)$ have on the determinant?
 \begin{align*}
-\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-& = \lambda \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+\det M' & = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots \lambda m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+& = \lambda \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
 & = \lambda \det M
 \end{align*}
 Thus, multiplying a row by $\lambda$ multiplies the determinant by $\lambda$.
@@ -74,9 +74,9 @@ Then multiplying $S^i_j(\lambda)$ by $M$ gives the following:
 \]
 What is the effect of multiplying by $S^i_j(\lambda)$ on the determinant?  Let $M'=S^i_j(\lambda)M$, and let $M''$ be the matrix $M$ but with $R^i$ replaced by $R^j$.
 \begin{align*}
-\det M' & = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \lambda m^j_{\sigma(j)}) \cdots m^n_{\sigma(n)} \\
-& = \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
-&   \qquad + \sum_{\sigma} \text{sgn}(\sigma) m^1_{\sigma(1)}\cdots \lambda m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
+\det M' & = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots (m^i_{\sigma(i)}+ \lambda m^j_{\sigma(j)}) \cdots m^n_{\sigma(n)} \\
+& = \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots m^i_{\sigma(i)} \cdots m^n_{\sigma(n)} \\
+&   \qquad + \sum_{\sigma} \sgn (\sigma) m^1_{\sigma(1)}\cdots \lambda m^j_{\sigma(j)} \cdots m^j_{\sigma(j)} \cdots m^n_{\sigma(n)} \\
 & = \det M + \lambda \det M''
 \end{align*}
 Since $M''$ has two identical rows, its determinant is $0$.  Then \[\det S^i_j(\lambda)M = \det M\, .\]
