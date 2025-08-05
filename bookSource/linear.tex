@@ -29,17 +29,36 @@
 %\usepackage{showkeys}
 
 
-\usepackage{sectsty}
 \usepackage{slashed}
-\subsectionfont{\sffamily\bfseries}
-\sectionfont{\sffamily\bfseries}
-\chapterfont{\sffamily\bfseries}
-%\runningheadfont{\sffamily\bfseries}
-%\renewcommand{\rmdefault}{arev}
-%\renewcommand{\familydefault}{\sfdefault}
 
+%\usepackage{sectsty}
+%\subsectionfont{\sffamily\bfseries}
+%\sectionfont{\sffamily\bfseries}
+%\chapterfont{\sffamily\bfseries}
+%%\runningheadfont{\sffamily\bfseries}
+%%\renewcommand{\rmdefault}{arev}
+%%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[Bjornstrup]{fncychap}
+% Bjornstrup causes validation errors
 
-\usepackage[Bjornstrup]{fncychap}
+% this tried to mimic Bjornstrup, but still had errors
+%\usepackage[explicit]{titlesec}
+%\titleformat{\chapter}[block]{\vspace{12pt}}{}{0pt}
+%{%\null\hfill\Huge\makebox[0pt]{\itshape\color{darkgray}\scalebox{2}{\thechapter}}\\[-.4in]
+%\colorbox{gray!30}{\parbox[t][1in][b]{\textwidth}{\Large\hfill\sffamily\bfseries\raisebox{.5\baselineskip}{#1}~\null}}%
+%\smash{\makebox[0pt]{\Huge\itshape\color{darkgray!75}\scalebox{3}{\thechapter}}}
+%}
+%%\titleformat{\chapter}[frame]{}{\Huge\itshape\hfill\textcolor{darkgray}{\thechapter}}{.5in}{\colorbox{gray}{\hfill\Huge\sffamily\bfseries#1}}
+%% these two could be \titleformat*, but that doesn't work with explicit
+%\titleformat{\section}{\bfseries\sffamily\Large}{\thesection}{1em}{#1}
+%\titleformat{\subsection}{\bfseries\sffamily\large}{\thesubsection}{1em}{#1}
+
+\usepackage{titlesec}
+%\titleformat*{\chapter}{\bfseries\sffamily\Huge}
+\titleformat{\chapter}[display]
+ {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat*{\section}{\bfseries\sffamily\Large}
+\titleformat*{\subsection}{\bfseries\sffamily\large}
 
 \usepackage{fancyhdr}
 %\fancyhf{\sffamily\bfseries}
@@ -65,9 +84,9 @@
 %\AddToHook{env/shabox/after}{\par\tagstructend}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
-\AddToHook{env/tcolorbox/before}{\par\tagstructbegin{tag=Div}}
-\AddToHook{env/tcolorbox/after}{\par\tagstructend}
-\newcommand*{\shabox}[1]{\begin{tcolorbox}[
+\AddToHook{env/tcolorbox/begin}{\tagpdfparaOff\tcbset{before upper=\tagpdfparaOn}}
+%\AddToHook{env/tcolorbox/after}{}
+\newcommand*{\shabox}[1]{\par\tagstructbegin{tag=Div}\begin{tcolorbox}[
 	enhanced,
 %	borderline={.1pt}{0pt}{black}, % cannot get it thinner
 	colback=white,
@@ -75,7 +94,8 @@
 	sharp corners,
 %	before upper={\setlength{\parindent}{14pt}},
 	add to width=-20pt,
-	halign=flush center]#1\end{tcolorbox}}
+	halign=flush center]
+	#1\end{tcolorbox}\par\tagstructend}
 \usepackage[english]{babel}
 \usepackage{blindtext}
 \usepackage{graphicx,xcolor}
@@ -288,7 +308,7 @@ Rohit Thomas and Andrew Waldron}
 
 \clearpage
 
-\pagecolor{white}
+\nopagecolor
 %\phantom{.}
 \vspace*{\fill}
 
@@ -303,7 +323,6 @@ First Edition. Davis California, 2013.\\
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}{\small Creative Commons Attribution-NonCommercial-}\\
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}{\small ShareAlike 3.0 Unported License.}
 \end{minipage}
-
 
 
 
