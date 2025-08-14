@@ -167,7 +167,7 @@ functions of vectors that respect vector addition.
 Here are some examples of things that can be added:
 
 \begin{example} (Vector Addition)
-\begin{enumext}[label=\Alph*,wrap-label=(#1)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1),labelwidth={2em}]
 \item Numbers: Both $3$ and $5$ are numbers and so is $3+5$.\\[-2mm]
 \item 3-vectors: $\colvec{1 \\ 1\\ 0} + \colvec{0\\1\\1}=\colvec{1 \\ 2\\ 1}$.\\[-1mm]
 \item Polynomials: If $p(x)=1+x-2x^2+3x^3$ and $q(x)=x+3x^2-3x^3+x^4$ then\\[1mm] their sum $p(x)+q(x)$ is the new polynomial $1+2x+x^2+x^4$.\\
@@ -180,7 +180,7 @@ Here are some examples of things that can be added:
 \noindent
 There are clearly different kinds of vectors. 
 Stacks of numbers are not the only things that are vectors, as examples C, D, and E show. 
-Vectors of different kinds can not be added; What possible meaning could the following have? 
+Vectors of different kinds cannot be added; What possible meaning could the following have? 
 \[\colvec{9\\3} + e^x\]
 
 In fact, you should think of all five kinds of vectors above as different kinds, and that you should not add vectors that are not of the same kind. 
@@ -211,7 +211,7 @@ above, you can probably guess how to multiply a vector by a scalar. For example
 
  A very special vector can be produced from any vector of any kind by scalar multiplying any vector by the number~$0$. 
 This is called the {\itshape zero vector}\index{Zero vector} and is usually denoted simply $0$. This gives five very different kinds of zero from the 5 different kinds of vectors in   examples A-E above.
-\begin{enumext}[label=\Alph*,wrap-label=(#1)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1),labelwidth={2em}]
 \item $0(3)=0$ (The zero number)
 \item $0\colvec{1\\1\\0}=\colvec{0\\0\\0} $ (The zero 3-vector)
 \item $0\left(1+x-2x^2+3x^3\right)=0$ (The zero polynomial)
@@ -264,7 +264,7 @@ So things don't get too abstract, here are five questions that can be rephrased 
 
 \begin{example}  \label{EX}
 (Questions involving Functions of Vectors in Disguise)\\
-\begin{enumext}[label=\Alph*,wrap-label=(#1)]
+\begin{enumext}[label=\Alph*,wrap-label=(#1),labelwidth={2em}]
 \item\label{FVA}What number $x$ satisfies $10x=3$?
 \item\label{FVB} What 3-vector~$u\!\, $  satisfies\footnote{ The \hyperlink{crossprod}{cross product} appears in this equation.}~$\!\colvec{1 \\ 1\\ 0} \times u = \colvec{0\\1\\1}$?\\[-.4cm]
 %\[\!\!\!\!\!\!\!\!\!\colvec{x\\ y\\ z} \raisebox{-11mm}{\includegraphics[scale=.14]{\whatIsPath//machine_blank.jpg} }\! \! \!\! \! \!\colvec{\phantom{-}z\\-z\\y-x}\]
