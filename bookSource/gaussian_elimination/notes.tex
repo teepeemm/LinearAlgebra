@@ -621,31 +621,31 @@ not every column need have a pivot, as demonstrated in examples~\ref{redundant} 
 Here is an example where multiple columns have no pivot:
 
 \begin{example} (Consecutive  columns with no pivot in RREF)
-\begin{multline*}
+\begin{align*}
    \left.
 \begin{array}{cccccccccr}
 	 x & + & y &+ & z& + & 0w & = & 2 \\
 	2x& +& 2y& +&2z&+&2w & = &  4
      \end{array}
    \right\} 
-   \!\Leftrightarrow\!
+   &\Leftrightarrow
 \begin{amatrix}{4}
 1 &1 &1 & 0 &2 \\ 
 2 &2 &2 & 1 & 4
-\end{amatrix}\\
+\end{amatrix}
 \sim
 \begin{amatrix}{4}
 1 &1 &1 & 0 &2 \\ 
 0 &0 &0 & 1 & 0
 \end{amatrix}\\[2mm]
-\!\Leftrightarrow\!
+&\Leftrightarrow
 \left\{
 \begin{array}{rrrrrr}
 	x \ +\  y\  + \  z&&& = & 2 \phantom{\, .}\\
 	&& w & = &  0\, .
      \end{array}
    \right.
-\end{multline*}
+\end{align*}
 Note that there was no hope of reaching the identity matrix, because of the shape of the augmented matrix we started with. 
 \end{example}
 
@@ -1753,7 +1753,7 @@ $M=E_1^{-1}E_2^{-1}E_3^{-1}U$ or
 \!-4&0&9&2\\
 0&-1&1&\!\!-1
 \end{pmatrix}
-\!\!\!\!\!\!&=
+&=
 \begin{pmatrix}
 1&0&0&0\\
 0&1&0&0\\
