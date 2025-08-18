@@ -1,10 +1,26 @@
 % !TEX program = LuaLaTeX
 % doesn't have enough memory. use a command line with
 % max_strings=1000000 latexmk -lualatex -interaction=batchmode -synctex=1 -g linear
-\DocumentMetadata{lang=en,pdfstandard=ua-2,pdfstandard=a-4f,tagging=on,
-  tagging-setup={math/setup=mathml-SE,math/alt/use},
-%  colorprofiles={A=FOGRA39L_coated.icc}
-  }
+%\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
+%  tagging-setup={math/setup=mathml-SE,math/alt/use},
+%%  colorprofiles={A=FOGRA39L_coated.icc}
+%  }
+% for LaTeXML
+\AtBeginDocument{\tikzset{alt/.code={}}}
+\providecommand{\tagpdfsetup}[1]{}
+\providecommand{\tagstructbegin}[1]{}
+\providecommand{\tagstructend}{}
+\providecommand{\tagpdfparaOn}{}
+\providecommand{\tagpdfparaOff}{}
+\providecommand{\NewSocket}[2]{}
+\providecommand{\NewSocketPlug}[3]{}
+\providecommand{\AssignSocketPlug}[2]{}
+\ExplSyntaxOn
+\providecommand{\tag_mc_end_push:}{}
+\providecommand{\tag_mc_begin:n}[1]{}
+\providecommand{\tag_mc_end:}{}
+\providecommand{\tag_mc_begin_pop:n}[1]{}
+\ExplSyntaxOff
 \documentclass[12pt]{book}
 
 %%%LIST
@@ -116,7 +132,6 @@
 \usepackage{textcomp}
 %\usepackage{fancyhdr}
 %\pagestyle{fancy}
-\usepackage{enumext}
 
 \usepackage{linalgdir} % Get the directory and title information
 
