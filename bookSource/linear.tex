@@ -1,6 +1,10 @@
 % !TEX program = LuaLaTeX
-\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
-  tagging-setup={math/setup=mathml-SE,math/alt/use}}
+% doesn't have enough memory. use a command line with
+% max_strings=1000000 latexmk -lualatex -interaction=batchmode -synctex=1 -g linear
+\DocumentMetadata{lang=en,pdfstandard=ua-2,pdfstandard=a-4f,tagging=on,
+  tagging-setup={math/setup=mathml-SE,math/alt/use},
+%  colorprofiles={A=FOGRA39L_coated.icc}
+  }
 \documentclass[12pt]{book}
 
 %%%LIST
@@ -27,6 +31,8 @@
 %use this if you need to show labels, but turn it off afterwards.
 %\usepackage{showkeys}
 
+\usepackage{xcolor}
+%\usepackage[cmyk]{xcolor}
 
 \usepackage{slashed}
 
@@ -97,7 +103,7 @@
 	#1\end{tcolorbox}\par\tagstructend}
 \usepackage[english]{babel}
 \usepackage{blindtext}
-\usepackage{graphicx,xcolor}
+\usepackage{graphicx}
 \usepackage{tikz}
 \DeclareGraphicsRule{*}{mps}{*}{}
 \usepackage{linalgjh}
@@ -275,7 +281,8 @@
 \begin{document}
 
 \thispagestyle{empty}
-\pagecolor{cyan}
+%\pagecolor{cyan} % messes up A-4F
+\pagecolor[RGB]{0,163,218} % an approximate cyan
 
 \vspace*{\fill}
 
@@ -289,10 +296,6 @@
 Rohit Thomas and Andrew Waldron}
 
 \end{center}
-
-%\date{}
-
-%\maketitle
 
 \vspace{\fill}
 
