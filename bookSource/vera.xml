@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report>
+  <buildInformation>
+    <releaseDetails id="core" version="1.28.2" buildDate="2025-07-15T16:07:00-05:00"></releaseDetails>
+    <releaseDetails id="validation-model" version="1.28.2" buildDate="2025-07-15T16:12:00-05:00"></releaseDetails>
+    <releaseDetails id="gui" version="1.28.2" buildDate="2025-07-15T16:59:00-05:00"></releaseDetails>
+  </buildInformation>
+  <jobs>
+    <job>
+      <item size="37038248">
+        <name>/Users/timothyprescott/Documents/programming/git/LinearAlgebra/bookSource/linear.pdf</name>
+      </item>
+      <validationReport jobEndStatus="normal" profileName="PDF/A-4F validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="109" failedRules="0" passedChecks="2380246" failedChecks="0"></details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="PDF/UA-2 + Tagged PDF validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1723" failedRules="0" passedChecks="2859575" failedChecks="0"></details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Accessibility validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1719" failedRules="0" passedChecks="2859571" failedChecks="0"></details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Reuse validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1706" failedRules="0" passedChecks="2490745" failedChecks="0"></details>
+      </validationReport>
+      <duration start="1755489713754" finish="1755489723451">00:00:09.697</duration>
+    </job>
+  </jobs>
+  <batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">
+    <validationReports compliant="1" nonCompliant="0" failedJobs="0">1</validationReports>
+    <featureReports failedJobs="0">0</featureReports>
+    <repairReports failedJobs="0">0</repairReports>
+    <duration start="1755489713631" finish="1755489723471">00:00:09.840</duration>
+  </batchSummary>
+</report>
