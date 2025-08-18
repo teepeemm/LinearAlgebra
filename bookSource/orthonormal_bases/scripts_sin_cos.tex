@@ -29,7 +29,17 @@ and hence $\{ e_1^{\theta}, e_2^{\theta} \}$ is an orthonormal basis. To show th
 %\begin{figure}[ht!]
 %\label{figure:sin_cos_onb}
 \begin{center}
-\includegraphics[alt={The vector (cosθ,sinθ) makes an angle θ with the positive x axis.  If we rotate it counterclockwise by a right angle, it makes the vector (-sinθ,cosθ).},scale=1.1]{\orthonormPath/sin_cos_onb.pdf}
+%\includegraphics[alt={The vector (cosθ,sinθ) makes an angle θ with the positive x axis.  If we rotate it counterclockwise by a right angle, it makes the vector (-sinθ,cosθ).},scale=1.1]{\orthonormPath/sin_cos_onb.pdf}
+\begin{tikzpicture}[alt={The vector (cosθ,sinθ) makes an angle θ with the positive x axis.  If we rotate it counterclockwise by a right angle, it makes the vector (-sinθ,cosθ).},scale=5]
+\draw[thick](-0.5,0)--(1,0);
+\draw[thick](0,-0.3)--(0,1);
+\draw[thick](0,0)--(30:1);
+\draw[thick](0.3,0)arc(0:30:0.3)node[midway,right]{$\theta$};
+\draw[thick](0.8,0)arc(0:30:0.8)node[at end,above]{$\begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}$};
+\draw[thick](0,0)--(120:1);
+\draw[thick](0.6,0)arc(0:120:0.6)node[at end,above]{$\begin{pmatrix}-\sin\theta\\\phantom-\cos\theta\end{pmatrix}$};
+\draw[thick](30:0.1)-- ++(120:0.1)-- ++(210:0.1);
+\end{tikzpicture}
 \end{center}
 %\caption{Plot of the vectors $e_1^{\theta}$ and $e_2^{\theta}$ in $\mathbb{R}^2$.}
 %\end{figure}
