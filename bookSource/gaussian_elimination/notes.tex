@@ -5,7 +5,7 @@
 \label{gaussElim}
 
 \hyperlink{system2matrix}{Systems of linear equations can be written as matrix equations.}
-Now you will learn  an efficient algorithm  for (maximally) simplifying a system of linear equations (or a matrix equation) -- Gaussian elimination.
+Now you will learn  an efficient algorithm  for (maximally) simplifying a system of linear equations (or a matrix equation) --- Gaussian elimination.
 
 %You might get the feeling that you are learning to do Gaussian elimination only so that you can tell your computer how to do it in the future. There is more than that going on here. Let us foreshadow chapter 3; as we attempt to streamline the process of elimination we will discover the building blocks of matrices. 
 
@@ -436,7 +436,7 @@ For many systems, it is not possible to reach the identity in the augmented matr
      \end{array}
    \right.
 \]
-This example demonstrates if one equation is a multiple of the other the identity matrix can not be a reached. This is because the first step in elimination will make the second row a row of zeros. Notice that solutions still exists $(1,1)$ is a solution. The last augmented matrix here is in RREF; no more than two components  can be eliminated.
+This example demonstrates if one equation is a multiple of the other the identity matrix cannot be a reached. This is because the first step in elimination will make the second row a row of zeros. Notice that solutions still exists $(1,1)$ is a solution. The last augmented matrix here is in RREF; no more than two components  can be eliminated.
 \end{example}
 
 \begin{example} (Inconsistent equations)
@@ -486,7 +486,7 @@ A robot might make this mistake:
 \end{amatrix}
 \sim \, \cdots\, ,
 \]
-and then give up because the the upper left slot can not function as a pivot since the~0 that lives there can not be used to eliminate the zero below it. Of course, the right thing to do is to change the order of the equations before starting
+and then give up because the the upper left slot cannot function as a pivot since the~0 that lives there cannot be used to eliminate the zero below it. Of course, the right thing to do is to change the order of the equations before starting
 \[
    \left.
 \begin{array}{ccccr}
