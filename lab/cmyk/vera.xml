@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report>
+  <buildInformation>
+    <releaseDetails id="core" version="1.28.2" buildDate="2025-07-15T16:07:00-05:00"></releaseDetails>
+    <releaseDetails id="validation-model" version="1.28.2" buildDate="2025-07-15T16:12:00-05:00"></releaseDetails>
+    <releaseDetails id="gui" version="1.28.2" buildDate="2025-07-15T16:59:00-05:00"></releaseDetails>
+  </buildInformation>
+  <jobs>
+    <job>
+      <item size="28144">
+        <name>/Users/timothyprescott/Library/CloudStorage/Dropbox/teaching/207/lab/cmykColor.pdf</name>
+      </item>
+      <validationReport jobEndStatus="normal" profileName="PDF/A-4F validation profile" statement="PDF file is not compliant with Validation Profile requirements." isCompliant="false">
+        <details passedRules="108" failedRules="1" passedChecks="361" failedChecks="3">
+          <rule specification="ISO 19005-4:2020" clause="6.2.4.3" testNumber="3" status="failed" failedChecks="3">
+            <description>DeviceCMYK shall only be used if a device independent DefaultCMYK colour space has been set when the DeviceCMYK colour space is used or if the current transparency blending space, when the DeviceCMYK colour space is used, is a device independent CMYK-based colour space or the current PDF/A OutputIntent, when the DeviceCMYK colour space is used, contains a 'CMYK' destination profile</description>
+            <object>PDDeviceCMYK</object>
+            <test>(gPageOutputCS == null ? gDocumentOutputCS == 'CMYK' : gPageOutputCS == 'CMYK') || gTransparencyCS == 'CMYK'</test>
+            <check status="failed">
+              <context>root/document[0]/pages[0](31 0 obj PDPage)/contentStream[0](32 0 obj PDSemanticContentStream)/operators[2]/colorSpace[0]</context>
+              <errorMessage>DeviceCMYK colour space is used without CMYK output intent profile and without current transparency blending space being Device-independent CMYK</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/pages[0](31 0 obj PDPage)/contentStream[0](32 0 obj PDSemanticContentStream)/operators[3]/colorSpace[0]</context>
+              <errorMessage>DeviceCMYK colour space is used without CMYK output intent profile and without current transparency blending space being Device-independent CMYK</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/pages[0](31 0 obj PDPage)/contentStream[0](32 0 obj PDSemanticContentStream)/operators[6]/fillCS[0]</context>
+              <errorMessage>DeviceCMYK colour space is used without CMYK output intent profile and without current transparency blending space being Device-independent CMYK</errorMessage>
+            </check>
+          </rule>
+        </details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="PDF/UA-2 + Tagged PDF validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1723" failedRules="0" passedChecks="187" failedChecks="0"></details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Accessibility validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1719" failedRules="0" passedChecks="183" failedChecks="0"></details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Reuse validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
+        <details passedRules="1706" failedRules="0" passedChecks="175" failedChecks="0"></details>
+      </validationReport>
+      <duration start="1755289198408" finish="1755289198583">00:00:00.175</duration>
+    </job>
+  </jobs>
+  <batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">
+    <validationReports compliant="0" nonCompliant="1" failedJobs="0">1</validationReports>
+    <featureReports failedJobs="0">0</featureReports>
+    <repairReports failedJobs="0">0</repairReports>
+    <duration start="1755289198378" finish="1755289198597">00:00:00.219</duration>
+  </batchSummary>
+</report>

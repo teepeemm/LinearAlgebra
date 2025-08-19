@@ -1,0 +1,26 @@
+% !TEX program = LuaLaTeX
+\DocumentMetadata{lang=en,pdfstandard=ua-2,pdfstandard=a-4f,tagging=on,
+  tagging-setup={math/setup=mathml-SE}}
+\documentclass{article}
+\usepackage{xcolor}
+\title{title}
+\begin{document}
+
+\newcommand{\testcolor}[1]{{\colorbox[RGB]{#1}{\parbox[c][2in]{2in}{#1}}}}
+
+%\thispagestyle{empty}
+% ok: black, blue, brown, darkgray, gray, green, lightgray, lime, orange, pink, purple, red, teal, violet, white;
+% bad: cyan, magenta, olive, yellow
+\pagecolor{cyan}
+\Huge
+\noindent
+%\testcolor{0,184,235}\\
+\testcolor{0,159,214}
+\testcolor{5,160,215}
+\testcolor{10,161,216}
+\testcolor{15,162,217}
+\testcolor{0,163,218}
+\testcolor{0,168,226}
+\testcolor{0,172,230}
+\testcolor{0,191,255}
+\end{document}
