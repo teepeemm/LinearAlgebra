@@ -89,6 +89,11 @@
 %\usepackage{shadow}
 %\AddToHook{env/shabox/before}{\par\tagstructbegin{tag=Div}}
 %\AddToHook{env/shabox/after}{\par\tagstructend}
+\usepackage{latexml}
+
+\iflatexml
+\newcommand*{\shabox}[1]{\parbox{\textwidth}{\lxAddClass{shabox}#1}}
+\else
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 \AddToHook{env/tcolorbox/begin}{\tagpdfparaOff\tcbset{before upper=\tagpdfparaOn}}
@@ -103,6 +108,10 @@
 	add to width=-20pt,
 	halign=flush center]
 	#1\end{tcolorbox}\par\tagstructend}
+\usepackage{table-header-scope} % work around a PAC bug
+\usepackage{unicode-math}
+\fi
+
 \usepackage[english]{babel}
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -121,12 +130,9 @@
 
 \usepackage{linalgdir} % Get the directory and title information
 
-\usepackage{table-header-scope} % work around a PAC bug
-
 % Review problems have this setup
 \tagpdfsetup{table/header-columns={1},table/header-rows={}}
 
-\usepackage{unicode-math}
 
 %Change the next line as appropriate for your course.
 %\newcommand{\webworkurl}{http://webwork.math.ucdavis.edu/webwork2/MAT22A-Waldron-Fall-2014/}
