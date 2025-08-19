@@ -1,0 +1,50 @@
+% !TEX program = LuaLaTeX
+% doesn't have enough memory. use a command line with
+% max_strings=1000000 latexmk -lualatex -interaction=batchmode -synctex=1 -g linear
+% latexml --nocomments --destination=linear.xml --includestyles linear
+% latexmlpost --destination=web/index.html --split linear.xml
+%\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
+%  tagging-setup={math/setup=mathml-SE,math/alt/use},
+%%  colorprofiles={A=FOGRA39L_coated.icc}
+%  }
+\documentclass[12pt]{book}
+
+%%%LIST
+%Reading homeworks for chapter 1
+
+%%%%%Some commands to make online notes...
+%\newcommand{\Lecture}{Module}
+%\newcommand{\moduletitle}[1]{\newpage\thispagestyle{empty}\section*{#1}}
+%\newcommand{\submoduletitle}[1]{\newpage\thispagestyle{empty}\subsection*{#1}}
+
+%%%%%toggle between the above for online and below for book
+
+\usepackage{tcolorbox}
+%\tcbuselibrary{skins}
+%\usepackage{graphicx}
+
+\title{Linear Algebra}
+\author{David Cherney, Tom Denton, Rohit Thomas and Andrew Waldron}
+\date{}
+
+\begin{document}
+
+\thispagestyle{empty}
+%\pagecolor{cyan} % messes up A-4F
+%\pagecolor[RGB]{0,163,218} % an approximate cyan
+
+\vspace*{\fill}
+
+\begin{center}\sffamily
+
+\scalebox{2.2}{\Huge Linear Algebra}\vspace{.5in}
+
+%\includegraphics[alt={Four bicyclists},scale=.54]{example-image}\bigskip
+
+{\Large David Cherney, Tom Denton,\\\medskip
+Rohit Thomas and Andrew Waldron}
+
+\end{center}
+
+\vspace{\fill}
+\end{document}

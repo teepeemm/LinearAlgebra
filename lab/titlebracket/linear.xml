@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/Users/timothyprescott/Documents/programming/git/LinearAlgebra/lab/titlebracket"?>
+<?latexml class="book" options="12pt"?>
+<?latexml package="tcolorbox"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-book.css" type="text/css"/>
+  <title>Linear Algebra</title>
+  <creator role="author">
+    <personname>David Cherney, Tom Denton, Rohit Thomas and Andrew Waldron</personname>
+  </creator>
+  <para xml:id="p1">
+    <p>[</p>
+  </para>
+  <logical-block>
+    <para xml:id="p2">
+      <inline-block align="center" depth="12.7pt" height="45.5pt" width="395.5pt" xscale="2.2" xtranslate="107.9pt" yscale="2.2" ytranslate="-15.9pt">
+        <p><text font="sansserif" fontsize="298%">Linear Algebra</text></p>
+      </inline-block>
+      <p align="center"><text font="sansserif" fontsize="144%">David Cherney, Tom Denton,<break/>Rohit Thomas and Andrew Waldron<text fontsize="69%"></text></text></p>
+    </para>
+  </logical-block>
+</document>
