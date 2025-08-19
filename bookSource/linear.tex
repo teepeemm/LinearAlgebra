@@ -199,21 +199,43 @@
 
 %%%This links to reading homeworks:
 \newcommand{\reading}[2]{\begin{center}
-\href{\webworkurl ReadingHomework#1/#2/}{
-\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #1.#2}\hspace{8mm}\end{center}}
-
+\href{\webworkurl ReadingHomework#1/#2/}{%
+\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+\hspace{2mm}\sffamily
+\hypertarget{#1#2}{Reading homework:}%
+problem #1.#2%
+}\hspace{8mm}%
+\end{center}}
 %\newcommand{\Reading}[2]{\begin{center}
 %\href{\webworkurl ReadingHomework#1/#2/}{
 %\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}%\end{center}}
 
+\iflatexml
+\makeatletter
+\newcommand{\Reading}{\begin{center}
+\@ifstar\Reading@yes@star\Reading@no@star
+\hspace{8mm}\end{center}}
+\newcommand{\Reading@yes@star}[2]{%
+\href{\webworkurl #1/#2/}{%
+\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+\hspace{2mm}\sffamily Reading homework: problem #2%
+}}
+\newcommand{\Reading@no@star}[2]{%
+\href{\webworkurl #1/#2/}{%
+\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+\hspace{2mm}\sffamily\hypertarget{#1#2}{Reading homework:} problem #2%
+}}
+\makeatother
+\else
 \NewDocumentCommand{\Reading}{smm}{\begin{center}
 \href{\webworkurl #2/#3/}{%
 \raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
 \hspace{2mm}\sffamily
 \IfBooleanTF{#1}{Reading homework:}{\hypertarget{#2#3}{Reading homework:}}%
 problem #3%
-}\hspace{8mm}
+}\hspace{8mm}%
 \end{center}}
+\fi
 %\newcommand{\Reading}[2]{\begin{center}
 %\href{\webworkurl #1/#2/}{
 %\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}\end{center}}
