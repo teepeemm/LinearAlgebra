@@ -13,7 +13,8 @@
 .*.lb
 
 ## created by LaTeXML
-web/
+booksource/web/
+booksource/linear.xml
 
 ## created by unicode-math / lualatex / tagpdf
 *-luamml-mathml.html
