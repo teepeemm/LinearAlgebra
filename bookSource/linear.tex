@@ -1,12 +1,14 @@
 % !TEX program = LuaLaTeX
 % doesn't have enough memory. use a command line with
 % max_strings=1000000 latexmk -lualatex -interaction=batchmode -synctex=1 -g linear
-%\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
-%  tagging-setup={math/setup=mathml-SE,math/alt/use},
-%%  colorprofiles={A=FOGRA39L_coated.icc}
-%  }
+% latexml --nocomments --destination=linear.xml --preload=LaTeX.pool linear
+% latexmlpost --destination=web/index.html --split linear.xml
+\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
+  tagging-setup={math/setup=mathml-SE,math/alt/use},
+%  colorprofiles={A=FOGRA39L_coated.icc}
+  }
 % for LaTeXML
-\AtBeginDocument{\tikzset{alt/.code={}}}
+%\AtBeginDocument{\tikzset{alt/.code={}}}
 \providecommand{\tagpdfsetup}[1]{}
 \providecommand{\tagstructbegin}[1]{}
 \providecommand{\tagstructend}{}
@@ -15,6 +17,9 @@
 \providecommand{\NewSocket}[2]{}
 \providecommand{\NewSocketPlug}[3]{}
 \providecommand{\AssignSocketPlug}[2]{}
+\providecommand{\SuspendTagging}{}
+\providecommand{\ResumeTagging}{}
+\providecommand{\UseTaggingSocket}[1]{}
 \ExplSyntaxOn
 \providecommand{\tag_mc_end_push:}{}
 \providecommand{\tag_mc_begin:n}[1]{}
@@ -214,9 +219,17 @@
 %\href{\webworkurl ReadingHomework#1/#2/}{
 %\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}%\end{center}}
 
-\newcommand{\Reading}[2]{\begin{center}
-\href{\webworkurl #1/#2/}{
-\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}\end{center}}
+\NewDocumentCommand{\Reading}{smm}{\begin{center}
+\href{\webworkurl #2/#3/}{%
+\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+\hspace{2mm}\sffamily
+\IfBooleanTF{#1}{Reading homework:}{\hypertarget{#2#3}{Reading homework:}}%
+problem #3%
+}\hspace{8mm}
+\end{center}}
+%\newcommand{\Reading}[2]{\begin{center}
+%\href{\webworkurl #1/#2/}{
+%\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}\end{center}}
 
 \newcommand{\hwrref}[2]{\href{\webworkurl #1/#2}{#2}\hyperlink{#1#2}{\raisebox{-1.5mm}{\includegraphics[alt={eyeglasses},scale=.05]{glasses.jpg}}}}
 \newcommand{\hwref}[2]{\href{\webworkurl #1/#2}{#2}}
