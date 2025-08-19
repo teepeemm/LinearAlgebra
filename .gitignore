@@ -12,8 +12,11 @@
 *.cb2
 .*.lb
 
+## created by LaTeXML
+web/
+
 ## created by unicode-math / lualatex / tagpdf
-**/*-luamml-mathml.html
+*-luamml-mathml.html
 
 ## Intermediate documents:
 *.dvi
