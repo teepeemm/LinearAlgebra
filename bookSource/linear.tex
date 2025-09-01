@@ -60,13 +60,6 @@
 %\titleformat{\section}{\bfseries\sffamily\Large}{\thesection}{1em}{#1}
 %\titleformat{\subsection}{\bfseries\sffamily\large}{\thesubsection}{1em}{#1}
 
-\usepackage{titlesec}
-%\titleformat*{\chapter}{\bfseries\sffamily\Huge}
-\titleformat{\chapter}[display]
- {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-\titleformat*{\section}{\bfseries\sffamily\Large}
-\titleformat*{\subsection}{\bfseries\sffamily\large}
-
 \usepackage{fancyhdr}
 %\fancyhf{\sffamily\bfseries}
 %\fancyhead[RE]{\sffamily\bfseries}
@@ -89,16 +82,39 @@
 %\usepackage{shadow}
 %\AddToHook{env/shabox/before}{\par\tagstructbegin{tag=Div}}
 %\AddToHook{env/shabox/after}{\par\tagstructend}
+\usepackage{linalgjh}
 \usepackage{latexml}
 
 \iflatexml
-\newcommand*{\shabox}[1]{\parbox{\textwidth}{\lxAddClass{shabox}#1}}
+ \newcommand*{\shabox}[1]{\parbox{\textwidth}{\lxAddClass{shabox}#1}}
 \else
-\usepackage{tcolorbox}
-\tcbuselibrary{skins}
-\AddToHook{env/tcolorbox/begin}{\tagpdfparaOff\tcbset{before upper=\tagpdfparaOn}}
-%\AddToHook{env/tcolorbox/after}{}
-\newcommand*{\shabox}[1]{\par\tagstructbegin{tag=Div}\begin{tcolorbox}[
+ \usepackage{titlesec}
+ %\titleformat*{\chapter}{\bfseries\sffamily\Huge}
+ \titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+ \titleformat*{\section}{\bfseries\sffamily\Large}
+ \titleformat*{\subsection}{\bfseries\sffamily\large}
+ % from https://github.com/latex3/tagging-project/issues/24
+ \usepackage{etoolbox}
+ \makeatletter
+  \patchcmd\ttl@straight@ii
+    {\@svsechd\unskip}
+    {\@svsechd\unskip\tagtool {sec-split-para}}
+    {}{\fail}
+  \patchcmd\ttl@straight@ii
+    {\@afterheading}
+    {\UseTaggingSocket{para/restore}\@afterheading}
+    {}{\fail}
+  \patchcmd\ttl@straight@i
+    {\par}
+    {\par\tagtool{sec-start=#1}\tagtool{para/flattened}}
+    {}{\fail} 
+ \makeatother 
+ \usepackage{tcolorbox}
+ \tcbuselibrary{skins}
+ \AddToHook{env/tcolorbox/begin}{\tagpdfparaOff\tcbset{before upper=\tagpdfparaOn}}
+ %\AddToHook{env/tcolorbox/after}{}
+ \newcommand*{\shabox}[1]{\par\tagstructbegin{tag=Div}\begin{tcolorbox}[
 	enhanced,
 %	borderline={.1pt}{0pt}{black}, % cannot get it thinner
 	colback=white,
@@ -108,8 +124,8 @@
 	add to width=-20pt,
 	halign=flush center]
 	#1\end{tcolorbox}\par\tagstructend}
-\usepackage{table-header-scope} % work around a PAC bug
-\usepackage{unicode-math}
+ \usepackage{table-header-scope} % work around a PAC bug
+ \usepackage{unicode-math}
 \fi
 
 \usepackage[english]{babel}
@@ -117,7 +133,6 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \DeclareGraphicsRule{*}{mps}{*}{}
-\usepackage{linalgjh}
 \usepackage{multirow}
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 %\usepackage[toc]{glossaries}
@@ -211,30 +226,33 @@ problem #1.#2%
 %\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}\hspace{2mm}\sffamily \hypertarget{#1#2}{Reading homework:} problem #2}\hspace{8mm}%\end{center}}
 
 \iflatexml
-\makeatletter
-\newcommand{\Reading}{\begin{center}
-\@ifstar\Reading@yes@star\Reading@no@star
-\hspace{8mm}\end{center}}
-\newcommand{\Reading@yes@star}[2]{%
-\href{\webworkurl #1/#2/}{%
-\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
-\hspace{2mm}\sffamily Reading homework: problem #2%
-}}
-\newcommand{\Reading@no@star}[2]{%
-\href{\webworkurl #1/#2/}{%
-\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
-\hspace{2mm}\sffamily\hypertarget{#1#2}{Reading homework:} problem #2%
-}}
-\makeatother
+ \makeatletter
+  \newcommand{\Reading}{\@ifstar\Reading@yes@star\Reading@no@star}
+  \newcommand{\Reading@yes@star}[2]{\begin{center}%
+   \href{\webworkurl #1/#2/}{%
+    \raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+    \hspace{2mm}\sffamily Reading homework: problem #2%
+   }%
+   \hspace{8mm}\end{center}
+  }
+  \newcommand{\Reading@no@star}[2]{\begin{center}%
+   \href{\webworkurl #1/#2/}{%
+    \raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+    \hspace{2mm}\sffamily\hypertarget{#1#2}{Reading homework:} problem #2%
+   }%
+   \hspace{8mm}\end{center}
+  }
+ \makeatother
 \else
-\NewDocumentCommand{\Reading}{smm}{\begin{center}
-\href{\webworkurl #2/#3/}{%
-\raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
-\hspace{2mm}\sffamily
-\IfBooleanTF{#1}{Reading homework:}{\hypertarget{#2#3}{Reading homework:}}%
-problem #3%
-}\hspace{8mm}%
-\end{center}}
+ \NewDocumentCommand{\Reading}{smm}{\begin{center}
+  \href{\webworkurl #2/#3/}{%
+   \raisebox{-3mm}{\includegraphics[alt={eyeglasses},scale=.1]{glasses.jpg}}%
+   \hspace{2mm}\sffamily
+   \IfBooleanTF{#1}{Reading homework:}{\hypertarget{#2#3}{Reading homework:}}%
+   problem #3%
+  }\hspace{8mm}%
+  \end{center}%
+ }
 \fi
 %\newcommand{\Reading}[2]{\begin{center}
 %\href{\webworkurl #1/#2/}{
@@ -245,8 +263,8 @@ problem #3%
 
 
 %A simple URL macro
-\newcommand{\URL}[1]{\vspace{-3mm}\begin{center}\href{#1}{\tt\scriptsize #1}\end{center}\vspace{-1mm}}
-\newcommand{\URLS}[2]{\vspace{-3mm}\begin{center}\href{#1}{\tt\scriptsize #2}\end{center}\vspace{-1mm}}
+%\newcommand{\URL}[1]{\vspace{-3mm}\begin{center}\href{#1}{\tt\scriptsize #1}\end{center}\vspace{-1mm}}
+%\newcommand{\URLS}[2]{\vspace{-3mm}\begin{center}\href{#1}{\tt\scriptsize #2}\end{center}\vspace{-1mm}}
 
 %use this to center ugly matrix entries
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
