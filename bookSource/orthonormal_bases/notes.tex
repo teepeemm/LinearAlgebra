@@ -2,7 +2,7 @@
 
 You may have noticed that we have only rarely used the dot product. That is because many of the
 results we have obtained do not require a preferred notion of lengths of vectors. Once a dot or inner product
-is available, lengths of and angles between vectors can be measured--very powerful machinery and results are available
+is available, lengths of and angles between vectors can be measured---very powerful machinery and results are available
 in this case.
 
 \section{Properties of the Standard Basis}
@@ -351,7 +351,7 @@ This is called an {\bfseries orthogonal decomposition}\index{Orthogonal decompos
 
 If $u$, $v$ are linearly independent vectors in $\mathbb{R}^3$, then the set $\{u, v^\perp, u\times v^\perp \}$ would be an orthogonal basis for $\mathbb{R}^3$.  This set could then be normalized by dividing each vector by its length to obtain an orthonormal basis.
 
-However, it often occurs that we are interested in vector spaces with dimension greater than $3$, and must resort to craftier means than cross products to obtain an orthogonal basis\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of~$T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\mathbb{R}^3$.  This only gets us the ``\emph{last}'' orthogonal vector, though; the Gram--Schmidt process described in this section gives a way to get a full orthogonal basis.}.
+However, it often occurs that we are interested in vector spaces with dimension greater than $3$, and must resort to craftier means than cross products to obtain an orthogonal basis\footnote{Actually, given a set $T$ of $(n-1)$ independent vectors in $n$-space, one can define an analogue of the cross product that will produce a vector orthogonal to the span of~$T$, using a method exactly analogous to the usual computation for calculating the cross product of two vectors in $\mathbb{R}^3$.  This only gets us the ``\emph{last}'' orthogonal vector, though; the Gram-Schmidt process described in this section gives a way to get a full orthogonal basis.}.
 %yeah, and who is going to teach them about the Hodge star in office hours? I say nix this footnote -cherney
 
 Given a third vector $w$, we should first check that $w$ does not lie in the 
@@ -392,7 +392,7 @@ That is, an orthogonal basis for the latter vector space.
 
 Note that the set of vectors you start out with needs to be ordered to uniquely specify the algorithm; changing the order of the vectors will give a different orthogonal basis. You might need to be the one to put an order on the initial set of vectors.
 
-This algorithm is called the {\bfseries Gram--Schmidt orthogonalization procedure}\index{Gram--Schmidt orthogonalization procedure}\label{GramSchmidt}--Gram worked at a Danish insurance company over one hundred years ago, Schmidt was a student of Hilbert (the famous German mathmatician).
+This algorithm is called the {\bfseries Gram-Schmidt orthogonalization procedure}\index{Gram-Schmidt orthogonalization procedure}\label{GramSchmidt}---Gram worked at a Danish insurance company over one hundred years ago, Schmidt was a student of Hilbert (the famous German mathematician).
 
 \begin{example}
 We'll  obtain an orthogonal basis for $\mathbb{R}^3$ by appling Gram-Schmidt to the linearly independent set 
@@ -417,13 +417,13 @@ is an orthogonal basis for $\mathbb{R}^3$.  To obtain an ortho{\itshape normal} 
 \]
 \end{example}
 
-\Videoscriptlink{gram_schimdt_and_orthogonal_complements_4by4_example.mp4}{A $4\times4$ Gram--Schmidt Example} {scripts_gram_schmidt_and_orthogonal_complements_4by4_example}
+\Videoscriptlink{gram_schimdt_and_orthogonal_complements_4by4_example.mp4}{A $4\times4$ Gram-Schmidt Example} {scripts_gram_schmidt_and_orthogonal_complements_4by4_example}
 
 \section{$QR$ Decomposition}
 In Chapter~\ref{Matrices}, Section~\ref{LUdecomp} teaches you how to solve linear systems by decomposing a matrix $M$ into 
 a product of lower and upper triangular matrices
 \[M=LU\, .\]
-The Gram--Schmidt procedure suggests another matrix decomposition,
+The Gram-Schmidt procedure suggests another matrix decomposition,
 \[M=QR\, ,\] 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix. So-called QR-decompositions\index{QR decomposition}
 are useful for solving linear systems, eigenvalue problems and least squares approximations. You can
@@ -431,9 +431,9 @@ easily get the idea behind the $QR$ decomposition by working through a simple ex
 
 \begin{example}
 \hypertarget{methodQR}{Find} the $QR$ decomposition of \[M=\begin{pmatrix}2&-1&1\\1&3&-2\\0&1&-2\end{pmatrix}\, .\]
-What we will do is to think of the columns of $M$ as three 3-vectors and use Gram--Schmidt to
+What we will do is to think of the columns of $M$ as three 3-vectors and use Gram-Schmidt to
 build an orthonormal basis from these that will become the columns of the orthogonal matrix $Q$.
-We will use the matrix $R$ to record the steps of the Gram--Schmidt procedure in such a way
+We will use the matrix $R$ to record the steps of the Gram-Schmidt procedure in such a way
 that the product $QR$ equals $M$. 
 
 To begin with we write
@@ -441,7 +441,7 @@ To begin with we write
 M=\begin{pmatrix}2&-\frac75&1\\[1mm]1&\frac{14}5&-2\\[1mm]0&1&-2\end{pmatrix}
 \begin{pmatrix}1&\frac15&0\\[1mm]0&1&0\\[1mm]0&0&1\end{pmatrix}\, .
 \]
-In the first matrix the first two columns are  orthogonal because we simply replaced the second column of $M$ by the vector that the Gram--Schmidt
+In the first matrix the first two columns are  orthogonal because we simply replaced the second column of $M$ by the vector that the Gram-Schmidt
 procedure produces from the first two columns of~$M$, namely
 \[
 \colvec{-\frac75\\[1mm]\frac{14}5\\[1mm]1}=\colvec{-1\\[1mm]3\\[1mm]1}-\frac15
@@ -451,7 +451,7 @@ procedure produces from the first two columns of~$M$, namely
 matrix, save the $+\frac15$ in the second entry of the first row, whose effect upon multiplying the
 two matrices precisely undoes what we we did to the second column of the first matrix. 
 
-For the third column of $M$ we use Gram--Schmidt to deduce the third orthogonal vector
+For the third column of $M$ we use Gram-Schmidt to deduce the third orthogonal vector
 \[
 \colvec{-\frac16\\[1mm]\frac13\\[1mm]-\frac76}=
 \colvec{1\\[1mm]-2\\[1mm]-2}
@@ -687,7 +687,7 @@ Reading Problems &
  \hwrref{OrthonormalBases}{2}, 
  \hwrref{OrthonormalBases}{3}, 
  \hwrref{OrthonormalBases}{4}\\
-Gram--Schmidt &  \hwref{OrthonormalBases}{5}\\
+Gram-Schmidt &  \hwref{OrthonormalBases}{5}\\
 Orthogonal eigenbasis &  \hwref{OrthonormalBases}{6}, \hwref{OrthonormalBases}{7}\\
  Orthogonal complement&\hwref{OrthonormalBases}{8}\\
    \hline

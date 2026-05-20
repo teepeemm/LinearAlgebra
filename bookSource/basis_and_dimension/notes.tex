@@ -50,12 +50,12 @@ If we have more than one $i$ for which $c^i\neq d^i$, we can use this last equat
 \Videoscriptlink{basis_and_dimension_thm.mp4}{Proof Explanation}{basis_and_dimension_thm}
 
 \begin{remark}
-This theorem is the one that makes bases so useful--they allow us to convert abstract vectors into column vectors.
+This theorem is the one that makes bases so useful---they allow us to convert abstract vectors into column vectors.
 By ordering the set $S$ we obtain $B=(v_1,\ldots,v_n)$ and can write
 \[
 w=(v_1,\ldots,v_n) \ccolvec{c^1\\ \vdots\\ c^n }=\ccolvec{c^1\\ \vdots\\ c^n }_B\, .
 \]
-Remember that in general it makes no sense to drop the subscript $B$ on the column vector on the right--most vector spaces  are not made from  columns of numbers!
+Remember that in general it makes no sense to drop the subscript $B$ on the column vector on the right---most vector spaces  are not made from  columns of numbers!
 \end{remark}
 
 \Videoscriptlink{eigenvectors_and_eigenvalues_matrix.mp4}{Worked Example}{scripts_eigenvalseigenvects_matrix}
@@ -115,7 +115,7 @@ In review question~\ref{stdbasis}, chapter~\ref{linearind} you checked that
 \colvec{0\\1\\ \vdots \\ 0}, \ldots, \colvec{0\\0\\ \vdots \\ 1}\right\},
 \]
 and that this set of vectors is linearly independent. (If you didn't do that problem, check this before reading any further!)  So this set of vectors is a basis for~$\mathbb{R}^n$, and $\dimension \mathbb{R}^n=n$.  This basis is often called the \emph{standard} or \emph{canonical basis}\index{Standard basis}\index{Canonical basis|seealso{Standard basis}} for $\mathbb{R}^n$.  The vector with a one in the $i$th position and zeros everywhere else is written 
-$e_i$. (You could also view it as the function $\{1,2,\ldots,n\}\to {\mathbb R}$ where $e_i(j)=1$ if $i=j$ and $0$ if $i\neq j$.)  It points in the direction of the $i$th coordinate axis, and has unit length.  In multivariable calculus classes, this basis is often written $\{ \hat i,\hat j,\hat k \}$ for $\mathbb{R}^3$. 
+$e_i$. (You could also view it as the function $\{1,2,\ldots,n\}\to {\mathbb R}$ where $e_i(j)=1$ if $i=j$ and $0$ if $i\neq j$.)  It points in the direction of the $i$th coordinate axis, and has unit length.  In multivariable calculus classes, this basis is often written $\{ \hat\imath,\hat\jmath,\hat k \}$ for $\mathbb{R}^3$. 
 
 %\begin{figure}
 %\begin{center}
@@ -137,7 +137,7 @@ are bases for $\mathbb{R}^2$.  Rescaling any vector in one of these sets is alre
 \end{remark}
 
 
-To see whether a set of vectors $S=\{v_1, \ldots, v_m \}$ is a basis for~$\mathbb{R}^n$, we have to check that the elements  are linearly independent and that they span~$\mathbb{R}^n$.  From the previous discussion, we also know that $m$ must equal $n$, so lets assume~$S$ has $n$ vectors.
+To see whether a set of vectors $S=\{v_1, \ldots, v_m \}$ is a basis for~$\mathbb{R}^n$, we have to check that the elements  are linearly independent and that they span~$\mathbb{R}^n$.  From the previous discussion, we also know that $m$ must equal $n$, so let's assume~$S$ has $n$ vectors.
 If $S$ is linearly independent, then there is no non-trivial solution of the equation
 \[
 0 = x^1v_1+\cdots + x^nv_n.
@@ -196,7 +196,7 @@ Not only do bases allow us to describe arbitrary vectors as column vectors, they
  reviewed again here.
  
 Suppose we have a linear transformation $L \colon V\rightarrow W$ and 
-ordered input and output bases $E=(e_1, \ldots, e_n)$ and $F=(f_1, \ldots, f_m)$ for $V$ and $W$ respectively (of course, these need not be the standard basis--in all likelihood $V$ is {\itshape not} ${\mathbb R}^n$). 
+ordered input and output bases $E=(e_1, \ldots, e_n)$ and $F=(f_1, \ldots, f_m)$ for $V$ and $W$ respectively (of course, these need not be the standard basis---in all likelihood $V$ is {\itshape not} ${\mathbb R}^n$). 
 Since for each $e_j$, $L(e_j)$ is a vector in $W$, there exist unique  numbers~$m^i_j$ such that
 \[
 L(e_j)=f_1m^1_j + \cdots + f_mm^m_j =(f_1,\ldots, f_m) \ccolvec{m^1_j\\\vdots\\m^m_j}\, .

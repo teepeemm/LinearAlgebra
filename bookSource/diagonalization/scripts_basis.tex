@@ -21,7 +21,7 @@ Since this was a linear systems problem, we can try to represent what's in the b
 where $(x,y)=(\mbox{apples},\mbox{oranges})$:
 \vspace{2mm}
 \begin{center}
-\begin{tikzpicture}[domain=0:4]
+\begin{tikzpicture}[alt={A graph with horizontal axis apples and vertical axis oranges.},domain=0:4]
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {$\mbox{Apples}$};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$\mbox{Oranges}$};
     \draw[->] (0,0) -- (2,3) node[anchor=south east] {$(x,y)$};
@@ -71,7 +71,7 @@ f=x+y\, .
 \end{array}
 \right.
 \]
-Essentially, this is already our change of basis formula, but lets play around and put it in our notations.
+Essentially, this is already our change of basis formula, but let's play around and put it in our notations.
 First we can write this as a matrix
 \[
 \begin{pmatrix}s\\f\end{pmatrix}=
@@ -126,7 +126,7 @@ Q=P^{-1}\, ,
 \]
 (which is in fact how we constructed $P$ in the first place).
 
-Finally, lets consider the very first linear systems problem, where you were given that there were 27 pieces of fruit in total and twice as many oranges as apples. In equations this says just
+Finally, let's consider the very first linear systems problem, where you were given that there were 27 pieces of fruit in total and twice as many oranges as apples. In equations this says just
 \[
 x+y=27\quad \mbox{and} \quad 2x-y=0\, .
 \]
@@ -144,16 +144,16 @@ Note that
 \[
 \vec x = \begin{pmatrix}\vec e_1 & \vec e_2\end{pmatrix}\, X\, .
 \]
-Also lets call \[ \vec v:= \begin{pmatrix}\vec e_1 & \vec e_2\end{pmatrix}\, V\, .\]
+Also let's call \[ \vec v:= \begin{pmatrix}\vec e_1 & \vec e_2\end{pmatrix}\, V\, .\]
 Now the matrix $M$ is the matrix of some linear transformation $L$ in the basis of the engineers.
-Lets convert it to the basis of the nutritionists:
+Let's convert it to the basis of the nutritionists:
 \[
 L\vec x = L \begin{pmatrix}\vec f_1 & \vec f_2\end{pmatrix}
 \begin{pmatrix} s \\  f\end{pmatrix}
 = L \begin{pmatrix}\vec e_1 & \vec e_2\end{pmatrix} P \begin{pmatrix} s \\  f\end{pmatrix}
 = \begin{pmatrix} \vec e_1 \\ \vec e_2\end{pmatrix} M P \begin{pmatrix} s \\  f\end{pmatrix}\, .
 \]
-Note here that the linear transformation on acts on {\itshape vectors} -- these are the objects we have written with a $\vec{}$ sign on top of them. It does not act on columns of numbers!
+Note here that the linear transformation on acts on {\itshape vectors} --- these are the objects we have written with a $\vec{}$ sign on top of them. It does not act on columns of numbers!
 
 We can easily compute $MP$ and find
 \[
@@ -164,7 +164,7 @@ MP=\begin{pmatrix} 1 & 1 \\ 2 & -1 \end{pmatrix}\begin{pmatrix}-\frac1\lambda & 
 \] 
 Note that $P^{-1}MP$ is the matrix of $L$ in the nutritionists basis, but we don't need this quantity right now.
 
-Thus the last task is to solve the system, lets solve for sugar and fruit. 
+Thus the last task is to solve the system, let's solve for sugar and fruit. 
 We need to solve
 \[
 MP\begin{pmatrix} s \\  f\end{pmatrix}

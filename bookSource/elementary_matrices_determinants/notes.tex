@@ -7,7 +7,7 @@ the goal of this chapter.
 \section{The Determinant Formula}
 
 The determinant boils down a square matrix to a a single number. That number determines whether the square matrix is invertible or not.  
-Lets see how this works for small matrices first.
+Let's see how this works for small matrices first.
 
 \subsection{Simple Examples}
 
@@ -64,7 +64,7 @@ Notice that in the subscripts, each ordering of the numbers $1$, $2$, and $3$ oc
 
 \subsection{Permutations}
 Consider $n$ objects labeled $1$ through $n$ and shuffle them.  Each possible shuffle is called a \emph{permutation}\index{Permutation}.  
-For example, here is an example of a permutation of $1$--$5$:
+For example, here is an example of a permutation of $1--5$:
 \[
 \sigma = \begin{bmatrix}
 1 & 2 & 3 & 4 & 5 \\
@@ -174,7 +174,7 @@ Since the identity matrix is diagonal with all diagonal entries equal to one, we
 We would like to use the determinant to decide whether a matrix is invertible.  Previously, we computed the inverse of a matrix by applying row operations.  Therefore we ask what happens to the determinant when row operations are applied to a matrix.
 
 \begin{remark}[Swapping rows]
-Lets \hypertarget{rowswap}{swap}
+Let's \hypertarget{rowswap}{swap}
  rows $i$ and $j$ of  a matrix $M$ and then compute its determinant.  For the permutation $\sigma$, let $\hat{\sigma}$ be the permutation obtained by swapping positions $i$ and $j$.  Clearly \[\sgn (\hat{\sigma})=-\sgn (\sigma)\, .\]  Let  $M'$ be the matrix $M$ with rows $i$ and $j$ swapped.  Then  (assuming $i<j$):
 \begin{align}
 \det M' & = \sum_{\sigma} \sgn (\sigma)\, m^1_{\sigma(1)}\cdots m^j_{\sigma(i)}\cdots m^i_{\sigma(j)} \cdots m^n_{\sigma(n)} \nonumber \\

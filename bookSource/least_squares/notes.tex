@@ -17,7 +17,7 @@ However, for many applications we do not need an exact solution of the system; i
 ``My work always tried to unite the Truth with the Beautiful, but when I had to choose one or the other, I usually chose the Beautiful.'' 
 
 \vspace{-2mm}
-\hspace{7cm}-- Hermann Weyl.
+\hspace{7cm}--- Hermann Weyl.
 \end{quote}
 
 If the vector space $W$ has a notion of lengths of vectors, we can try to find $x$ that minimizes $||L(x)-v||$.
@@ -286,7 +286,7 @@ L L^* L u_i = \lambda_i L u_i\, .
 The vectors $(Lu_1,\ldots, Lu_n)$ are linearly independent, because $\ker L=\{0\}$ (this is where we use our simplifying assumption, but you can 
 try and extend our analysis to the case where it no longer holds). 
 
-Lets compute the angles between and lengths of these vectors. 
+Let's compute the angles between and lengths of these vectors. 
 For that we express the vectors $u_i$ in the bases used to compute the matrix $M$ of $L$. Denoting these column vectors by $U_i$ we then compute
 \[
 (MU_i)\cdot (MU_j)=U_i^T M^T M U_j = \lambda_j \, U_i^T U_j=\lambda_j \, U_i\cdot U_j = \lambda_j \delta_{ij}\, .
@@ -305,7 +305,7 @@ However,  it is a subset of the eigenvectors of $LL^*$ so there is an orthonorma
 \[
 O'=\left(\frac{Lu_1}{\sqrt{\lambda_1}},\ldots,\frac{Lu_n}{\sqrt{\lambda_n}},v_{n+1},\ldots,v_{m}\right)=:(v_1,\ldots,v_m)\, .
 \]
-Now lets compute the matrix of $L$ with respect to the orthonormal basis $O=(u_1,\ldots,u_n)$ for $V$ and the orthonormal basis~$O'=(v_1,\ldots,v_m)$ for~$W$. As usual, our starting point is the computation of $L$ acting on the input basis vectors;
+Now let's compute the matrix of $L$ with respect to the orthonormal basis $O=(u_1,\ldots,u_n)$ for $V$ and the orthonormal basis~$O'=(v_1,\ldots,v_m)$ for~$W$. As usual, our starting point is the computation of $L$ acting on the input basis vectors;
 \begin{align*}
 LO=\big(Lu_1,\ldots, Lu_n\big)&=
 \big(\sqrt{\lambda_1}\,  v_1,\ldots,\sqrt{\lambda_n}\,  v_n\big)\\[2mm]

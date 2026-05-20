@@ -33,14 +33,15 @@ Note that for matrices $\overline{AB + C} = \overline{A} \overline{B} + \overlin
 
 \item Let \[x_1=\colvec{a\\ b \\ c}\, ,\] where $a^2+b^2+c^2=1$.  Find vectors $x_2$ and $x_3$ such that $\{x_1,x_2,x_3\}$ is an orthonormal basis for $\mathbb{R}^3$. What can you say about the matrix $P$ whose columns are the vectors $x_1$, $x_2$ and $x_3$ that you found?
 
-\item~\label{atleastone} Let $V\ni v\neq0$ be a vector space, $\dimension V=n$ and $L:V\stackrel{\textrm{linear}}{-\!\!-\!\!\!\longrightarrow}V$.
+% shouldn't this be in the eigen chapter ?
+\item\label{atleastone} Let $V\ni v\neq0$ be a vector space, $\dimension V=n$ and $L:V\stackrel{\textrm{linear}}{-\!\!-\!\!\!\longrightarrow}V$.
 \begin{enumerate}
 \item Explain why the list of vectors $(v,Lv,L^2v,\ldots,L^n v)$ is linearly dependent.
 \item Explain why there exist scalars $\alpha_i$ not all zero such that
 \[
 \alpha_0 v + \alpha_1 L v+\alpha_2 L^2 v+\cdots + \alpha_n L^n v=0\, .
 \]
-\item Let $m$ be the largest integer such that $\alpha_m\neq0$ and \[p(z)=\alpha_0+ \alpha_1 z + \alpha_2 z^2+\cdots + \alpha_m z^n \, .\]
+\item Let $m$ be the smallest integer such that $\alpha_m\neq0$ and \[p(z)=\alpha_0+ \alpha_1 z + \alpha_2 z^2+\cdots + \alpha_m z^m \, .\]
 Explain why the polynomial $p(z)$ can be written as
 \[
 p(z)=\alpha_m (z-\lambda_1)(z-\lambda_2)\ldots(z-\lambda_{m})\, .

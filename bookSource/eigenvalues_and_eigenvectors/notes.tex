@@ -64,7 +64,7 @@ as well as a new linear function
 \[
 L:=\frac{d^2}{dx^2}: U\longrightarrow U\, .
 \]
-The number $\omega$ is called an angular frequency in many contexts, lets call its square $\lambda:=-\omega^2$ to match notations we will use later (notice that for this particular problem $\lambda$ must then  be negative).
+The number $\omega$ is called an angular frequency in many contexts, let's call its square $\lambda:=-\omega^2$ to match notations we will use later (notice that for this particular problem $\lambda$ must then  be negative).
 Then, because we want $W(y)=0$, which implies $d^2 f/dx^2=\omega^2 f$, it follows that the vector $v(x)\in U$ determining the vibrating string's shape obeys
 \[
 L(v)=\lambda v\, .
@@ -90,7 +90,7 @@ We began this chapter by stating ``In a vector space, with no other structure, n
 %You might ask ``more important in what sense?" 
 %In the sense that the function $L$ can be built out of the various values of $k$ and the vectors in $V_k$ and the biggest part of that construction is the part with the biggest values of $k$. In particular for some vectors $v_k\in V_k$
 %\[L=\sum_{k} k \, v_k \,v_k^t.\]
-%We are aware that we have made the startling suggestion that a derivative operator is a linear combination of products of vectors, and we hope that you are intrigued. Lets now return to the simpler case of linear functions which are matrices to develop this idea.
+%We are aware that we have made the startling suggestion that a derivative operator is a linear combination of products of vectors, and we hope that you are intrigued. Let's now return to the simpler case of linear functions which are matrices to develop this idea.
 
 
 
@@ -160,7 +160,7 @@ shows these superimposed on one another. Now look at the second picture on that 
 chosen such that if the inputs into $L$ are in the parallelogram spanned by $f_1$ and $f_2$, the outputs also form a parallelogram with
 edges lying along the same two directions. Clearly this is a very special situation that should correspond to  interesting properties of $L$.
 
-Now lets try an explicit example to see if we can achieve the last picture:
+Now let's try an explicit example to see if we can achieve the last picture:
 
 \begin{example}
 Consider the linear transformation $L$ such that \[L\colvec{1\\0}=\colvec{-4\\-10}\,  \mbox{ and }\, L\colvec{0\\1}=\colvec{3\\7}\, ,\] so that the matrix of $L$ in the standard basis is \[\begin{pmatrix}
@@ -191,14 +191,14 @@ $
 \begin{center}
 \includegraphics[alt={L(v)=λv where v≠0 is the eigenvector and λ is the eigenvalue.},scale=.4]{\eigenPath/eigeneqn.jpg}
 \end{center}
-\caption{The eigenvalue--eigenvector equation is probably the most important one in linear algebra.}
+\caption{The eigenvalue-eigenvector equation is probably the most important one in linear algebra.}
 \end{figure}
 We call the direction of the vector $v$ an \emph{invariant direction}\index{Invariant direction}.  In fact, any vector pointing in the same direction also satisfies this  equation because   $L(cv)=cL(v)=\lambda cv$.  
 More generally, any {\itshape non-zero} vector $v$ that solves
 \[
 L(v)=\lambda v
 \]
-is called an \emph{eigenvector}\index{Eigenvector} of $L$, and $\lambda$ (which now need not be zero) is an \emph{eigenvalue}\index{Eigenvalue}.  Since the direction is all we really care about here, then any other vector $cv$ (so long as $c\neq 0$) is an equally good choice of eigenvector. Notice that the relation ``\(u\) and \(v\) point in the same direction'' is an equivalence relation.
+is called an \emph{eigenvector}\index{Eigenvector} of $L$, and $\lambda$ (which now may be zero) is an \emph{eigenvalue}\index{Eigenvalue}.  Since the direction is all we really care about here, then any other vector $cv$ (so long as $c\neq 0$) is an equally good choice of eigenvector. Notice that the relation ``\(u\) and \(v\) point in the same direction'' is an equivalence relation.
 
 In our example of the linear transformation $L$ with matrix \[\begin{pmatrix}
 -4 & 3 \\
@@ -361,7 +361,7 @@ Our process was the following:
 
 
 
-\section{The Eigenvalue--Eigenvector Equation}\label{evalsevectsII}
+\section{The Eigenvalue---Eigenvector Equation}\label{evalsevectsII}
 
 In section~\ref{eigenvalseigenvects}, we developed the idea of eigenvalues and eigenvectors in the case of linear transformations $\mathbb{R}^2\rightarrow \mathbb{R}^2$.  In this section, we will develop the idea more generally.
 
@@ -511,7 +511,7 @@ L(c^1v_1+c^2v_2+\cdots)
 So every linear combination of the $v_i$ is an eigenvector of $L$ with the same eigenvalue $\lambda$.
 In simple terms, any sum of eigenvectors is again an eigenvector {\itshape if they share the same eigenvalue}.
 
-The space of all vectors with eigenvalue $\lambda$ is called an {\bfseries eigenspace}\index{Eigenspace}.  It is, in fact, a vector space contained within the larger vector space $V$.  It contains $0_V$, since $L0_V=0_V=\lambda 0_V$, and is closed under addition and scalar multiplication by the above calculation.  All other vector space properties are inherited from the fact that $V$ itself is a vector space. In other words, the \hyperlink{sst}{subspace theorem} (\ref{subspacetheorem}, chapter~\ref{subspacesspanning}) ensures that $V_\lambda:=\{v\in V|Lv=0\}$ is a subspace of $V$.
+The space of all vectors with eigenvalue $\lambda$ is called an {\bfseries eigenspace}\index{Eigenspace}.  It is, in fact, a vector space contained within the larger vector space $V$.  It contains $0_V$, since $L0_V=0_V=\lambda 0_V$, and is closed under addition and scalar multiplication by the above calculation.  All other vector space properties are inherited from the fact that $V$ itself is a vector space. In other words, the \hyperlink{sst}{subspace theorem} (\ref{subspacetheorem}, chapter~\ref{subspacesspanning}) ensures that $V_\lambda:=\{v\in V|Lv=\lambda v\}$ is a subspace of $V$.
 
 %An eigenspace is an example of a \emph{subspace}\index{Subspace!notion of} of $V$, a notion explored in Chapter~\ref{subspacesspanning}.
 

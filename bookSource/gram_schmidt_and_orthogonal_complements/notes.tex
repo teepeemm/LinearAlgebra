@@ -61,7 +61,7 @@ v_i^\perp%&=&   v_i - \sum_{j<i} \frac{v_j^\perp\cdot v_i}{v_j^\perp\cdot v_j^\p
 Notice that each $v_i^\perp$ here depends on  $v_j^\perp$ for every $j<i$.  This allows us to inductively/algorithmically build up a linearly independent, orthogonal set of vectors 
 $\{v_1^\perp,v_2^\perp, \ldots \}$ 
 such that 
-$\spa \{v_1^\perp,v_2^\perp, \ldots \}=\spa \{v_1, v_2, \ldots \}$. That is, on orthogonal basis for the latter vector space. This algorithm bears the name \emph{Gram--Schmidt orthogonalization procedure}\index{Gram--Schmidt orthogonalization procedure}\label{GramSchmidt}.
+$\spa \{v_1^\perp,v_2^\perp, \ldots \}=\spa \{v_1, v_2, \ldots \}$. That is, on orthogonal basis for the latter vector space. This algorithm bears the name \emph{Gram-Schmidt orthogonalization procedure}\index{Gram-Schmidt orthogonalization procedure}\label{GramSchmidt}.
 
 \begin{example}
 We'll  obtain an orthogonal basis for $\mathbb{R}^3$ by appling Gram-Schmidt to the linearly independent set 
@@ -88,7 +88,7 @@ is an orthogonal basis for $\mathbb{R}^3$.  To obtain an orthonormal basis, as a
 In Lecture~\ref{LUdecomp} we learned how to solve linear systems by decomposing a matrix $M$ into 
 a product of lower and upper triangular matrices
 \[M=LU\, .\]
-The Gram--Schmidt procedure suggests another matrix decomposition,
+The Gram-Schmidt procedure suggests another matrix decomposition,
 \[M=QR\] 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix. So-called QR-decompositions\index{QR decomposition}
 are useful for solving linear systems, eigenvalue problems and least squares approximations. You can
@@ -96,9 +96,9 @@ easily get the idea behind $QR$ decomposition by working through a simple exampl
 
 \begin{example}
 \hypertarget{methodQR}{Find} the $QR$ decomposition of \[M=\begin{pmatrix}2&-1&1\\1&3&-2\\0&1&-2\end{pmatrix}\, .\]
-What we will do is to think of the columns of $M$ as three vectors and use Gram--Schmidt to
+What we will do is to think of the columns of $M$ as three vectors and use Gram-Schmidt to
 build an orthonormal basis from these that will become the columns of the orthogonal matrix $Q$.
-We will use the matrix $R$ to record the steps of the Gram--Schmidt procedure in such a way
+We will use the matrix $R$ to record the steps of the Gram-Schmidt procedure in such a way
 that the product $QR$ equals $M$. 
 
 To begin with we write
@@ -106,7 +106,7 @@ To begin with we write
 M=\begin{pmatrix}2&-\frac75&1\\[1mm]1&\frac{14}5&-2\\[1mm]0&1&-2\end{pmatrix}
 \begin{pmatrix}1&\frac15&0\\[1mm]0&1&0\\[1mm]0&0&1\end{pmatrix}\, .
 \]
-In the first matrix the first two columns are  orthogonal because we simpy replaced the second column of $M$ by the vector that the Gram--Schmidt
+In the first matrix the first two columns are  orthogonal because we simpy replaced the second column of $M$ by the vector that the Gram-Schmidt
 procedure produces from the first two columns of~$M$, namely
 \[
 \colvec{-\frac75\\[1mm]\frac{14}5\\[1mm]1}=\colvec{-1\\[1mm]3\\[1mm]1}-\frac15
@@ -116,7 +116,7 @@ procedure produces from the first two columns of~$M$, namely
 matrix, save the $+\frac15$ in the second entry of the first row, whose effect upon multiplying the
 two matrices precisely undoes what we we did to the second column of the first matrix. 
 
-For the third column of $M$ we use Gram--Schmidt to deduce the third orthogonal vector
+For the third column of $M$ we use Gram-Schmidt to deduce the third orthogonal vector
 \[
 \colvec{-\frac16\\[1mm]\frac13\\[1mm]-\frac76}=
 \colvec{1\\[1mm]-2\\[1mm]-2}
