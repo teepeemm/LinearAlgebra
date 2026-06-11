@@ -3,10 +3,16 @@
 % max_strings=1000000 latexmk -lualatex -interaction=batchmode -synctex=1 -g linear
 % latexml --nocomments --destination=linear.xml --includestyles linear
 % latexmlpost --destination=web/index.html --split linear.xml
-\DocumentMetadata{lang=en,pdfstandard=ua-2,tagging=on,
-  tagging-setup={math/setup=mathml-SE,math/alt/use},
+\DocumentMetadata{
+ lang=en,
+ tagging=on,
+ pdfstandard=ua-2,
+ tagging-setup={
+  math/setup=mathml-SE,
+%  math/alt/use
+ },
 %  colorprofiles={A=FOGRA39L_coated.icc}
-  }
+}
 \documentclass[12pt]{book}
 
 %%%LIST
@@ -88,28 +94,28 @@
 \iflatexml
  \newcommand*{\shabox}[1]{\parbox{\textwidth}{\lxAddClass{shabox}#1}}
 \else
- \usepackage{titlesec}
- %\titleformat*{\chapter}{\bfseries\sffamily\Huge}
- \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
- \titleformat*{\section}{\bfseries\sffamily\Large}
- \titleformat*{\subsection}{\bfseries\sffamily\large}
+% \usepackage{titlesec}
+% %\titleformat*{\chapter}{\bfseries\sffamily\Huge}
+% \titleformat{\chapter}[display]
+%  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% \titleformat*{\section}{\bfseries\sffamily\Large}
+% \titleformat*{\subsection}{\bfseries\sffamily\large}
  % from https://github.com/latex3/tagging-project/issues/24
- \usepackage{etoolbox}
- \makeatletter
-  \patchcmd\ttl@straight@ii
-    {\@svsechd\unskip}
-    {\@svsechd\unskip\tagtool {sec-split-para}}
-    {}{\fail}
-  \patchcmd\ttl@straight@ii
-    {\@afterheading}
-    {\UseTaggingSocket{para/restore}\@afterheading}
-    {}{\fail}
-  \patchcmd\ttl@straight@i
-    {\par}
-    {\par\tagtool{sec-start=#1}\tagtool{para/flattened}}
-    {}{\fail} 
- \makeatother 
+% \usepackage{etoolbox}
+% \makeatletter
+%  \patchcmd\ttl@straight@ii
+%    {\@svsechd\unskip}
+%    {\@svsechd\unskip\tagtool {sec-split-para}}
+%    {}{\fail}
+%  \patchcmd\ttl@straight@ii
+%    {\@afterheading}
+%    {\UseTaggingSocket{para/restore}\@afterheading}
+%    {}{\fail}
+%  \patchcmd\ttl@straight@i
+%    {\par}
+%    {\par\tagtool{sec-start=#1}\tagtool{para/flattened}}
+%    {}{\fail} 
+% \makeatother 
  \usepackage{tcolorbox}
  \tcbuselibrary{skins}
  \AddToHook{env/tcolorbox/begin}{\tagpdfparaOff\tcbset{before upper=\tagpdfparaOn}}
